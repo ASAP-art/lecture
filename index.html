@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f3d2e">
+  <meta name="description" content="실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 로또 번호 추천 스튜디오">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천">
+  <meta property="og:description" content="1부터 45까지, 한 번의 클릭으로 로또 5게임(1장) 행운 조합과 홀짝·합계 통계를 확인해 보세요.">
+  <title>행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f5f1;
+      --paper-elevated: rgba(255, 255, 255, 0.88);
+      --surface: #ffffff;
+      --ink: #14201b;
+      --ink-secondary: #3c4a43;
+      --muted: #69756e;
+      --line: #dde3dc;
+      --line-strong: #c8d2c7;
+      --green: #0f3d2e;
+      --green-mid: #175943;
+      --green-dark: #09271d;
+      --lime: #c9ef74;
+      --lime-hover: #d6f58e;
+      --gold: #d99b26;
+      --accent-coral: #e06d53;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(15, 35, 27, 0.04);
+      --shadow-md: 0 12px 32px -8px rgba(15, 35, 27, 0.08), 0 4px 12px -2px rgba(15, 35, 27, 0.04);
+      --shadow-panel: 0 20px 40px -12px rgba(9, 39, 29, 0.28);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(circle at 15% 0%, rgba(201, 239, 116, 0.22), transparent 38%),
+        radial-gradient(circle at 85% 12%, rgba(23, 89, 67, 0.08), transparent 42%),
+        radial-gradient(#cfd8ce 0.85px, transparent 0.85px);
+      background-size: 100% 100%, 100% 100%, 22px 22px;
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    button {
+      font: inherit;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .page-shell {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .topbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: var(--lime);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.22);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      backdrop-filter: blur(8px);
+    }
+
+    .top-badge::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22a06b;
+      box-shadow: 0 0 0 3px rgba(34, 160, 107, 0.18);
+      content: "";
+    }
+
+    main { padding: 48px 0 44px; }
+
+    /* Hero Intro */
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro-main { max-width: 640px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 12px;
+      padding: 5px 11px;
+      border-radius: 6px;
+      background: rgba(15, 61, 46, 0.07);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .eyebrow::before {
+      width: 14px;
+      height: 2px;
+      background: var(--accent-coral);
+      content: "";
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+
+    h1 .highlight {
+      color: var(--green-mid);
+      position: relative;
+      display: inline-block;
+    }
+
+    .intro-copy {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .color-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(6px);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Workspace Grid */
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      align-items: start;
+      gap: 36px;
+    }
+
+    .results-column { min-width: 0; }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading h2,
+    .history-heading h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .slip-badge {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .section-kicker {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Ticket List & Lottery Slip Styling */
+    .ticket-list {
+      display: grid;
+      gap: 12px;
+      padding-top: 16px;
+    }
+
+    .ticket {
+      position: relative;
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--green-mid);
+      border-radius: var(--radius-md);
+      background: var(--paper-elevated);
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(8px);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      animation: arrive 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .ticket:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--line-strong);
+      border-left-color: var(--green);
+    }
+
+    .ticket-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .ticket-game {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .ticket-index {
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .balls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: clamp(6px, 1.1vw, 11px);
+    }
+
+    .ball {
+      width: clamp(38px, 4.6vw, 45px);
+      aspect-ratio: 1;
+      display: grid;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 15px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      position: relative;
+      box-shadow:
+        0 4px 10px rgba(20, 32, 27, 0.12),
+        inset 0 -3px 5px rgba(0, 0, 0, 0.16),
+        inset 0 2px 4px rgba(255, 255, 255, 0.65);
+      transition: transform 160ms ease;
+    }
+
+    .ticket:hover .ball {
+      transform: scale(1.03);
+    }
+
+    .ball-yellow {
+      background: radial-gradient(circle at 32% 28%, #fff1a8, #f2c94c 68%, #d9a520);
+      color: #332400;
+      border: 1px solid rgba(180, 130, 10, 0.28);
+    }
+
+    .ball-blue {
+      background: radial-gradient(circle at 32% 28%, #cce7ff, #6eb4f7 68%, #3b82d6);
+      color: #0b2545;
+      border: 1px solid rgba(35, 100, 180, 0.25);
+    }
+
+    .ball-red {
+      background: radial-gradient(circle at 32% 28%, #ffd2ca, #f28472 68%, #d4533f);
+      color: #3b0d07;
+      border: 1px solid rgba(185, 55, 35, 0.25);
+    }
+
+    .ball-gray {
+      background: radial-gradient(circle at 32% 28%, #eef1ef, #b8c0bc 68%, #8e9893);
+      color: #1f2623;
+      border: 1px solid rgba(90, 100, 95, 0.25);
+    }
+
+    .ball-green {
+      background: radial-gradient(circle at 32% 28%, #d8f5cf, #7ed175 68%, #4ca844);
+      color: #0e2e0b;
+      border: 1px solid rgba(55, 140, 45, 0.25);
+    }
+
+    .ticket-side {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ticket-stats {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      padding-right: 10px;
+      border-right: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ticket-stats strong {
+      color: var(--ink-secondary);
+      font-weight: 700;
+    }
+
+    .ticket-reroll {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--ink-secondary);
+      cursor: pointer;
+      transition: background 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+    }
+
+    .ticket-reroll:hover {
+      border-color: var(--green-mid);
+      background: #f0f6f2;
+      color: var(--green);
+      transform: rotate(25deg);
+    }
+
+    .ticket-reroll svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .empty-state {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 20px;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.55);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty-orbit {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border: 1px dashed #9ab3a6;
+      border-radius: 50%;
+      background: rgba(15, 61, 46, 0.05);
+      color: var(--green);
+      font-family: var(--serif);
+      font-size: 28px;
+    }
+
+    .empty-state p {
+      margin: 0 0 6px;
+      color: var(--ink-secondary);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .empty-state span.empty-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Result Footer Actions & Summary */
+    .result-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 16px;
+    }
+
+    .summary-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .summary-pill {
+      padding: 5px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .result-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .text-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--green);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      transition: all 150ms ease;
+    }
+
+    .text-button:hover:not(:disabled) {
+      border-color: var(--green);
+      background: #f2f7f4;
+      transform: translateY(-1px);
+    }
+
+    .text-button:disabled {
+      opacity: 0.5;
+      color: var(--muted);
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .text-button svg { width: 15px; height: 15px; }
+
+    /* Control Panel */
+    .control-panel {
+      position: sticky;
+      top: 24px;
+      padding: 26px 24px 22px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(160deg, var(--green-mid) 0%, var(--green) 55%, var(--green-dark) 100%);
+      color: var(--white);
+      box-shadow: var(--shadow-panel);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .control-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .control-title {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .control-tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(201, 239, 116, 0.16);
+      color: var(--lime);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .control-caption {
+      margin: 0 0 22px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .control-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .control-label {
+      display: block;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .control-recommend {
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .count-picker {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .count-option {
+      min-width: 0;
+      height: 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 800;
+      transition: all 150ms ease;
+    }
+
+    .count-option small {
+      font-size: 9px;
+      font-weight: 600;
+      opacity: 0.75;
+    }
+
+    .count-option:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .count-option[aria-pressed="true"] {
+      border-color: var(--lime);
+      background: var(--lime);
+      color: var(--green-dark);
+      box-shadow: 0 4px 14px rgba(201, 239, 116, 0.28);
+    }
+
+    .count-option:focus-visible,
+    .draw-button:focus-visible,
+    .text-button:focus-visible,
+    .ticket-reroll:focus-visible,
+    .history-clear:focus-visible {
+      outline: 3px solid #f5d875;
+      outline-offset: 3px;
+    }
+
+    .draw-button {
+      width: 100%;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--lime);
+      color: var(--green-dark);
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
+    }
+
+    .draw-button:hover {
+      transform: translateY(-1px);
+      background: var(--lime-hover);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+    }
+
+    .draw-button:active { transform: translateY(0); }
+    .draw-button svg { width: 18px; height: 18px; }
+
+    .control-features {
+      margin: 18px 0 0;
+      padding: 14px 0 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 11px;
+    }
+
+    .control-features li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .control-features li::before {
+      content: "✓";
+      color: var(--lime);
+      font-weight: 800;
+    }
+
+    .control-footnote {
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* History Section */
+    .history {
+      margin-top: 52px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .history-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .history-heading h2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .history-heading h2 span {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15, 61, 46, 0.08);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .history-clear {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 150ms ease;
+    }
+
+    .history-clear:hover {
+      border-color: #d98273;
+      color: #b53824;
+      background: #fff5f3;
+    }
+
+    .history-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 10px;
+    }
+
+    .history-row {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+    }
+
+    .history-time {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .history-balls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .mini-ball {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.14);
+    }
+
+    .history-empty {
+      grid-column: 1 / -1;
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+      padding: 18px 0 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translate(-50%, 16px);
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms ease, transform 200ms ease;
+      z-index: 50;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    #announcement {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tablet & Mobile Responsive */
+    @media (max-width: 860px) {
+      .page-shell { width: min(100% - 32px, 640px); }
+      main { padding-top: 32px; }
+      .workspace {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .control-panel {
+        position: static;
+        grid-row: 1;
+      }
+      .results-column { grid-row: 2; }
+      .history { margin-top: 36px; padding: 18px; }
+    }
+
+    @media (max-width: 540px) {
+      .page-shell { width: calc(100% - 24px); }
+      .topbar { height: 64px; }
+      .top-badge { font-size: 10px; padding: 5px 9px; }
+      main { padding-top: 24px; }
+      .intro {
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        gap: 16px;
+      }
+      .intro-copy { font-size: 14px; }
+      .color-legend {
+        width: 100%;
+        justify-content: space-between;
+        padding: 9px 12px;
+      }
+      .control-panel {
+        padding: 20px 18px 18px;
+      }
+      .ticket {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 14px;
+      }
+      .ticket-meta {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+      .balls {
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        gap: 6px;
+      }
+      .ball {
+        width: clamp(36px, 12.2vw, 44px);
+        font-size: 14px;
+      }
+      .ticket-side {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .result-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .result-actions {
+        width: 100%;
+        margin-left: 0;
+      }
+      .text-button {
+        flex: 1;
+        justify-content: center;
+        min-height: 44px;
+      }
+      .history-list {
+        grid-template-columns: 1fr;
+      }
+      .page-footer {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="행운 번호 홈">
+        <span class="brand-mark" aria-hidden="true">행</span>
+        <span class="brand-text">
+          <span>행운 번호</span>
+          <span class="brand-sub">LOTTO 6/45 STUDIO</span>
+        </span>
+      </a>
+      <span class="top-badge">5-GAME QUICK SLIP</span>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-main">
+          <p class="eyebrow">A LITTLE LUCK, JUST FOR YOU</p>
+          <h1 id="page-title">오늘의 <span class="highlight">5게임 행운 조합</span></h1>
+          <p class="intro-copy">실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 번호 생성기입니다. 각 게임의 홀짝 비율과 번호 총합까지 한눈에 확인해 보세요.</p>
+        </div>
+        <div class="color-legend" aria-label="번호대별 색상 안내">
+          <span class="legend-item"><span class="legend-dot ball-yellow"></span>1–10</span>
+          <span class="legend-item"><span class="legend-dot ball-blue"></span>11–20</span>
+          <span class="legend-item"><span class="legend-dot ball-red"></span>21–30</span>
+          <span class="legend-item"><span class="legend-dot ball-gray"></span>31–40</span>
+          <span class="legend-item"><span class="legend-dot ball-green"></span>41–45</span>
+        </div>
+      </section>
+
+      <div class="workspace">
+        <section class="results-column" aria-labelledby="results-title">
+          <div class="section-heading">
+            <div class="section-heading-left">
+              <h2 id="results-title">추첨 결과</h2>
+              <span class="slip-badge">SLIP A–E</span>
+            </div>
+            <span class="section-kicker" id="result-caption">번호 6개를 무작위로 뽑아요</span>
+          </div>
+
+          <div class="ticket-list" id="ticket-list" aria-live="polite" aria-relevant="additions text">
+            <div class="empty-state" id="empty-state">
+              <span class="empty-orbit" aria-hidden="true">?</span>
+              <p>아직 추첨 전이에요. 행운 번호를 뽑아보세요.</p>
+              <span class="empty-sub">‘행운 번호 추첨’ 버튼을 누르면 선택한 게임 수만큼 즉시 생성됩니다.</span>
+            </div>
+          </div>
+
+          <div class="result-footer">
+            <div class="summary-strip" id="summary-strip" aria-live="polite"></div>
+            <div class="result-actions">
+              <button class="text-button" id="share-button" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>공유하기</span>
+              </button>
+              <button class="text-button" id="copy-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
+                <span id="copy-button-text">결과 복사</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="control-panel" aria-labelledby="control-title">
+          <div class="control-header">
+            <h2 class="control-title" id="control-title">번호 뽑기</h2>
+            <span class="control-tag">CSPRNG</span>
+          </div>
+          <p class="control-caption">원하는 게임 수를 선택하고 한 번에 추천받으세요.</p>
+
+          <div class="control-label-row">
+            <span class="control-label" id="count-label">한 번에 뽑기</span>
+            <span class="control-recommend">5게임(1장) 권장</span>
+          </div>
+
+          <div class="count-picker" role="group" aria-labelledby="count-label">
+            <button class="count-option" type="button" aria-pressed="false" data-count="1">1<small>게임</small></button>
+            <button class="count-option" type="button" aria-pressed="false" data-count="2">2<small>게임</small></button>
+            <button class="count-option" type="button" aria-pressed="false" data-count="3">3<small>게임</small></button>
+            <button class="count-option" type="button" aria-pressed="false" data-count="4">4<small>게임</small></button>
+            <button class="count-option" type="button" aria-pressed="true" data-count="5">5<small>게임</small></button>
+          </div>
+
+          <button class="draw-button" id="draw-button" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M5.6 9a7 7 0 0 1 11.6-2L20 12M4 12l2.8 5a7 7 0 0 0 11.6-2"></path></svg>
+            <span id="draw-button-label">5게임 행운 번호 추첨</span>
+          </button>
+
+          <ul class="control-features">
+            <li>웹 암호학 난수(crypto.getRandomValues) 적용</li>
+            <li>개별 게임 다시 뽑기 및 전체 결과 복사 지원</li>
+          </ul>
+          <p class="control-footnote">각 게임은 중복 없이 6개 번호로 구성됩니다.</p>
+        </aside>
+      </div>
+
+      <section class="history" aria-labelledby="history-title">
+        <div class="history-heading">
+          <h2 id="history-title">최근 추첨 <span id="history-count">0</span></h2>
+          <button class="history-clear" id="clear-history" type="button">기록 지우기</button>
+        </div>
+        <div class="history-list" id="history-list">
+          <div class="history-empty">아직 저장된 추첨 기록이 없습니다.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span>행운 번호는 재미를 위한 무작위 번호 생성기입니다.</span>
+      <span>이용 결과는 당첨을 보장하지 않습니다.</span>
+    </footer>
+    <div id="toast" class="toast" aria-hidden="true"></div>
+    <div id="announcement" role="status" aria-live="polite"></div>
+  </div>
+
+  <script>
+    const HISTORY_KEY = "lucky-number-history-v1";
+    const GAME_LETTERS = ["A", "B", "C", "D", "E"];
+    const ticketList = document.querySelector("#ticket-list");
+    const historyList = document.querySelector("#history-list");
+    const historyCount = document.querySelector("#history-count");
+    const copyButton = document.querySelector("#copy-button");
+    const copyButtonText = document.querySelector("#copy-button-text");
+    const drawButtonLabel = document.querySelector("#draw-button-label");
+    const summaryStrip = document.querySelector("#summary-strip");
+    const announcement = document.querySelector("#announcement");
+    const toast = document.querySelector("#toast");
+    let toastTimer = null;
+
+    let selectedCount = 5;
+    let latestDraw = [];
+    let history = loadHistory();
+
+    function showToast(message) {
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("is-visible");
+      }, 2200);
+    }
+
+    function loadHistory() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+        return Array.isArray(saved) ? saved.filter((entry) =>
+          Array.isArray(entry.numbers) && entry.numbers.length === 6 &&
+          entry.numbers.every((number) => Number.isInteger(number) && number >= 1 && number <= 45) &&
+          typeof entry.time === "string"
+        ).slice(0, 12) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveHistory() {
+      try {
+        localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+      } catch {
+        announcement.textContent = "기록을 브라우저에 저장하지 못했지만 현재 결과는 확인할 수 있습니다.";
+      }
+    }
+
+    function colorClass(number) {
+      if (number <= 10) return "ball-yellow";
+      if (number <= 20) return "ball-blue";
+      if (number <= 30) return "ball-red";
+      if (number <= 40) return "ball-gray";
+      return "ball-green";
+    }
+
+    function drawNumbers() {
+      const pool = Array.from({ length: 45 }, (_, index) => index + 1);
+      for (let index = pool.length - 1; index > 0; index -= 1) {
+        const random = new Uint32Array(1);
+        crypto.getRandomValues(random);
+        const swapIndex = Math.floor((random[0] / 4294967296) * (index + 1));
+        [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
+      }
+      return pool.slice(0, 6).sort((left, right) => left - right);
+    }
+
+    function formatNow() {
+      return new Intl.DateTimeFormat("ko-KR", {
+        month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
+      }).format(new Date());
+    }
+
+    function renderSummary() {
+      summaryStrip.replaceChildren();
+      if (latestDraw.length === 0) return;
+
+      const flat = latestDraw.flat();
+      const oddCount = flat.filter((n) => n % 2 === 1).length;
+      const evenCount = flat.length - oddCount;
+      const avgSum = Math.round(
+        latestDraw.reduce((acc, nums) => acc + nums.reduce((a, b) => a + b, 0), 0) / latestDraw.length
+      );
+
+      const pill1 = document.createElement("span");
+      pill1.className = "summary-pill";
+      pill1.textContent = `총 ${latestDraw.length}게임 (${flat.length}개 번호)`;
+
+      const pill2 = document.createElement("span");
+      pill2.className = "summary-pill";
+      pill2.textContent = `평균 합계 ${avgSum}`;
+
+      const pill3 = document.createElement("span");
+      pill3.className = "summary-pill";
+      pill3.textContent = `전체 홀짝 ${oddCount}:${evenCount}`;
+
+      summaryStrip.append(pill1, pill2, pill3);
+    }
+
+    function renderTickets() {
+      ticketList.replaceChildren();
+      latestDraw.forEach((numbers, index) => {
+        const ticket = document.createElement("div");
+        ticket.className = "ticket";
+        ticket.style.animationDelay = `${index * 60}ms`;
+
+        const meta = document.createElement("div");
+        meta.className = "ticket-meta";
+
+        const gameBadge = document.createElement("span");
+        gameBadge.className = "ticket-game";
+        gameBadge.textContent = `GAME ${GAME_LETTERS[index] || index + 1}`;
+
+        const label = document.createElement("span");
+        label.className = "ticket-index";
+        label.textContent = `NO. ${String(index + 1).padStart(2, "0")}`;
+
+        meta.append(gameBadge, label);
+
+        const balls = document.createElement("div");
+        balls.className = "balls";
+        balls.setAttribute("aria-label", numbers.join(", "));
+        numbers.forEach((number) => {
+          const ball = document.createElement("span");
+          ball.className = `ball ${colorClass(number)}`;
+          ball.textContent = String(number);
+          balls.append(ball);
+        });
+
+        const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+        const odd = numbers.filter((n) => n % 2 === 1).length;
+        const even = 6 - odd;
+
+        const side = document.createElement("div");
+        side.className = "ticket-side";
+
+        const stats = document.createElement("div");
+        stats.className = "ticket-stats";
+        stats.innerHTML = `<span>합계 <strong>${sum}</strong></span><span>홀짝 <strong>${odd}:${even}</strong></span>`;
+
+        const rerollBtn = document.createElement("button");
+        rerollBtn.type = "button";
+        rerollBtn.className = "ticket-reroll";
+        rerollBtn.title = `${index + 1}번 게임 다시 뽑기`;
+        rerollBtn.setAttribute("aria-label", `${index + 1}번 게임 다시 뽑기`);
+        rerollBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>`;
+        rerollBtn.addEventListener("click", () => {
+          const newNumbers = drawNumbers();
+          latestDraw[index] = newNumbers;
+          const time = formatNow();
+          history = [{ numbers: newNumbers, time }, ...history].slice(0, 12);
+          saveHistory();
+          renderTickets();
+          renderHistory();
+          const msg = `${GAME_LETTERS[index]}게임(NO. 0${index + 1}) 번호를 다시 추첨했습니다.`;
+          announcement.textContent = msg;
+          showToast(msg);
+        });
+
+        side.append(stats, rerollBtn);
+        ticket.append(meta, balls, side);
+        ticketList.append(ticket);
+      });
+
+      copyButton.disabled = latestDraw.length === 0;
+      document.querySelector("#result-caption").textContent = latestDraw.length
+        ? `${latestDraw.length}게임 추첨 완료`
+        : "번호 6개를 무작위로 뽑아요";
+      renderSummary();
+    }
+
+    function renderHistory() {
+      historyList.replaceChildren();
+      historyCount.textContent = String(history.length);
+      if (history.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "history-empty";
+        empty.textContent = "아직 저장된 추첨 기록이 없습니다.";
+        historyList.append(empty);
+        return;
+      }
+
+      history.forEach((entry) => {
+        const row = document.createElement("div");
+        row.className = "history-row";
+        const time = document.createElement("time");
+        time.className = "history-time";
+        time.textContent = entry.time;
+        const balls = document.createElement("div");
+        balls.className = "history-balls";
+        balls.setAttribute("aria-label", entry.numbers.join(", "));
+        entry.numbers.forEach((number) => {
+          const ball = document.createElement("span");
+          ball.className = `mini-ball ${colorClass(number)}`;
+          ball.textContent = String(number);
+          balls.append(ball);
+        });
+        row.append(time, balls);
+        historyList.append(row);
+      });
+    }
+
+    document.querySelectorAll(".count-option").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectedCount = Number(button.dataset.count);
+        document.querySelectorAll(".count-option").forEach((option) => {
+          option.setAttribute("aria-pressed", String(option === button));
+        });
+        drawButtonLabel.textContent = `${selectedCount}게임 행운 번호 추첨`;
+      });
+    });
+
+    function runDraw() {
+      latestDraw = Array.from({ length: selectedCount }, drawNumbers);
+      const time = formatNow();
+      const newEntries = latestDraw.map((numbers) => ({ numbers, time }));
+      history = [...newEntries, ...history].slice(0, 12);
+      saveHistory();
+      renderTickets();
+      renderHistory();
+      announcement.textContent = `${selectedCount}게임의 로또 번호를 추첨했습니다.`;
+    }
+
+    document.querySelector("#draw-button").addEventListener("click", () => {
+      runDraw();
+      showToast(`${selectedCount}게임 행운 조합이 생성되었습니다.`);
+    });
+
+    copyButton.addEventListener("click", async () => {
+      if (latestDraw.length === 0) return;
+      const text = latestDraw
+        .map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`)
+        .join("\n");
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const temporaryInput = document.createElement("textarea");
+        temporaryInput.value = text;
+        temporaryInput.style.position = "fixed";
+        temporaryInput.style.opacity = "0";
+        document.body.append(temporaryInput);
+        temporaryInput.select();
+        document.execCommand("copy");
+        temporaryInput.remove();
+      }
+      announcement.textContent = "추첨 결과를 복사했습니다.";
+      copyButtonText.textContent = "복사 완료!";
+      showToast("추첨 결과가 클립보드에 복사되었습니다.");
+      setTimeout(() => {
+        copyButtonText.textContent = "결과 복사";
+      }, 1800);
+    });
+
+    document.querySelector("#share-button").addEventListener("click", async () => {
+      const shareUrl = window.location.href;
+      const drawSummary = latestDraw.length
+        ? "\n\n" + latestDraw.map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`).join("\n")
+        : "";
+      const shareData = {
+        title: "행운 번호 스튜디오 | 로또 6/45 5게임 추천",
+        text: `오늘의 로또 5게임 행운 조합을 확인해 보세요!${drawSummary}`,
+        url: shareUrl
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          announcement.textContent = "공유 창을 열었습니다.";
+          return;
+        } catch (err) {
+          if (err && err.name === "AbortError") return;
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(`${shareData.text}\n${shareUrl}`);
+      } catch {
+        const temporaryInput = document.createElement("textarea");
+        temporaryInput.value = `${shareData.text}\n${shareUrl}`;
+        temporaryInput.style.position = "fixed";
+        temporaryInput.style.opacity = "0";
+        document.body.append(temporaryInput);
+        temporaryInput.select();
+        document.execCommand("copy");
+        temporaryInput.remove();
+      }
+      announcement.textContent = "공유 링크를 복사했습니다.";
+      showToast("공유 링크와 번호가 클립보드에 복사되었습니다.");
+    });
+
+    document.querySelector("#clear-history").addEventListener("click", () => {
+      history = [];
+      saveHistory();
+      renderHistory();
+      announcement.textContent = "추첨 기록을 지웠습니다.";
+      showToast("최근 추첨 기록을 모두 지웠습니다.");
+    });
+
+    renderHistory();
+  </script>
+</body>
+</html>
