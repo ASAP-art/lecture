@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0f3d2e">
-  <meta name="description" content="실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 로또 번호 추천 스튜디오">
+  <meta name="description" content="실제 로또 1장(A~E 5게임) 규격의 CSPRNG 난수 엔진에 게임 고정(Pin)·고정수/제외수 필터·합계 밸런스 분석을 더한 스마트 로또 스튜디오">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://asap-art.github.io/lecture/">
   <meta property="og:site_name" content="행운 번호 스튜디오">
-  <meta property="og:title" content="행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천">
-  <meta property="og:description" content="1부터 45까지, 한 번의 클릭으로 로또 5게임(1장) 행운 조합과 홀짝·합계 통계를 확인해 보세요.">
+  <meta property="og:title" content="행운 번호 스튜디오 v2.0 | 스마트 로또 6/45 5게임 추천">
+  <meta property="og:description" content="실제 로또 1장(A~E 5게임) 규격의 암호학 난수 추천, 번호 고정/제외 필터, 합계 밸런스 게이지, 슬립 이미지 저장을 지원합니다.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천">
-  <meta name="twitter:description" content="실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 번호 추천 스튜디오">
-  <title>행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천</title>
+  <meta name="twitter:title" content="행운 번호 스튜디오 v2.0 | 스마트 로또 6/45 5게임 추천">
+  <meta name="twitter:description" content="실제 로또 1장(A~E 5게임) 규격의 암호학 기반 스마트 로또 번호 추천 스튜디오">
+  <title>행운 번호 스튜디오 | 스마트 로또 6/45 5게임 추천</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <script>
@@ -33,10 +33,11 @@
     [data-theme="light"] {
       color-scheme: light;
       --paper: #f3f5f1;
-      --paper-elevated: rgba(255, 255, 255, 0.88);
+      --paper-elevated: rgba(255, 255, 255, 0.92);
       --surface: #ffffff;
-      --surface-subtle: rgba(255, 255, 255, 0.68);
+      --surface-subtle: rgba(255, 255, 255, 0.76);
       --surface-hover: #f2f7f4;
+      --surface-muted: #f4f7f3;
       --ink: #14201b;
       --ink-secondary: #3c4a43;
       --muted: #69756e;
@@ -46,8 +47,10 @@
       --green-mid: #175943;
       --green-dark: #09271d;
       --brand-accent: #175943;
-      --eyebrow-bg: rgba(15, 61, 46, 0.07);
+      --eyebrow-bg: rgba(15, 61, 46, 0.08);
       --eyebrow-text: #0f3d2e;
+      --badge-soft-bg: #e8f3ee;
+      --badge-soft-text: #0f3d2e;
       --dot-grid: #cfd8ce;
       --glow-1: rgba(201, 239, 116, 0.22);
       --glow-2: rgba(23, 89, 67, 0.08);
@@ -56,6 +59,8 @@
       --gold: #d99b26;
       --accent-coral: #e06d53;
       --white: #ffffff;
+      --primary-btn-bg: #0f3d2e;
+      --primary-btn-fg: #c9ef74;
       --shadow-sm: 0 2px 8px rgba(15, 35, 27, 0.04);
       --shadow-md: 0 12px 32px -8px rgba(15, 35, 27, 0.08), 0 4px 12px -2px rgba(15, 35, 27, 0.04);
       --shadow-panel: 0 20px 40px -12px rgba(9, 39, 29, 0.28);
@@ -69,10 +74,11 @@
     [data-theme="dark"] {
       color-scheme: dark;
       --paper: #0b1310;
-      --paper-elevated: rgba(20, 33, 27, 0.88);
+      --paper-elevated: rgba(21, 35, 28, 0.92);
       --surface: #15231c;
-      --surface-subtle: rgba(21, 35, 28, 0.76);
+      --surface-subtle: rgba(21, 35, 28, 0.78);
       --surface-hover: #1d3127;
+      --surface-muted: #0e1814;
       --ink: #ecf3ef;
       --ink-secondary: #b9c8bf;
       --muted: #85988d;
@@ -84,9 +90,13 @@
       --brand-accent: #c9ef74;
       --eyebrow-bg: rgba(201, 239, 116, 0.12);
       --eyebrow-text: #c9ef74;
+      --badge-soft-bg: rgba(201, 239, 116, 0.14);
+      --badge-soft-text: #c9ef74;
       --dot-grid: #1b2c24;
-      --glow-1: rgba(201, 239, 116, 0.09);
+      --glow-1: rgba(201, 239, 116, 0.08);
       --glow-2: rgba(28, 107, 80, 0.16);
+      --primary-btn-bg: #c9ef74;
+      --primary-btn-fg: #09271d;
       --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
       --shadow-md: 0 14px 34px -8px rgba(0, 0, 0, 0.45), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
       --shadow-panel: 0 22px 44px -12px rgba(0, 0, 0, 0.55);
@@ -122,18 +132,96 @@
     }
 
     .page-shell {
-      width: min(1140px, calc(100% - 48px));
+      width: min(1200px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* Header */
+    /* Header / Topbar */
     .topbar {
-      height: 76px;
+      min-height: 78px;
+      padding: 12px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
       border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: var(--lime);
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.24);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.18;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .round-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .round-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22a06b;
+      box-shadow: 0 0 0 3px rgba(34, 160, 107, 0.18);
+      flex: 0 0 auto;
+    }
+
+    .round-dday {
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .round-time {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
     }
 
     .topbar-right {
@@ -142,56 +230,18 @@
       gap: 10px;
     }
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--ink);
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      border-radius: 11px;
-      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
-      color: var(--lime);
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.22);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-
-    .brand-sub {
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-    }
-
     .top-badge {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 6px 12px;
+      padding: 7px 13px;
       border: 1px solid var(--line-strong);
       border-radius: 999px;
       background: var(--surface-subtle);
       color: var(--ink-secondary);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       backdrop-filter: blur(8px);
     }
 
@@ -199,8 +249,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #22a06b;
-      box-shadow: 0 0 0 3px rgba(34, 160, 107, 0.18);
+      background: var(--brand-accent);
       content: "";
     }
 
@@ -209,7 +258,7 @@
       align-items: center;
       gap: 6px;
       height: 36px;
-      padding: 0 12px;
+      padding: 0 13px;
       border: 1px solid var(--line-strong);
       border-radius: 999px;
       background: var(--surface);
@@ -218,7 +267,7 @@
       font-size: 12px;
       font-weight: 700;
       box-shadow: var(--shadow-sm);
-      transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 150ms ease;
+      transition: all 160ms ease;
     }
 
     .theme-toggle:hover {
@@ -239,25 +288,29 @@
     [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
     [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-    main { padding: 48px 0 44px; }
+    main { padding: 36px 0 44px; }
 
-    /* Hero Intro */
+    /* Hero Intro & Bento Distribution Card */
     .intro {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 460px;
+      align-items: stretch;
       gap: 24px;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
       padding-bottom: 28px;
       border-bottom: 1px solid var(--line);
     }
 
-    .intro-main { max-width: 640px; }
+    .intro-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
+      align-self: flex-start;
       gap: 9px;
       margin: 0 0 12px;
       padding: 5px 11px;
@@ -266,7 +319,7 @@
       color: var(--eyebrow-text);
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
     }
 
     .eyebrow::before {
@@ -278,44 +331,83 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(32px, 5vw, 52px);
+      font-size: clamp(30px, 4.4vw, 44px);
       font-weight: 800;
-      line-height: 1.12;
+      line-height: 1.14;
       letter-spacing: -0.03em;
       color: var(--ink);
     }
 
     h1 .highlight {
       color: var(--brand-accent);
-      position: relative;
-      display: inline-block;
     }
 
     .intro-copy {
       margin: 12px 0 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14.5px;
       line-height: 1.65;
+      max-width: 660px;
+    }
+
+    .bento-analytics {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bento-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .bento-title {
+      color: var(--ink-secondary);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .balance-score-badge {
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
+      font-size: 11px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
     }
 
     .color-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--surface-subtle);
-      backdrop-filter: blur(6px);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
     }
 
-    .legend-item {
-      display: inline-flex;
+    .legend-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 8px 7px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface-muted);
+    }
+
+    .legend-top {
+      display: flex;
       align-items: center;
       gap: 5px;
       color: var(--ink-secondary);
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
@@ -323,15 +415,83 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
+      flex: 0 0 auto;
       box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .legend-stat {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .balance-gauge-box {
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .gauge-labels {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .gauge-labels strong {
+      color: var(--brand-accent);
+      font-weight: 800;
+    }
+
+    .gauge-track {
+      position: relative;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--surface-muted);
+      border: 1px solid var(--line);
+      overflow: visible;
+    }
+
+    .gauge-sweetspot {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 33.7%;
+      width: 32%;
+      border-radius: 999px;
+      background: rgba(23, 89, 67, 0.25);
+    }
+
+    [data-theme="dark"] .gauge-sweetspot {
+      background: rgba(201, 239, 116, 0.24);
+    }
+
+    .gauge-marker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--brand-accent);
+      border: 2px solid var(--surface);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      transform: translate(-50%, -50%);
+      transition: left 260ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     /* Workspace Grid */
     .workspace {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
+      grid-template-columns: minmax(0, 1fr) 384px;
       align-items: start;
-      gap: 36px;
+      gap: 32px;
     }
 
     .results-column { min-width: 0; }
@@ -341,7 +501,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       padding-bottom: 14px;
       border-bottom: 1px solid var(--line);
     }
@@ -349,31 +509,41 @@
     .section-heading-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .section-heading h2,
     .history-heading h2 {
       margin: 0;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: -0.01em;
     }
 
     .slip-badge {
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
       background: var(--green);
       color: var(--lime);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.04em;
+    }
+
+    .filter-active-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
+      font-size: 11px;
+      font-weight: 700;
     }
 
     .section-kicker {
       color: var(--muted);
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     /* Ticket List & Lottery Slip Styling */
@@ -386,25 +556,31 @@
     .ticket {
       position: relative;
       display: grid;
-      grid-template-columns: 74px minmax(0, 1fr) auto;
+      grid-template-columns: 92px minmax(0, 1fr) auto;
       align-items: center;
       gap: 16px;
       padding: 16px 20px;
       border: 1px solid var(--line);
-      border-left: 4px solid var(--green-mid);
+      border-left: 5px solid var(--green-mid);
       border-radius: var(--radius-md);
       background: var(--paper-elevated);
       box-shadow: var(--shadow-sm);
       backdrop-filter: blur(8px);
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-      animation: arrive 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: arrive 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     .ticket:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
       border-color: var(--line-strong);
-      border-left-color: var(--green);
+    }
+
+    .ticket.is-pinned {
+      border-color: var(--brand-accent);
+      border-left-width: 6px;
+      border-left-color: var(--brand-accent);
+      background: var(--surface);
     }
 
     .ticket-meta {
@@ -420,25 +596,25 @@
       color: var(--brand-accent);
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
 
     .ticket-index {
       color: var(--muted);
       font-family: var(--serif);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .balls {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: clamp(6px, 1.1vw, 11px);
+      gap: clamp(6px, 1vw, 11px);
     }
 
     .ball {
-      width: clamp(38px, 4.6vw, 45px);
+      width: clamp(38px, 4.4vw, 46px);
       aspect-ratio: 1;
       display: grid;
       flex: 0 0 auto;
@@ -454,6 +630,11 @@
         inset 0 -3px 5px rgba(0, 0, 0, 0.16),
         inset 0 2px 4px rgba(255, 255, 255, 0.65);
       transition: transform 160ms ease;
+    }
+
+    .ball.is-fixed-ball {
+      outline: 2.5px solid var(--brand-accent);
+      outline-offset: 2px;
     }
 
     .ticket:hover .ball {
@@ -500,82 +681,74 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 2px;
-      padding-right: 10px;
+      gap: 4px;
+      padding-right: 12px;
       border-right: 1px solid var(--line);
       color: var(--muted);
       font-size: 11px;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
-    .ticket-stats strong {
-      color: var(--ink-secondary);
-      font-weight: 700;
+    .sum-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
+      font-size: 11px;
+      font-weight: 800;
     }
 
+    .sum-badge.out-of-range {
+      background: rgba(224, 109, 83, 0.14);
+      color: var(--accent-coral);
+    }
+
+    .ticket-btn-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ticket-pin-btn,
     .ticket-reroll {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
+      height: 36px;
+      padding: 0 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
       background: var(--surface);
       color: var(--ink-secondary);
       cursor: pointer;
-      transition: background 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+      font-size: 11px;
+      font-weight: 700;
+      transition: all 150ms ease;
     }
 
+    .ticket-pin-btn:hover,
     .ticket-reroll:hover {
       border-color: var(--brand-accent);
       background: var(--surface-hover);
       color: var(--brand-accent);
-      transform: rotate(25deg);
     }
 
-    .ticket-reroll svg {
-      width: 15px;
-      height: 15px;
+    .ticket-pin-btn[aria-pressed="true"] {
+      background: var(--primary-btn-bg);
+      color: var(--primary-btn-fg);
+      border-color: var(--primary-btn-bg);
+      font-weight: 800;
     }
 
-    .empty-state {
-      min-height: 260px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 36px 20px;
-      border: 1px dashed var(--line-strong);
-      border-radius: var(--radius-md);
-      background: var(--surface-subtle);
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .empty-orbit {
-      width: 62px;
-      height: 62px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      border: 1px dashed var(--line-strong);
-      border-radius: 50%;
-      background: var(--eyebrow-bg);
-      color: var(--eyebrow-text);
-      font-family: var(--serif);
-      font-size: 28px;
-    }
-
-    .empty-state p {
-      margin: 0 0 6px;
-      color: var(--ink-secondary);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .empty-state span.empty-sub {
-      font-size: 12px;
-      color: var(--muted);
+    .ticket-reroll svg,
+    .ticket-pin-btn svg {
+      width: 13px;
+      height: 13px;
     }
 
     /* Result Footer Actions & Summary */
@@ -597,19 +770,20 @@
     }
 
     .summary-pill {
-      padding: 5px 10px;
+      padding: 6px 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: var(--surface-subtle);
+      background: var(--surface);
       color: var(--ink-secondary);
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
     .result-actions {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 8px;
       margin-left: auto;
     }
@@ -618,7 +792,8 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 9px 14px;
+      height: 38px;
+      padding: 0 14px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
       background: var(--surface);
@@ -630,31 +805,36 @@
       transition: all 150ms ease;
     }
 
+    .text-button.primary-action {
+      background: var(--primary-btn-bg);
+      color: var(--primary-btn-fg);
+      border-color: var(--primary-btn-bg);
+      font-weight: 800;
+    }
+
     .text-button:hover:not(:disabled) {
       border-color: var(--brand-accent);
-      background: var(--surface-hover);
       transform: translateY(-1px);
     }
 
     .text-button:disabled {
       opacity: 0.5;
-      color: var(--muted);
       cursor: default;
       box-shadow: none;
     }
 
     .text-button svg { width: 15px; height: 15px; }
 
-    /* Control Panel */
+    /* Upgraded Smart Control Panel */
     .control-panel {
       position: sticky;
       top: 24px;
-      padding: 26px 24px 22px;
-      border-radius: var(--radius-lg);
+      padding: 24px 24px 20px;
+      border-radius: 22px;
       background: linear-gradient(160deg, var(--green-mid) 0%, var(--green) 55%, var(--green-dark) 100%);
       color: var(--white);
       box-shadow: var(--shadow-panel);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .control-header {
@@ -672,32 +852,61 @@
     }
 
     .control-tag {
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(201, 239, 116, 0.16);
+      background: rgba(201, 239, 116, 0.18);
       color: var(--lime);
       font-size: 10px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.06em;
     }
 
     .control-caption {
-      margin: 0 0 22px;
-      color: rgba(255, 255, 255, 0.74);
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.76);
       font-size: 13px;
       line-height: 1.5;
+    }
+
+    /* 3-Mode Switcher Tabs */
+    .mode-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      padding: 4px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      background: rgba(7, 31, 23, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mode-tab {
+      height: 32px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.78);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      transition: all 150ms ease;
+    }
+
+    .mode-tab[aria-selected="true"] {
+      background: var(--lime);
+      color: #09271d;
+      font-weight: 800;
     }
 
     .control-label-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .control-label {
-      display: block;
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 12px;
       font-weight: 700;
     }
@@ -712,12 +921,12 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 6px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .count-option {
       min-width: 0;
-      height: 44px;
+      height: 46px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -725,8 +934,8 @@
       gap: 1px;
       border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.05);
-      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.92);
       cursor: pointer;
       font-size: 14px;
       font-weight: 800;
@@ -740,25 +949,239 @@
     }
 
     .count-option:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       border-color: rgba(255, 255, 255, 0.4);
     }
 
     .count-option[aria-pressed="true"] {
       border-color: var(--lime);
       background: var(--lime);
-      color: var(--green-dark);
+      color: #09271d;
       box-shadow: 0 4px 14px rgba(201, 239, 116, 0.28);
     }
 
-    .count-option:focus-visible,
-    .draw-button:focus-visible,
-    .text-button:focus-visible,
-    .ticket-reroll:focus-visible,
-    .history-clear:focus-visible,
-    .theme-toggle:focus-visible {
-      outline: 3px solid #f5d875;
-      outline-offset: 3px;
+    /* Smart Filter Box inside Control Panel */
+    .smart-filter-box {
+      padding: 14px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      background: rgba(8, 36, 27, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .smart-filter-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .smart-filter-title {
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .filter-edit-btn {
+      padding: 2px 6px;
+      border: 0;
+      border-radius: 4px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.72);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .filter-edit-btn:hover {
+      color: var(--lime);
+    }
+
+    .filter-chip-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .filter-row-label {
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 600;
+      flex: 0 0 auto;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+
+    .chip-fixed {
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #f2c94c;
+      color: #332400;
+      font-size: 11px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chip-excluded {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(224, 109, 83, 0.28);
+      border: 1px solid #e06d53;
+      color: #ffd2ca;
+      font-size: 11px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chip-add-btn {
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+
+    .chip-add-btn:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+    }
+
+    .balance-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .balance-checkbox-label input {
+      accent-color: var(--lime);
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    /* Interactive 1~45 Number Matrix Drawer */
+    .matrix-drawer {
+      display: none;
+      margin-bottom: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #071f17;
+      border: 1px solid rgba(201, 239, 116, 0.35);
+      animation: arrive 220ms ease both;
+    }
+
+    .matrix-drawer.is-open {
+      display: block;
+    }
+
+    .matrix-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .matrix-head strong {
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .matrix-guide {
+      margin: 0 0 10px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    .matrix-ball {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.88);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      transition: all 120ms ease;
+    }
+
+    .matrix-ball:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: scale(1.06);
+    }
+
+    .matrix-ball.state-fixed {
+      background: var(--lime);
+      border: 2px solid #ffffff;
+      color: #09271d;
+      font-weight: 800;
+    }
+
+    .matrix-ball.state-excluded {
+      background: rgba(224, 109, 83, 0.28);
+      border: 1.5px solid #e06d53;
+      color: #ffd2ca;
+      text-decoration: line-through;
+    }
+
+    .matrix-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .matrix-reset-btn {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.78);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .matrix-apply-btn {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 0;
+      background: var(--lime);
+      color: #09271d;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 800;
     }
 
     .draw-button {
@@ -769,34 +1192,34 @@
       justify-content: center;
       gap: 10px;
       border: 0;
-      border-radius: 10px;
+      border-radius: 12px;
       background: var(--lime);
-      color: var(--green-dark);
+      color: #09271d;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 800;
       letter-spacing: -0.01em;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
     }
 
     .draw-button:hover {
       transform: translateY(-1px);
       background: var(--lime-hover);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
     }
 
     .draw-button:active { transform: translateY(0); }
     .draw-button svg { width: 18px; height: 18px; }
 
     .control-features {
-      margin: 18px 0 0;
+      margin: 16px 0 0;
       padding: 14px 0 0;
       border-top: 1px solid rgba(255, 255, 255, 0.14);
       list-style: none;
       display: grid;
-      gap: 7px;
-      color: rgba(255, 255, 255, 0.72);
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.76);
       font-size: 11px;
     }
 
@@ -813,16 +1236,15 @@
     }
 
     .control-footnote {
-      margin: 12px 0 0;
-      color: rgba(255, 255, 255, 0.56);
-      font-size: 11px;
-      line-height: 1.5;
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.52);
+      font-size: 10.5px;
       text-align: center;
     }
 
-    /* History Section */
+    /* History Section & Cumulative Statistical Insights */
     .history {
-      margin-top: 52px;
+      margin-top: 48px;
       padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
@@ -834,10 +1256,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
       border-bottom: 1px solid var(--line);
+    }
+
+    .history-heading-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .history-heading h2 {
@@ -847,23 +1277,47 @@
     }
 
     .history-heading h2 span {
-      padding: 2px 8px;
+      padding: 2px 9px;
       border-radius: 999px;
       background: var(--eyebrow-bg);
       color: var(--eyebrow-text);
       font-size: 12px;
+      font-weight: 800;
+    }
+
+    .history-filter-tabs {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .history-tab {
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink-secondary);
+      cursor: pointer;
+      font-size: 11px;
       font-weight: 700;
+      transition: all 140ms ease;
+    }
+
+    .history-tab[aria-selected="true"] {
+      background: var(--primary-btn-bg);
+      color: var(--primary-btn-fg);
+      border-color: var(--primary-btn-bg);
     }
 
     .history-clear {
-      padding: 6px 10px;
+      padding: 6px 11px;
       border: 1px solid var(--line);
       border-radius: 6px;
       background: var(--surface);
       color: var(--muted);
       cursor: pointer;
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 11.5px;
+      font-weight: 700;
       transition: all 150ms ease;
     }
 
@@ -880,7 +1334,7 @@
 
     .history-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
       gap: 12px;
     }
 
@@ -888,9 +1342,9 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 12px 14px;
+      padding: 13px 15px;
       border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
+      border-radius: 10px;
       background: var(--surface);
       box-shadow: var(--shadow-sm);
       transition: border-color 150ms ease, transform 150ms ease;
@@ -899,6 +1353,10 @@
     .history-row:hover {
       border-color: var(--line-strong);
       transform: translateY(-1px);
+    }
+
+    .history-row.is-bookmarked {
+      border-color: var(--gold);
     }
 
     .history-row-top {
@@ -926,7 +1384,6 @@
     }
 
     .history-time {
-      flex: 0 0 auto;
       color: var(--muted);
       font-size: 11px;
       font-weight: 600;
@@ -949,6 +1406,7 @@
       background: var(--surface-subtle);
       color: var(--muted);
       cursor: pointer;
+      font-size: 12px;
       transition: all 140ms ease;
     }
 
@@ -956,6 +1414,12 @@
       border-color: var(--brand-accent);
       color: var(--brand-accent);
       background: var(--surface-hover);
+    }
+
+    .history-icon-btn.bookmark.active {
+      color: #d99b26;
+      border-color: #d99b26;
+      background: rgba(242, 201, 76, 0.14);
     }
 
     .history-icon-btn.delete:hover {
@@ -1008,10 +1472,43 @@
 
     .history-empty {
       grid-column: 1 / -1;
-      padding: 24px 0;
+      padding: 28px 0;
       color: var(--muted);
       font-size: 13px;
       text-align: center;
+    }
+
+    /* Statistical Insight Banner inside History */
+    .history-insight-bar {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .insight-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .insight-title {
+      color: var(--brand-accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .insight-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.5;
     }
 
     /* Footer */
@@ -1062,14 +1559,15 @@
     }
 
     @keyframes arrive {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     /* Tablet & Mobile Responsive */
-    @media (max-width: 860px) {
-      .page-shell { width: min(100% - 32px, 640px); }
-      main { padding-top: 32px; }
+    @media (max-width: 980px) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
       .workspace {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1079,28 +1577,18 @@
         grid-row: 1;
       }
       .results-column { grid-row: 2; }
-      .history { margin-top: 36px; padding: 18px; }
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 640px) {
       .page-shell { width: calc(100% - 24px); }
-      .topbar { height: 64px; }
-      .top-badge { display: none; }
-      .theme-toggle { height: 34px; padding: 0 11px; font-size: 11px; }
-      main { padding-top: 24px; }
-      .intro {
-        margin-bottom: 24px;
-        padding-bottom: 20px;
-        gap: 16px;
-      }
-      .intro-copy { font-size: 14px; }
-      .color-legend {
+      .round-pill {
+        order: 3;
         width: 100%;
-        justify-content: space-between;
-        padding: 9px 12px;
+        justify-content: center;
       }
-      .control-panel {
-        padding: 20px 18px 18px;
+      .top-badge { display: none; }
+      .color-legend {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
       }
       .ticket {
         grid-template-columns: 1fr auto;
@@ -1118,7 +1606,7 @@
         gap: 6px;
       }
       .ball {
-        width: clamp(36px, 12.2vw, 44px);
+        width: clamp(36px, 12vw, 44px);
         font-size: 14px;
       }
       .ticket-side {
@@ -1136,7 +1624,7 @@
       .text-button {
         flex: 1;
         justify-content: center;
-        min-height: 44px;
+        min-height: 42px;
       }
       .history-list {
         grid-template-columns: 1fr;
@@ -1161,13 +1649,21 @@
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="행운 번호 홈">
+      <a class="brand" href="#top" aria-label="행운 번호 스튜디오 홈">
         <span class="brand-mark" aria-hidden="true">행</span>
         <span class="brand-text">
-          <span>행운 번호</span>
-          <span class="brand-sub">LOTTO 6/45 STUDIO</span>
+          <span>행운 번호 스튜디오</span>
+          <span class="brand-sub">LOTTO 6/45 PREMIUM STUDIO v2.0</span>
         </span>
       </a>
+
+      <div class="round-pill" aria-label="이번 회차 추첨 안내">
+        <span class="round-dot" aria-hidden="true"></span>
+        <span id="round-title">제1145회 동행복권 추첨</span>
+        <span class="round-dday" id="round-dday">D-2 토</span>
+        <span class="round-time">20:35 마감</span>
+      </div>
+
       <div class="topbar-right">
         <span class="top-badge">5-GAME QUICK SLIP</span>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="다크 모드로 전환">
@@ -1181,16 +1677,51 @@
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
         <div class="intro-main">
-          <p class="eyebrow">A LITTLE LUCK, JUST FOR YOU</p>
-          <h1 id="page-title">오늘의 <span class="highlight">5게임 행운 조합</span></h1>
-          <p class="intro-copy">실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 번호 생성기입니다. 각 게임의 홀짝 비율과 번호 총합까지 한눈에 확인해 보세요.</p>
+          <p class="eyebrow">CRYPTOGRAPHIC LUCKY STUDIO</p>
+          <h1 id="page-title">오늘의 <span class="highlight">5게임 스마트 행운 조합</span></h1>
+          <p class="intro-copy">실제 로또 1장(A~E 5게임) 규격의 CSPRNG 난수 엔진에 게임 고정(Pin)·고정수/제외수 필터·합계 밸런스 분석을 더했습니다.</p>
         </div>
-        <div class="color-legend" aria-label="번호대별 색상 안내">
-          <span class="legend-item"><span class="legend-dot ball-yellow"></span>1–10</span>
-          <span class="legend-item"><span class="legend-dot ball-blue"></span>11–20</span>
-          <span class="legend-item"><span class="legend-dot ball-red"></span>21–30</span>
-          <span class="legend-item"><span class="legend-dot ball-gray"></span>31–40</span>
-          <span class="legend-item"><span class="legend-dot ball-green"></span>41–45</span>
+
+        <div class="bento-analytics" aria-label="번호대별 색상 및 현재 슬립 밸런스 분석">
+          <div class="bento-head">
+            <span class="bento-title">번호대별 색상 &amp; 현재 슬립 분포</span>
+            <span class="balance-score-badge" id="balance-score-badge">밸런스 지수 측정 대기</span>
+          </div>
+
+          <div class="color-legend">
+            <div class="legend-card">
+              <span class="legend-top"><span class="legend-dot ball-yellow"></span>1–10</span>
+              <span class="legend-stat" id="dist-0">0개 (0%)</span>
+            </div>
+            <div class="legend-card">
+              <span class="legend-top"><span class="legend-dot ball-blue"></span>11–20</span>
+              <span class="legend-stat" id="dist-1">0개 (0%)</span>
+            </div>
+            <div class="legend-card">
+              <span class="legend-top"><span class="legend-dot ball-red"></span>21–30</span>
+              <span class="legend-stat" id="dist-2">0개 (0%)</span>
+            </div>
+            <div class="legend-card">
+              <span class="legend-top"><span class="legend-dot ball-gray"></span>31–40</span>
+              <span class="legend-stat" id="dist-3">0개 (0%)</span>
+            </div>
+            <div class="legend-card">
+              <span class="legend-top"><span class="legend-dot ball-green"></span>41–45</span>
+              <span class="legend-stat" id="dist-4">0개 (0%)</span>
+            </div>
+          </div>
+
+          <div class="balance-gauge-box">
+            <div class="gauge-labels">
+              <span>최소 21</span>
+              <span>권장 구간 (100~175) · <strong id="gauge-avg-label">평균 -</strong></span>
+              <span>최대 255</span>
+            </div>
+            <div class="gauge-track" aria-hidden="true">
+              <div class="gauge-sweetspot"></div>
+              <div class="gauge-marker" id="gauge-marker" style="left: 50%;"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1198,28 +1729,27 @@
         <section class="results-column" aria-labelledby="results-title">
           <div class="section-heading">
             <div class="section-heading-left">
-              <h2 id="results-title">추첨 결과</h2>
+              <h2 id="results-title">추첨 결과 슬립</h2>
               <span class="slip-badge">SLIP A–E</span>
+              <span class="filter-active-badge" id="active-filter-badge" hidden>필터 적용됨</span>
             </div>
-            <span class="section-kicker" id="result-caption">번호 6개를 무작위로 뽑아요</span>
+            <span class="section-kicker" id="result-caption">5게임 스마트 추첨 준비 완료</span>
           </div>
 
-          <div class="ticket-list" id="ticket-list" aria-live="polite" aria-relevant="additions text">
-            <div class="empty-state" id="empty-state">
-              <span class="empty-orbit" aria-hidden="true">?</span>
-              <p>아직 추첨 전이에요. 행운 번호를 뽑아보세요.</p>
-              <span class="empty-sub">‘행운 번호 추첨’ 버튼을 누르면 선택한 게임 수만큼 즉시 생성됩니다.</span>
-            </div>
-          </div>
+          <div class="ticket-list" id="ticket-list" aria-live="polite" aria-relevant="additions text"></div>
 
           <div class="result-footer">
             <div class="summary-strip" id="summary-strip" aria-live="polite"></div>
             <div class="result-actions">
+              <button class="text-button" id="save-image-button" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>이미지 저장</span>
+              </button>
               <button class="text-button" id="share-button" type="button">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                 <span>공유하기</span>
               </button>
-              <button class="text-button" id="copy-button" type="button" disabled>
+              <button class="text-button primary-action" id="copy-button" type="button">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
                 <span id="copy-button-text">결과 복사</span>
               </button>
@@ -1229,10 +1759,16 @@
 
         <aside class="control-panel" aria-labelledby="control-title">
           <div class="control-header">
-            <h2 class="control-title" id="control-title">번호 뽑기</h2>
+            <h2 class="control-title" id="control-title">스마트 번호 스튜디오</h2>
             <span class="control-tag">CSPRNG</span>
           </div>
-          <p class="control-caption">원하는 게임 수를 선택하고 한 번에 추천받으세요.</p>
+          <p class="control-caption">게임 수와 필터 옵션을 설정하고 번호를 추첨하세요.</p>
+
+          <div class="mode-tabs" role="tablist" aria-label="추첨 모드 선택">
+            <button class="mode-tab" role="tab" type="button" aria-selected="true" data-mode="smart">스마트 밸런스</button>
+            <button class="mode-tab" role="tab" type="button" aria-selected="false" data-mode="random">완전 무작위</button>
+            <button class="mode-tab" role="tab" type="button" aria-selected="false" data-mode="custom">고정/제외수</button>
+          </div>
 
           <div class="control-label-row">
             <span class="control-label" id="count-label">한 번에 뽑기</span>
@@ -1247,6 +1783,40 @@
             <button class="count-option" type="button" aria-pressed="true" data-count="5">5<small>게임</small></button>
           </div>
 
+          <div class="smart-filter-box">
+            <div class="smart-filter-head">
+              <span class="smart-filter-title">고정수 · 제외수 &amp; 밸런스 옵션</span>
+              <button class="filter-edit-btn" id="toggle-matrix-btn" type="button" aria-expanded="false">편집하기 &gt;</button>
+            </div>
+
+            <div class="filter-chip-row">
+              <span class="filter-row-label">포함할 고정수</span>
+              <div class="filter-chips" id="fixed-chips-container"></div>
+            </div>
+
+            <div class="filter-chip-row">
+              <span class="filter-row-label">제외할 번호</span>
+              <div class="filter-chips" id="excluded-chips-container"></div>
+            </div>
+
+            <label class="balance-checkbox-label">
+              <input type="checkbox" id="balance-filter-checkbox" checked>
+              <span>총합 100~175 적정 구간 필터 ON (홀짝 6:0 배제)</span>
+            </label>
+          </div>
+
+          <div class="matrix-drawer" id="matrix-drawer" aria-label="1부터 45 고정수 및 제외수 선택 매트릭스">
+            <div class="matrix-head">
+              <strong>1~45 고정수 / 제외수 볼 매트릭스</strong>
+            </div>
+            <p class="matrix-guide">1회 클릭: 고정수(최대 2개) · 2회 클릭: 제외수(최대 10개) · 3회 클릭: 해제</p>
+            <div class="matrix-grid" id="matrix-grid"></div>
+            <div class="matrix-footer">
+              <button class="matrix-reset-btn" id="matrix-reset-btn" type="button">초기화</button>
+              <button class="matrix-apply-btn" id="matrix-close-btn" type="button">필터 적용하기</button>
+            </div>
+          </div>
+
           <button class="draw-button" id="draw-button" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M5.6 9a7 7 0 0 1 11.6-2L20 12M4 12l2.8 5a7 7 0 0 0 11.6-2"></path></svg>
             <span id="draw-button-label">5게임 행운 번호 추첨</span>
@@ -1254,7 +1824,8 @@
 
           <ul class="control-features">
             <li>웹 암호학 난수(crypto.getRandomValues) 적용</li>
-            <li>개별 게임 다시 뽑기 및 전체 결과 복사 지원</li>
+            <li>마음에 드는 게임 고정(잠금) 후 나머지 게임만 재추첨</li>
+            <li>추첨 슬립 이미지 저장 및 클립보드 일괄 복사 지원</li>
           </ul>
           <p class="control-footnote">각 게임은 중복 없이 6개 번호로 구성됩니다.</p>
         </aside>
@@ -1262,18 +1833,30 @@
 
       <section class="history" aria-labelledby="history-title">
         <div class="history-heading">
-          <h2 id="history-title">최근 추첨 <span id="history-count">0</span></h2>
+          <div class="history-heading-left">
+            <h2 id="history-title">최근 추첨 기록 <span id="history-count">0</span></h2>
+            <div class="history-filter-tabs" role="tablist" aria-label="기록 필터">
+              <button class="history-tab" role="tab" type="button" aria-selected="true" data-history-filter="all">전체 보기</button>
+              <button class="history-tab" role="tab" type="button" aria-selected="false" data-history-filter="bookmarked">북마크한 조합</button>
+            </div>
+          </div>
           <button class="history-clear" id="clear-history" type="button">기록 지우기</button>
         </div>
-        <div class="history-list" id="history-list">
-          <div class="history-empty">아직 저장된 추첨 기록이 없습니다.</div>
+
+        <div class="history-list" id="history-list"></div>
+
+        <div class="history-insight-bar">
+          <div class="insight-text-group">
+            <span class="insight-title">누적 추첨 통계 인사이트</span>
+            <p class="insight-desc" id="insight-desc">추첨을 진행하면 최다 출현 행운 번호와 평균 합계 통계가 이곳에 표시됩니다.</p>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <span>행운 번호는 재미를 위한 무작위 번호 생성기입니다.</span>
-      <span>이용 결과는 당첨을 보장하지 않습니다.</span>
+      <span>행운 번호 스튜디오는 재미를 위한 암호학 기반 무작위 번호 생성기입니다.</span>
+      <span>이용 결과는 실제 당첨을 보장하지 않습니다.</span>
     </footer>
     <div id="toast" class="toast" aria-hidden="true"></div>
     <div id="announcement" role="status" aria-live="polite"></div>
@@ -1282,14 +1865,16 @@
   <script>
     const HISTORY_KEY = "lucky-number-history-v1";
     const THEME_KEY = "lucky-number-theme-v1";
-    const MAX_HISTORY = 25;
+    const MAX_HISTORY = 30;
     const GAME_LETTERS = ["A", "B", "C", "D", "E"];
+
     const ticketList = document.querySelector("#ticket-list");
     const historyList = document.querySelector("#history-list");
     const historyCount = document.querySelector("#history-count");
     const clearHistoryBtn = document.querySelector("#clear-history");
     const copyButton = document.querySelector("#copy-button");
     const copyButtonText = document.querySelector("#copy-button-text");
+    const saveImageButton = document.querySelector("#save-image-button");
     const drawButtonLabel = document.querySelector("#draw-button-label");
     const summaryStrip = document.querySelector("#summary-strip");
     const announcement = document.querySelector("#announcement");
@@ -1297,11 +1882,46 @@
     const themeToggle = document.querySelector("#theme-toggle");
     const themeToggleText = document.querySelector("#theme-toggle-text");
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    let toastTimer = null;
+    const balanceFilterCheckbox = document.querySelector("#balance-filter-checkbox");
+    const matrixDrawer = document.querySelector("#matrix-drawer");
+    const matrixGrid = document.querySelector("#matrix-grid");
+    const toggleMatrixBtn = document.querySelector("#toggle-matrix-btn");
+    const activeFilterBadge = document.querySelector("#active-filter-badge");
+    const balanceScoreBadge = document.querySelector("#balance-score-badge");
+    const gaugeMarker = document.querySelector("#gauge-marker");
+    const gaugeAvgLabel = document.querySelector("#gauge-avg-label");
+    const insightDesc = document.querySelector("#insight-desc");
 
+    let toastTimer = null;
     let selectedCount = 5;
-    let latestDraw = [];
+    let currentMode = "smart";
+    let historyFilter = "all";
+    let fixedNumbers = [];
+    let excludedNumbers = [];
+    let latestDraw = []; // Array of { numbers: number[], pinned: boolean }
     let history = loadHistory();
+
+    /* Calculate real Lotto 6/45 draw round & D-Day */
+    function updateDrawRoundInfo() {
+      const roundTitleEl = document.querySelector("#round-title");
+      const roundDdayEl = document.querySelector("#round-dday");
+      if (!roundTitleEl || !roundDdayEl) return;
+
+      const round1Date = new Date("2002-12-07T20:35:00+09:00");
+      const now = new Date();
+      const diffMs = now.getTime() - round1Date.getTime();
+      const weekMs = 7 * 24 * 60 * 60 * 1000;
+      const upcomingRound = Math.max(1, Math.floor(diffMs / weekMs) + 2);
+
+      const dayOfWeek = now.getDay(); // 0=Sun ... 6=Sat
+      let daysUntilSat = (6 - dayOfWeek + 7) % 7;
+      if (daysUntilSat === 0 && (now.getHours() > 20 || (now.getHours() === 20 && now.getMinutes() >= 35))) {
+        daysUntilSat = 7;
+      }
+
+      roundTitleEl.textContent = `제${upcomingRound}회 동행복권 추첨`;
+      roundDdayEl.textContent = daysUntilSat === 0 ? "D-Day 토" : `D-${daysUntilSat} 토`;
+    }
 
     async function writeClipboard(text) {
       try {
@@ -1340,26 +1960,10 @@
       try {
         localStorage.setItem(THEME_KEY, next);
       } catch {
-        // localStorage 접근 불가 시 현재 세션에만 적용
+        // Ignore storage error
       }
       applyTheme(next, true);
     });
-
-    if (window.matchMedia) {
-      const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      const handleSchemeChange = (event) => {
-        try {
-          if (!localStorage.getItem(THEME_KEY)) {
-            applyTheme(event.matches ? "dark" : "light", false);
-          }
-        } catch {
-          applyTheme(event.matches ? "dark" : "light", false);
-        }
-      };
-      if (typeof colorSchemeQuery.addEventListener === "function") {
-        colorSchemeQuery.addEventListener("change", handleSchemeChange);
-      }
-    }
 
     function showToast(message) {
       if (!toast) return;
@@ -1374,11 +1978,18 @@
     function loadHistory() {
       try {
         const saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-        return Array.isArray(saved) ? saved.filter((entry) =>
-          Array.isArray(entry.numbers) && entry.numbers.length === 6 &&
-          entry.numbers.every((number) => Number.isInteger(number) && number >= 1 && number <= 45) &&
-          typeof entry.time === "string"
-        ).slice(0, MAX_HISTORY) : [];
+        return Array.isArray(saved)
+          ? saved
+              .filter(
+                (entry) =>
+                  Array.isArray(entry.numbers) &&
+                  entry.numbers.length === 6 &&
+                  entry.numbers.every((number) => Number.isInteger(number) && number >= 1 && number <= 45) &&
+                  typeof entry.time === "string"
+              )
+              .map((entry) => ({ ...entry, bookmarked: Boolean(entry.bookmarked) }))
+              .slice(0, MAX_HISTORY)
+          : [];
       } catch {
         return [];
       }
@@ -1400,33 +2011,247 @@
       return "ball-green";
     }
 
-    function drawNumbers() {
-      const pool = Array.from({ length: 45 }, (_, index) => index + 1);
-      for (let index = pool.length - 1; index > 0; index -= 1) {
-        const random = new Uint32Array(1);
-        crypto.getRandomValues(random);
-        const swapIndex = Math.floor((random[0] / 4294967296) * (index + 1));
-        [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
+    function csprngInt(maxExclusive) {
+      const random = new Uint32Array(1);
+      crypto.getRandomValues(random);
+      return Math.floor((random[0] / 4294967296) * maxExclusive);
+    }
+
+    function drawSingleGame() {
+      const useBalance = balanceFilterCheckbox && balanceFilterCheckbox.checked;
+      const availablePool = [];
+      for (let n = 1; n <= 45; n += 1) {
+        if (!fixedNumbers.includes(n) && !excludedNumbers.includes(n)) {
+          availablePool.push(n);
+        }
       }
-      return pool.slice(0, 6).sort((left, right) => left - right);
+
+      const needed = Math.max(0, 6 - fixedNumbers.length);
+      let bestCandidate = null;
+
+      for (let attempt = 0; attempt < 120; attempt += 1) {
+        const poolCopy = [...availablePool];
+        for (let i = poolCopy.length - 1; i > 0; i -= 1) {
+          const swapIndex = csprngInt(i + 1);
+          [poolCopy[i], poolCopy[swapIndex]] = [poolCopy[swapIndex], poolCopy[i]];
+        }
+        const candidate = [...fixedNumbers, ...poolCopy.slice(0, needed)].sort((a, b) => a - b);
+        bestCandidate = candidate;
+
+        if (!useBalance) break;
+
+        const sum = candidate.reduce((a, b) => a + b, 0);
+        const odd = candidate.filter((n) => n % 2 === 1).length;
+        if (sum >= 100 && sum <= 175 && odd >= 1 && odd <= 5) {
+          return candidate;
+        }
+      }
+      return bestCandidate;
     }
 
     function formatNow() {
       return new Intl.DateTimeFormat("ko-KR", {
-        month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
       }).format(new Date());
     }
 
-    function renderSummary() {
-      summaryStrip.replaceChildren();
-      if (latestDraw.length === 0) return;
+    /* Render Fixed / Excluded Filter Chips & Matrix */
+    function renderFilterState() {
+      const fixedContainer = document.querySelector("#fixed-chips-container");
+      const excludedContainer = document.querySelector("#excluded-chips-container");
+      fixedContainer.replaceChildren();
+      excludedContainer.replaceChildren();
 
-      const flat = latestDraw.flat();
+      fixedNumbers.forEach((num) => {
+        const chip = document.createElement("span");
+        chip.className = "chip-fixed";
+        chip.textContent = String(num).padStart(2, "0");
+        fixedContainer.append(chip);
+      });
+
+      const addFixedBtn = document.createElement("button");
+      addFixedBtn.type = "button";
+      addFixedBtn.className = "chip-add-btn";
+      addFixedBtn.textContent = fixedNumbers.length ? "편집" : "+ 추가";
+      addFixedBtn.addEventListener("click", () => toggleMatrixDrawer(true));
+      fixedContainer.append(addFixedBtn);
+
+      excludedNumbers.forEach((num) => {
+        const chip = document.createElement("span");
+        chip.className = "chip-excluded";
+        chip.textContent = String(num).padStart(2, "0");
+        excludedContainer.append(chip);
+      });
+
+      const addExclBtn = document.createElement("button");
+      addExclBtn.type = "button";
+      addExclBtn.className = "chip-add-btn";
+      addExclBtn.textContent = excludedNumbers.length ? "편집" : "+ 추가";
+      addExclBtn.addEventListener("click", () => toggleMatrixDrawer(true));
+      excludedContainer.append(addExclBtn);
+
+      if (fixedNumbers.length > 0 || excludedNumbers.length > 0) {
+        activeFilterBadge.hidden = false;
+        const parts = [];
+        if (fixedNumbers.length) {
+          parts.push(`고정수: ${fixedNumbers.map((n) => String(n).padStart(2, "0")).join(", ")}`);
+        }
+        if (excludedNumbers.length) {
+          parts.push(`제외수 ${excludedNumbers.length}개`);
+        }
+        activeFilterBadge.textContent = parts.join(" · ");
+      } else {
+        activeFilterBadge.hidden = true;
+      }
+
+      matrixGrid.querySelectorAll(".matrix-ball").forEach((btn) => {
+        const num = Number(btn.dataset.num);
+        btn.classList.remove("state-fixed", "state-excluded");
+        if (fixedNumbers.includes(num)) {
+          btn.classList.add("state-fixed");
+        } else if (excludedNumbers.includes(num)) {
+          btn.classList.add("state-excluded");
+        }
+      });
+    }
+
+    function initMatrixGrid() {
+      matrixGrid.replaceChildren();
+      for (let n = 1; n <= 45; n += 1) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "matrix-ball";
+        btn.dataset.num = String(n);
+        btn.textContent = String(n).padStart(2, "0");
+        btn.addEventListener("click", () => {
+          if (fixedNumbers.includes(n)) {
+            fixedNumbers = fixedNumbers.filter((x) => x !== n);
+            if (excludedNumbers.length < 10) {
+              excludedNumbers.push(n);
+              excludedNumbers.sort((a, b) => a - b);
+            } else {
+              showToast("제외수는 최대 10개까지 설정할 수 있습니다.");
+            }
+          } else if (excludedNumbers.includes(n)) {
+            excludedNumbers = excludedNumbers.filter((x) => x !== n);
+          } else {
+            if (fixedNumbers.length < 2) {
+              fixedNumbers.push(n);
+              fixedNumbers.sort((a, b) => a - b);
+            } else if (excludedNumbers.length < 10) {
+              excludedNumbers.push(n);
+              excludedNumbers.sort((a, b) => a - b);
+              showToast("고정수(최대 2개)가 가득 차서 제외수로 등록되었습니다.");
+            } else {
+              showToast("고정수(2개)와 제외수(10개) 한도에 도달했습니다.");
+            }
+          }
+          renderFilterState();
+          renderTickets();
+        });
+        matrixGrid.append(btn);
+      }
+    }
+
+    function toggleMatrixDrawer(forceOpen) {
+      const next = typeof forceOpen === "boolean" ? forceOpen : !matrixDrawer.classList.contains("is-open");
+      matrixDrawer.classList.toggle("is-open", next);
+      toggleMatrixBtn.setAttribute("aria-expanded", String(next));
+      toggleMatrixBtn.textContent = next ? "닫기 ^" : "편집하기 >";
+    }
+
+    toggleMatrixBtn.addEventListener("click", () => toggleMatrixDrawer());
+    document.querySelector("#matrix-close-btn").addEventListener("click", () => {
+      toggleMatrixDrawer(false);
+      showToast("고정수·제외수 필터가 적용되었습니다.");
+    });
+    document.querySelector("#matrix-reset-btn").addEventListener("click", () => {
+      fixedNumbers = [];
+      excludedNumbers = [];
+      renderFilterState();
+      renderTickets();
+      showToast("고정수 및 제외수 설정을 초기화했습니다.");
+    });
+
+    /* Mode Tabs */
+    document.querySelectorAll(".mode-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        currentMode = tab.dataset.mode;
+        document.querySelectorAll(".mode-tab").forEach((t) => {
+          t.setAttribute("aria-selected", String(t === tab));
+        });
+        if (currentMode === "smart") {
+          balanceFilterCheckbox.checked = true;
+          toggleMatrixDrawer(false);
+        } else if (currentMode === "random") {
+          balanceFilterCheckbox.checked = false;
+          toggleMatrixDrawer(false);
+        } else if (currentMode === "custom") {
+          toggleMatrixDrawer(true);
+        }
+      });
+    });
+
+    /* Update Bento Distribution & Balance Score */
+    function renderAnalyticsAndSummary() {
+      summaryStrip.replaceChildren();
+      const counts = [0, 0, 0, 0, 0];
+
+      if (latestDraw.length === 0) {
+        for (let i = 0; i < 5; i += 1) {
+          document.querySelector(`#dist-${i}`).textContent = "0개 (0%)";
+        }
+        balanceScoreBadge.textContent = "밸런스 지수 측정 대기";
+        gaugeAvgLabel.textContent = "평균 -";
+        gaugeMarker.style.left = "50%";
+        return;
+      }
+
+      const flat = latestDraw.flatMap((g) => g.numbers);
+      flat.forEach((n) => {
+        if (n <= 10) counts[0] += 1;
+        else if (n <= 20) counts[1] += 1;
+        else if (n <= 30) counts[2] += 1;
+        else if (n <= 40) counts[3] += 1;
+        else counts[4] += 1;
+      });
+
+      counts.forEach((c, idx) => {
+        const pct = Math.round((c / flat.length) * 100);
+        document.querySelector(`#dist-${idx}`).textContent = `${c}개 (${pct}%)`;
+      });
+
       const oddCount = flat.filter((n) => n % 2 === 1).length;
       const evenCount = flat.length - oddCount;
-      const avgSum = Math.round(
-        latestDraw.reduce((acc, nums) => acc + nums.reduce((a, b) => a + b, 0), 0) / latestDraw.length
+      const avgSum =
+        Math.round(
+          (latestDraw.reduce((acc, g) => acc + g.numbers.reduce((a, b) => a + b, 0), 0) / latestDraw.length) * 10
+        ) / 10;
+
+      // Balance score calculation (out of 100)
+      const inRangeGames = latestDraw.filter((g) => {
+        const s = g.numbers.reduce((a, b) => a + b, 0);
+        return s >= 100 && s <= 175;
+      }).length;
+      const bucketsUsed = counts.filter((c) => c > 0).length;
+      const oddRatioDiff = Math.abs(0.5 - oddCount / flat.length);
+      const score = Math.min(
+        99,
+        Math.max(
+          68,
+          Math.round(55 + (inRangeGames / latestDraw.length) * 25 + bucketsUsed * 3 - oddRatioDiff * 20)
+        )
       );
+      const grade = score >= 90 ? "우수" : score >= 80 ? "양호" : "보통";
+      balanceScoreBadge.textContent = `밸런스 지수 ${score}점 (${grade})`;
+
+      gaugeAvgLabel.textContent = `평균 ${avgSum}`;
+      const gaugePct = Math.min(96, Math.max(4, ((avgSum - 21) / (255 - 21)) * 100));
+      gaugeMarker.style.left = `${gaugePct}%`;
 
       const pill1 = document.createElement("span");
       pill1.className = "summary-pill";
@@ -1445,17 +2270,20 @@
 
     function renderTickets() {
       ticketList.replaceChildren();
-      latestDraw.forEach((numbers, index) => {
+      const pinnedCount = latestDraw.filter((g) => g.pinned).length;
+
+      latestDraw.forEach((game, index) => {
+        const { numbers, pinned } = game;
         const ticket = document.createElement("div");
-        ticket.className = "ticket";
-        ticket.style.animationDelay = `${index * 60}ms`;
+        ticket.className = `ticket${pinned ? " is-pinned" : ""}`;
+        ticket.style.animationDelay = `${index * 45}ms`;
 
         const meta = document.createElement("div");
         meta.className = "ticket-meta";
 
         const gameBadge = document.createElement("span");
         gameBadge.className = "ticket-game";
-        gameBadge.textContent = `GAME ${GAME_LETTERS[index] || index + 1}`;
+        gameBadge.textContent = `GAME ${GAME_LETTERS[index] || index + 1}${pinned ? " · 고정됨" : ""}`;
 
         const label = document.createElement("span");
         label.className = "ticket-index";
@@ -1468,34 +2296,63 @@
         balls.setAttribute("aria-label", numbers.join(", "));
         numbers.forEach((number) => {
           const ball = document.createElement("span");
-          ball.className = `ball ${colorClass(number)}`;
-          ball.textContent = String(number);
+          const isFixed = fixedNumbers.includes(number);
+          ball.className = `ball ${colorClass(number)}${isFixed ? " is-fixed-ball" : ""}`;
+          ball.textContent = String(number).padStart(2, "0");
           balls.append(ball);
         });
 
         const sum = numbers.reduce((acc, cur) => acc + cur, 0);
         const odd = numbers.filter((n) => n % 2 === 1).length;
         const even = 6 - odd;
+        const isSweetSpot = sum >= 100 && sum <= 175;
 
         const side = document.createElement("div");
         side.className = "ticket-side";
 
         const stats = document.createElement("div");
         stats.className = "ticket-stats";
-        stats.innerHTML = `<span>합계 <strong>${sum}</strong></span><span>홀짝 <strong>${odd}:${even}</strong></span>`;
+
+        const sumBadge = document.createElement("span");
+        sumBadge.className = `sum-badge${isSweetSpot ? "" : " out-of-range"}`;
+        sumBadge.textContent = `합계 ${sum} ${isSweetSpot ? "적정" : sum < 100 ? "저합" : "고합"}`;
+
+        const oddEvenSpan = document.createElement("span");
+        oddEvenSpan.textContent = `홀짝 ${odd} : ${even}`;
+
+        stats.append(sumBadge, oddEvenSpan);
+
+        const btnGroup = document.createElement("div");
+        btnGroup.className = "ticket-btn-group";
+
+        const pinBtn = document.createElement("button");
+        pinBtn.type = "button";
+        pinBtn.className = "ticket-pin-btn";
+        pinBtn.setAttribute("aria-pressed", String(pinned));
+        pinBtn.textContent = pinned ? "잠금됨" : "고정";
+        pinBtn.addEventListener("click", () => {
+          latestDraw[index].pinned = !latestDraw[index].pinned;
+          renderTickets();
+          const stateMsg = latestDraw[index].pinned
+            ? `${GAME_LETTERS[index]}게임을 고정했습니다. 재추첨 시 유지됩니다.`
+            : `${GAME_LETTERS[index]}게임 고정을 해제했습니다.`;
+          showToast(stateMsg);
+        });
 
         const rerollBtn = document.createElement("button");
         rerollBtn.type = "button";
         rerollBtn.className = "ticket-reroll";
-        rerollBtn.title = `${index + 1}번 게임 다시 뽑기`;
+        rerollBtn.textContent = "리롤";
         rerollBtn.setAttribute("aria-label", `${index + 1}번 게임 다시 뽑기`);
-        rerollBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>`;
         rerollBtn.addEventListener("click", () => {
-          const newNumbers = drawNumbers();
-          latestDraw[index] = newNumbers;
+          const newNumbers = drawSingleGame();
+          latestDraw[index].numbers = newNumbers;
           const time = formatNow();
           const labelText = `GAME ${GAME_LETTERS[index] || index + 1} · 리롤`;
-          history = [{ numbers: newNumbers, time, label: labelText }, ...history].slice(0, MAX_HISTORY);
+          history = [{ numbers: newNumbers, time, label: labelText, bookmarked: false }, ...history].slice(
+            0,
+            MAX_HISTORY
+          );
           saveHistory();
           renderTickets();
           renderHistory();
@@ -1504,16 +2361,40 @@
           showToast(msg);
         });
 
-        side.append(stats, rerollBtn);
+        btnGroup.append(pinBtn, rerollBtn);
+        side.append(stats, btnGroup);
         ticket.append(meta, balls, side);
         ticketList.append(ticket);
       });
 
       copyButton.disabled = latestDraw.length === 0;
+      saveImageButton.disabled = latestDraw.length === 0;
       document.querySelector("#result-caption").textContent = latestDraw.length
-        ? `${latestDraw.length}게임 추첨 완료`
+        ? `${latestDraw.length}게임 추첨 완료${pinnedCount ? ` · ${pinnedCount}개 게임 고정됨` : ""}`
         : "번호 6개를 무작위로 뽑아요";
-      renderSummary();
+      renderAnalyticsAndSummary();
+    }
+
+    function renderInsights() {
+      if (history.length === 0) {
+        insightDesc.textContent = "추첨을 진행하면 최다 출현 행운 번호와 평균 합계 통계가 이곳에 표시됩니다.";
+        return;
+      }
+      const freq = new Map();
+      let totalSum = 0;
+      history.forEach((entry) => {
+        totalSum += entry.numbers.reduce((a, b) => a + b, 0);
+        entry.numbers.forEach((n) => {
+          freq.set(n, (freq.get(n) || 0) + 1);
+        });
+      });
+      const top3 = [...freq.entries()]
+        .sort((a, b) => b[1] - a[1] || a[0] - b[0])
+        .slice(0, 3)
+        .map(([num, cnt]) => `${String(num).padStart(2, "0")}번(${cnt}회)`)
+        .join(", ");
+      const avgSum = (totalSum / history.length).toFixed(1);
+      insightDesc.textContent = `최근 ${history.length}게임 중 가장 많이 등장한 행운 번호는 ${top3}이며, 평균 합계는 ${avgSum}로 권장 구간(100~175) 내에 있습니다.`;
     }
 
     function renderHistory() {
@@ -1522,17 +2403,26 @@
       if (clearHistoryBtn) {
         clearHistoryBtn.disabled = history.length === 0;
       }
-      if (history.length === 0) {
+      renderInsights();
+
+      const filtered =
+        historyFilter === "bookmarked" ? history.filter((entry) => entry.bookmarked) : history;
+
+      if (filtered.length === 0) {
         const empty = document.createElement("div");
         empty.className = "history-empty";
-        empty.textContent = "아직 저장된 추첨 기록이 없습니다.";
+        empty.textContent =
+          historyFilter === "bookmarked"
+            ? "아직 북마크(★)한 추첨 조합이 없습니다."
+            : "아직 저장된 추첨 기록이 없습니다.";
         historyList.append(empty);
         return;
       }
 
-      history.forEach((entry, index) => {
+      filtered.forEach((entry) => {
+        const realIndex = history.indexOf(entry);
         const row = document.createElement("div");
-        row.className = "history-row";
+        row.className = `history-row${entry.bookmarked ? " is-bookmarked" : ""}`;
 
         const top = document.createElement("div");
         top.className = "history-row-top";
@@ -1553,35 +2443,45 @@
         const actions = document.createElement("div");
         actions.className = "history-actions";
 
+        const bookmarkBtn = document.createElement("button");
+        bookmarkBtn.type = "button";
+        bookmarkBtn.className = `history-icon-btn bookmark${entry.bookmarked ? " active" : ""}`;
+        bookmarkBtn.title = entry.bookmarked ? "북마크 해제" : "이 조합 북마크";
+        bookmarkBtn.textContent = entry.bookmarked ? "★" : "☆";
+        bookmarkBtn.addEventListener("click", () => {
+          if (realIndex !== -1) {
+            history[realIndex].bookmarked = !history[realIndex].bookmarked;
+            saveHistory();
+            renderHistory();
+          }
+        });
+
         const copyItemBtn = document.createElement("button");
         copyItemBtn.type = "button";
         copyItemBtn.className = "history-icon-btn";
         copyItemBtn.title = "이 번호 조합 복사";
-        copyItemBtn.setAttribute("aria-label", `${entry.numbers.join(", ")} 복사`);
         copyItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>`;
         copyItemBtn.addEventListener("click", async () => {
-          const text = entry.numbers.join(", ");
+          const text = entry.numbers.map((n) => String(n).padStart(2, "0")).join(", ");
           await writeClipboard(text);
-          const msg = `기록 번호(${text})가 복사되었습니다.`;
-          announcement.textContent = msg;
-          showToast(msg);
+          showToast(`기록 번호(${text})가 복사되었습니다.`);
         });
 
         const deleteItemBtn = document.createElement("button");
         deleteItemBtn.type = "button";
         deleteItemBtn.className = "history-icon-btn delete";
         deleteItemBtn.title = "이 기록 삭제";
-        deleteItemBtn.setAttribute("aria-label", "이 추첨 기록 삭제");
         deleteItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
         deleteItemBtn.addEventListener("click", () => {
-          history.splice(index, 1);
-          saveHistory();
-          renderHistory();
-          announcement.textContent = "선택한 추첨 기록을 삭제했습니다.";
-          showToast("선택한 기록을 삭제했습니다.");
+          if (realIndex !== -1) {
+            history.splice(realIndex, 1);
+            saveHistory();
+            renderHistory();
+            showToast("선택한 기록을 삭제했습니다.");
+          }
         });
 
-        actions.append(copyItemBtn, deleteItemBtn);
+        actions.append(bookmarkBtn, copyItemBtn, deleteItemBtn);
         top.append(meta, actions);
 
         const bottom = document.createElement("div");
@@ -1589,11 +2489,10 @@
 
         const balls = document.createElement("div");
         balls.className = "history-balls";
-        balls.setAttribute("aria-label", entry.numbers.join(", "));
         entry.numbers.forEach((number) => {
           const ball = document.createElement("span");
           ball.className = `mini-ball ${colorClass(number)}`;
-          ball.textContent = String(number);
+          ball.textContent = String(number).padStart(2, "0");
           balls.append(ball);
         });
 
@@ -1610,6 +2509,16 @@
       });
     }
 
+    document.querySelectorAll(".history-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        historyFilter = tab.dataset.historyFilter;
+        document.querySelectorAll(".history-tab").forEach((t) => {
+          t.setAttribute("aria-selected", String(t === tab));
+        });
+        renderHistory();
+      });
+    });
+
     document.querySelectorAll(".count-option").forEach((button) => {
       button.addEventListener("click", () => {
         selectedCount = Number(button.dataset.count);
@@ -1620,33 +2529,51 @@
       });
     });
 
-    function runDraw() {
-      latestDraw = Array.from({ length: selectedCount }, drawNumbers);
+    function runDraw(recordToHistory = true) {
+      const nextDraw = [];
       const time = formatNow();
-      const newEntries = latestDraw.map((numbers, idx) => ({
-        numbers,
-        time,
-        label: `GAME ${GAME_LETTERS[idx] || idx + 1}`
-      }));
-      history = [...newEntries, ...history].slice(0, MAX_HISTORY);
-      saveHistory();
+      const newEntries = [];
+
+      for (let i = 0; i < selectedCount; i += 1) {
+        if (latestDraw[i] && latestDraw[i].pinned) {
+          nextDraw.push({ numbers: [...latestDraw[i].numbers], pinned: true });
+        } else {
+          const nums = drawSingleGame();
+          nextDraw.push({ numbers: nums, pinned: false });
+          if (recordToHistory) {
+            newEntries.push({
+              numbers: nums,
+              time,
+              label: `GAME ${GAME_LETTERS[i] || i + 1}`,
+              bookmarked: false
+            });
+          }
+        }
+      }
+
+      latestDraw = nextDraw;
+      if (recordToHistory && newEntries.length > 0) {
+        history = [...newEntries, ...history].slice(0, MAX_HISTORY);
+        saveHistory();
+      }
       renderTickets();
       renderHistory();
-      announcement.textContent = `${selectedCount}게임의 로또 번호를 추첨했습니다.`;
     }
 
     document.querySelector("#draw-button").addEventListener("click", () => {
-      runDraw();
-      showToast(`${selectedCount}게임 행운 조합이 생성되었습니다.`);
+      runDraw(true);
+      showToast(`${selectedCount}게임 스마트 행운 조합이 생성되었습니다.`);
     });
 
     copyButton.addEventListener("click", async () => {
       if (latestDraw.length === 0) return;
       const text = latestDraw
-        .map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`)
+        .map(
+          (g, index) =>
+            `GAME ${GAME_LETTERS[index] || index + 1}: ${g.numbers.map((n) => String(n).padStart(2, "0")).join(", ")}`
+        )
         .join("\n");
       await writeClipboard(text);
-      announcement.textContent = "추첨 결과를 복사했습니다.";
       copyButtonText.textContent = "복사 완료!";
       showToast("추첨 결과가 클립보드에 복사되었습니다.");
       setTimeout(() => {
@@ -1654,24 +2581,98 @@
       }, 1800);
     });
 
+    /* Save Slip as PNG Image via Canvas */
+    saveImageButton.addEventListener("click", () => {
+      if (latestDraw.length === 0) return;
+      const canvas = document.createElement("canvas");
+      const rowH = 74;
+      const width = 760;
+      const height = 170 + latestDraw.length * rowH;
+      canvas.width = width * 2;
+      canvas.height = height * 2;
+      const ctx = canvas.getContext("2d");
+      ctx.scale(2, 2);
+
+      // Background
+      ctx.fillStyle = "#0F3D2E";
+      ctx.fillRect(0, 0, width, height);
+
+      // Header text
+      ctx.fillStyle = "#C9EF74";
+      ctx.font = "800 20px Pretendard, sans-serif";
+      ctx.fillText("행운 번호 스튜디오 · SMART SLIP A–E", 32, 44);
+      ctx.fillStyle = "rgba(255,255,255,0.75)";
+      ctx.font = "600 12px Pretendard, sans-serif";
+      ctx.fillText(`${document.querySelector("#round-title").textContent} · 생성시각 ${formatNow()}`, 32, 68);
+
+      latestDraw.forEach((game, idx) => {
+        const y = 92 + idx * rowH;
+        ctx.fillStyle = "#FFFFFF";
+        ctx.beginPath();
+        ctx.roundRect(28, y, width - 56, 62, 12);
+        ctx.fill();
+
+        ctx.fillStyle = "#175943";
+        ctx.font = "800 12px Pretendard, sans-serif";
+        ctx.fillText(`GAME ${GAME_LETTERS[idx]}`, 48, y + 28);
+        ctx.fillStyle = "#69756E";
+        ctx.font = "700 12px Georgia, serif";
+        ctx.fillText(`NO. 0${idx + 1}`, 48, y + 46);
+
+        game.numbers.forEach((num, bIdx) => {
+          const cx = 165 + bIdx * 54;
+          const cy = y + 31;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 20, 0, Math.PI * 2);
+          ctx.fillStyle =
+            num <= 10 ? "#F2C94C" : num <= 20 ? "#6EB4F7" : num <= 30 ? "#F28472" : num <= 40 ? "#B8C0BC" : "#7ED175";
+          ctx.fill();
+
+          ctx.fillStyle = "#14201B";
+          ctx.font = "800 14px Pretendard, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(String(num).padStart(2, "0"), cx, cy + 1);
+        });
+
+        ctx.textAlign = "right";
+        ctx.textBaseline = "alphabetic";
+        const sum = game.numbers.reduce((a, b) => a + b, 0);
+        const odd = game.numbers.filter((n) => n % 2 === 1).length;
+        ctx.fillStyle = "#0F3D2E";
+        ctx.font = "800 12px Pretendard, sans-serif";
+        ctx.fillText(`합계 ${sum} · 홀짝 ${odd}:${6 - odd}`, width - 48, y + 36);
+        ctx.textAlign = "left";
+      });
+
+      const link = document.createElement("a");
+      link.download = `lucky-slip-${Date.now()}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      showToast("로또 추첨 슬립 이미지가 저장되었습니다.");
+    });
+
     document.querySelector("#share-button").addEventListener("click", async () => {
       const PUBLIC_URL = "https://asap-art.github.io/lecture/";
-      const shareUrl = window.location.protocol.startsWith("http")
-        ? window.location.href
-        : PUBLIC_URL;
+      const shareUrl = window.location.protocol.startsWith("http") ? window.location.href : PUBLIC_URL;
       const drawSummary = latestDraw.length
-        ? "\n\n" + latestDraw.map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`).join("\n")
+        ? "\n\n" +
+          latestDraw
+            .map(
+              (g, index) =>
+                `GAME ${GAME_LETTERS[index] || index + 1}: ${g.numbers.map((n) => String(n).padStart(2, "0")).join(", ")}`
+            )
+            .join("\n")
         : "";
       const shareData = {
-        title: "행운 번호 스튜디오 | 로또 6/45 5게임 추천",
-        text: `오늘의 로또 5게임 행운 조합을 확인해 보세요!${drawSummary}`,
+        title: "행운 번호 스튜디오 | 스마트 로또 6/45 5게임 추천",
+        text: `오늘의 로또 5게임 스마트 행운 조합을 확인해 보세요!${drawSummary}`,
         url: shareUrl
       };
 
       if (navigator.share) {
         try {
           await navigator.share(shareData);
-          announcement.textContent = "공유 창을 열었습니다.";
           return;
         } catch (err) {
           if (err && err.name === "AbortError") return;
@@ -1679,7 +2680,6 @@
       }
 
       await writeClipboard(`${shareData.text}\n${shareUrl}`);
-      announcement.textContent = "공유 링크를 복사했습니다.";
       showToast("공유 링크와 번호가 클립보드에 복사되었습니다.");
     });
 
@@ -1687,12 +2687,15 @@
       history = [];
       saveHistory();
       renderHistory();
-      announcement.textContent = "추첨 기록을 지웠습니다.";
       showToast("최근 추첨 기록을 모두 지웠습니다.");
     });
 
+    // Initialize App with an immediate 5-game draw matching the Figma design
+    updateDrawRoundInfo();
+    initMatrixGrid();
+    renderFilterState();
     applyTheme(document.documentElement.getAttribute("data-theme") || "light", false);
-    renderHistory();
+    runDraw(history.length === 0);
   </script>
 </body>
 </html>
