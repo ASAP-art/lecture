@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f3d2e">
+  <meta name="theme-color" content="#0d2e22">
   <meta name="description" content="실제 로또 1장(A~E 5게임) 규격의 CSPRNG 난수 엔진에 게임 고정(Pin)·고정수/제외수 필터·합계 밸런스 분석을 더한 스마트 로또 스튜디오">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://asap-art.github.io/lecture/">
@@ -32,77 +32,80 @@
     :root,
     [data-theme="light"] {
       color-scheme: light;
-      --paper: #f3f5f1;
-      --paper-elevated: rgba(255, 255, 255, 0.92);
+      --paper: #f2f5f3;
+      --paper-subtle: #e9eeeb;
       --surface: #ffffff;
-      --surface-subtle: rgba(255, 255, 255, 0.76);
-      --surface-hover: #f2f7f4;
-      --surface-muted: #f4f7f3;
-      --ink: #14201b;
-      --ink-secondary: #3c4a43;
-      --muted: #69756e;
-      --line: #dde3dc;
-      --line-strong: #c8d2c7;
-      --green: #0f3d2e;
-      --green-mid: #175943;
-      --green-dark: #09271d;
-      --brand-accent: #175943;
-      --eyebrow-bg: rgba(15, 61, 46, 0.08);
-      --eyebrow-text: #0f3d2e;
-      --badge-soft-bg: #e8f3ee;
-      --badge-soft-text: #0f3d2e;
-      --dot-grid: #cfd8ce;
-      --glow-1: rgba(201, 239, 116, 0.22);
-      --glow-2: rgba(23, 89, 67, 0.08);
+      --surface-hover: #f3f7f5;
+      --surface-muted: #ebf0ed;
+      --pinned-bg: #f1f8f4;
+      --ink: #111a16;
+      --ink-secondary: #2a3831;
+      --muted: #485750;
+      --line: #dce3df;
+      --line-strong: #c4cfc9;
+      --slip-rule: #e3e9e5;
+      --green: #0d2e22;
+      --green-mid: #144433;
+      --green-dark: #082017;
+      --brand-accent: #124d38;
+      --badge-soft-bg: #e3efe9;
+      --badge-soft-text: #0d3828;
       --lime: #c9ef74;
-      --lime-hover: #d6f58e;
-      --gold: #d99b26;
-      --accent-coral: #e06d53;
+      --lime-hover: #d5f48b;
+      --gold: #c88a14;
+      --accent-coral: #a62f19;
+      --accent-coral-bg: #fceee9;
       --white: #ffffff;
-      --primary-btn-bg: #0f3d2e;
+      --primary-btn-bg: #0d2e22;
       --primary-btn-fg: #c9ef74;
-      --shadow-sm: 0 2px 8px rgba(15, 35, 27, 0.04);
-      --shadow-md: 0 12px 32px -8px rgba(15, 35, 27, 0.08), 0 4px 12px -2px rgba(15, 35, 27, 0.04);
-      --shadow-panel: 0 20px 40px -12px rgba(9, 39, 29, 0.28);
+      --shadow-xs: 0 1px 2px rgba(17, 26, 22, 0.04);
+      --shadow-sm: 0 2px 8px -2px rgba(17, 26, 22, 0.06), 0 1px 3px rgba(17, 26, 22, 0.04);
+      --shadow-md: 0 12px 28px -8px rgba(17, 26, 22, 0.08), 0 4px 10px -2px rgba(17, 26, 22, 0.04);
+      --shadow-panel: 0 16px 36px -10px rgba(17, 26, 22, 0.16);
       --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      --radius-md: 12px;
+      --radius-lg: 16px;
       --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
     }
 
     [data-theme="dark"] {
       color-scheme: dark;
-      --paper: #0b1310;
-      --paper-elevated: rgba(21, 35, 28, 0.92);
-      --surface: #15231c;
-      --surface-subtle: rgba(21, 35, 28, 0.78);
-      --surface-hover: #1d3127;
-      --surface-muted: #0e1814;
-      --ink: #ecf3ef;
-      --ink-secondary: #b9c8bf;
-      --muted: #85988d;
-      --line: #21352b;
-      --line-strong: #2f4a3c;
-      --green: #0f3d2e;
-      --green-mid: #1c6b50;
-      --green-dark: #071f17;
+      --paper: #0c1210;
+      --paper-subtle: #111916;
+      --surface: #151f1b;
+      --surface-hover: #1c2924;
+      --surface-muted: #101815;
+      --pinned-bg: #182821;
+      --ink: #eef4f0;
+      --ink-secondary: #c2d0c8;
+      --muted: #8fa398;
+      --line: #22312b;
+      --line-strong: #31473e;
+      --slip-rule: #202f29;
+      --green: #0d2e22;
+      --green-mid: #164f3b;
+      --green-dark: #071912;
       --brand-accent: #c9ef74;
-      --eyebrow-bg: rgba(201, 239, 116, 0.12);
-      --eyebrow-text: #c9ef74;
       --badge-soft-bg: rgba(201, 239, 116, 0.14);
       --badge-soft-text: #c9ef74;
-      --dot-grid: #1b2c24;
-      --glow-1: rgba(201, 239, 116, 0.08);
-      --glow-2: rgba(28, 107, 80, 0.16);
+      --accent-coral: #f28472;
+      --accent-coral-bg: rgba(224, 109, 83, 0.16);
       --primary-btn-bg: #c9ef74;
-      --primary-btn-fg: #09271d;
-      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
-      --shadow-md: 0 14px 34px -8px rgba(0, 0, 0, 0.45), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
-      --shadow-panel: 0 22px 44px -12px rgba(0, 0, 0, 0.55);
+      --primary-btn-fg: #082017;
+      --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+      --shadow-sm: 0 4px 12px -2px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 16px 32px -8px rgba(0, 0, 0, 0.5);
+      --shadow-panel: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: #082017;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -115,36 +118,44 @@
       margin: 0;
       color: var(--ink);
       background-color: var(--paper);
-      background-image:
-        radial-gradient(circle at 15% 0%, var(--glow-1), transparent 38%),
-        radial-gradient(circle at 85% 12%, var(--glow-2), transparent 42%),
-        radial-gradient(var(--dot-grid) 0.85px, transparent 0.85px);
-      background-size: 100% 100%, 100% 100%, 22px 22px;
       font-family: var(--sans);
-      transition: background-color 220ms ease, color 220ms ease;
+      font-size: 14px;
+      line-height: 1.5;
+      transition: background-color 200ms ease, color 200ms ease;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
-    button {
+    button,
+    input {
       font: inherit;
       -webkit-tap-highlight-color: transparent;
     }
 
+    :focus-visible {
+      outline: 2px solid var(--brand-accent);
+      outline-offset: 2px;
+    }
+
+    .control-panel :focus-visible {
+      outline: 2px solid var(--lime);
+      outline-offset: 2px;
+    }
+
     .page-shell {
-      width: min(1200px, calc(100% - 48px));
+      width: min(1180px, calc(100% - 48px));
       margin: 0 auto;
     }
 
     /* Header / Topbar */
     .topbar {
-      min-height: 78px;
-      padding: 12px 0;
+      min-height: 72px;
+      padding: 14px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -153,127 +164,108 @@
       align-items: center;
       gap: 12px;
       color: var(--ink);
-      font-size: 17px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
       text-decoration: none;
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       display: grid;
       place-items: center;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      border-radius: 10px;
+      background: var(--green);
       color: var(--lime);
-      font-family: var(--serif);
-      font-size: 21px;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(15, 61, 46, 0.24);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      box-shadow: var(--shadow-xs);
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.18;
+      gap: 1px;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
     }
 
     .brand-sub {
       color: var(--muted);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .round-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 14px;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
       background: var(--surface);
-      box-shadow: var(--shadow-sm);
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 600;
       color: var(--ink);
+      font-variant-numeric: tabular-nums;
     }
 
     .round-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: #22a06b;
-      box-shadow: 0 0 0 3px rgba(34, 160, 107, 0.18);
+      background: #1e9e68;
       flex: 0 0 auto;
     }
 
     .round-dday {
-      padding: 3px 9px;
-      border-radius: 999px;
+      padding: 2px 8px;
+      border-radius: 4px;
       background: var(--badge-soft-bg);
       color: var(--badge-soft-text);
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .round-time {
       color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .top-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 13px;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      background: var(--surface-subtle);
-      color: var(--ink-secondary);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      backdrop-filter: blur(8px);
-    }
-
-    .top-badge::before {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--brand-accent);
-      content: "";
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .theme-toggle {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      height: 36px;
-      padding: 0 13px;
+      gap: 7px;
+      height: 38px;
+      padding: 0 14px;
       border: 1px solid var(--line-strong);
-      border-radius: 999px;
+      border-radius: var(--radius-sm);
       background: var(--surface);
       color: var(--ink);
       cursor: pointer;
-      font-size: 12px;
-      font-weight: 700;
-      box-shadow: var(--shadow-sm);
-      transition: all 160ms ease;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color 150ms ease, border-color 150ms ease;
     }
 
     .theme-toggle:hover {
       border-color: var(--brand-accent);
       background: var(--surface-hover);
-      transform: translateY(-1px);
     }
 
     .theme-toggle svg {
@@ -282,22 +274,24 @@
       flex: 0 0 auto;
     }
 
-    .theme-toggle .icon-sun { display: none; color: #f5b82e; }
+    .theme-toggle .icon-sun { display: none; color: #e5a91f; }
     .theme-toggle .icon-moon { display: block; color: var(--brand-accent); }
 
     [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
     [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-    main { padding: 36px 0 44px; }
+    main {
+      padding: 32px 0 56px;
+    }
 
-    /* Hero Intro & Bento Distribution Card */
+    /* Aligned 2-Column Editorial Hero & Bento Analytics */
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 460px;
-      align-items: stretch;
-      gap: 24px;
-      margin-bottom: 32px;
-      padding-bottom: 28px;
+      grid-template-columns: minmax(0, 1fr) 392px;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -307,35 +301,14 @@
       justify-content: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      align-self: flex-start;
-      gap: 9px;
-      margin: 0 0 12px;
-      padding: 5px 11px;
-      border-radius: 6px;
-      background: var(--eyebrow-bg);
-      color: var(--eyebrow-text);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.11em;
-    }
-
-    .eyebrow::before {
-      width: 14px;
-      height: 2px;
-      background: var(--accent-coral);
-      content: "";
-    }
-
     h1 {
       margin: 0;
-      font-size: clamp(30px, 4.4vw, 44px);
+      font-size: clamp(28px, 3.8vw, 40px);
       font-weight: 800;
-      line-height: 1.14;
+      line-height: 1.18;
       letter-spacing: -0.03em;
       color: var(--ink);
+      text-wrap: balance;
     }
 
     h1 .highlight {
@@ -343,23 +316,23 @@
     }
 
     .intro-copy {
-      margin: 12px 0 0;
+      margin: 10px 0 0;
       color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.65;
-      max-width: 660px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 62ch;
     }
 
     .bento-analytics {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       gap: 12px;
       padding: 16px 18px;
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: var(--radius-md);
       background: var(--surface);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-xs);
     }
 
     .bento-head {
@@ -370,18 +343,19 @@
     }
 
     .bento-title {
-      color: var(--ink-secondary);
-      font-size: 12px;
-      font-weight: 800;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
 
     .balance-score-badge {
       padding: 3px 9px;
-      border-radius: 999px;
+      border-radius: 6px;
       background: var(--badge-soft-bg);
       color: var(--badge-soft-text);
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
@@ -394,10 +368,10 @@
     .legend-card {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      padding: 8px 8px 7px;
+      gap: 3px;
+      padding: 7px 8px;
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: var(--radius-sm);
       background: var(--surface-muted);
     }
 
@@ -406,28 +380,28 @@
       align-items: center;
       gap: 5px;
       color: var(--ink-secondary);
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
     .legend-dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
       flex: 0 0 auto;
-      box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
     }
 
     .legend-stat {
       color: var(--muted);
-      font-size: 10px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
     }
 
     .balance-gauge-box {
-      padding-top: 8px;
+      padding-top: 10px;
       border-top: 1px solid var(--line);
       display: flex;
       flex-direction: column;
@@ -438,20 +412,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 10.5px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       color: var(--muted);
       font-variant-numeric: tabular-nums;
     }
 
     .gauge-labels strong {
       color: var(--brand-accent);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .gauge-track {
       position: relative;
-      height: 8px;
+      height: 7px;
       border-radius: 999px;
       background: var(--surface-muted);
       border: 1px solid var(--line);
@@ -465,7 +439,7 @@
       left: 33.7%;
       width: 32%;
       border-radius: 999px;
-      background: rgba(23, 89, 67, 0.25);
+      background: rgba(18, 77, 56, 0.22);
     }
 
     [data-theme="dark"] .gauge-sweetspot {
@@ -481,20 +455,31 @@
       border-radius: 50%;
       background: var(--brand-accent);
       border: 2px solid var(--surface);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
       transform: translate(-50%, -50%);
       transition: left 260ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    /* Workspace Grid */
+    /* Workspace Grid — Aligned with .intro 392px right column */
     .workspace {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 384px;
+      grid-template-columns: minmax(0, 1fr) 392px;
       align-items: start;
       gap: 32px;
     }
 
-    .results-column { min-width: 0; }
+    .results-column {
+      min-width: 0;
+    }
+
+    /* Unified Lotto 6/45 Slip Sheet */
+    .slip-sheet {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
 
     .section-heading {
       display: flex;
@@ -502,7 +487,8 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
-      padding-bottom: 14px;
+      padding: 18px 24px;
+      background: var(--surface-muted);
       border-bottom: 1px solid var(--line);
     }
 
@@ -510,111 +496,113 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
 
     .section-heading h2,
     .history-heading h2 {
       margin: 0;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
     }
 
     .slip-badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--green);
-      color: var(--lime);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--ink-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
     }
 
     .filter-active-badge {
-      padding: 4px 10px;
-      border-radius: 999px;
+      padding: 3px 9px;
+      border-radius: 4px;
       background: var(--badge-soft-bg);
       color: var(--badge-soft-text);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
     }
 
     .section-kicker {
       color: var(--muted);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
     }
 
-    /* Ticket List & Lottery Slip Styling */
+    /* Unified Ticket Rows inside Slip Sheet */
     .ticket-list {
-      display: grid;
-      gap: 12px;
-      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
     }
 
     .ticket {
       position: relative;
       display: grid;
-      grid-template-columns: 92px minmax(0, 1fr) auto;
+      grid-template-columns: 104px minmax(0, 1fr) auto;
       align-items: center;
       gap: 16px;
-      padding: 16px 20px;
-      border: 1px solid var(--line);
-      border-left: 5px solid var(--green-mid);
-      border-radius: var(--radius-md);
-      background: var(--paper-elevated);
-      box-shadow: var(--shadow-sm);
-      backdrop-filter: blur(8px);
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-      animation: arrive 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--slip-rule);
+      background: var(--surface);
+      transition: background-color 150ms ease;
+      animation: arrive 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .ticket:last-child {
+      border-bottom: 0;
     }
 
     .ticket:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--line-strong);
+      background: var(--surface-hover);
     }
 
     .ticket.is-pinned {
-      border-color: var(--brand-accent);
-      border-left-width: 6px;
-      border-left-color: var(--brand-accent);
-      background: var(--surface);
+      background: var(--pinned-bg);
     }
 
     .ticket-meta {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 2px;
     }
 
     .ticket-game {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .ticket.is-pinned .ticket-game {
       color: var(--brand-accent);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
     }
 
     .ticket-index {
       color: var(--muted);
-      font-family: var(--serif);
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
     }
 
     .balls {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: clamp(6px, 1vw, 11px);
+      gap: clamp(8px, 1.2vw, 12px);
     }
 
     .ball {
-      width: clamp(38px, 4.4vw, 46px);
+      width: clamp(40px, 4.4vw, 46px);
       aspect-ratio: 1;
       display: grid;
       flex: 0 0 auto;
@@ -626,10 +614,10 @@
       letter-spacing: -0.02em;
       position: relative;
       box-shadow:
-        0 4px 10px rgba(20, 32, 27, 0.12),
-        inset 0 -3px 5px rgba(0, 0, 0, 0.16),
+        0 3px 8px rgba(17, 26, 22, 0.1),
+        inset 0 -3px 5px rgba(0, 0, 0, 0.14),
         inset 0 2px 4px rgba(255, 255, 255, 0.65);
-      transition: transform 160ms ease;
+      transition: transform 150ms ease;
     }
 
     .ball.is-fixed-ball {
@@ -638,55 +626,55 @@
     }
 
     .ticket:hover .ball {
-      transform: scale(1.03);
+      transform: translateY(-1px);
     }
 
     .ball-yellow {
-      background: radial-gradient(circle at 32% 28%, #fff1a8, #f2c94c 68%, #d9a520);
-      color: #332400;
+      background: radial-gradient(circle at 32% 28%, #fff3b0, #f2c94c 68%, #d9a520);
+      color: #2e2000;
       border: 1px solid rgba(180, 130, 10, 0.28);
     }
 
     .ball-blue {
-      background: radial-gradient(circle at 32% 28%, #cce7ff, #6eb4f7 68%, #3b82d6);
-      color: #0b2545;
+      background: radial-gradient(circle at 32% 28%, #d4ebff, #6eb4f7 68%, #3b82d6);
+      color: #092240;
       border: 1px solid rgba(35, 100, 180, 0.25);
     }
 
     .ball-red {
-      background: radial-gradient(circle at 32% 28%, #ffd2ca, #f28472 68%, #d4533f);
-      color: #3b0d07;
+      background: radial-gradient(circle at 32% 28%, #ffd8d1, #f28472 68%, #d4533f);
+      color: #380b06;
       border: 1px solid rgba(185, 55, 35, 0.25);
     }
 
     .ball-gray {
-      background: radial-gradient(circle at 32% 28%, #eef1ef, #b8c0bc 68%, #8e9893);
-      color: #1f2623;
+      background: radial-gradient(circle at 32% 28%, #f2f4f3, #b8c0bc 68%, #8e9893);
+      color: #1b221f;
       border: 1px solid rgba(90, 100, 95, 0.25);
     }
 
     .ball-green {
-      background: radial-gradient(circle at 32% 28%, #d8f5cf, #7ed175 68%, #4ca844);
-      color: #0e2e0b;
+      background: radial-gradient(circle at 32% 28%, #dcf7d4, #7ed175 68%, #4ca844);
+      color: #0c2909;
       border: 1px solid rgba(55, 140, 45, 0.25);
     }
 
     .ticket-side {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .ticket-stats {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 4px;
-      padding-right: 12px;
+      gap: 3px;
+      padding-right: 14px;
       border-right: 1px solid var(--line);
       color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 500;
       font-variant-numeric: tabular-nums;
     }
 
@@ -694,16 +682,12 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 3px 8px;
-      border-radius: 6px;
-      background: var(--badge-soft-bg);
-      color: var(--badge-soft-text);
-      font-size: 11px;
-      font-weight: 800;
+      color: var(--ink-secondary);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .sum-badge.out-of-range {
-      background: rgba(224, 109, 83, 0.14);
       color: var(--accent-coral);
     }
 
@@ -716,68 +700,70 @@
     .ticket-pin-btn,
     .ticket-reroll {
       height: 36px;
-      padding: 0 11px;
+      padding: 0 12px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 4px;
-      border: 1px solid var(--line);
+      gap: 5px;
+      border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
       background: var(--surface);
       color: var(--ink-secondary);
       cursor: pointer;
-      font-size: 11px;
-      font-weight: 700;
-      transition: all 150ms ease;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 140ms ease;
     }
 
     .ticket-pin-btn:hover,
     .ticket-reroll:hover {
       border-color: var(--brand-accent);
       background: var(--surface-hover);
-      color: var(--brand-accent);
+      color: var(--ink);
     }
 
     .ticket-pin-btn[aria-pressed="true"] {
       background: var(--primary-btn-bg);
       color: var(--primary-btn-fg);
       border-color: var(--primary-btn-bg);
-      font-weight: 800;
+      font-weight: 700;
     }
 
-    .ticket-reroll svg,
-    .ticket-pin-btn svg {
-      width: 13px;
-      height: 13px;
-    }
-
-    /* Result Footer Actions & Summary */
+    /* Slip Sheet Footer Actions & Summary */
     .result-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      padding-top: 16px;
+      padding: 16px 24px;
+      background: var(--surface-muted);
+      border-top: 1px solid var(--line);
     }
 
     .summary-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      align-items: center;
+      gap: 14px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .summary-pill {
-      padding: 6px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--surface);
+      display: inline-flex;
+      align-items: center;
       color: var(--ink-secondary);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
       font-variant-numeric: tabular-nums;
+    }
+
+    .summary-pill + .summary-pill::before {
+      content: "·";
+      margin-right: 14px;
+      color: var(--line-strong);
+      font-weight: 700;
     }
 
     .result-actions {
@@ -792,24 +778,24 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      height: 38px;
-      padding: 0 14px;
+      height: 40px;
+      padding: 0 15px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
       background: var(--surface);
-      color: var(--brand-accent);
+      color: var(--ink);
       cursor: pointer;
-      font-size: 12px;
-      font-weight: 700;
-      box-shadow: var(--shadow-sm);
-      transition: all 150ms ease;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-xs);
+      transition: all 140ms ease;
     }
 
     .text-button.primary-action {
       background: var(--primary-btn-bg);
       color: var(--primary-btn-fg);
       border-color: var(--primary-btn-bg);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .text-button:hover:not(:disabled) {
@@ -818,23 +804,27 @@
     }
 
     .text-button:disabled {
-      opacity: 0.5;
+      opacity: 0.45;
       cursor: default;
       box-shadow: none;
     }
 
-    .text-button svg { width: 15px; height: 15px; }
+    .text-button svg {
+      width: 15px;
+      height: 15px;
+    }
 
-    /* Upgraded Smart Control Panel */
+    /* Smart Studio Control Panel */
     .control-panel {
       position: sticky;
       top: 24px;
-      padding: 24px 24px 20px;
-      border-radius: 22px;
-      background: linear-gradient(160deg, var(--green-mid) 0%, var(--green) 55%, var(--green-dark) 100%);
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background-color: #0b261c;
+      background-image: linear-gradient(180deg, #103528 0%, #092017 100%);
       color: var(--white);
       box-shadow: var(--shadow-panel);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .control-header {
@@ -846,25 +836,26 @@
 
     .control-title {
       margin: 0;
-      font-size: 21px;
-      font-weight: 800;
+      font-size: 19px;
+      font-weight: 700;
       letter-spacing: -0.02em;
     }
 
     .control-tag {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(201, 239, 116, 0.18);
-      color: var(--lime);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #dfece5;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     .control-caption {
-      margin: 0 0 16px;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 13px;
+      margin: 0 0 18px;
+      color: #c4d4cb;
+      font-size: 13.5px;
+      font-weight: 400;
       line-height: 1.5;
     }
 
@@ -874,28 +865,33 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 4px;
       padding: 4px;
-      margin-bottom: 18px;
-      border-radius: 10px;
-      background: rgba(7, 31, 23, 0.85);
+      margin-bottom: 20px;
+      border-radius: var(--radius-sm);
+      background: #061710;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .mode-tab {
-      height: 32px;
+      height: 36px;
       border: 0;
-      border-radius: 7px;
+      border-radius: 6px;
       background: transparent;
-      color: rgba(255, 255, 255, 0.78);
+      color: #b8ccc1;
       cursor: pointer;
-      font-size: 11px;
-      font-weight: 700;
-      transition: all 150ms ease;
+      font-size: 12.5px;
+      font-weight: 600;
+      transition: all 140ms ease;
+    }
+
+    .mode-tab:hover {
+      color: #ffffff;
     }
 
     .mode-tab[aria-selected="true"] {
-      background: var(--lime);
-      color: #09271d;
-      font-weight: 800;
+      background: #ffffff;
+      color: #092017;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     }
 
     .control-label-row {
@@ -906,70 +902,71 @@
     }
 
     .control-label {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 12px;
-      font-weight: 700;
+      color: #eef5f1;
+      font-size: 13px;
+      font-weight: 600;
     }
 
     .control-recommend {
       color: var(--lime);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
     }
 
     .count-picker {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .count-option {
       min-width: 0;
-      height: 46px;
+      height: 44px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      align-items: baseline;
       justify-content: center;
-      gap: 1px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      gap: 2px;
+      padding-top: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.06);
-      color: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.05);
+      color: #eef5f1;
       cursor: pointer;
-      font-size: 14px;
-      font-weight: 800;
-      transition: all 150ms ease;
+      font-size: 15px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      transition: all 140ms ease;
     }
 
     .count-option small {
-      font-size: 9px;
-      font-weight: 600;
-      opacity: 0.75;
+      font-size: 12px;
+      font-weight: 500;
+      opacity: 0.85;
     }
 
     .count-option:hover {
-      background: rgba(255, 255, 255, 0.14);
-      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.35);
     }
 
     .count-option[aria-pressed="true"] {
-      border-color: var(--lime);
-      background: var(--lime);
-      color: #09271d;
-      box-shadow: 0 4px 14px rgba(201, 239, 116, 0.28);
+      border-color: #ffffff;
+      background: #ffffff;
+      color: #092017;
+      font-weight: 800;
     }
 
     /* Smart Filter Box inside Control Panel */
     .smart-filter-box {
-      padding: 14px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      background: rgba(8, 36, 27, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 16px;
+      margin-bottom: 18px;
+      border-radius: var(--radius-md);
+      background: #061710;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .smart-filter-head {
@@ -980,22 +977,24 @@
 
     .smart-filter-title {
       color: var(--lime);
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 12.5px;
+      font-weight: 700;
     }
 
     .filter-edit-btn {
-      padding: 2px 6px;
+      padding: 4px 8px;
       border: 0;
       border-radius: 4px;
-      background: transparent;
-      color: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.08);
+      color: #dfece5;
       cursor: pointer;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
+      transition: background-color 140ms ease, color 140ms ease;
     }
 
     .filter-edit-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
       color: var(--lime);
     }
 
@@ -1004,12 +1003,13 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      font-size: 11px;
+      font-size: 12.5px;
     }
 
     .filter-row-label {
-      color: rgba(255, 255, 255, 0.82);
-      font-weight: 600;
+      color: #c4d4cb;
+      font-size: 12.5px;
+      font-weight: 500;
       flex: 0 0 auto;
     }
 
@@ -1023,33 +1023,33 @@
 
     .chip-fixed {
       padding: 3px 9px;
-      border-radius: 999px;
+      border-radius: 6px;
       background: #f2c94c;
-      color: #332400;
-      font-size: 11px;
-      font-weight: 800;
+      color: #2e2000;
+      font-size: 12px;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
 
     .chip-excluded {
       padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(224, 109, 83, 0.28);
+      border-radius: 6px;
+      background: rgba(224, 109, 83, 0.25);
       border: 1px solid #e06d53;
-      color: #ffd2ca;
-      font-size: 11px;
-      font-weight: 700;
+      color: #ffd8d1;
+      font-size: 12px;
+      font-weight: 600;
       font-variant-numeric: tabular-nums;
     }
 
     .chip-add-btn {
-      padding: 3px 9px;
-      border-radius: 999px;
+      padding: 4px 10px;
+      border-radius: 6px;
       border: 1px dashed rgba(255, 255, 255, 0.3);
-      background: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.06);
+      color: #dfece5;
       cursor: pointer;
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 600;
     }
 
@@ -1061,19 +1061,19 @@
     .balance-checkbox-label {
       display: flex;
       align-items: center;
-      gap: 7px;
-      padding-top: 6px;
+      gap: 8px;
+      padding-top: 10px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 11px;
-      font-weight: 600;
+      color: #dfece5;
+      font-size: 12.5px;
+      font-weight: 500;
       cursor: pointer;
     }
 
     .balance-checkbox-label input {
       accent-color: var(--lime);
-      width: 14px;
-      height: 14px;
+      width: 15px;
+      height: 15px;
       margin: 0;
       cursor: pointer;
     }
@@ -1081,12 +1081,12 @@
     /* Interactive 1~45 Number Matrix Drawer */
     .matrix-drawer {
       display: none;
-      margin-bottom: 16px;
-      padding: 14px;
-      border-radius: 12px;
-      background: #071f17;
+      margin-bottom: 18px;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: #05140e;
       border: 1px solid rgba(201, 239, 116, 0.35);
-      animation: arrive 220ms ease both;
+      animation: arrive 200ms ease both;
     }
 
     .matrix-drawer.is-open {
@@ -1102,32 +1102,32 @@
 
     .matrix-head strong {
       color: var(--lime);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .matrix-guide {
-      margin: 0 0 10px;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 10.5px;
-      line-height: 1.4;
+      margin: 0 0 12px;
+      color: #b8ccc1;
+      font-size: 12px;
+      line-height: 1.45;
     }
 
     .matrix-grid {
       display: grid;
       grid-template-columns: repeat(9, 1fr);
-      gap: 5px;
-      margin-bottom: 12px;
+      gap: 6px;
+      margin-bottom: 14px;
     }
 
     .matrix-ball {
       aspect-ratio: 1;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.05);
-      color: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      color: #eef5f1;
       cursor: pointer;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
       display: grid;
@@ -1137,21 +1137,21 @@
     }
 
     .matrix-ball:hover {
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: scale(1.06);
+      border-color: rgba(255, 255, 255, 0.55);
+      transform: scale(1.05);
     }
 
     .matrix-ball.state-fixed {
       background: var(--lime);
       border: 2px solid #ffffff;
-      color: #09271d;
+      color: #082017;
       font-weight: 800;
     }
 
     .matrix-ball.state-excluded {
       background: rgba(224, 109, 83, 0.28);
       border: 1.5px solid #e06d53;
-      color: #ffd2ca;
+      color: #ffd8d1;
       text-decoration: line-through;
     }
 
@@ -1163,82 +1163,68 @@
     }
 
     .matrix-reset-btn {
-      padding: 6px 10px;
+      height: 34px;
+      padding: 0 12px;
       border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       background: transparent;
-      color: rgba(255, 255, 255, 0.78);
+      color: #dfece5;
       cursor: pointer;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
     }
 
     .matrix-apply-btn {
-      padding: 6px 12px;
+      height: 34px;
+      padding: 0 14px;
       border-radius: 6px;
       border: 0;
       background: var(--lime);
-      color: #09271d;
+      color: #082017;
       cursor: pointer;
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 700;
     }
 
+    /* Primary Draw CTA Button */
     .draw-button {
       width: 100%;
-      min-height: 54px;
+      min-height: 52px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       border: 0;
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       background: var(--lime);
-      color: #09271d;
+      color: #082017;
       cursor: pointer;
       font-size: 15.5px;
       font-weight: 800;
       letter-spacing: -0.01em;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+      transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
     }
 
     .draw-button:hover {
       transform: translateY(-1px);
       background: var(--lime-hover);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
     }
 
-    .draw-button:active { transform: translateY(0); }
-    .draw-button svg { width: 18px; height: 18px; }
-
-    .control-features {
-      margin: 16px 0 0;
-      padding: 14px 0 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
-      list-style: none;
-      display: grid;
-      gap: 6px;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 11px;
+    .draw-button:active {
+      transform: translateY(0);
     }
 
-    .control-features li {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .control-features li::before {
-      content: "✓";
-      color: var(--lime);
-      font-weight: 800;
+    .draw-button svg {
+      width: 18px;
+      height: 18px;
     }
 
     .control-footnote {
-      margin: 10px 0 0;
-      color: rgba(255, 255, 255, 0.52);
-      font-size: 10.5px;
+      margin: 14px 0 0;
+      color: #b8ccc1;
+      font-size: 12.5px;
       text-align: center;
     }
 
@@ -1248,8 +1234,8 @@
       padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: var(--surface-subtle);
-      backdrop-filter: blur(8px);
+      background: var(--surface);
+      box-shadow: var(--shadow-xs);
     }
 
     .history-heading {
@@ -1267,7 +1253,7 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .history-heading h2 {
@@ -1277,12 +1263,13 @@
     }
 
     .history-heading h2 span {
-      padding: 2px 9px;
-      border-radius: 999px;
-      background: var(--eyebrow-bg);
-      color: var(--eyebrow-text);
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
     }
 
     .history-filter-tabs {
@@ -1292,14 +1279,15 @@
     }
 
     .history-tab {
-      padding: 5px 11px;
-      border-radius: 999px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: var(--radius-sm);
       border: 1px solid var(--line);
-      background: var(--surface);
+      background: var(--surface-muted);
       color: var(--ink-secondary);
       cursor: pointer;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
       transition: all 140ms ease;
     }
 
@@ -1307,24 +1295,26 @@
       background: var(--primary-btn-bg);
       color: var(--primary-btn-fg);
       border-color: var(--primary-btn-bg);
+      font-weight: 700;
     }
 
     .history-clear {
-      padding: 6px 11px;
+      height: 34px;
+      padding: 0 12px;
       border: 1px solid var(--line);
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       background: var(--surface);
       color: var(--muted);
       cursor: pointer;
-      font-size: 11.5px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
       transition: all 150ms ease;
     }
 
     .history-clear:hover:not(:disabled) {
-      border-color: #d98273;
-      color: #e06d53;
-      background: rgba(224, 109, 83, 0.1);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
+      background: var(--accent-coral-bg);
     }
 
     .history-clear:disabled {
@@ -1342,21 +1332,20 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 13px 15px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--surface);
-      box-shadow: var(--shadow-sm);
-      transition: border-color 150ms ease, transform 150ms ease;
+      border-radius: var(--radius-md);
+      background: var(--paper);
+      transition: border-color 150ms ease;
     }
 
     .history-row:hover {
       border-color: var(--line-strong);
-      transform: translateY(-1px);
     }
 
     .history-row.is-bookmarked {
       border-color: var(--gold);
+      background: var(--surface);
     }
 
     .history-row-top {
@@ -1369,68 +1358,67 @@
     .history-meta {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
       min-width: 0;
     }
 
     .history-tag {
-      padding: 2px 7px;
-      border-radius: 5px;
-      background: var(--eyebrow-bg);
-      color: var(--eyebrow-text);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--badge-soft-bg);
+      color: var(--badge-soft-text);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .history-time {
       color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       font-variant-numeric: tabular-nums;
     }
 
     .history-actions {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
     }
 
     .history-icon-btn {
-      width: 26px;
-      height: 26px;
+      width: 32px;
+      height: 32px;
       display: grid;
       place-items: center;
       border: 1px solid var(--line);
       border-radius: 6px;
-      background: var(--surface-subtle);
+      background: var(--surface);
       color: var(--muted);
       cursor: pointer;
-      font-size: 12px;
+      font-size: 13px;
       transition: all 140ms ease;
     }
 
     .history-icon-btn:hover {
       border-color: var(--brand-accent);
-      color: var(--brand-accent);
+      color: var(--ink);
       background: var(--surface-hover);
     }
 
     .history-icon-btn.bookmark.active {
-      color: #d99b26;
-      border-color: #d99b26;
+      color: var(--gold);
+      border-color: var(--gold);
       background: rgba(242, 201, 76, 0.14);
     }
 
     .history-icon-btn.delete:hover {
-      border-color: #d98273;
-      color: #e06d53;
-      background: rgba(224, 109, 83, 0.1);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
+      background: var(--accent-coral-bg);
     }
 
     .history-icon-btn svg {
-      width: 13px;
-      height: 13px;
+      width: 14px;
+      height: 14px;
     }
 
     .history-row-bottom {
@@ -1443,38 +1431,39 @@
     .history-balls {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
     }
 
     .history-stat {
       color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
     }
 
     .history-stat strong {
       color: var(--ink-secondary);
+      font-weight: 700;
     }
 
     .mini-ball {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      font-size: 10px;
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 700;
       font-variant-numeric: tabular-nums;
-      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.14);
+      box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.12);
     }
 
     .history-empty {
       grid-column: 1 / -1;
-      padding: 28px 0;
+      padding: 32px 0;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 14px;
       text-align: center;
     }
 
@@ -1483,7 +1472,7 @@
       margin-top: 16px;
       padding: 14px 18px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       background: var(--surface-muted);
       display: flex;
       align-items: center;
@@ -1495,19 +1484,19 @@
     .insight-text-group {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
     }
 
     .insight-title {
       color: var(--brand-accent);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .insight-desc {
       margin: 0;
       color: var(--muted);
-      font-size: 11.5px;
+      font-size: 13px;
       line-height: 1.5;
     }
 
@@ -1517,11 +1506,11 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 44px;
-      padding: 18px 0 28px;
+      margin-top: 48px;
+      padding: 20px 0 32px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.6;
     }
 
@@ -1532,12 +1521,12 @@
       left: 50%;
       transform: translate(-50%, 16px);
       padding: 11px 18px;
-      border-radius: 999px;
+      border-radius: var(--radius-sm);
       background: var(--ink);
       color: var(--paper);
       font-size: 13px;
       font-weight: 600;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
       opacity: 0;
       pointer-events: none;
       transition: opacity 200ms ease, transform 200ms ease;
@@ -1559,7 +1548,7 @@
     }
 
     @keyframes arrive {
-      from { opacity: 0; transform: translateY(8px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -1567,33 +1556,43 @@
     @media (max-width: 980px) {
       .intro {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
       .workspace {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 24px;
       }
       .control-panel {
         position: static;
         grid-row: 1;
       }
-      .results-column { grid-row: 2; }
+      .results-column {
+        grid-row: 2;
+      }
     }
 
     @media (max-width: 640px) {
-      .page-shell { width: calc(100% - 24px); }
-      .round-pill {
-        order: 3;
+      .page-shell {
+        width: calc(100% - 28px);
+      }
+      .topbar-right {
         width: 100%;
+        justify-content: space-between;
+      }
+      .round-pill {
+        flex: 1;
         justify-content: center;
       }
-      .top-badge { display: none; }
       .color-legend {
         grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .section-heading {
+        padding: 14px 16px;
       }
       .ticket {
         grid-template-columns: 1fr auto;
         gap: 12px;
-        padding: 14px;
+        padding: 16px;
       }
       .ticket-meta {
         flex-direction: row;
@@ -1606,16 +1605,21 @@
         gap: 6px;
       }
       .ball {
-        width: clamp(36px, 12vw, 44px);
+        width: clamp(38px, 12vw, 44px);
         font-size: 14px;
       }
       .ticket-side {
         grid-column: 2;
         grid-row: 1;
+        gap: 10px;
+      }
+      .matrix-grid {
+        grid-template-columns: repeat(5, 1fr);
       }
       .result-footer {
         flex-direction: column;
         align-items: stretch;
+        padding: 14px 16px;
       }
       .result-actions {
         width: 100%;
@@ -1625,6 +1629,9 @@
         flex: 1;
         justify-content: center;
         min-height: 42px;
+      }
+      .history {
+        padding: 18px 16px;
       }
       .history-list {
         grid-template-columns: 1fr;
@@ -1650,22 +1657,21 @@
   <div class="page-shell">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="행운 번호 스튜디오 홈">
-        <span class="brand-mark" aria-hidden="true">행</span>
+        <span class="brand-mark" aria-hidden="true">6/45</span>
         <span class="brand-text">
-          <span>행운 번호 스튜디오</span>
-          <span class="brand-sub">LOTTO 6/45 PREMIUM STUDIO v2.0</span>
+          <span class="brand-name">행운 번호 스튜디오</span>
+          <span class="brand-sub">동행복권 5게임 슬립 규격 번호 생성기</span>
         </span>
       </a>
 
-      <div class="round-pill" aria-label="이번 회차 추첨 안내">
-        <span class="round-dot" aria-hidden="true"></span>
-        <span id="round-title">제1145회 동행복권 추첨</span>
-        <span class="round-dday" id="round-dday">D-2 토</span>
-        <span class="round-time">20:35 마감</span>
-      </div>
-
       <div class="topbar-right">
-        <span class="top-badge">5-GAME QUICK SLIP</span>
+        <div class="round-pill" aria-label="이번 회차 추첨 안내">
+          <span class="round-dot" aria-hidden="true"></span>
+          <span id="round-title">제1145회 동행복권 추첨</span>
+          <span class="round-dday" id="round-dday">D-2 토</span>
+          <span class="round-time">20:35 마감</span>
+        </div>
+
         <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="다크 모드로 전환">
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -1677,14 +1683,13 @@
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
         <div class="intro-main">
-          <p class="eyebrow">CRYPTOGRAPHIC LUCKY STUDIO</p>
           <h1 id="page-title">오늘의 <span class="highlight">5게임 스마트 행운 조합</span></h1>
-          <p class="intro-copy">실제 로또 1장(A~E 5게임) 규격의 CSPRNG 난수 엔진에 게임 고정(Pin)·고정수/제외수 필터·합계 밸런스 분석을 더했습니다.</p>
+          <p class="intro-copy">실제 로또 1장(A~E 5게임) 규격의 암호학 난수 엔진에 게임 잠금(고정)·고정수/제외수 필터·합계 밸런스 분석을 결합했습니다.</p>
         </div>
 
         <div class="bento-analytics" aria-label="번호대별 색상 및 현재 슬립 밸런스 분석">
           <div class="bento-head">
-            <span class="bento-title">번호대별 색상 &amp; 현재 슬립 분포</span>
+            <span class="bento-title">번호대별 분포 &amp; 합계 밸런스</span>
             <span class="balance-score-badge" id="balance-score-badge">밸런스 지수 측정 대기</span>
           </div>
 
@@ -1727,32 +1732,34 @@
 
       <div class="workspace">
         <section class="results-column" aria-labelledby="results-title">
-          <div class="section-heading">
-            <div class="section-heading-left">
-              <h2 id="results-title">추첨 결과 슬립</h2>
-              <span class="slip-badge">SLIP A–E</span>
-              <span class="filter-active-badge" id="active-filter-badge" hidden>필터 적용됨</span>
+          <div class="slip-sheet">
+            <div class="section-heading">
+              <div class="section-heading-left">
+                <h2 id="results-title">추첨 결과 슬립</h2>
+                <span class="slip-badge">SLIP A–E</span>
+                <span class="filter-active-badge" id="active-filter-badge" hidden>필터 적용됨</span>
+              </div>
+              <span class="section-kicker" id="result-caption">5게임 스마트 추첨 준비 완료</span>
             </div>
-            <span class="section-kicker" id="result-caption">5게임 스마트 추첨 준비 완료</span>
-          </div>
 
-          <div class="ticket-list" id="ticket-list" aria-live="polite" aria-relevant="additions text"></div>
+            <div class="ticket-list" id="ticket-list" aria-live="polite" aria-relevant="additions text"></div>
 
-          <div class="result-footer">
-            <div class="summary-strip" id="summary-strip" aria-live="polite"></div>
-            <div class="result-actions">
-              <button class="text-button" id="save-image-button" type="button">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>이미지 저장</span>
-              </button>
-              <button class="text-button" id="share-button" type="button">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                <span>공유하기</span>
-              </button>
-              <button class="text-button primary-action" id="copy-button" type="button">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
-                <span id="copy-button-text">결과 복사</span>
-              </button>
+            <div class="result-footer">
+              <div class="summary-strip" id="summary-strip" aria-live="polite"></div>
+              <div class="result-actions">
+                <button class="text-button" id="save-image-button" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>이미지 저장</span>
+                </button>
+                <button class="text-button" id="share-button" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  <span>공유하기</span>
+                </button>
+                <button class="text-button primary-action" id="copy-button" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
+                  <span id="copy-button-text">결과 복사</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -1760,7 +1767,7 @@
         <aside class="control-panel" aria-labelledby="control-title">
           <div class="control-header">
             <h2 class="control-title" id="control-title">스마트 번호 스튜디오</h2>
-            <span class="control-tag">CSPRNG</span>
+            <span class="control-tag">6/45 SLIP</span>
           </div>
           <p class="control-caption">게임 수와 필터 옵션을 설정하고 번호를 추첨하세요.</p>
 
@@ -1822,12 +1829,7 @@
             <span id="draw-button-label">5게임 행운 번호 추첨</span>
           </button>
 
-          <ul class="control-features">
-            <li>웹 암호학 난수(crypto.getRandomValues) 적용</li>
-            <li>마음에 드는 게임 고정(잠금) 후 나머지 게임만 재추첨</li>
-            <li>추첨 슬립 이미지 저장 및 클립보드 일괄 복사 지원</li>
-          </ul>
-          <p class="control-footnote">각 게임은 중복 없이 6개 번호로 구성됩니다.</p>
+          <p class="control-footnote">웹 암호학 난수(CSPRNG) 기반 · 게임별 중복 없는 6개 번호 생성</p>
         </aside>
       </div>
 
@@ -1945,7 +1947,7 @@
       themeToggle.setAttribute("aria-label", isDark ? "화이트 모드로 전환" : "다크 모드로 전환");
       themeToggleText.textContent = isDark ? "화이트 모드" : "다크 모드";
       if (themeColorMeta) {
-        themeColorMeta.setAttribute("content", isDark ? "#0b1310" : "#0f3d2e");
+        themeColorMeta.setAttribute("content", isDark ? "#0c1210" : "#0d2e22");
       }
       if (notify) {
         const msg = isDark ? "다크 모드가 적용되었습니다." : "화이트 모드가 적용되었습니다.";
@@ -2110,11 +2112,19 @@
 
       matrixGrid.querySelectorAll(".matrix-ball").forEach((btn) => {
         const num = Number(btn.dataset.num);
+        const numLabel = String(num).padStart(2, "0");
         btn.classList.remove("state-fixed", "state-excluded");
         if (fixedNumbers.includes(num)) {
           btn.classList.add("state-fixed");
+          btn.setAttribute("aria-pressed", "true");
+          btn.setAttribute("aria-label", `${numLabel}번 (고정수로 선택됨)`);
         } else if (excludedNumbers.includes(num)) {
           btn.classList.add("state-excluded");
+          btn.setAttribute("aria-pressed", "true");
+          btn.setAttribute("aria-label", `${numLabel}번 (제외수로 선택됨)`);
+        } else {
+          btn.setAttribute("aria-pressed", "false");
+          btn.setAttribute("aria-label", `${numLabel}번`);
         }
       });
     }
@@ -2127,6 +2137,8 @@
         btn.className = "matrix-ball";
         btn.dataset.num = String(n);
         btn.textContent = String(n).padStart(2, "0");
+        btn.setAttribute("aria-pressed", "false");
+        btn.setAttribute("aria-label", `${String(n).padStart(2, "0")}번`);
         btn.addEventListener("click", () => {
           if (fixedNumbers.includes(n)) {
             fixedNumbers = fixedNumbers.filter((x) => x !== n);
@@ -2145,7 +2157,7 @@
             } else if (excludedNumbers.length < 10) {
               excludedNumbers.push(n);
               excludedNumbers.sort((a, b) => a - b);
-              showToast("고정수(최대 2개)가 가득 차서 제외수로 등록되었습니다.");
+              showToast("고정수(최대 2개) 한도로 인해 제외수로 등록되었습니다. 다시 누르면 해제됩니다.");
             } else {
               showToast("고정수(2개)와 제외수(10개) 한도에 도달했습니다.");
             }
@@ -2167,7 +2179,8 @@
     toggleMatrixBtn.addEventListener("click", () => toggleMatrixDrawer());
     document.querySelector("#matrix-close-btn").addEventListener("click", () => {
       toggleMatrixDrawer(false);
-      showToast("고정수·제외수 필터가 적용되었습니다.");
+      runDraw(false);
+      showToast("고정수·제외수 필터가 현재 슬립에 적용되었습니다.");
     });
     document.querySelector("#matrix-reset-btn").addEventListener("click", () => {
       fixedNumbers = [];
@@ -2177,13 +2190,17 @@
       showToast("고정수 및 제외수 설정을 초기화했습니다.");
     });
 
-    /* Mode Tabs */
+    /* Mode Tabs & Checkbox Sync */
+    function setActiveModeTab(mode) {
+      currentMode = mode;
+      document.querySelectorAll(".mode-tab").forEach((t) => {
+        t.setAttribute("aria-selected", String(t.dataset.mode === mode));
+      });
+    }
+
     document.querySelectorAll(".mode-tab").forEach((tab) => {
       tab.addEventListener("click", () => {
-        currentMode = tab.dataset.mode;
-        document.querySelectorAll(".mode-tab").forEach((t) => {
-          t.setAttribute("aria-selected", String(t === tab));
-        });
+        setActiveModeTab(tab.dataset.mode);
         if (currentMode === "smart") {
           balanceFilterCheckbox.checked = true;
           toggleMatrixDrawer(false);
@@ -2194,6 +2211,14 @@
           toggleMatrixDrawer(true);
         }
       });
+    });
+
+    balanceFilterCheckbox.addEventListener("change", () => {
+      if (matrixDrawer.classList.contains("is-open")) {
+        setActiveModeTab("custom");
+      } else {
+        setActiveModeTab(balanceFilterCheckbox.checked ? "smart" : "random");
+      }
     });
 
     /* Update Bento Distribution & Balance Score */
@@ -2276,18 +2301,18 @@
         const { numbers, pinned } = game;
         const ticket = document.createElement("div");
         ticket.className = `ticket${pinned ? " is-pinned" : ""}`;
-        ticket.style.animationDelay = `${index * 45}ms`;
+        ticket.style.animationDelay = `${index * 40}ms`;
 
         const meta = document.createElement("div");
         meta.className = "ticket-meta";
 
         const gameBadge = document.createElement("span");
         gameBadge.className = "ticket-game";
-        gameBadge.textContent = `GAME ${GAME_LETTERS[index] || index + 1}${pinned ? " · 고정됨" : ""}`;
+        gameBadge.textContent = `GAME ${GAME_LETTERS[index] || index + 1}${pinned ? " · 잠금" : ""}`;
 
         const label = document.createElement("span");
         label.className = "ticket-index";
-        label.textContent = `NO. ${String(index + 1).padStart(2, "0")}`;
+        label.textContent = `제${index + 1}조합`;
 
         meta.append(gameBadge, label);
 
@@ -2315,7 +2340,7 @@
 
         const sumBadge = document.createElement("span");
         sumBadge.className = `sum-badge${isSweetSpot ? "" : " out-of-range"}`;
-        sumBadge.textContent = `합계 ${sum} ${isSweetSpot ? "적정" : sum < 100 ? "저합" : "고합"}`;
+        sumBadge.textContent = `합계 ${sum} (${isSweetSpot ? "적정" : sum < 100 ? "저합" : "고합"})`;
 
         const oddEvenSpan = document.createElement("span");
         oddEvenSpan.textContent = `홀짝 ${odd} : ${even}`;
@@ -2356,7 +2381,7 @@
           saveHistory();
           renderTickets();
           renderHistory();
-          const msg = `${GAME_LETTERS[index]}게임(NO. 0${index + 1}) 번호를 다시 추첨했습니다.`;
+          const msg = `${GAME_LETTERS[index]}게임 번호를 다시 추첨했습니다.`;
           announcement.textContent = msg;
           showToast(msg);
         });
@@ -2447,6 +2472,8 @@
         bookmarkBtn.type = "button";
         bookmarkBtn.className = `history-icon-btn bookmark${entry.bookmarked ? " active" : ""}`;
         bookmarkBtn.title = entry.bookmarked ? "북마크 해제" : "이 조합 북마크";
+        bookmarkBtn.setAttribute("aria-label", entry.bookmarked ? "북마크 해제" : "이 조합 북마크");
+        bookmarkBtn.setAttribute("aria-pressed", String(Boolean(entry.bookmarked)));
         bookmarkBtn.textContent = entry.bookmarked ? "★" : "☆";
         bookmarkBtn.addEventListener("click", () => {
           if (realIndex !== -1) {
@@ -2460,6 +2487,7 @@
         copyItemBtn.type = "button";
         copyItemBtn.className = "history-icon-btn";
         copyItemBtn.title = "이 번호 조합 복사";
+        copyItemBtn.setAttribute("aria-label", "이 번호 조합 복사");
         copyItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>`;
         copyItemBtn.addEventListener("click", async () => {
           const text = entry.numbers.map((n) => String(n).padStart(2, "0")).join(", ");
@@ -2471,6 +2499,7 @@
         deleteItemBtn.type = "button";
         deleteItemBtn.className = "history-icon-btn delete";
         deleteItemBtn.title = "이 기록 삭제";
+        deleteItemBtn.setAttribute("aria-label", "이 기록 삭제");
         deleteItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
         deleteItemBtn.addEventListener("click", () => {
           if (realIndex !== -1) {
@@ -2594,7 +2623,7 @@
       ctx.scale(2, 2);
 
       // Background
-      ctx.fillStyle = "#0F3D2E";
+      ctx.fillStyle = "#0D2E22";
       ctx.fillRect(0, 0, width, height);
 
       // Header text
@@ -2609,15 +2638,15 @@
         const y = 92 + idx * rowH;
         ctx.fillStyle = "#FFFFFF";
         ctx.beginPath();
-        ctx.roundRect(28, y, width - 56, 62, 12);
+        ctx.roundRect(28, y, width - 56, 62, 10);
         ctx.fill();
 
-        ctx.fillStyle = "#175943";
+        ctx.fillStyle = "#124D38";
         ctx.font = "800 12px Pretendard, sans-serif";
         ctx.fillText(`GAME ${GAME_LETTERS[idx]}`, 48, y + 28);
-        ctx.fillStyle = "#69756E";
-        ctx.font = "700 12px Georgia, serif";
-        ctx.fillText(`NO. 0${idx + 1}`, 48, y + 46);
+        ctx.fillStyle = "#4E5B54";
+        ctx.font = "600 12px Pretendard, sans-serif";
+        ctx.fillText(`제${idx + 1}조합`, 48, y + 46);
 
         game.numbers.forEach((num, bIdx) => {
           const cx = 165 + bIdx * 54;
@@ -2628,7 +2657,7 @@
             num <= 10 ? "#F2C94C" : num <= 20 ? "#6EB4F7" : num <= 30 ? "#F28472" : num <= 40 ? "#B8C0BC" : "#7ED175";
           ctx.fill();
 
-          ctx.fillStyle = "#14201B";
+          ctx.fillStyle = "#111A16";
           ctx.font = "800 14px Pretendard, sans-serif";
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
@@ -2639,8 +2668,8 @@
         ctx.textBaseline = "alphabetic";
         const sum = game.numbers.reduce((a, b) => a + b, 0);
         const odd = game.numbers.filter((n) => n % 2 === 1).length;
-        ctx.fillStyle = "#0F3D2E";
-        ctx.font = "800 12px Pretendard, sans-serif";
+        ctx.fillStyle = "#0D2E22";
+        ctx.font = "700 12px Pretendard, sans-serif";
         ctx.fillText(`합계 ${sum} · 홀짝 ${odd}:${6 - odd}`, width - 48, y + 36);
         ctx.textAlign = "left";
       });
@@ -2690,7 +2719,7 @@
       showToast("최근 추첨 기록을 모두 지웠습니다.");
     });
 
-    // Initialize App with an immediate 5-game draw matching the Figma design
+    // Initialize App with an immediate 5-game draw
     updateDrawRoundInfo();
     initMatrixGrid();
     renderFilterState();
