@@ -6,8 +6,13 @@
   <meta name="theme-color" content="#0f3d2e">
   <meta name="description" content="실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 로또 번호 추천 스튜디오">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asap-art.github.io/lecture/">
+  <meta property="og:site_name" content="행운 번호 스튜디오">
   <meta property="og:title" content="행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천">
   <meta property="og:description" content="1부터 45까지, 한 번의 클릭으로 로또 5게임(1장) 행운 조합과 홀짝·합계 통계를 확인해 보세요.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천">
+  <meta name="twitter:description" content="실제 로또 1장(A~E 5게임) 규격에 맞춘 암호학 기반 무작위 번호 추천 스튜디오">
   <title>행운 번호 스튜디오 | 프리미엄 로또 6/45 5게임 추천</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
@@ -862,28 +867,62 @@
       transition: all 150ms ease;
     }
 
-    .history-clear:hover {
+    .history-clear:hover:not(:disabled) {
       border-color: #d98273;
       color: #e06d53;
       background: rgba(224, 109, 83, 0.1);
     }
 
+    .history-clear:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
     .history-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 12px;
     }
 
     .history-row {
-      min-height: 50px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px 14px;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 14px;
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
       background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      transition: border-color 150ms ease, transform 150ms ease;
+    }
+
+    .history-row:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-1px);
+    }
+
+    .history-row-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .history-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .history-tag {
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: var(--eyebrow-bg);
+      color: var(--eyebrow-text);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
     }
 
     .history-time {
@@ -894,10 +933,65 @@
       font-variant-numeric: tabular-nums;
     }
 
+    .history-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .history-icon-btn {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface-subtle);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+
+    .history-icon-btn:hover {
+      border-color: var(--brand-accent);
+      color: var(--brand-accent);
+      background: var(--surface-hover);
+    }
+
+    .history-icon-btn.delete:hover {
+      border-color: #d98273;
+      color: #e06d53;
+      background: rgba(224, 109, 83, 0.1);
+    }
+
+    .history-icon-btn svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .history-row-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
     .history-balls {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+    }
+
+    .history-stat {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .history-stat strong {
+      color: var(--ink-secondary);
     }
 
     .mini-ball {
@@ -1188,10 +1282,12 @@
   <script>
     const HISTORY_KEY = "lucky-number-history-v1";
     const THEME_KEY = "lucky-number-theme-v1";
+    const MAX_HISTORY = 25;
     const GAME_LETTERS = ["A", "B", "C", "D", "E"];
     const ticketList = document.querySelector("#ticket-list");
     const historyList = document.querySelector("#history-list");
     const historyCount = document.querySelector("#history-count");
+    const clearHistoryBtn = document.querySelector("#clear-history");
     const copyButton = document.querySelector("#copy-button");
     const copyButtonText = document.querySelector("#copy-button-text");
     const drawButtonLabel = document.querySelector("#draw-button-label");
@@ -1206,6 +1302,21 @@
     let selectedCount = 5;
     let latestDraw = [];
     let history = loadHistory();
+
+    async function writeClipboard(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const temporaryInput = document.createElement("textarea");
+        temporaryInput.value = text;
+        temporaryInput.style.position = "fixed";
+        temporaryInput.style.opacity = "0";
+        document.body.append(temporaryInput);
+        temporaryInput.select();
+        document.execCommand("copy");
+        temporaryInput.remove();
+      }
+    }
 
     function applyTheme(theme, notify = false) {
       const isDark = theme === "dark";
@@ -1234,6 +1345,22 @@
       applyTheme(next, true);
     });
 
+    if (window.matchMedia) {
+      const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const handleSchemeChange = (event) => {
+        try {
+          if (!localStorage.getItem(THEME_KEY)) {
+            applyTheme(event.matches ? "dark" : "light", false);
+          }
+        } catch {
+          applyTheme(event.matches ? "dark" : "light", false);
+        }
+      };
+      if (typeof colorSchemeQuery.addEventListener === "function") {
+        colorSchemeQuery.addEventListener("change", handleSchemeChange);
+      }
+    }
+
     function showToast(message) {
       if (!toast) return;
       toast.textContent = message;
@@ -1251,7 +1378,7 @@
           Array.isArray(entry.numbers) && entry.numbers.length === 6 &&
           entry.numbers.every((number) => Number.isInteger(number) && number >= 1 && number <= 45) &&
           typeof entry.time === "string"
-        ).slice(0, 12) : [];
+        ).slice(0, MAX_HISTORY) : [];
       } catch {
         return [];
       }
@@ -1367,7 +1494,8 @@
           const newNumbers = drawNumbers();
           latestDraw[index] = newNumbers;
           const time = formatNow();
-          history = [{ numbers: newNumbers, time }, ...history].slice(0, 12);
+          const labelText = `GAME ${GAME_LETTERS[index] || index + 1} · 리롤`;
+          history = [{ numbers: newNumbers, time, label: labelText }, ...history].slice(0, MAX_HISTORY);
           saveHistory();
           renderTickets();
           renderHistory();
@@ -1391,6 +1519,9 @@
     function renderHistory() {
       historyList.replaceChildren();
       historyCount.textContent = String(history.length);
+      if (clearHistoryBtn) {
+        clearHistoryBtn.disabled = history.length === 0;
+      }
       if (history.length === 0) {
         const empty = document.createElement("div");
         empty.className = "history-empty";
@@ -1399,12 +1530,63 @@
         return;
       }
 
-      history.forEach((entry) => {
+      history.forEach((entry, index) => {
         const row = document.createElement("div");
         row.className = "history-row";
+
+        const top = document.createElement("div");
+        top.className = "history-row-top";
+
+        const meta = document.createElement("div");
+        meta.className = "history-meta";
+
+        const tag = document.createElement("span");
+        tag.className = "history-tag";
+        tag.textContent = entry.label || "GAME";
+
         const time = document.createElement("time");
         time.className = "history-time";
         time.textContent = entry.time;
+
+        meta.append(tag, time);
+
+        const actions = document.createElement("div");
+        actions.className = "history-actions";
+
+        const copyItemBtn = document.createElement("button");
+        copyItemBtn.type = "button";
+        copyItemBtn.className = "history-icon-btn";
+        copyItemBtn.title = "이 번호 조합 복사";
+        copyItemBtn.setAttribute("aria-label", `${entry.numbers.join(", ")} 복사`);
+        copyItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>`;
+        copyItemBtn.addEventListener("click", async () => {
+          const text = entry.numbers.join(", ");
+          await writeClipboard(text);
+          const msg = `기록 번호(${text})가 복사되었습니다.`;
+          announcement.textContent = msg;
+          showToast(msg);
+        });
+
+        const deleteItemBtn = document.createElement("button");
+        deleteItemBtn.type = "button";
+        deleteItemBtn.className = "history-icon-btn delete";
+        deleteItemBtn.title = "이 기록 삭제";
+        deleteItemBtn.setAttribute("aria-label", "이 추첨 기록 삭제");
+        deleteItemBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+        deleteItemBtn.addEventListener("click", () => {
+          history.splice(index, 1);
+          saveHistory();
+          renderHistory();
+          announcement.textContent = "선택한 추첨 기록을 삭제했습니다.";
+          showToast("선택한 기록을 삭제했습니다.");
+        });
+
+        actions.append(copyItemBtn, deleteItemBtn);
+        top.append(meta, actions);
+
+        const bottom = document.createElement("div");
+        bottom.className = "history-row-bottom";
+
         const balls = document.createElement("div");
         balls.className = "history-balls";
         balls.setAttribute("aria-label", entry.numbers.join(", "));
@@ -1414,7 +1596,16 @@
           ball.textContent = String(number);
           balls.append(ball);
         });
-        row.append(time, balls);
+
+        const sum = entry.numbers.reduce((acc, cur) => acc + cur, 0);
+        const odd = entry.numbers.filter((n) => n % 2 === 1).length;
+        const even = 6 - odd;
+        const stat = document.createElement("span");
+        stat.className = "history-stat";
+        stat.innerHTML = `합 <strong>${sum}</strong> · 홀짝 <strong>${odd}:${even}</strong>`;
+
+        bottom.append(balls, stat);
+        row.append(top, bottom);
         historyList.append(row);
       });
     }
@@ -1432,8 +1623,12 @@
     function runDraw() {
       latestDraw = Array.from({ length: selectedCount }, drawNumbers);
       const time = formatNow();
-      const newEntries = latestDraw.map((numbers) => ({ numbers, time }));
-      history = [...newEntries, ...history].slice(0, 12);
+      const newEntries = latestDraw.map((numbers, idx) => ({
+        numbers,
+        time,
+        label: `GAME ${GAME_LETTERS[idx] || idx + 1}`
+      }));
+      history = [...newEntries, ...history].slice(0, MAX_HISTORY);
       saveHistory();
       renderTickets();
       renderHistory();
@@ -1450,18 +1645,7 @@
       const text = latestDraw
         .map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`)
         .join("\n");
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch {
-        const temporaryInput = document.createElement("textarea");
-        temporaryInput.value = text;
-        temporaryInput.style.position = "fixed";
-        temporaryInput.style.opacity = "0";
-        document.body.append(temporaryInput);
-        temporaryInput.select();
-        document.execCommand("copy");
-        temporaryInput.remove();
-      }
+      await writeClipboard(text);
       announcement.textContent = "추첨 결과를 복사했습니다.";
       copyButtonText.textContent = "복사 완료!";
       showToast("추첨 결과가 클립보드에 복사되었습니다.");
@@ -1471,7 +1655,10 @@
     });
 
     document.querySelector("#share-button").addEventListener("click", async () => {
-      const shareUrl = window.location.href;
+      const PUBLIC_URL = "https://asap-art.github.io/lecture/";
+      const shareUrl = window.location.protocol.startsWith("http")
+        ? window.location.href
+        : PUBLIC_URL;
       const drawSummary = latestDraw.length
         ? "\n\n" + latestDraw.map((numbers, index) => `${index + 1}게임: ${numbers.join(", ")}`).join("\n")
         : "";
@@ -1491,18 +1678,7 @@
         }
       }
 
-      try {
-        await navigator.clipboard.writeText(`${shareData.text}\n${shareUrl}`);
-      } catch {
-        const temporaryInput = document.createElement("textarea");
-        temporaryInput.value = `${shareData.text}\n${shareUrl}`;
-        temporaryInput.style.position = "fixed";
-        temporaryInput.style.opacity = "0";
-        document.body.append(temporaryInput);
-        temporaryInput.select();
-        document.execCommand("copy");
-        temporaryInput.remove();
-      }
+      await writeClipboard(`${shareData.text}\n${shareUrl}`);
       announcement.textContent = "공유 링크를 복사했습니다.";
       showToast("공유 링크와 번호가 클립보드에 복사되었습니다.");
     });
