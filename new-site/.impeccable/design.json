@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T08:08:56.319Z",
+  "title": "Design System: 하루선",
+  "extensions": {
+    "colorMeta": {
+      "forest": {"role": "primary", "displayName": "시간표 숲색", "canonical": "#173f35", "tonalRamp": ["#071b16", "#0e3028", "#173f35", "#285a4c", "#5b8276", "#9ab5ab", "#d5e7d8", "#f1f7f3"]},
+      "coral": {"role": "tertiary", "displayName": "현재 위치 코럴", "canonical": "#a73a28", "tonalRamp": ["#32100b", "#632116", "#a73a28", "#c95139", "#dd826e", "#edb5a8", "#f5dfd8", "#fff5f2"]},
+      "cool-paper": {"role": "neutral", "displayName": "차가운 종이", "canonical": "#e8efeb", "tonalRamp": ["#15201b", "#2d3a34", "#52615a", "#7d8c84", "#a8b7af", "#cbd7d0", "#e8efeb", "#fbfdfb"]}
+    },
+    "typographyMeta": {
+      "headline": {"displayName": "하루 제목", "purpose": "선택 날짜와 오늘의 흐름 제목"},
+      "body": {"displayName": "작업 본문", "purpose": "일정, 다이어리, 폼과 상태 문구"}
+    },
+    "shadows": [
+      {"name": "panel", "value": "0 12px 32px -22px rgba(18, 43, 35, 0.45), 0 2px 8px rgba(18, 43, 35, 0.06)", "purpose": "작업 패널을 차가운 종이 배경에서 분리"}
+    ],
+    "motion": [
+      {"name": "state", "value": "160ms ease-out", "purpose": "버튼과 필터의 상태 전환"},
+      {"name": "editor-reveal", "value": "260ms cubic-bezier(.16, 1, .3, 1)", "purpose": "인라인 일정 편집기 한 번의 공개 동작"}
+    ],
+    "breakpoints": [
+      {"name": "stack-diary", "value": "1180px"},
+      {"name": "mobile", "value": "780px"},
+      {"name": "compact", "value": "480px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "저장과 추가처럼 결과를 만드는 핵심 행동",
+      "html": "<button class=\"ds-primary\">일정 저장</button>",
+      "css": ".ds-primary{min-height:42px;padding:0 15px;border:0;border-radius:7px;background:var(--forest,#173f35);color:var(--surface,#fbfdfb);font:750 15px sans-serif;cursor:pointer}.ds-primary:hover{background:#0e3028}.ds-primary:focus-visible{outline:3px solid #a73a28;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "일정과 다이어리의 기본 입력",
+      "html": "<input class=\"ds-input\" value=\"발표 자료 정리\" aria-label=\"할 일\">",
+      "css": ".ds-input{min-height:44px;padding:0 12px;border:1px solid #a8b7af;border-radius:7px;background:#fbfdfb;color:#16231f;font:400 15px sans-serif}.ds-input:hover{border-color:#173f35}.ds-input:focus-visible{outline:3px solid #a73a28;outline-offset:3px}"
+    },
+    {
+      "name": "Selected Filter",
+      "kind": "chip",
+      "description": "현재 작업 범위를 표시하는 pressed 버튼",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">선택한 날</button>",
+      "css": ".ds-filter{min-height:36px;padding:0 12px;border:0;border-radius:6px;background:#173f35;color:#fbfdfb;font:750 12px sans-serif}.ds-filter:focus-visible{outline:3px solid #a73a28;outline-offset:3px}"
+    },
+    {
+      "name": "Timeline Stop",
+      "kind": "custom",
+      "description": "시간순 할 일의 위치와 중요도를 연결하는 정차점",
+      "html": "<div class=\"ds-task\"><time>14:30</time><span></span><strong>발표 자료 정리</strong></div>",
+      "css": ".ds-task{display:grid;grid-template-columns:52px 18px 1fr;gap:10px;align-items:center;color:#16231f;font:400 14px sans-serif}.ds-task time{color:#44534d;font-size:12px;text-align:right}.ds-task span{width:14px;height:14px;border:3px solid #fbfdfb;border-radius:50%;background:#173f35;box-shadow:0 0 0 1px #173f35}"
+    },
+    {
+      "name": "Selected Date",
+      "kind": "nav",
+      "description": "오늘 또는 선택 날짜를 나타내는 날짜 레일 항목",
+      "html": "<button class=\"ds-date\" aria-pressed=\"true\"><strong>9</strong><span>월 · 오늘</span><b>2</b></button>",
+      "css": ".ds-date{min-height:57px;padding:8px 11px;display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:9px;border:0;border-radius:7px;background:#173f35;color:#fbfdfb;font-family:sans-serif}.ds-date strong{font-size:20px}.ds-date span{font-size:12px}.ds-date b{min-width:23px;height:23px;display:grid;place-items:center;border-radius:999px;background:#f4c866;color:#0e3028;font-size:11px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "데이라인 타임테이블",
+    "overview": "하루선은 도시 시간표의 명료한 리듬을 빌리되 교통 앱처럼 꾸미지 않는다. 할 일은 시간선 위의 정차 지점으로, 다이어리는 하루가 끝나는 종착 기록으로 읽힌다. 표준 입력과 버튼이 항상 은유보다 우선한다.",
+    "keyCharacteristics": ["짙은 숲색 셸과 밝고 차분한 작업면", "날짜·시간·완료 상태를 빠르게 훑는 높은 정보 밀도", "시간선과 정차점 하나만을 반복하는 절제된 시그니처", "과한 장식 없이 선, 간격, 상태색으로 만든 구조"],
+    "rules": [{"name": "The State Color Rule", "body": "코럴과 골드는 장식이 아니라 중요도·현재 위치·경고에만 사용한다.", "section": "colors"}],
+    "dos": ["Do 날짜, 시간, 완료 상태를 첫 시선에서 읽을 수 있게 유지한다.", "Do 빈 상태와 저장 실패처럼 실제 상태에 복구 행동을 제공한다.", "Do 시간선 은유보다 표준 폼과 명확한 동사를 우선한다."],
+    "donts": ["Don't 시간표 소재를 표지판, 노선도, 교통 아이콘으로 과장하지 않는다.", "Don't 같은 크기의 장식 카드로 작업 영역을 분절하지 않는다.", "Don't 코럴과 골드를 의미 없는 강조색으로 확장하지 않는다."]
+  }
+}
