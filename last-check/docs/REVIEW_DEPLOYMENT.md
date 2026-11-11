@@ -26,3 +26,13 @@
 - 원본 두 사이트의 실제 응답 SHA와 커밋 바이트, 배포 manifest의 commit/base, 모든22이미지와 JS/CSS의 파일/MIME/해시·404/콘솔을 확인한다. 응답 캐시 지연 시 새 커밋이 제공될 때까지 이전 커밋을 검수 완료로 표시하지 않는다.
 - 최근 원문82/선택54·실제 엔진·단위286/E2E24의 범위/경계 주입은 FULL_QA.md. 실기기 iOS/Android·실제 스크린리더·전82장면 육안·사람 플레이는 별도 미검증이다.
 - 인증은 기존 Git credential helper/GitHub 권한을 사용하며 토큰/비밀번호를 요청·문서·명령행 인자로 기록하지 않는다. 인증이 끊기면 사용자가 GitHub/Git Credential Manager에서 로그인/권한 승인 후 같은 workflow를 실행한다.
+
+## 최초 실제 검토 배포 결과
+
+- **공개 검토 URL:** https://asap-art.github.io/lecture/last-check/ — 정식 출시 아님.
+- **실제 배포 소스 커밋:** `bd9fa17ce966fb9f81bcb2f5ff0e4a57a2a9237e`. [Pages Actions 실행42949184793](https://github.com/ASAP-art/lecture/actions/runs/42949184793)의 npm ci·타입/콘텐츠/Vite build·자산 검증·패키징·게시 모두 성공했다. `deployment.json`도 같은 커밋/base를 반환했다.
+- 실제 URL 런타임29파일(그림22 포함)이200/MIME/크기/SHA 일치. 기존 두 사이트 실행4파일은 이전 e06a659 커밋과 바이트 동일하다. 게임 source/docs/art-source 및 잘못된 자산 대소문자는 예상404이며 rewrite로 숨기지 않았다. 앱 무슬래시 URL은301로 정규 URL에 연결된다.
+- 실제 응답은 Cache-Control `max-age=600`, ETag/Last-Modified가 있다. 기존 미버전화 PNG3개(bg_archive/bg_interview/char_yikyung_neutral)는 이번에 바꾸지 않았다. 나중에 이미지 바이트를 바꿀 때는 파일명 버전/매핑 갱신이 필요하며 noindex/캐시를 접근 제한으로 보지 않는다.
+- 실제 HTTPS URL 스모크3건 통과: Chromium TRUE는 상태주입 없이 선택ID24개를 실제 클릭해 엔딩/종료 문장/TITLE까지 완주; WebKit 모바일2건은 시작/선택→결과/수첩·로그/수동 저장·복원/재접속/CH02 진행과 읽기 설정·390×844 화면을 확인했다. 브라우저 콘솔 경고/오류·pageerror·요청 실패·예상 밖 HTTP 오류0. 모바일 타이틀/인물 캡처를 실제 확인했다.
+- 공개 배포 JS/CSS가 이번 로컬 빌드 및 최근 전체 QA와 같은 해시/바이트여서 기존 단위286·E2E24를 재사용했다. 전체 검사를 다시 실행한 것으로 세지 않는다. 로컬 근거: `docs/qa-logs/deployment-{ci,http,smoke,qa-reuse}.json`, `deployment-mobile-evidence/`, `deployment-ending-evidence/`.
+- 사용자 추가 인증 동작은 없다. 토큰/비밀번호를 요구·기록하지 않았다. 실기기·실제 스크린리더·전82장면 육안·사람 플레이, 미수신 문서3·기존 미술 문제는 여전히 미검증/미완료다. 현재 후속 변경은 검수 결과 문서뿐이며 이 경로는 workflow 배포 트리거에서 제외된다.
