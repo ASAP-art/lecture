@@ -1,0 +1,1241 @@
+{
+  "id": "CH08",
+  "title": "마지막 확인〔5분〕",
+  "entrySceneId": "CH08_S01",
+  "scenes": [
+    {
+      "id": "CH08_S01",
+      "chapterId": "CH08",
+      "title": "퍼즐 4: 실수의 설명력",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S01_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "지후는 확인서 사본을 접지 않고 그대로 들고 있었다. 종이가 손에서 조금 떨렸다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1166,
+            "lineEnd": 1166,
+            "stableBlockId": "SRC_CH08_S01_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “사람 수를 잘못 셌을 수는 있어요. 제가 틀렸다는 게, 죽이려 했다는 뜻은 아니에요.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1168,
+            "lineEnd": 1168,
+            "stableBlockId": "SRC_CH08_S01_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “맞습니다. 하나씩 보죠.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1170,
+            "lineEnd": 1170,
+            "stableBlockId": "SRC_CH08_S01_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "화면 왼쪽에는 19시 35분 ‘A3에서 19시 41분까지 대기’ 회신. 오른쪽에는 지후의 열람 확인. 아래에는 19시 39분 재확인 통화 슬롯이 나타났다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1172,
+            "lineEnd": 1172,
+            "stableBlockId": "SRC_CH08_S01_04"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “실수 가설이라면 설명해야 할 것이 두 개입니다. 왜 태오 씨를 제외하고 세었는가. 그리고 태오 씨를 이름으로 물었을 때 무엇을 답했는가.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1174,
+            "lineEnd": 1174,
+            "stableBlockId": "SRC_CH08_S01_05"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_06",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1176,
+            "lineEnd": 1176,
+            "stableBlockId": "SRC_CH08_S01_06"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C18_A",
+          "label": "대기 회신의 열람과 특정 인물 재질문을 묶어 고의를 검토한다.",
+          "resultSceneId": "CH08_S01_A",
+          "effectIds": [
+            "FX_C18_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1178,
+            "lineEnd": 1178,
+            "stableBlockId": "SRC_C18_A"
+          }
+        },
+        {
+          "id": "C18_B",
+          "label": "지후가 태오를 싫어했다는 동기만으로 고의를 확정한다.",
+          "resultSceneId": "CH08_S01_B",
+          "effectIds": [
+            "FX_C18_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1179,
+            "lineEnd": 1179,
+            "stableBlockId": "SRC_C18_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1163,
+        "lineEnd": 1179,
+        "stableBlockId": "SRC_CH08_S01"
+      }
+    },
+    {
+      "id": "CH08_S01_A",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S01_A_RESULT",
+          "kind": "dialogue",
+          "content": {
+            "type": "conditional",
+            "variants": [
+              {
+                "id": "VAR_CH08_S01_A_COMPLETE",
+                "when": {
+                  "op": "all",
+                  "conditions": [
+                    { "op": "hasEvidence", "evidenceId": "E09" },
+                    { "op": "hasEvidence", "evidenceId": "E10" }
+                  ]
+                },
+                "text": "서진: “단순히 네 건을 센 실수라면, 원장이 A3에 남았는지 물었을 때 확인을 멈췄어야 합니다. 5초 전 그곳에서 전화를 받았고, 계속 기다리라고 했어요. 25초 만에 출구까지 나올 수도 없습니다. 그런데 확인했다고 답했습니다.”\n\n지후: “나왔을 수도…….”\n\n서진: “방금 전 통화와 이동거리까지 알고 한 확인입니다. 추측했다는 해명으로 설명할 수 없습니다. 예약 마감의 조건이 된 건 당신의 전원 퇴실 서명입니다.”\n\n지후는 종이를 내려놓았다.",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1184,
+                  "lineEnd": 1190,
+                  "stableBlockId": "SRC_CH08_S01_A_COMPLETE"
+                }
+              },
+              {
+                "id": "VAR_CH08_S01_A_INCOMPLETE",
+                "when": {
+                  "op": "not",
+                  "condition": {
+                    "op": "all",
+                    "conditions": [
+                      { "op": "hasEvidence", "evidenceId": "E09" },
+                      { "op": "hasEvidence", "evidenceId": "E10" }
+                    ]
+                  }
+                },
+                "text": "서진: “회신을 읽었다는 건 확인됐습니다. 하지만 나중에 그가 나왔다고 믿게 된 근거도 검증해야 합니다.”\n\n도현: “특정 질문에 한 답을 아직 청취하지 않았어요. 고의의 빈칸은 남겨두겠습니다.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1196,
+                  "lineEnd": 1198,
+                  "stableBlockId": "SRC_CH08_S01_A_INCOMPLETE"
+                }
+              }
+            ]
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S01_A_COMPLETE",
+            "FX_REVEAL_NOTE_CH08_S01_A_INCOMPLETE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1181,
+            "lineEnd": 1202,
+            "stableBlockId": "SRC_CH08_S01_A_CONDITIONAL"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1181,
+        "lineEnd": 1202,
+        "stableBlockId": "SRC_CH08_S01_A"
+      }
+    },
+    {
+      "id": "CH08_S01_B",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S01_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그를 원망했고, 그를 안에 남겼습니다. 그래서 죽였습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1205,
+            "lineEnd": 1205,
+            "stableBlockId": "SRC_CH08_S01_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “원망한 사람은 여기 많아요.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1207,
+            "lineEnd": 1207,
+            "stableBlockId": "SRC_CH08_S01_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “선배. 동기 다음에 행동을 넣어야 합니다. 감정으로 그 칸을 대신 채우면 안 돼요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1209,
+            "lineEnd": 1209,
+            "stableBlockId": "SRC_CH08_S01_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S01_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "나는 질문을 끝내지 못했다. 지후는 내 말을 부정했지만, 그날 자신이 한 확인은 설명하지 않았다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S01_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1211,
+            "lineEnd": 1211,
+            "stableBlockId": "SRC_CH08_S01_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1204,
+        "lineEnd": 1213,
+        "stableBlockId": "SRC_CH08_S01_B"
+      }
+    },
+    {
+      "id": "CH08_S02",
+      "chapterId": "CH08",
+      "title": "퍼즐 5: 무너지지 않는 알리바이",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S02_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그럼에도 지후는 안전실에 있었죠. 영상이 거짓이라고 하실 겁니까?”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1218,
+            "lineEnd": 1218,
+            "stableBlockId": "SRC_CH08_S02_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “아닙니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1220,
+            "lineEnd": 1220,
+            "stableBlockId": "SRC_CH08_S02_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “장치를 만지지도 못했고요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1222,
+            "lineEnd": 1222,
+            "stableBlockId": "SRC_CH08_S02_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그것도 맞습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1224,
+            "lineEnd": 1224,
+            "stableBlockId": "SRC_CH08_S02_04"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그럼 누가 움직였습니까?”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1226,
+            "lineEnd": 1226,
+            "stableBlockId": "SRC_CH08_S02_05"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_06",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그녀는 처음의 질문을 다시 내놓았다. 열쇠, 외함, 스위치, 현장. 시선을 끌기 쉬운 것들만 그 문장 안에 들어 있었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1228,
+            "lineEnd": 1228,
+            "stableBlockId": "SRC_CH08_S02_06"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_07",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "도현이 화이트보드 아래에 작은 칸을 만들었다. ‘그 안에 아무도 없다고 누가 보증했는가.’"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1230,
+            "lineEnd": 1230,
+            "stableBlockId": "SRC_CH08_S02_07"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_08",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1232,
+            "lineEnd": 1232,
+            "stableBlockId": "SRC_CH08_S02_08"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C19_A",
+          "label": "알리바이가 부정하는 행위와 실제 필요한 행위를 분리한다.",
+          "resultSceneId": "CH08_S02_A",
+          "effectIds": [
+            "FX_C19_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1234,
+            "lineEnd": 1234,
+            "stableBlockId": "SRC_C19_A"
+          }
+        },
+        {
+          "id": "C19_B",
+          "label": "영상 속 보이지 않는 틈이나 대역을 다시 찾는다.",
+          "resultSceneId": "CH08_S02_B",
+          "effectIds": [
+            "FX_C19_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1235,
+            "lineEnd": 1235,
+            "stableBlockId": "SRC_C19_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1215,
+        "lineEnd": 1235,
+        "stableBlockId": "SRC_CH08_S02"
+      }
+    },
+    {
+      "id": "CH08_S02_A",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S02_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “알리바이는 지후가 현장에서 손으로 조작했다는 말을 반박합니다. 예약 마감에 필요한 확인을 했는지는 반박하지 않아요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1238,
+            "lineEnd": 1238,
+            "stableBlockId": "SRC_CH08_S02_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “오히려 계속 안전실에 있었으니, 그 시간 그 단말의 작성자가 누구인지는 더 분명해집니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1240,
+            "lineEnd": 1240,
+            "stableBlockId": "SRC_CH08_S02_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “사람 하나 잘못 센 걸 살인으로 바꾸실 겁니까?”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1242,
+            "lineEnd": 1242,
+            "stableBlockId": "SRC_CH08_S02_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_A_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “바꾸지 않습니다. 무엇을 알고 어떤 말을 했는지 증거를 붙이겠습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S02_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1244,
+            "lineEnd": 1244,
+            "stableBlockId": "SRC_CH08_S02_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1237,
+        "lineEnd": 1246,
+        "stableBlockId": "SRC_CH08_S02_A"
+      }
+    },
+    {
+      "id": "CH08_S02_B",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S02_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “대역도 편집도 아닙니다. 같은 사람이고, 실제 응답이고, 끊기지도 않았어요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1249,
+            "lineEnd": 1249,
+            "stableBlockId": "SRC_CH08_S02_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그건 처음부터 말씀드렸습니다.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1251,
+            "lineEnd": 1251,
+            "stableBlockId": "SRC_CH08_S02_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그럼 다른 가능성을…….”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1253,
+            "lineEnd": 1253,
+            "stableBlockId": "SRC_CH08_S02_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S02_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "나는 같은 문장 앞에서 멈췄다. 알리바이를 깨는 것이 반드시 필요한 이유를 설명하지 못했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1255,
+            "lineEnd": 1255,
+            "stableBlockId": "SRC_CH08_S02_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1248,
+        "lineEnd": 1257,
+        "stableBlockId": "SRC_CH08_S02_B"
+      }
+    },
+    {
+      "id": "CH08_S03",
+      "chapterId": "CH08",
+      "title": "논증 제출",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S03_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “최종 수사 가설로 올릴 겁니다. 이름부터 쓰지 말고, 일어난 일을 적죠.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1262,
+            "lineEnd": 1262,
+            "stableBlockId": "SRC_CH08_S03_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_02",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "수첩에서 고른 자료만 보드에 붙는다. 미확보 증거는 빈칸으로 남는다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1264,
+            "lineEnd": 1264,
+            "stableBlockId": "SRC_CH08_S03_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_03",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "**① 확인 대상과 실제 인원 / ② 작동 경로와 사후 흔적 / ③ 안전 확인 작성자 / ④ 잔류 인식 / ⑤ 위치 알리바이의 범위**"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1266,
+            "lineEnd": 1266,
+            "stableBlockId": "SRC_CH08_S03_03"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “하나라도 비어 있으면 다른 설명이 들어올 자리가 남아.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1268,
+            "lineEnd": 1268,
+            "stableBlockId": "SRC_CH08_S03_04"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “자백이 그걸 전부 메워주지는 않고요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1270,
+            "lineEnd": 1270,
+            "stableBlockId": "SRC_CH08_S03_05"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_06",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1272,
+            "lineEnd": 1272,
+            "stableBlockId": "SRC_CH08_S03_06"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C20_A",
+          "label": "확보 자료만으로 ‘허위 확인→예약 마감→사망→사후 수동 흔적’ 논증을 제출한다.",
+          "resultSceneId": "CH08_S03_A",
+          "effectIds": [
+            "FX_C20_A_COMPLETE",
+            "FX_C20_A_INCOMPLETE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1274,
+            "lineEnd": 1274,
+            "stableBlockId": "SRC_C20_A"
+          }
+        },
+        {
+          "id": "C20_B",
+          "label": "‘현장 수동 조작→사망’ 가설을 유지한다.",
+          "resultSceneId": "CH08_S03_B",
+          "effectIds": [
+            "FX_C20_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1275,
+            "lineEnd": 1275,
+            "stableBlockId": "SRC_C20_B"
+          }
+        },
+        {
+          "id": "C20_C",
+          "label": "확정 판단을 보류하고 두 가설을 병기한다.",
+          "resultSceneId": "CH08_S03_C",
+          "effectIds": [
+            "FX_C20_C"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1276,
+            "lineEnd": 1276,
+            "stableBlockId": "SRC_C20_C"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1259,
+        "lineEnd": 1276,
+        "stableBlockId": "SRC_CH08_S03"
+      }
+    },
+    {
+      "id": "CH08_S03_A",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S03_A_RESULT",
+          "kind": "dialogue",
+          "content": {
+            "type": "conditional",
+            "variants": [
+              {
+                "id": "VAR_CH08_S03_A_COMPLETE",
+                "when": {
+                  "op": "all",
+                  "conditions": [
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D1"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D2"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D3"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D4"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E03"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E04"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E05"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E06"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E07"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E09"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E10"
+                    },
+                    {
+                      "op": "flag",
+                      "flagId": "FLAG_RESTORED",
+                      "equals": true
+                    }
+                  ]
+                },
+                "text": "서진: “지후가 태오를 안에 남게 했고, 그 회신을 읽었습니다. 특정 질문에도 빈 공간이라고 확인했어요. 그 서류가 예약 마감을 통과시켰습니다. 수동 흔적은 그 뒤에 생겼습니다.”\n\n도현: “행동, 지식, 인과관계가 이어집니다. 영상과도 충돌하지 않습니다.”\n\n이경은 의자 팔걸이를 꽉 잡았다.\n\n이경: “그 애를 현장에 보내려고 애쓰실 줄 알았습니다.”\n\n서진: “그러길 바라셨겠죠.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1283,
+                  "lineEnd": 1291,
+                  "stableBlockId": "SRC_CH08_S03_A_COMPLETE"
+                }
+              },
+              {
+                "id": "VAR_CH08_S03_A_INCOMPLETE",
+                "when": {
+                  "op": "not",
+                  "condition": {
+                    "op": "all",
+                    "conditions": [
+                      {
+                        "op": "hasDeduction",
+                        "deductionId": "D1"
+                      },
+                      {
+                        "op": "hasDeduction",
+                        "deductionId": "D2"
+                      },
+                      {
+                        "op": "hasDeduction",
+                        "deductionId": "D3"
+                      },
+                      {
+                        "op": "hasDeduction",
+                        "deductionId": "D4"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E03"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E04"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E05"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E06"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E07"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E09"
+                      },
+                      {
+                        "op": "hasEvidence",
+                        "evidenceId": "E10"
+                      },
+                      {
+                        "op": "flag",
+                        "flagId": "FLAG_RESTORED",
+                        "equals": true
+                      }
+                    ]
+                  }
+                },
+                "text": "도현: “가능한 가설입니다. 그런데 아직 증명되지 않은 칸이 있습니다.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1297,
+                  "lineEnd": 1297,
+                  "stableBlockId": "SRC_CH08_S03_A_INCOMPLETE"
+                }
+              }
+            ]
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S03_A_COMPLETE",
+            "FX_REVEAL_NOTE_CH08_S03_A_INCOMPLETE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1278,
+            "lineEnd": 1305,
+            "stableBlockId": "SRC_CH08_S03_A_CONDITIONAL"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “빈칸은 빈칸으로 제출하자. 추측을 증거로 쓰지는 말고.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S03_A_02"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1301,
+            "lineEnd": 1301,
+            "stableBlockId": "SRC_CH08_S03_A_02"
+          },
+          "condition": {
+            "op": "not",
+            "condition": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "hasDeduction",
+                  "deductionId": "D1"
+                },
+                {
+                  "op": "hasDeduction",
+                  "deductionId": "D2"
+                },
+                {
+                  "op": "hasDeduction",
+                  "deductionId": "D3"
+                },
+                {
+                  "op": "hasDeduction",
+                  "deductionId": "D4"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E03"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E04"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E05"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E06"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E07"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E09"
+                },
+                {
+                  "op": "hasEvidence",
+                  "evidenceId": "E10"
+                },
+                {
+                  "op": "flag",
+                  "flagId": "FLAG_RESTORED",
+                  "equals": true
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "presentationInstructions": [
+        {
+          "text": "다음 조건을 모두 만족하면 완성 판정: D1·D2·D3·D4, E03·E04·E05·E06·E07·E09·E10, flags.restored=true.",
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1279,
+            "lineEnd": 1279,
+            "stableBlockId": "SRC_CH08_S03_A_PRESENTATION_1"
+          }
+        },
+        {
+          "text": "누락 항목을 있는 그대로 출력한다: D1 미보유면 ‘집합 불일치’, D2면 ‘흔적의 선후’, D3면 ‘문서 귀속’, D4면 ‘고의’, restored=false면 ‘알리바이의 적용 범위’. 새 정답 대사나 미획득 증거는 제공하지 않는다.",
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1299,
+            "lineEnd": 1299,
+            "stableBlockId": "SRC_CH08_S03_A_PRESENTATION_2"
+          }
+        }
+      ],
+      "nextSceneId": "CH09_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1278,
+        "lineEnd": 1305,
+        "stableBlockId": "SRC_CH08_S03_A"
+      }
+    },
+    {
+      "id": "CH08_S03_B",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S03_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “이경의 열쇠, 동기, 자백을 중심으로 작성합시다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1308,
+            "lineEnd": 1308,
+            "stableBlockId": "SRC_CH08_S03_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “확보한 반대 자료도 목록에서 빼지 않겠습니다. 수동 가설과 충돌하면 최종 지목이 제한됩니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1310,
+            "lineEnd": 1310,
+            "stableBlockId": "SRC_CH08_S03_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_B_03",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 대답하지 않았다. 손가락 사이에서 코트 단추가 돌았다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S03_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1312,
+            "lineEnd": 1312,
+            "stableBlockId": "SRC_CH08_S03_B_03"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH09_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1307,
+        "lineEnd": 1314,
+        "stableBlockId": "SRC_CH08_S03_B"
+      }
+    },
+    {
+      "id": "CH08_S03_C",
+      "chapterId": "CH08",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH08_S03_C_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “문서가 만든 죽음인지, 현장의 손이 만든 죽음인지. 확정 못 한 부분을 표시해.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1317,
+            "lineEnd": 1317,
+            "stableBlockId": "SRC_CH08_S03_C_01"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_C_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “알겠습니다. 지목과 입증은 따로 판단하죠.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1319,
+            "lineEnd": 1319,
+            "stableBlockId": "SRC_CH08_S03_C_02"
+          }
+        },
+        {
+          "id": "BLK_CH08_S03_C_03",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "방 안의 사람들은 아무도 반박하지 않았다. 각자 다른 이유로 그 침묵을 원했다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH08_S03_C"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1321,
+            "lineEnd": 1321,
+            "stableBlockId": "SRC_CH08_S03_C_03"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH09_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1316,
+        "lineEnd": 1323,
+        "stableBlockId": "SRC_CH08_S03_C"
+      }
+    }
+  ],
+  "source": {
+    "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+    "sourcePath": "source/마지막_확인_전체_시나리오.md",
+    "lineStart": 1161,
+    "lineEnd": 1324,
+    "stableBlockId": "SRC_CH08"
+  }
+}

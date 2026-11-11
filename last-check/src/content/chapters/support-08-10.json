@@ -1,0 +1,2378 @@
+{
+  "evidence": [
+    {
+      "id": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "sectionIds": [
+        "ESECTION_E14_01",
+        "ESECTION_E14_02",
+        "ESECTION_E14_03",
+        "ESECTION_E14_04",
+        "ESECTION_E14_05",
+        "ESECTION_E14_06",
+        "ESECTION_E14_07"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 189,
+        "lineEnd": 189,
+        "stableBlockId": "SRC_E14"
+      }
+    },
+    {
+      "id": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "sectionIds": [
+        "ESECTION_E16_01",
+        "ESECTION_E16_02",
+        "ESECTION_E16_03",
+        "ESECTION_E16_04",
+        "ESECTION_E16_05",
+        "ESECTION_E16_06",
+        "ESECTION_E16_07",
+        "ESECTION_E16_08",
+        "ESECTION_E16_09"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 191,
+        "lineEnd": 191,
+        "stableBlockId": "SRC_E16"
+      }
+    }
+  ],
+  "evidenceSections": [
+    {
+      "id": "ESECTION_E14_01",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "지후의 글은 사흘 전에 작성돼 있었다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1350,
+        "lineEnd": 1350,
+        "stableBlockId": "SRC_ESECTION_E14_01"
+      }
+    },
+    {
+      "id": "ESECTION_E14_02",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "지후의 진술 초안: “나는 그때 누가 날 살렸다고 느꼈는지 증언하려는 게 아니다. 누가 내 어머니의 의사를 서류에서 지웠는지 말하려고 한다. 한이경 씨가 한 일을 진술하겠다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1352,
+        "lineEnd": 1352,
+        "stableBlockId": "SRC_ESECTION_E14_02"
+      }
+    },
+    {
+      "id": "ESECTION_E14_03",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "아래에는 전달받은 이경의 서명, 당일 17시 10분. 같은 글에 대한 이경의 짧은 답장이 붙어 있었다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1354,
+        "lineEnd": 1354,
+        "stableBlockId": "SRC_ESECTION_E14_03"
+      }
+    },
+    {
+      "id": "ESECTION_E14_04",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "이경의 답장: “받았다. 네가 직접 말해라. 나는 내 이름으로 답하겠다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1356,
+        "lineEnd": 1356,
+        "stableBlockId": "SRC_ESECTION_E14_04"
+      }
+    },
+    {
+      "id": "ESECTION_E14_05",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "서진: “사고 전에 알고 있었군요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1358,
+        "lineEnd": 1358,
+        "stableBlockId": "SRC_ESECTION_E14_05"
+      }
+    },
+    {
+      "id": "ESECTION_E14_06",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "은서: “네. 지후 씨가 자기를 증언할 거라는 것도. 함께 돌아갈 집을 지키려고 그런 게 아니에요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1360,
+        "lineEnd": 1360,
+        "stableBlockId": "SRC_ESECTION_E14_06"
+      }
+    },
+    {
+      "id": "ESECTION_E14_07",
+      "evidenceId": "E14",
+      "title": "지후의 이경 고발 진술 초안·17:10 수령 서명",
+      "body": "종이 끝의 수령 서명은 안전 확인서의 글씨와 달랐다. 이경의 이름이었다. 지후의 뜻을 읽었다는, 이번에는 다른 사람이 대신할 수 없는 확인이었다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1362,
+        "lineEnd": 1362,
+        "stableBlockId": "SRC_ESECTION_E14_07"
+      }
+    },
+    {
+      "id": "ESECTION_E16_01",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "서진: “지후 씨가 한 일까지 대신 정할 수는 없습니다. 그 사람 진술은 그 사람 이름으로 남겨야 합니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1402,
+        "lineEnd": 1402,
+        "stableBlockId": "SRC_ESECTION_E16_01"
+      }
+    },
+    {
+      "id": "ESECTION_E16_02",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "이경: “내가 데려온 아이예요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1404,
+        "lineEnd": 1404,
+        "stableBlockId": "SRC_ESECTION_E16_02"
+      }
+    },
+    {
+      "id": "ESECTION_E16_03",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "서진: “지금은 자기 이름을 쓰는 사람입니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1406,
+        "lineEnd": 1406,
+        "stableBlockId": "SRC_ESECTION_E16_03"
+      }
+    },
+    {
+      "id": "ESECTION_E16_04",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "이경은 가방에서 작은 수첩을 꺼냈다. 마지막 장에 세 줄이 적혀 있었다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1408,
+        "lineEnd": 1408,
+        "stableBlockId": "SRC_ESECTION_E16_04"
+      }
+    },
+    {
+      "id": "ESECTION_E16_05",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "**‘원본은 은서에게. 내 일도 빼지 말 것. 지후 진술은 지후가 직접.’**",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1410,
+        "lineEnd": 1410,
+        "stableBlockId": "SRC_ESECTION_E16_05"
+      }
+    },
+    {
+      "id": "ESECTION_E16_06",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "그 밑에는 예금 해지와 집 정리, 지후 명의가 아닌 별도 변호 비용 준비가 적혀 있었다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1412,
+        "lineEnd": 1412,
+        "stableBlockId": "SRC_ESECTION_E16_06"
+      }
+    },
+    {
+      "id": "ESECTION_E16_07",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "이경: “살아서 나한테 고맙다고 할 거라곤 생각 안 했어요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1414,
+        "lineEnd": 1414,
+        "stableBlockId": "SRC_ESECTION_E16_07"
+      }
+    },
+    {
+      "id": "ESECTION_E16_08",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "서진: “그래서 이번에도 대신 결정했습니까?”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1416,
+        "lineEnd": 1416,
+        "stableBlockId": "SRC_ESECTION_E16_08"
+      }
+    },
+    {
+      "id": "ESECTION_E16_09",
+      "evidenceId": "E16",
+      "title": "이경의 사후 메모: 원본 전달·지후 독립 증언·자기 재산 정리",
+      "body": "이경: “……이번에는 달랐으면 했습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1418,
+        "lineEnd": 1418,
+        "stableBlockId": "SRC_ESECTION_E16_09"
+      }
+    }
+  ],
+  "notebookEntries": [
+    {
+      "id": "NOTE_CH08_S01_A_COMPLETE",
+      "title": "D4.",
+      "body": "서진: “단순히 네 건을 센 실수라면, 원장이 A3에 남았는지 물었을 때 확인을 멈췄어야 합니다. 5초 전 그곳에서 전화를 받았고, 계속 기다리라고 했어요. 25초 만에 출구까지 나올 수도 없습니다. 그런데 확인했다고 답했습니다.”\n\n지후: “나왔을 수도…….”\n\n서진: “방금 전 통화와 이동거리까지 알고 한 확인입니다. 추측했다는 해명으로 설명할 수 없습니다. 예약 마감의 조건이 된 건 당신의 전원 퇴실 서명입니다.”\n\n지후는 종이를 내려놓았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1184,
+        "lineEnd": 1190,
+        "stableBlockId": "SRC_NOTE_CH08_S01_A_COMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S01_A_INCOMPLETE",
+      "title": "D4 없음.",
+      "body": "서진: “회신을 읽었다는 건 확인됐습니다. 하지만 나중에 그가 나왔다고 믿게 된 근거도 검증해야 합니다.”\n\n도현: “특정 질문에 한 답을 아직 청취하지 않았어요. 고의의 빈칸은 남겨두겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1196,
+        "lineEnd": 1198,
+        "stableBlockId": "SRC_NOTE_CH08_S01_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S01_B",
+      "title": "D4 없음.",
+      "body": "서진: “그를 원망했고, 그를 안에 남겼습니다. 그래서 죽였습니다.”\n\n지후: “원망한 사람은 여기 많아요.”\n\n도현: “선배. 동기 다음에 행동을 넣어야 합니다. 감정으로 그 칸을 대신 채우면 안 돼요.”\n\n나는 질문을 끝내지 못했다. 지후는 내 말을 부정했지만, 그날 자신이 한 확인은 설명하지 않았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1205,
+        "lineEnd": 1211,
+        "stableBlockId": "SRC_NOTE_CH08_S01_B"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S02_A",
+      "title": "숨은 전제 메모.",
+      "body": "서진: “알리바이는 지후가 현장에서 손으로 조작했다는 말을 반박합니다. 예약 마감에 필요한 확인을 했는지는 반박하지 않아요.”\n\n도현: “오히려 계속 안전실에 있었으니, 그 시간 그 단말의 작성자가 누구인지는 더 분명해집니다.”\n\n이경: “사람 하나 잘못 센 걸 살인으로 바꾸실 겁니까?”\n\n서진: “바꾸지 않습니다. 무엇을 알고 어떤 말을 했는지 증거를 붙이겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1238,
+        "lineEnd": 1244,
+        "stableBlockId": "SRC_NOTE_CH08_S02_A"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S03_A_COMPLETE",
+      "title": "D5.",
+      "body": "서진: “지후가 태오를 안에 남게 했고, 그 회신을 읽었습니다. 특정 질문에도 빈 공간이라고 확인했어요. 그 서류가 예약 마감을 통과시켰습니다. 수동 흔적은 그 뒤에 생겼습니다.”\n\n도현: “행동, 지식, 인과관계가 이어집니다. 영상과도 충돌하지 않습니다.”\n\n이경은 의자 팔걸이를 꽉 잡았다.\n\n이경: “그 애를 현장에 보내려고 애쓰실 줄 알았습니다.”\n\n서진: “그러길 바라셨겠죠.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1283,
+        "lineEnd": 1291,
+        "stableBlockId": "SRC_NOTE_CH08_S03_A_COMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S03_A_INCOMPLETE",
+      "title": "D5 없음.",
+      "body": "도현: “가능한 가설입니다. 그런데 아직 증명되지 않은 칸이 있습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1297,
+        "lineEnd": 1297,
+        "stableBlockId": "SRC_NOTE_CH08_S03_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S03_A_02",
+      "title": "D5.",
+      "body": "서진: “빈칸은 빈칸으로 제출하자. 추측을 증거로 쓰지는 말고.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1301,
+        "lineEnd": 1301,
+        "stableBlockId": "SRC_NOTE_CH08_S03_A_02"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S03_B",
+      "title": "D5 없음.",
+      "body": "서진: “이경의 열쇠, 동기, 자백을 중심으로 작성합시다.”\n\n도현: “확보한 반대 자료도 목록에서 빼지 않겠습니다. 수동 가설과 충돌하면 최종 지목이 제한됩니다.”\n\n이경은 대답하지 않았다. 손가락 사이에서 코트 단추가 돌았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1308,
+        "lineEnd": 1312,
+        "stableBlockId": "SRC_NOTE_CH08_S03_B"
+      }
+    },
+    {
+      "id": "NOTE_CH08_S03_C",
+      "title": "D5 없음.",
+      "body": "서진: “문서가 만든 죽음인지, 현장의 손이 만든 죽음인지. 확정 못 한 부분을 표시해.”\n\n도현: “알겠습니다. 지목과 입증은 따로 판단하죠.”\n\n방 안의 사람들은 아무도 반박하지 않았다. 각자 다른 이유로 그 침묵을 원했다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1317,
+        "lineEnd": 1321,
+        "stableBlockId": "SRC_NOTE_CH08_S03_C"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S01_A_COMPLETE",
+      "title": "D6.",
+      "body": "서진: “원본은 이미 일부 안전했습니다. 지후는 이경을 증언하려 했고, 이경은 사고 전에 그 글을 받았습니다. 자신의 위조도 남기라고 했어요. 가족이 원래대로 돌아올 거라는 거래가 아닙니다.”\n\n도현: “아들은 자신을 떠나고, 자기 과거도 드러나는데. 현재 살인의 책임만 가져가려 했군요.”\n\n서진: “그게 그 사람에게는 마지막으로 할 수 있는 보호였겠지. 지후가 원했는지는 묻지 않은 채로.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1456,
+        "lineEnd": 1460,
+        "stableBlockId": "SRC_NOTE_CH10_S01_A_COMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S01_A_INCOMPLETE",
+      "title": "D6 없음.",
+      "body": "서진: “보호라는 해석은 가능합니다. 하지만 이경이 당시 무엇을 알고 있었는지까지 확인하지는 못했습니다.”\n\n도현: “그럼 동기는 추정으로 남기겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1466,
+        "lineEnd": 1468,
+        "stableBlockId": "SRC_NOTE_CH10_S01_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S01_B",
+      "title": "D6 없음.",
+      "body": "서진: “자기를 엄마로 남겨두고 싶었던 거겠죠. 현재 사건까지 덮으면 과거도 덮일 거라고.”\n\n도현: “그 해석과 맞지 않는 자료가 있는지는 기록에 남기겠습니다.”\n\n이경이 무엇을 기대했는지, 무엇을 기대하지 않았는지는 더 묻지 않았다. 그녀의 선택은 설명하기 쉬운 말 속으로 들어갔다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1475,
+        "lineEnd": 1479,
+        "stableBlockId": "SRC_NOTE_CH10_S01_B"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S02_A",
+      "title": "최종 보고.",
+      "body": "서진: “정지후 씨를 지목합니다. 직접 조작 여부가 아니라, 그가 알고 작성한 안전 확인과 실제 죽음의 연결을 제출합니다.”\n\n도현: “자료 대조하겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1507,
+        "lineEnd": 1509,
+        "stableBlockId": "SRC_NOTE_CH10_S02_A"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S02_B",
+      "title": "최종 보고.",
+      "body": "서진: “한이경 씨가 열쇠를 사용해 현장에서 서가를 움직인 것으로 판단합니다.”\n\n도현: “자백과 접촉 흔적을 중심으로 제출하겠습니다. 확인되지 않은 작동 경로는 미확정으로 표시하고요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1514,
+        "lineEnd": 1516,
+        "stableBlockId": "SRC_NOTE_CH10_S02_B"
+      }
+    },
+    {
+      "id": "NOTE_CH10_S02_C",
+      "title": "최종 보고.",
+      "body": "서진: “누가 죽음을 의도했는지 입증하지 못했습니다. 현재 자료로 살인 혐의를 확정하지 않습니다.”\n\n도현: “미해결 목록에 남기겠습니다. 원본은 유지하고요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1521,
+        "lineEnd": 1523,
+        "stableBlockId": "SRC_NOTE_CH10_S02_C"
+      }
+    },
+    {
+      "id": "NOTE_END_GOOD_MISSING_E14",
+      "title": "범인 검거〔3~4분〕",
+      "body": "그 안에 무엇이 있었는지, 그녀가 그것을 언제부터 알고 있었는지까지 나는 확인하지 못했다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1723,
+        "lineEnd": 1723,
+        "stableBlockId": "SRC_NOTE_END_GOOD_MISSING_E14"
+      }
+    },
+    {
+      "id": "NOTE_END_GOOD_HAS_E14",
+      "title": "범인 검거〔3~4분〕",
+      "body": "편지를 받았다는 사실은 확인했다. 하지만 그 글을 읽고 무엇을 버릴 각오였는지까지 나는 제대로 이해하지 못했다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1725,
+        "lineEnd": 1725,
+        "stableBlockId": "SRC_NOTE_END_GOOD_HAS_E14"
+      }
+    },
+    {
+      "id": "NOTE_END_BAD01_MISSING_D1",
+      "title": "완벽한 알리바이〔3분〕",
+      "body": "도현은 두 명단을 펼쳤다. “선배. 태그 네 건이 다 같은 방향이 아니네요. 지후 씨 건은 퇴실이 아니라 입실이에요.” 대상 명부의 강태오와 안전실 명부의 정지후가 다른 줄에 남았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1796,
+        "lineEnd": 1796,
+        "stableBlockId": "SRC_NOTE_END_BAD01_MISSING_D1"
+      }
+    },
+    {
+      "id": "NOTE_END_BAD01_MISSING_D2",
+      "title": "완벽한 알리바이〔3분〕",
+      "body": "도현이 보완 출력 원본의 행을 짚었다. “HAND는 7시 46분이네요. 그전에 이미 예약 이동이 끝났습니다.” 나는 처음 찍었던 현재 상태 사진의 시각을 다시 보았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1797,
+        "lineEnd": 1797,
+        "stableBlockId": "SRC_NOTE_END_BAD01_MISSING_D2"
+      }
+    },
+    {
+      "id": "NOTE_END_BAD01_MISSING_D3",
+      "title": "완벽한 알리바이〔3분〕",
+      "body": "도현은 다른 날 화면 세 장을 나란히 놓았다. “실제 일한 사람이 달라도 관리자 이름은 같습니다. 이 이름은 그날의 행위자가 아니에요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1798,
+        "lineEnd": 1798,
+        "stableBlockId": "SRC_NOTE_END_BAD01_MISSING_D3"
+      }
+    },
+    {
+      "id": "NOTE_END_BAD01_MISSING_D4",
+      "title": "완벽한 알리바이〔3분〕",
+      "body": "도현이 A3의 고정 내선 통화와 경비의 재확인 녹음을 이었다. “남아 있으라고 한 사람이, 5초 뒤에는 아무도 없다고 했습니다.” 처음부터 따로 보관했던 두 통화였다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1799,
+        "lineEnd": 1799,
+        "stableBlockId": "SRC_NOTE_END_BAD01_MISSING_D4"
+      }
+    },
+    {
+      "id": "NOTE_END_BAD01_CONNECTION_FAILED",
+      "title": "완벽한 알리바이〔3분〕",
+      "body": "도현은 이미 분석한 자료를 하나의 사건번호 아래 놓았다. “하나씩 맞는지는 확인했는데, 함께 무슨 일을 만들었는지는 최종 의견에 연결하지 못했습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1800,
+        "lineEnd": 1800,
+        "stableBlockId": "SRC_NOTE_END_BAD01_CONNECTION_FAILED"
+      }
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D4",
+      "title": "지후는 태오의 잔류를 알고도 부정했다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 200,
+        "lineEnd": 200,
+        "stableBlockId": "SRC_D4"
+      }
+    },
+    {
+      "id": "D5",
+      "title": "위치 알리바이와 살인의 인과관계가 양립한다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 201,
+        "lineEnd": 201,
+        "stableBlockId": "SRC_D5"
+      }
+    },
+    {
+      "id": "D6",
+      "title": "이경은 단절과 자기 폭로까지 알고 희생했다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 202,
+        "lineEnd": 202,
+        "stableBlockId": "SRC_D6"
+      }
+    }
+  ],
+  "flags": [
+    {
+      "id": "FLAG_RESTORED",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1246,
+        "lineEnd": 1246,
+        "stableBlockId": "SRC_FLAG_RESTORED"
+      }
+    },
+    {
+      "id": "FLAG_FINAL_CHAIN",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1293,
+        "lineEnd": 1293,
+        "stableBlockId": "SRC_FLAG_FINAL_CHAIN"
+      }
+    },
+    {
+      "id": "FLAG_RETURN_AGENCY",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1420,
+        "lineEnd": 1420,
+        "stableBlockId": "SRC_FLAG_RETURN_AGENCY"
+      }
+    },
+    {
+      "id": "FLAG_FINAL_CHOICE",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FLAG_FINAL_CHOICE"
+      }
+    },
+    {
+      "id": "FLAG_OUTCOME",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FLAG_OUTCOME"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "FX_C18_A",
+      "operations": [
+        {
+          "op": "addDeduction",
+          "deductionId": "D4"
+        },
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_JIHU",
+          "delta": 1
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E09"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E10"
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1192,
+        "lineEnd": 1192,
+        "stableBlockId": "SRC_FX_C18_A"
+      }
+    },
+    {
+      "id": "FX_C18_B",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_JIHU",
+          "delta": -1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1213,
+        "lineEnd": 1213,
+        "stableBlockId": "SRC_FX_C18_B"
+      }
+    },
+    {
+      "id": "FX_C19_A",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_RESTORED",
+          "value": true
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1246,
+        "lineEnd": 1246,
+        "stableBlockId": "SRC_FX_C19_A"
+      }
+    },
+    {
+      "id": "FX_C19_B",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_RESTORED",
+          "value": false
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1257,
+        "lineEnd": 1257,
+        "stableBlockId": "SRC_FX_C19_B"
+      }
+    },
+    {
+      "id": "FX_C20_A_COMPLETE",
+      "operations": [
+        {
+          "op": "addDeduction",
+          "deductionId": "D5"
+        },
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHAIN",
+          "value": true
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D2"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D3"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D4"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E03"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E04"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E05"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E06"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E07"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E09"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E10"
+          },
+          {
+            "op": "flag",
+            "flagId": "FLAG_RESTORED",
+            "equals": true
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1293,
+        "lineEnd": 1293,
+        "stableBlockId": "SRC_FX_C20_A_COMPLETE"
+      }
+    },
+    {
+      "id": "FX_C20_A_INCOMPLETE",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHAIN",
+          "value": false
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "hasDeduction",
+              "deductionId": "D1"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D2"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D3"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D4"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E03"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E04"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E05"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E06"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E07"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E09"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E10"
+            },
+            {
+              "op": "flag",
+              "flagId": "FLAG_RESTORED",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1303,
+        "lineEnd": 1303,
+        "stableBlockId": "SRC_FX_C20_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "FX_C20_B",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHAIN",
+          "value": false
+        },
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1314,
+        "lineEnd": 1314,
+        "stableBlockId": "SRC_FX_C20_B"
+      }
+    },
+    {
+      "id": "FX_C20_C",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHAIN",
+          "value": false
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1323,
+        "lineEnd": 1323,
+        "stableBlockId": "SRC_FX_C20_C"
+      }
+    },
+    {
+      "id": "FX_C21_A",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E14"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_EUNSEO",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1364,
+        "lineEnd": 1364,
+        "stableBlockId": "SRC_FX_C21_A"
+      }
+    },
+    {
+      "id": "FX_C22_A",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E16"
+        },
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_RETURN_AGENCY",
+          "value": true
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1420,
+        "lineEnd": 1420,
+        "stableBlockId": "SRC_FX_C22_A"
+      }
+    },
+    {
+      "id": "FX_C22_B",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_IKYEONG",
+          "delta": -1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1433,
+        "lineEnd": 1433,
+        "stableBlockId": "SRC_FX_C22_B"
+      }
+    },
+    {
+      "id": "FX_C23_A",
+      "operations": [
+        {
+          "op": "addDeduction",
+          "deductionId": "D6"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E12"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E14"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E15"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E16"
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1462,
+        "lineEnd": 1462,
+        "stableBlockId": "SRC_FX_C23_A"
+      }
+    },
+    {
+      "id": "FX_C24_A",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHOICE",
+          "value": "A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FX_C24_A"
+      }
+    },
+    {
+      "id": "FX_C24_A_TRUE",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "TRUE"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "hasDeduction",
+                "deductionId": "D1"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D2"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D3"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D4"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D5"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E03"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E04"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E05"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E06"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E07"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E09"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E10"
+              },
+              {
+                "op": "flag",
+                "flagId": "FLAG_FINAL_CHAIN",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D6"
+          },
+          {
+            "op": "flag",
+            "flagId": "FLAG_RETURN_AGENCY",
+            "equals": true
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FX_C24_A_TRUE"
+      }
+    },
+    {
+      "id": "FX_C24_A_GOOD",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "GOOD"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "all",
+            "conditions": [
+              {
+                "op": "hasDeduction",
+                "deductionId": "D1"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D2"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D3"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D4"
+              },
+              {
+                "op": "hasDeduction",
+                "deductionId": "D5"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E03"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E04"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E05"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E06"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E07"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E09"
+              },
+              {
+                "op": "hasEvidence",
+                "evidenceId": "E10"
+              },
+              {
+                "op": "flag",
+                "flagId": "FLAG_FINAL_CHAIN",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "condition": {
+              "op": "all",
+              "conditions": [
+                {
+                  "op": "all",
+                  "conditions": [
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D1"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D2"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D3"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D4"
+                    },
+                    {
+                      "op": "hasDeduction",
+                      "deductionId": "D5"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E03"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E04"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E05"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E06"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E07"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E09"
+                    },
+                    {
+                      "op": "hasEvidence",
+                      "evidenceId": "E10"
+                    },
+                    {
+                      "op": "flag",
+                      "flagId": "FLAG_FINAL_CHAIN",
+                      "equals": true
+                    }
+                  ]
+                },
+                {
+                  "op": "hasDeduction",
+                  "deductionId": "D6"
+                },
+                {
+                  "op": "flag",
+                  "flagId": "FLAG_RETURN_AGENCY",
+                  "equals": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FX_C24_A_GOOD"
+      }
+    },
+    {
+      "id": "FX_C24_A_BAD01",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "BAD01"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "hasDeduction",
+              "deductionId": "D1"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D2"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D3"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D4"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D5"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E03"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E04"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E05"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E06"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E07"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E09"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E10"
+            },
+            {
+              "op": "flag",
+              "flagId": "FLAG_FINAL_CHAIN",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1511,
+        "lineEnd": 1511,
+        "stableBlockId": "SRC_FX_C24_A_BAD01"
+      }
+    },
+    {
+      "id": "FX_C24_B",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHOICE",
+          "value": "B"
+        },
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "BAD02"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1518,
+        "lineEnd": 1518,
+        "stableBlockId": "SRC_FX_C24_B"
+      }
+    },
+    {
+      "id": "FX_C24_C",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_FINAL_CHOICE",
+          "value": "C"
+        },
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "BAD01"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1525,
+        "lineEnd": 1525,
+        "stableBlockId": "SRC_FX_C24_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_01",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_01"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1350,
+        "lineEnd": 1350,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_01"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_02",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_02"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1352,
+        "lineEnd": 1352,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_02"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_03",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_03"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1354,
+        "lineEnd": 1354,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_03"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_04",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_04"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1356,
+        "lineEnd": 1356,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_04"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_05",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_05"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1358,
+        "lineEnd": 1358,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_05"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_06",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_06"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1360,
+        "lineEnd": 1360,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_06"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E14_07",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E14_07"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1362,
+        "lineEnd": 1362,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E14_07"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_01",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_01"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1402,
+        "lineEnd": 1402,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_01"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_02",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_02"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1404,
+        "lineEnd": 1404,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_02"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_03",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_03"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1406,
+        "lineEnd": 1406,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_03"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_04",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_04"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1408,
+        "lineEnd": 1408,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_04"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_05",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_05"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1410,
+        "lineEnd": 1410,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_05"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_06",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_06"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1412,
+        "lineEnd": 1412,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_06"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_07",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_07"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1414,
+        "lineEnd": 1414,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_07"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_08",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_08"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1416,
+        "lineEnd": 1416,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_08"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E16_09",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E16_09"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1418,
+        "lineEnd": 1418,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E16_09"
+      }
+    },
+    {
+      "id": "FX_END_TRUE_ENTRY",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "TRUE"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1532,
+        "lineEnd": 1532,
+        "stableBlockId": "SRC_FX_END_TRUE_ENTRY"
+      }
+    },
+    {
+      "id": "FX_END_GOOD_ENTRY",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "GOOD"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1679,
+        "lineEnd": 1679,
+        "stableBlockId": "SRC_FX_END_GOOD_ENTRY"
+      }
+    },
+    {
+      "id": "FX_END_BAD01_ENTRY",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "BAD01"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1748,
+        "lineEnd": 1748,
+        "stableBlockId": "SRC_FX_END_BAD01_ENTRY"
+      }
+    },
+    {
+      "id": "FX_END_BAD02_ENTRY",
+      "operations": [
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_OUTCOME",
+          "value": "BAD02"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1815,
+        "lineEnd": 1815,
+        "stableBlockId": "SRC_FX_END_BAD02_ENTRY"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S01_A_COMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S01_A_COMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          { "op": "hasEvidence", "evidenceId": "E09" },
+          { "op": "hasEvidence", "evidenceId": "E10" }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1184,
+        "lineEnd": 1190,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S01_A_COMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S01_A_INCOMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S01_A_INCOMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            { "op": "hasEvidence", "evidenceId": "E09" },
+            { "op": "hasEvidence", "evidenceId": "E10" }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1196,
+        "lineEnd": 1198,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S01_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S01_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S01_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1205,
+        "lineEnd": 1211,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S01_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S02_A",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S02_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1238,
+        "lineEnd": 1244,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S02_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S03_A_COMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S03_A_COMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D2"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D3"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D4"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E03"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E04"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E05"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E06"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E07"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E09"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E10"
+          },
+          {
+            "op": "flag",
+            "flagId": "FLAG_RESTORED",
+            "equals": true
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1283,
+        "lineEnd": 1291,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S03_A_COMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S03_A_INCOMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S03_A_INCOMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "hasDeduction",
+              "deductionId": "D1"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D2"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D3"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D4"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E03"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E04"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E05"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E06"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E07"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E09"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E10"
+            },
+            {
+              "op": "flag",
+              "flagId": "FLAG_RESTORED",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1297,
+        "lineEnd": 1297,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S03_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S03_A_02",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S03_A_02"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "hasDeduction",
+              "deductionId": "D1"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D2"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D3"
+            },
+            {
+              "op": "hasDeduction",
+              "deductionId": "D4"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E03"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E04"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E05"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E06"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E07"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E09"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E10"
+            },
+            {
+              "op": "flag",
+              "flagId": "FLAG_RESTORED",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1301,
+        "lineEnd": 1301,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S03_A_02"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S03_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S03_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1308,
+        "lineEnd": 1312,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S03_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH08_S03_C",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH08_S03_C"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1317,
+        "lineEnd": 1321,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH08_S03_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S01_A_COMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S01_A_COMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E12"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E14"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E15"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E16"
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1456,
+        "lineEnd": 1460,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S01_A_COMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S01_A_INCOMPLETE",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S01_A_INCOMPLETE"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E12"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E14"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E15"
+            },
+            {
+              "op": "hasEvidence",
+              "evidenceId": "E16"
+            }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1466,
+        "lineEnd": 1468,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S01_A_INCOMPLETE"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S01_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S01_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1475,
+        "lineEnd": 1479,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S01_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S02_A",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S02_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1507,
+        "lineEnd": 1509,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S02_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S02_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S02_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1514,
+        "lineEnd": 1516,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S02_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH10_S02_C",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH10_S02_C"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1521,
+        "lineEnd": 1523,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH10_S02_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_GOOD_MISSING_E14",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_GOOD_MISSING_E14"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "hasEvidence",
+          "evidenceId": "E14"
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1723,
+        "lineEnd": 1723,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_GOOD_MISSING_E14"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_GOOD_HAS_E14",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_GOOD_HAS_E14"
+        }
+      ],
+      "condition": {
+        "op": "hasEvidence",
+        "evidenceId": "E14"
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1725,
+        "lineEnd": 1725,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_GOOD_HAS_E14"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_BAD01_MISSING_D1",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_BAD01_MISSING_D1"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "not",
+            "condition": {
+              "op": "hasDeduction",
+              "deductionId": "D1"
+            }
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1796,
+        "lineEnd": 1796,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_BAD01_MISSING_D1"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_BAD01_MISSING_D2",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_BAD01_MISSING_D2"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "not",
+            "condition": {
+              "op": "hasDeduction",
+              "deductionId": "D2"
+            }
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1797,
+        "lineEnd": 1797,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_BAD01_MISSING_D2"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_BAD01_MISSING_D3",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_BAD01_MISSING_D3"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D2"
+          },
+          {
+            "op": "not",
+            "condition": {
+              "op": "hasDeduction",
+              "deductionId": "D3"
+            }
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1798,
+        "lineEnd": 1798,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_BAD01_MISSING_D3"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_BAD01_MISSING_D4",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_BAD01_MISSING_D4"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D2"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D3"
+          },
+          {
+            "op": "not",
+            "condition": {
+              "op": "hasDeduction",
+              "deductionId": "D4"
+            }
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1799,
+        "lineEnd": 1799,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_BAD01_MISSING_D4"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_END_BAD01_CONNECTION_FAILED",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_END_BAD01_CONNECTION_FAILED"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasDeduction",
+            "deductionId": "D1"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D2"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D3"
+          },
+          {
+            "op": "hasDeduction",
+            "deductionId": "D4"
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1800,
+        "lineEnd": 1800,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_END_BAD01_CONNECTION_FAILED"
+      }
+    }
+  ]
+}

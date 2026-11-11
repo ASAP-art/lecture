@@ -1,0 +1,915 @@
+{
+  "id": "CH09",
+  "title": "이미 받은 편지〔4분〕",
+  "entrySceneId": "CH09_S01",
+  "scenes": [
+    {
+      "id": "CH09_S01",
+      "chapterId": "CH09",
+      "title": "수령인",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S01_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "복도 끝에는 저녁에 가져온 종이 도시락이 그대로 쌓여 있었다. 은서는 그 옆에 앉아 얇은 봉투를 들고 있었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1330,
+            "lineEnd": 1330,
+            "stableBlockId": "SRC_CH09_S01_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “사건 전에 끝난 일이 하나 있어요. 오늘 5시 10분. 제가 전달했습니다.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1332,
+            "lineEnd": 1332,
+            "stableBlockId": "SRC_CH09_S01_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “누구에게요?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1334,
+            "lineEnd": 1334,
+            "stableBlockId": "SRC_CH09_S01_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “이경 씨요. 공개할 수 있는지는 아까 얘기한 자료 범위와 같아요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1336,
+            "lineEnd": 1336,
+            "stableBlockId": "SRC_CH09_S01_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그걸 보면 살인 방법이 달라집니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1338,
+            "lineEnd": 1338,
+            "stableBlockId": "SRC_CH09_S01_05"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “아뇨. 누가 누구를 지키고 있다고 생각했는지가 달라져요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1340,
+            "lineEnd": 1340,
+            "stableBlockId": "SRC_CH09_S01_06"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_07",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그녀는 봉투를 내밀기 전에 안쪽의 이름을 다시 한 번 가렸다. 사람의 이름을 보호하는 일과 사람의 책임을 지워주는 일은 다른 일이었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1342,
+            "lineEnd": 1342,
+            "stableBlockId": "SRC_CH09_S01_07"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_08",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1344,
+            "lineEnd": 1344,
+            "stableBlockId": "SRC_CH09_S01_08"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C21_A",
+          "label": "비공개 범위 안에서 발신·수령 시점과 내용을 확인한다. [private_access]",
+          "resultSceneId": "CH09_S01_A",
+          "effectIds": [
+            "FX_C21_A"
+          ],
+          "condition": {
+            "op": "flag",
+            "flagId": "FLAG_PRIVATE_ACCESS",
+            "equals": true
+          },
+          "disabledReason": "당사자 동의 미확보",
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1346,
+            "lineEnd": 1346,
+            "stableBlockId": "SRC_C21_A"
+          }
+        },
+        {
+          "id": "C21_B",
+          "label": "현재 살인 입증과 무관한 가족 자료는 열지 않는다.",
+          "resultSceneId": "CH09_S01_B",
+          "effectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1347,
+            "lineEnd": 1347,
+            "stableBlockId": "SRC_C21_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1327,
+        "lineEnd": 1347,
+        "stableBlockId": "SRC_CH09_S01"
+      }
+    },
+    {
+      "id": "CH09_S01_A",
+      "chapterId": "CH09",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S01_A_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "지후의 글은 사흘 전에 작성돼 있었다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_01"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1350,
+            "lineEnd": 1350,
+            "stableBlockId": "SRC_CH09_S01_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_02",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "지후의 진술 초안: “나는 그때 누가 날 살렸다고 느꼈는지 증언하려는 게 아니다. 누가 내 어머니의 의사를 서류에서 지웠는지 말하려고 한다. 한이경 씨가 한 일을 진술하겠다.”"
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_02"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1352,
+            "lineEnd": 1352,
+            "stableBlockId": "SRC_CH09_S01_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_03",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "아래에는 전달받은 이경의 서명, 당일 17시 10분. 같은 글에 대한 이경의 짧은 답장이 붙어 있었다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_03"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1354,
+            "lineEnd": 1354,
+            "stableBlockId": "SRC_CH09_S01_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경의 답장: “받았다. 네가 직접 말해라. 나는 내 이름으로 답하겠다.”"
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_04"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1356,
+            "lineEnd": 1356,
+            "stableBlockId": "SRC_CH09_S01_A_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “사고 전에 알고 있었군요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_05"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1358,
+            "lineEnd": 1358,
+            "stableBlockId": "SRC_CH09_S01_A_05"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “네. 지후 씨가 자기를 증언할 거라는 것도. 함께 돌아갈 집을 지키려고 그런 게 아니에요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_06"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1360,
+            "lineEnd": 1360,
+            "stableBlockId": "SRC_CH09_S01_A_06"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_A_07",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "종이 끝의 수령 서명은 안전 확인서의 글씨와 달랐다. 이경의 이름이었다. 지후의 뜻을 읽었다는, 이번에는 다른 사람이 대신할 수 없는 확인이었다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E14_07"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1362,
+            "lineEnd": 1362,
+            "stableBlockId": "SRC_CH09_S01_A_07"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "entryCondition": {
+        "op": "flag",
+        "flagId": "FLAG_PRIVATE_ACCESS",
+        "equals": true
+      },
+      "nextSceneId": "CH09_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1349,
+        "lineEnd": 1364,
+        "stableBlockId": "SRC_CH09_S01_A"
+      }
+    },
+    {
+      "id": "CH09_S01_B",
+      "chapterId": "CH09",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S01_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “현재 사건의 입증부터 마무리하겠습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1367,
+            "lineEnd": 1367,
+            "stableBlockId": "SRC_CH09_S01_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그럴 수 있죠. 이 서류는 해당 당사자가 말할 때 내겠습니다.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1369,
+            "lineEnd": 1369,
+            "stableBlockId": "SRC_CH09_S01_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “이경 씨가 아들의 선택을 안다는 겁니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1371,
+            "lineEnd": 1371,
+            "stableBlockId": "SRC_CH09_S01_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “제가 지금 대신 답하면, 결국 또 누군가의 말을 가져가는 거잖아요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1373,
+            "lineEnd": 1373,
+            "stableBlockId": "SRC_CH09_S01_B_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S01_B_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "봉투가 다시 가방 안으로 들어갔다. 살인을 설명할 자료는 남았지만, 이경이 무엇을 버리려 했는지는 여전히 문장 밖에 있었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1375,
+            "lineEnd": 1375,
+            "stableBlockId": "SRC_CH09_S01_B_05"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH09_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1366,
+        "lineEnd": 1377,
+        "stableBlockId": "SRC_CH09_S01_B"
+      }
+    },
+    {
+      "id": "CH09_S02",
+      "chapterId": "CH09",
+      "title": "가져갈 수 없는 것",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S02_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 코트 단추를 모두 풀어놓았다. 처음과 달리 떠날 준비를 한 사람 같지 않았다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1382,
+            "lineEnd": 1382,
+            "stableBlockId": "SRC_CH09_S02_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “출력물이 당신에게 불리하다는 건 알고 있었죠.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1384,
+            "lineEnd": 1384,
+            "stableBlockId": "SRC_CH09_S02_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그런 종이가 남는 곳에서 오래 일했으니까요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1386,
+            "lineEnd": 1386,
+            "stableBlockId": "SRC_CH09_S02_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그런데 없애지는 않았군요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1388,
+            "lineEnd": 1388,
+            "stableBlockId": "SRC_CH09_S02_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “경비실은 제 자리가 아니고, 원본도 제 종이가 아니니까.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1390,
+            "lineEnd": 1390,
+            "stableBlockId": "SRC_CH09_S02_05"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “대신 우리가 다른 종이를 먼저 읽게 했습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1392,
+            "lineEnd": 1392,
+            "stableBlockId": "SRC_CH09_S02_06"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_07",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 대답하지 않았다. 부정하는 표정도 아니었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1394,
+            "lineEnd": 1394,
+            "stableBlockId": "SRC_CH09_S02_07"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_08",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1396,
+            "lineEnd": 1396,
+            "stableBlockId": "SRC_CH09_S02_08"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C22_A",
+          "label": "지후가 직접 증언하고 책임질 권리도 남겨야 한다고 말한다.",
+          "resultSceneId": "CH09_S02_A",
+          "effectIds": [
+            "FX_C22_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1398,
+            "lineEnd": 1398,
+            "stableBlockId": "SRC_C22_A"
+          }
+        },
+        {
+          "id": "C22_B",
+          "label": "가족의 감정은 제외하고 자백의 허위 여부만 묻는다.",
+          "resultSceneId": "CH09_S02_B",
+          "effectIds": [
+            "FX_C22_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1399,
+            "lineEnd": 1399,
+            "stableBlockId": "SRC_C22_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1379,
+        "lineEnd": 1399,
+        "stableBlockId": "SRC_CH09_S02"
+      }
+    },
+    {
+      "id": "CH09_S02_A",
+      "chapterId": "CH09",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S02_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “지후 씨가 한 일까지 대신 정할 수는 없습니다. 그 사람 진술은 그 사람 이름으로 남겨야 합니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_01"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1402,
+            "lineEnd": 1402,
+            "stableBlockId": "SRC_CH09_S02_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “내가 데려온 아이예요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_02"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1404,
+            "lineEnd": 1404,
+            "stableBlockId": "SRC_CH09_S02_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “지금은 자기 이름을 쓰는 사람입니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_03"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1406,
+            "lineEnd": 1406,
+            "stableBlockId": "SRC_CH09_S02_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 가방에서 작은 수첩을 꺼냈다. 마지막 장에 세 줄이 적혀 있었다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_04"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1408,
+            "lineEnd": 1408,
+            "stableBlockId": "SRC_CH09_S02_A_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_05",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "**‘원본은 은서에게. 내 일도 빼지 말 것. 지후 진술은 지후가 직접.’**"
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_05"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1410,
+            "lineEnd": 1410,
+            "stableBlockId": "SRC_CH09_S02_A_05"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_06",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그 밑에는 예금 해지와 집 정리, 지후 명의가 아닌 별도 변호 비용 준비가 적혀 있었다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_06"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1412,
+            "lineEnd": 1412,
+            "stableBlockId": "SRC_CH09_S02_A_06"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “살아서 나한테 고맙다고 할 거라곤 생각 안 했어요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_07"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1414,
+            "lineEnd": 1414,
+            "stableBlockId": "SRC_CH09_S02_A_07"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그래서 이번에도 대신 결정했습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_08"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1416,
+            "lineEnd": 1416,
+            "stableBlockId": "SRC_CH09_S02_A_08"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_A_09",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “……이번에는 달랐으면 했습니다.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E16_09"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1418,
+            "lineEnd": 1418,
+            "stableBlockId": "SRC_CH09_S02_A_09"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH10_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1401,
+        "lineEnd": 1420,
+        "stableBlockId": "SRC_CH09_S02_A"
+      }
+    },
+    {
+      "id": "CH09_S02_B",
+      "chapterId": "CH09",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH09_S02_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “본인이 수동으로 움직였다는 진술을 유지합니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1423,
+            "lineEnd": 1423,
+            "stableBlockId": "SRC_CH09_S02_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “유지합니다.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1425,
+            "lineEnd": 1425,
+            "stableBlockId": "SRC_CH09_S02_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “원본과 다르면 다시 조사합니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1427,
+            "lineEnd": 1427,
+            "stableBlockId": "SRC_CH09_S02_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “하세요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1429,
+            "lineEnd": 1429,
+            "stableBlockId": "SRC_CH09_S02_B_04"
+          }
+        },
+        {
+          "id": "BLK_CH09_S02_B_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그녀는 가방 손잡이를 잡았다. 안에 무엇이 있는지 더 묻지 않았다. 나 역시 자백의 참거짓을 가리기 위해 그녀의 생활 전체를 읽을 필요는 없다고 생각했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1431,
+            "lineEnd": 1431,
+            "stableBlockId": "SRC_CH09_S02_B_05"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH10_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1422,
+        "lineEnd": 1433,
+        "stableBlockId": "SRC_CH09_S02_B"
+      }
+    }
+  ],
+  "source": {
+    "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+    "sourcePath": "source/마지막_확인_전체_시나리오.md",
+    "lineStart": 1325,
+    "lineEnd": 1434,
+    "stableBlockId": "SRC_CH09"
+  }
+}

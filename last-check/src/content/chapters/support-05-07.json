@@ -1,0 +1,1377 @@
+{
+  "evidence": [
+    {
+      "id": "E09",
+      "title": "19:41 대기 서명·열람 확인·19:39:05 A3 고정 내선 통화",
+      "sectionIds": [
+        "ESECTION_E09_COMMON"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 184,
+        "lineEnd": 184,
+        "stableBlockId": "SRC_E09"
+      }
+    },
+    {
+      "id": "E10",
+      "title": "19:39 태오를 특정한 안전 재확인 통화",
+      "sectionIds": [
+        "ESECTION_E10_CH06_S02_A",
+        "ESECTION_E10_CH07_S02_B"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 185,
+        "lineEnd": 185,
+        "stableBlockId": "SRC_E10"
+      }
+    },
+    {
+      "id": "E12",
+      "title": "이미 은서가 보관한 친모 관련 원본 일부",
+      "sectionIds": [
+        "ESECTION_E12_PRIVATE_01",
+        "ESECTION_E12_PRIVATE_02"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 187,
+        "lineEnd": 187,
+        "stableBlockId": "SRC_E12"
+      }
+    },
+    {
+      "id": "E13",
+      "title": "태오의 협박·폐기 암시 메시지",
+      "sectionIds": [
+        "ESECTION_E13_COMMON"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 188,
+        "lineEnd": 188,
+        "stableBlockId": "SRC_E13"
+      }
+    },
+    {
+      "id": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "sectionIds": [
+        "ESECTION_E15_PRIVATE_03",
+        "ESECTION_E15_PRIVATE_04",
+        "ESECTION_E15_PRIVATE_05",
+        "ESECTION_E15_PRIVATE_06",
+        "ESECTION_E15_PRIVATE_07"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 190,
+        "lineEnd": 190,
+        "stableBlockId": "SRC_E15"
+      }
+    }
+  ],
+  "evidenceSections": [
+    {
+      "id": "ESECTION_E13_COMMON",
+      "evidenceId": "E13",
+      "title": "태오의 협박·폐기 암시 메시지",
+      "body": "태오의 휴대전화에서 복구한 오후 메시지는 짧았다.\n\n태오의 메시지: “오늘 마감 때 예전 묶음은 정리합니다. 선생님이 걱정하는 서류도요. 아드님에게는 먼저 알려드렸어요.”\n\n지후에게 전달된 같은 메시지에는 지후의 열람 표시가 남아 있었다.\n\n서진: “예전 묶음은 뭡니까?”\n\n은서: “사람들 출생하고, 시설 들어오고, 나간 기록이요. 없애도 된다는 판정을 여기서 혼자 했어요.”\n\n서진: “지후 씨 기록도?”\n\n은서: “네.”\n\n지후: “사람을 종이 몇 장으로 갖고 놀았어요. 내가 어디서 왔는지 알려면 돈을 내래요.”\n\n서진: “그래서 죽었으면 좋겠다고 생각했습니까?”\n\n지후는 나를 보았다. 입이 열렸다가 닫혔다.\n\n지후: “좋은 사람 아니었어요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 714,
+        "lineEnd": 734,
+        "stableBlockId": "SRC_ESECTION_E13_COMMON"
+      }
+    },
+    {
+      "id": "ESECTION_E09_COMMON",
+      "evidenceId": "E09",
+      "title": "19:41 대기 서명·열람 확인·19:39:05 A3 고정 내선 통화",
+      "body": "송수신 문서함의 7시 35분 회신은 종이가 반쯤 비뚤어진 채 저장돼 있었다.\n\n**발신 정지후: ‘금일 19:40 마감 보류. 폐기 전 원본 대조를 위해 A3 안쪽에서 19:41까지 대기해 주세요.’**\n\n**회신 강태오: ‘확인. 단독 대조 후 자료 회수.’**\n\n서버 열람 이력에는 지후의 업무 계정과 안전실 단말이 찍혔다. 같은 시각 영상에서 지후가 그 회신의 태오 서명을 확대했다. 다른 사람이 몰래 계정을 썼다는 설명은 맞지 않았다.\n\n도현이 연결된 업무 통화를 재생했다. 19시 39분 05초. 발신 단말은 A3의 고정 내선이었다.\n\n녹음 속 태오: “나 A3 안이야. 서류 들고 빨리 와요.”\n\n녹음 속 지후: “거기 그대로 계세요. 확인하고 갑니다.”\n\n도현: “이 통화 뒤 25초 만에 전원 퇴실 서명을 했어요. A3에서 출구까지 최소 90초입니다.”\n\n도현: “종이가 두 군데 갔어요. 안전실, 그리고 관리책임자 참조.”\n\n서진: “이경 씨도 봤겠군.”\n\n도현: “네. 그쪽 인쇄함에서도 나왔습니다.”\n\n지후는 한동안 종이에서 눈을 떼지 않았다.\n\n지후: “전화 끊고 나왔을 수도 있잖아요.”\n\n서진: “당신이 직접 나오는 걸 본 적은 없고요.”\n\n지후: “그건 아까 말했어요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 874,
+        "lineEnd": 902,
+        "stableBlockId": "SRC_ESECTION_E09_COMMON"
+      }
+    },
+    {
+      "id": "ESECTION_E12_PRIVATE_01",
+      "evidenceId": "E12",
+      "title": "이미 은서가 보관한 친모 관련 원본 일부",
+      "body": "은서: “원본 일부는 어제 제가 받았어요. 지후 씨도 알아요. 그러니까 오늘 그 사람이 죽지 않았어도, 길은 있었어요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 794,
+        "lineEnd": 794,
+        "stableBlockId": "SRC_ESECTION_E12_PRIVATE_01"
+      }
+    },
+    {
+      "id": "ESECTION_E12_PRIVATE_02",
+      "evidenceId": "E12",
+      "title": "이미 은서가 보관한 친모 관련 원본 일부",
+      "body": "서진: “지후 씨 어머니 동의서입니까?”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 796,
+        "lineEnd": 796,
+        "stableBlockId": "SRC_ESECTION_E12_PRIVATE_02"
+      }
+    },
+    {
+      "id": "ESECTION_E15_PRIVATE_03",
+      "evidenceId": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "body": "은서: “친모요. 포기했다고 적혀 있는데, 본인은 그때 입원해 있었고 그런 서류에 동의하지 않았어요. 이경 씨가 작성한 걸 뒷받침하는 자료도 있고요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 798,
+        "lineEnd": 798,
+        "stableBlockId": "SRC_ESECTION_E15_PRIVATE_03"
+      }
+    },
+    {
+      "id": "ESECTION_E15_PRIVATE_04",
+      "evidenceId": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "body": "서진: “지후 씨는 알고 있습니까?”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 800,
+        "lineEnd": 800,
+        "stableBlockId": "SRC_ESECTION_E15_PRIVATE_04"
+      }
+    },
+    {
+      "id": "ESECTION_E15_PRIVATE_05",
+      "evidenceId": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "body": "은서: “네. 그래서 이경 씨를 증언하려고 했어요. 그 사람에게 오늘 알렸는지는, 나중에 정확히 보여드릴게요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 802,
+        "lineEnd": 802,
+        "stableBlockId": "SRC_ESECTION_E15_PRIVATE_05"
+      }
+    },
+    {
+      "id": "ESECTION_E15_PRIVATE_06",
+      "evidenceId": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "body": "서류에 묶인 작은 사진에는 아이의 얼굴 대신 뒷면만 보였다. 이름을 확인할 필요는 없었다. 동의가 없었다는 기록이 필요했다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 804,
+        "lineEnd": 804,
+        "stableBlockId": "SRC_ESECTION_E15_PRIVATE_06"
+      }
+    },
+    {
+      "id": "ESECTION_E15_PRIVATE_07",
+      "evidenceId": "E15",
+      "title": "25년 전 위조 서류와 친모의 미동의 기록",
+      "body": "은서: “데려온 사람이 살렸다고 말한다고, 데려가진 사람이 살려달라고 한 건 아니잖아요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 806,
+        "lineEnd": 806,
+        "stableBlockId": "SRC_ESECTION_E15_PRIVATE_07"
+      }
+    },
+    {
+      "id": "ESECTION_E10_CH06_S02_A",
+      "evidenceId": "E10",
+      "title": "19:39 태오를 특정한 안전 재확인 통화",
+      "body": "녹음 속 수현: “강 원장님 A3 들어가신 거 맞죠? 아직 거기 계신 건 아니에요?”\n\n녹음 속 지후: “확인했습니다. 안에 아무도 없어요. 네 명 다 나왔어요.”\n\n서진은 재생을 멈췄다. 방금 본 19시 41분 대기 서명의 회신이 화면 옆에 남아 있었다.\n\n수현: “그래서 받았어요. 그분 이름을 물었으니까.”\n\n서진: “다른 말은 덧붙이지 마세요. 이 문장 그대로 기록하겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 957,
+        "lineEnd": 965,
+        "stableBlockId": "SRC_ESECTION_E10_CH06_S02_A"
+      }
+    },
+    {
+      "id": "ESECTION_E07_CH07_S01_A",
+      "evidenceId": "E07",
+      "title": "독립 이력: AUTO 복귀→예약 이동→HAND 변경",
+      "body": "준석: “사건번호 같습니다. AUTO 복귀, 예약 이동, HAND 변경. 순서도 같습니다.”\n\n서진: “7시 46분에 다시 살인 장치를 작동했다는 뜻은 아니군요.”\n\n준석: “아닙니다. 그땐 이미 멈춰 있었어요. 모터가 움직였으면 별도 행이 나와야 해요.”\n\n도현: “최초 봉인은 7시 41분이니, 그 출력에는 뒤의 HAND 변경이 없습니다. 기록기 원본을 보완 출력해서 이어붙이면 7시 46분이 나와요. 서로 모순되지 않습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1025,
+        "lineEnd": 1031,
+        "stableBlockId": "SRC_ESECTION_E07_CH07_S01_A"
+      }
+    },
+    {
+      "id": "ESECTION_E04_CH07_S01_B",
+      "evidenceId": "E04",
+      "title": "모드 설명·등록 관리자 값·열쇠 점검대장",
+      "body": "준석: “이경 선생님 이름은 지난달 운전에도, 제가 혼자 일한 날에도 똑같이 떠요.”\n\n도현: “세 회차 대조했습니다. 고정 등록값 맞고요. 인원 확인서 작성자 서명은 매번 따로입니다.”\n\n서진: “오늘은 정지후.”\n\n준석: “네. 관리자가 누구냐고 물으면 한이경이고, 확인서를 누가 썼냐고 물으면 지후 씨예요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1036,
+        "lineEnd": 1042,
+        "stableBlockId": "SRC_ESECTION_E04_CH07_S01_B"
+      }
+    },
+    {
+      "id": "ESECTION_E11_CH07_S01_C",
+      "evidenceId": "E11",
+      "title": "19:44 이경의 출력물 문의",
+      "body": "수현: “제가 대답했어요. 경비실에도 원본 나온다고. 그러니까 더는 안 물었어요.”\n\n서진: “그 뒤 이경 씨가 경비실에 혼자 들어왔습니까?”\n\n수현: “아뇨. 구조 요청 전화 받느라 제가 계속 있었어요. 봉투도 제 앞에 있었고요.”\n\n도현: “없애지 못한 기록을 알고 있었다는 건 확인됩니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1047,
+        "lineEnd": 1053,
+        "stableBlockId": "SRC_ESECTION_E11_CH07_S01_C"
+      }
+    },
+    {
+      "id": "ESECTION_E10_CH07_S02_B",
+      "evidenceId": "E10",
+      "title": "19:39 태오를 특정한 안전 재확인 통화",
+      "body": "녹음 속 수현: “강 원장님 A3 들어가신 거 맞죠? 아직 거기 계신 건 아니에요?”\n\n녹음 속 지후: “확인했습니다. 안에 아무도 없어요. 네 명 다 나왔어요.”\n\n도현: “이름까지 물었네요.”\n\n서진: “지후가 무엇을 알았는지와 같이 봐야 해.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1101,
+        "lineEnd": 1107,
+        "stableBlockId": "SRC_ESECTION_E10_CH07_S02_B"
+      }
+    }
+  ],
+  "notebookEntries": [
+    {
+      "id": "NOTE_CH05_S01_A",
+      "title": "원본 위치 단서.",
+      "body": "은서: “전부라고 말할 수는 없어요.”\n\n서진: “이미 밖으로 나온 게 있습니까?”\n\n은서: “그걸 아무 데서나 말하지 않으려고 거짓말한 겁니다.”\n\n서진: “당사자 이름은 가리고 보겠습니다.”\n\n은서: “그 약속은 기억할게요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 743,
+        "lineEnd": 751,
+        "stableBlockId": "SRC_NOTE_CH05_S01_A"
+      }
+    },
+    {
+      "id": "NOTE_CH05_S01_B",
+      "title": "송수신 조사 단서.",
+      "body": "지후: “그날 처리한 건 업무 기록에 다 있어요.”\n\n서진: “당신이 태오 씨에게 보낸 것도요?”\n\n지후: “……사본이 남았겠죠.”\n\n그는 없다고 하지 않았다. 도현은 송수신 문서를 별도로 확보하겠다고 고개를 끄덕였다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 756,
+        "lineEnd": 762,
+        "stableBlockId": "SRC_NOTE_CH05_S01_B"
+      }
+    },
+    {
+      "id": "NOTE_CH05_S01_C",
+      "title": "봉투 진술.",
+      "body": "이경: “누가 무엇을 적었는지, 지후가 몰랐으면 했어요.”\n\n서진: “지금도요?”\n\n이경: “이제는 제가 바랄 수 있는 일이 아니죠.”\n\n그녀는 무릎 위에서 손톱으로 봉투 끝을 접었다. 이미 뜯긴 수령 봉투였다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 767,
+        "lineEnd": 773,
+        "stableBlockId": "SRC_NOTE_CH05_S01_C"
+      }
+    },
+    {
+      "id": "NOTE_CH05_S02_B",
+      "title": "사업 장부 메모.",
+      "body": "장부에는 기록 제공 명목의 현금 수입이 있었다. 비용 칸에는 ‘정리’, ‘이관’, ‘폐기’가 반복됐다.\n\n도현: “기록원 사업 자체도 봐야겠습니다.”\n\n서진: “은서 씨 가방은?”\n\n도현: “현재 사건 관련 동의 자료부터 받겠습니다. 과거 당사자 정보는 별도 절차가 필요하고요.”\n\n은서는 서류철을 다시 가방에 넣었다.\n\n은서: “원장님이 유일한 보관자였다고 단정하지는 마세요. 그 말까진 할 수 있어요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 811,
+        "lineEnd": 821,
+        "stableBlockId": "SRC_NOTE_CH05_S02_B"
+      }
+    },
+    {
+      "id": "NOTE_CH05_S03_A",
+      "title": "D1.",
+      "body": "서진: “이경, 은서, 준석은 양쪽에 있어. 남는 건 태오와 지후야. 지후의 안전실 입실을 태오의 퇴실로 세면 합계만 같아져.”\n\n도현: “지후가 여기 있었던 건 참이고, 태오가 나왔다는 건 아직 증명 안 됐군요.”\n\n서진: “그래. 목격자를 거짓말쟁이로 만들 필요가 없어.”\n\n명단 사이에 그었던 등호를 지웠다. 지후의 알리바이는 하나도 손상되지 않았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 848,
+        "lineEnd": 854,
+        "stableBlockId": "SRC_NOTE_CH05_S03_A"
+      }
+    },
+    {
+      "id": "NOTE_CH05_S03_B",
+      "title": "D1 없음.",
+      "body": "서진: “네 명을 봤다는 증언부터 다시 나눠보죠.”\n\n도현: “그건 다시 물어도 같은 답일 겁니다. 안전실 네 명은 영상에도 있어요.”\n\n서진: “아직 놓친 목격자가 있을 수 있어.”\n\n도현은 새 목격자 칸을 만들었지만 이름을 적지 못했다. 서로 다른 명단 두 장은 그대로 남았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 859,
+        "lineEnd": 865,
+        "stableBlockId": "SRC_NOTE_CH05_S03_B"
+      }
+    },
+    {
+      "id": "NOTE_CH06_S01_A",
+      "title": "열람 인정 진술.",
+      "body": "지후: “7시 35분에 봤어요. 회신 왔는지 확인해야 했으니까.”\n\n서진: “7시 39분에는 무엇으로 퇴실을 확인했습니까?”\n\n지후: “다들 밖에 있었어요.”\n\n서진: “태오 씨를 빼고 말하고 있군요.”\n\n지후는 이번에는 답을 고치지 않았다. 도현이 경비와 안전실 사이의 통화 목록을 화면에 올렸다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 910,
+        "lineEnd": 918,
+        "stableBlockId": "SRC_NOTE_CH06_S01_A"
+      }
+    },
+    {
+      "id": "NOTE_CH06_S01_B",
+      "title": "감정 진술.",
+      "body": "서진: “태오 씨가 당신을 협박했죠. 원망했습니까?”\n\n지후: “원망하면 다 죽여요?”\n\n서진: “당신이 보낸 문서 때문에 그 사람이 거기 있었습니다.”\n\n지후: “업무 때문에 간 거예요. 싫어한 건 맞고요. 그 둘을 섞지 마세요.”\n\n사실과 감정을 구분하라는 그의 말은 옳았다. 그 구분이 그를 무죄로 만들지는 않았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 923,
+        "lineEnd": 931,
+        "stableBlockId": "SRC_NOTE_CH06_S01_B"
+      }
+    },
+    {
+      "id": "NOTE_CH06_S02_B",
+      "title": "접수 재현 메모.",
+      "body": "수현은 빈 양식에 접수 도장을 찍었다. 안전실 서명 칸에는 손을 대지 않았다.\n\n수현: “저는 여기. 안전실은 여기요. 제 확인은 이 서류가 왔다는 확인이에요.”\n\n도현: “녹음은 확보해놓겠습니다. 청취는 아직이고요.”\n\n서진: “접수자와 진술자를 한 사람으로 보면 안 되겠군요.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 970,
+        "lineEnd": 976,
+        "stableBlockId": "SRC_NOTE_CH06_S02_B"
+      }
+    },
+    {
+      "id": "NOTE_CH06_S02_C",
+      "title": "참조 사본 메모.",
+      "body": "이경의 참조 사본에도 같은 대기 문구가 있었다. 하단에는 손으로 쓴 작은 물음표가 있었다.\n\n서진: “이건 언제 썼습니까?”\n\n이경: “사고 난 다음이요.”\n\n서진: “왜 물음표를 썼죠?”\n\n이경: “남겠다고 했는데, 아무도 없다고 했으니까요.”\n\n그녀는 지후의 이름을 말하지 않았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 981,
+        "lineEnd": 991,
+        "stableBlockId": "SRC_NOTE_CH06_S02_C"
+      }
+    },
+    {
+      "id": "NOTE_CH07_S02_A_HAS_E07",
+      "title": "D2.",
+      "body": "서진: “7시 40분 이동이 먼저다. 7시 46분 HAND는 원인이 될 수 없어. 그 뒤에는 이동도 없고.”\n\n도현: “열쇠를 쓴 사실은 참인데, 그 열쇠로 죽였다는 자백은 원본과 안 맞습니다.”\n\n서진: “사건 시각을 바꿀 필요도 없어. 흔적이 사건 뒤에 생긴 거야.”\n\n이경은 보드를 오래 보았다. 이번에는 7시 37분을 이야기하지 않았다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1080,
+        "lineEnd": 1086,
+        "stableBlockId": "SRC_NOTE_CH07_S02_A_HAS_E07"
+      }
+    },
+    {
+      "id": "NOTE_CH07_S02_A_MISSING_E07",
+      "title": "D2 없음.",
+      "body": "도현: “그 순서를 확정하려면 독립 이력이 필요합니다. 지금은 후보 시간표예요.”\n\n서진: “현재 상태를 과거의 원인으로 바로 쓸 수 없다는 것까지만 적어.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1092,
+        "lineEnd": 1094,
+        "stableBlockId": "SRC_NOTE_CH07_S02_A_MISSING_E07"
+      }
+    },
+    {
+      "id": "NOTE_CH07_S03_A_HAS_E04",
+      "title": "퍼즐 3: 이름의 역할",
+      "body": "서진: “이경은 등록 책임자, 지후는 내용 작성자, 수현은 수신자입니다. 이경 이름만으로 누가 사람 수를 확인했는지 답할 수 없습니다.”\n\n도현: “접수 도장도 지후의 거짓을 참으로 바꾸지는 않고요.”\n\n이경: “거짓이라고 확정하셨군요.”\n\n서진: “전원 퇴실의 근거가 없다는 건 확인했습니다. 고의인지는 따로 증명하겠습니다.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1130,
+        "lineEnd": 1136,
+        "stableBlockId": "SRC_NOTE_CH07_S03_A_HAS_E04"
+      }
+    },
+    {
+      "id": "NOTE_CH07_S03_A_MISSING_E04",
+      "title": "D3 없음.",
+      "body": "도현: “가능한 분류입니다. 화면 항목의 정의를 받지 않아 확정 근거는 부족합니다.”\n\n서진: “서명이 누구 건지는 남겨두자. 아직 하나로 묶지는 말고.”",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1142,
+        "lineEnd": 1144,
+        "stableBlockId": "SRC_NOTE_CH07_S03_A_MISSING_E04"
+      }
+    },
+    {
+      "id": "NOTE_CH07_S03_B",
+      "title": "D3 없음.",
+      "body": "서진: “운용은 관리자의 책임입니다. 나머지는 절차에 참여했을 뿐일 수 있어요.”\n\n이경: “그렇게 보시는 게 맞겠죠.”\n\n도현: “책임 범위와 실제 확인 발언은 별개로 적겠습니다.”\n\n그녀가 처음으로 먼저 고개를 끄덕였다. 내가 내린 결론보다 내가 그만두려는 질문에 안도하는 것처럼 보였다.",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1151,
+        "lineEnd": 1157,
+        "stableBlockId": "SRC_NOTE_CH07_S03_B"
+      }
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "title": "같은 ‘4’가 같은 집합을 뜻하지 않는다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 197,
+        "lineEnd": 197,
+        "stableBlockId": "SRC_D1"
+      }
+    },
+    {
+      "id": "D2",
+      "title": "HAND 흔적은 치명적 이동 뒤에 생겼다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 198,
+        "lineEnd": 198,
+        "stableBlockId": "SRC_D2"
+      }
+    },
+    {
+      "id": "D3",
+      "title": "등록 관리자와 안전 확인 작성자는 다르다",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 199,
+        "lineEnd": 199,
+        "stableBlockId": "SRC_D3"
+      }
+    }
+  ],
+  "flags": [
+    {
+      "id": "FLAG_PRIVATE_ACCESS",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 808,
+        "lineEnd": 808,
+        "stableBlockId": "SRC_FLAG_PRIVATE_ACCESS"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "id": "FX_C10_A",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_EUNSEO",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 753,
+        "lineEnd": 753,
+        "stableBlockId": "SRC_FX_C10_A"
+      }
+    },
+    {
+      "id": "FX_C10_B",
+      "operations": [
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_JIHU",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 764,
+        "lineEnd": 764,
+        "stableBlockId": "SRC_FX_C10_B"
+      }
+    },
+    {
+      "id": "FX_C10_C",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 775,
+        "lineEnd": 775,
+        "stableBlockId": "SRC_FX_C10_C"
+      }
+    },
+    {
+      "id": "FX_C11_A",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E12"
+        },
+        {
+          "op": "addEvidence",
+          "evidenceId": "E15"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_EUNSEO",
+          "delta": 1
+        },
+        {
+          "op": "setFlag",
+          "flagId": "FLAG_PRIVATE_ACCESS",
+          "value": true
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 808,
+        "lineEnd": 808,
+        "stableBlockId": "SRC_FX_C11_A"
+      }
+    },
+    {
+      "id": "FX_C12_A",
+      "operations": [
+        {
+          "op": "addDeduction",
+          "deductionId": "D1"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 856,
+        "lineEnd": 856,
+        "stableBlockId": "SRC_FX_C12_A"
+      }
+    },
+    {
+      "id": "FX_C12_B",
+      "operations": [
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_SUHYEON",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 867,
+        "lineEnd": 867,
+        "stableBlockId": "SRC_FX_C12_B"
+      }
+    },
+    {
+      "id": "FX_C13_A",
+      "operations": [
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_JIHU",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 920,
+        "lineEnd": 920,
+        "stableBlockId": "SRC_FX_C13_A"
+      }
+    },
+    {
+      "id": "FX_C13_B",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_JIHU",
+          "delta": -1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 933,
+        "lineEnd": 933,
+        "stableBlockId": "SRC_FX_C13_B"
+      }
+    },
+    {
+      "id": "FX_C14_A",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E10"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_SUHYEON",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 967,
+        "lineEnd": 967,
+        "stableBlockId": "SRC_FX_C14_A"
+      }
+    },
+    {
+      "id": "FX_C14_B",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_SUHYEON",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 978,
+        "lineEnd": 978,
+        "stableBlockId": "SRC_FX_C14_B"
+      }
+    },
+    {
+      "id": "FX_C14_C",
+      "operations": [
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 993,
+        "lineEnd": 993,
+        "stableBlockId": "SRC_FX_C14_C"
+      }
+    },
+    {
+      "id": "FX_C15_A",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E07"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_JUNSEOK",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1033,
+        "lineEnd": 1033,
+        "stableBlockId": "SRC_FX_C15_A"
+      }
+    },
+    {
+      "id": "FX_C15_B",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E04"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_JUNSEOK",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1044,
+        "lineEnd": 1044,
+        "stableBlockId": "SRC_FX_C15_B"
+      }
+    },
+    {
+      "id": "FX_C15_C",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E11"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_SUHYEON",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1055,
+        "lineEnd": 1055,
+        "stableBlockId": "SRC_FX_C15_C"
+      }
+    },
+    {
+      "id": "FX_C16_A",
+      "operations": [
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        },
+        {
+          "op": "addDeduction",
+          "deductionId": "D2"
+        }
+      ],
+      "condition": {
+        "op": "hasEvidence",
+        "evidenceId": "E07"
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1088,
+        "lineEnd": 1088,
+        "stableBlockId": "SRC_FX_C16_A"
+      }
+    },
+    {
+      "id": "FX_C16_B",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E10"
+        },
+        {
+          "op": "adjustTrust",
+          "characterId": "CHAR_SUHYEON",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1109,
+        "lineEnd": 1109,
+        "stableBlockId": "SRC_FX_C16_B"
+      }
+    },
+    {
+      "id": "FX_C17_A",
+      "operations": [
+        {
+          "op": "addDeduction",
+          "deductionId": "D3"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E04"
+          },
+          {
+            "op": "hasEvidence",
+            "evidenceId": "E06"
+          }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1138,
+        "lineEnd": 1138,
+        "stableBlockId": "SRC_FX_C17_A"
+      }
+    },
+    {
+      "id": "FX_C17_B",
+      "operations": [
+        {
+          "op": "adjustSuspicion",
+          "characterId": "CHAR_IKYEONG",
+          "delta": 1
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1159,
+        "lineEnd": 1159,
+        "stableBlockId": "SRC_FX_C17_B"
+      }
+    },
+    {
+      "id": "FX_CH05_S01_ENTRY_E13",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E13"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 712,
+        "lineEnd": 712,
+        "stableBlockId": "SRC_FX_CH05_S01_ENTRY_E13"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E13_COMMON",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E13_COMMON"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 714,
+        "lineEnd": 734,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E13_COMMON"
+      }
+    },
+    {
+      "id": "FX_CH06_S01_ENTRY_E09",
+      "operations": [
+        {
+          "op": "addEvidence",
+          "evidenceId": "E09"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 872,
+        "lineEnd": 872,
+        "stableBlockId": "SRC_FX_CH06_S01_ENTRY_E09"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E09_COMMON",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E09_COMMON"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 874,
+        "lineEnd": 902,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E09_COMMON"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E12_PRIVATE_01",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E12_PRIVATE_01"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 794,
+        "lineEnd": 794,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E12_PRIVATE_01"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E12_PRIVATE_02",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E12_PRIVATE_02"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 796,
+        "lineEnd": 796,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E12_PRIVATE_02"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E15_PRIVATE_03",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E15_PRIVATE_03"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 798,
+        "lineEnd": 798,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E15_PRIVATE_03"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E15_PRIVATE_04",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E15_PRIVATE_04"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 800,
+        "lineEnd": 800,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E15_PRIVATE_04"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E15_PRIVATE_05",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E15_PRIVATE_05"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 802,
+        "lineEnd": 802,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E15_PRIVATE_05"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E15_PRIVATE_06",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E15_PRIVATE_06"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 804,
+        "lineEnd": 804,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E15_PRIVATE_06"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E15_PRIVATE_07",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E15_PRIVATE_07"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 806,
+        "lineEnd": 806,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E15_PRIVATE_07"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E10_CH06_S02_A",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E10_CH06_S02_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 957,
+        "lineEnd": 965,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E10_CH06_S02_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E07_CH07_S01_A",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E07_CH07_S01_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1025,
+        "lineEnd": 1031,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E07_CH07_S01_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E04_CH07_S01_B",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E04_CH07_S01_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1036,
+        "lineEnd": 1042,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E04_CH07_S01_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E11_CH07_S01_C",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E11_CH07_S01_C"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1047,
+        "lineEnd": 1053,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E11_CH07_S01_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_ESECTION_E10_CH07_S02_B",
+      "operations": [
+        {
+          "op": "revealEvidenceSection",
+          "sectionId": "ESECTION_E10_CH07_S02_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1101,
+        "lineEnd": 1107,
+        "stableBlockId": "SRC_FX_REVEAL_ESECTION_E10_CH07_S02_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S01_A",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S01_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 743,
+        "lineEnd": 751,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S01_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S01_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S01_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 756,
+        "lineEnd": 762,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S01_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S01_C",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S01_C"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 767,
+        "lineEnd": 773,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S01_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S02_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S02_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 811,
+        "lineEnd": 821,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S02_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S03_A",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S03_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 848,
+        "lineEnd": 854,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S03_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH05_S03_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH05_S03_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 859,
+        "lineEnd": 865,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH05_S03_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH06_S01_A",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH06_S01_A"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 910,
+        "lineEnd": 918,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH06_S01_A"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH06_S01_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH06_S01_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 923,
+        "lineEnd": 931,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH06_S01_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH06_S02_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH06_S02_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 970,
+        "lineEnd": 976,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH06_S02_B"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH06_S02_C",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH06_S02_C"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 981,
+        "lineEnd": 991,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH06_S02_C"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH07_S02_A_HAS_E07",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH07_S02_A_HAS_E07"
+        }
+      ],
+      "condition": {
+        "op": "hasEvidence",
+        "evidenceId": "E07"
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1080,
+        "lineEnd": 1086,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH07_S02_A_HAS_E07"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH07_S02_A_MISSING_E07",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH07_S02_A_MISSING_E07"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "hasEvidence",
+          "evidenceId": "E07"
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1092,
+        "lineEnd": 1094,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH07_S02_A_MISSING_E07"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH07_S03_A_HAS_E04",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH07_S03_A_HAS_E04"
+        }
+      ],
+      "condition": {
+        "op": "all",
+        "conditions": [
+          { "op": "hasEvidence", "evidenceId": "E04" },
+          { "op": "hasEvidence", "evidenceId": "E06" }
+        ]
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1130,
+        "lineEnd": 1136,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH07_S03_A_HAS_E04"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH07_S03_A_MISSING_E04",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH07_S03_A_MISSING_E04"
+        }
+      ],
+      "condition": {
+        "op": "not",
+        "condition": {
+          "op": "all",
+          "conditions": [
+            { "op": "hasEvidence", "evidenceId": "E04" },
+            { "op": "hasEvidence", "evidenceId": "E06" }
+          ]
+        }
+      },
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1142,
+        "lineEnd": 1144,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH07_S03_A_MISSING_E04"
+      }
+    },
+    {
+      "id": "FX_REVEAL_NOTE_CH07_S03_B",
+      "operations": [
+        {
+          "op": "revealNotebookEntry",
+          "entryId": "NOTE_CH07_S03_B"
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1151,
+        "lineEnd": 1157,
+        "stableBlockId": "SRC_FX_REVEAL_NOTE_CH07_S03_B"
+      }
+    }
+  ]
+}

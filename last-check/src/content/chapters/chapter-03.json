@@ -1,0 +1,1331 @@
+{
+  "id": "CH03",
+  "title": "네 명의 얼굴〔5분〕",
+  "entrySceneId": "CH03_S01",
+  "scenes": [
+    {
+      "id": "CH03_S01",
+      "chapterId": "CH03",
+      "title": "끊기지 않은 영상",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S01_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "모니터에는 안전실의 오후 7시 30분이 떠 있었다. 지후는 서류 모서리를 맞춰놓고 자리에 앉았다. 형광등 아래에서 한쪽 소매를 두 번 접었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 436,
+            "lineEnd": 436,
+            "stableBlockId": "SRC_CH03_S01_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “원본 저장장치 확보했습니다. 시각은 경비실 장치와 동기화돼 있고, 영상은 연속입니다. 7시 45분까지 지후 씨가 화면을 떠나지 않아요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 438,
+            "lineEnd": 438,
+            "stableBlockId": "SRC_CH03_S01_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “녹화 영상을 다시 틀어놨을 가능성은?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 440,
+            "lineEnd": 440,
+            "stableBlockId": "SRC_CH03_S01_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “7시 38분에 은서 씨가 들어와 질문합니다. 지후 씨가 답하면서 서류 한 장을 건네요. 경비도 옆 통로에서 실시간으로 봤고요. 같은 시각 다른 카메라에도 은서 씨가 찍혀요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 442,
+            "lineEnd": 442,
+            "stableBlockId": "SRC_CH03_S01_04"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "영상 속 은서가 손에 든 종이를 펼쳤다. 지후는 맨 아래 줄을 가리켰다. 소리는 작았지만 자리를 뜨지 않았다는 사실은 분명했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 444,
+            "lineEnd": 444,
+            "stableBlockId": "SRC_CH03_S01_05"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “안전실에서 여기까지 뛰어도 왕복 7분은 걸립니다. 안쪽 출입은 한 길이고요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 446,
+            "lineEnd": 446,
+            "stableBlockId": "SRC_CH03_S01_06"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “확인됐죠?”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 448,
+            "lineEnd": 448,
+            "stableBlockId": "SRC_CH03_S01_07"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “당신이 안전실에 있었다는 건.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 450,
+            "lineEnd": 450,
+            "stableBlockId": "SRC_CH03_S01_08"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_09",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “그럼, 적어도 제가 기계실에서 뭘 했다는 얘기는 빼 주세요.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 452,
+            "lineEnd": 452,
+            "stableBlockId": "SRC_CH03_S01_09"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_10",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그는 억울한 표정으로 소리를 높이지 않았다. 문서의 잘못된 항목 하나를 지워달라는 사람처럼 말했다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_E03"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 454,
+            "lineEnd": 454,
+            "stableBlockId": "SRC_CH03_S01_10"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_11",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 456,
+            "lineEnd": 456,
+            "stableBlockId": "SRC_CH03_S01_11"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C05_A",
+          "label": "영상의 진위를 한 번 더 교차 검증한다.",
+          "resultSceneId": "CH03_S01_A",
+          "effectIds": [
+            "FX_C05_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 458,
+            "lineEnd": 458,
+            "stableBlockId": "SRC_C05_A"
+          }
+        },
+        {
+          "id": "C05_B",
+          "label": "영상 속 지후의 업무와 종이를 확인한다.",
+          "resultSceneId": "CH03_S01_B",
+          "effectIds": [
+            "FX_C05_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 459,
+            "lineEnd": 459,
+            "stableBlockId": "SRC_C05_B"
+          }
+        }
+      ],
+      "entryEffectIds": [
+        "FX_CH03_ENTRY_E03"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 433,
+        "lineEnd": 459,
+        "stableBlockId": "SRC_CH03_S01"
+      }
+    },
+    {
+      "id": "CH03_S01_A",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S01_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “그때 저한테 펜 빌려줬어요. 저 검은 거. 서명이 안 써져서요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 462,
+            "lineEnd": 462,
+            "stableBlockId": "SRC_CH03_S01_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “펜 건네는 손, 경비실 출입, 음성 시각까지 맞습니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 464,
+            "lineEnd": 464,
+            "stableBlockId": "SRC_CH03_S01_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “영상으로 그를 다른 장소에 보낼 수는 없겠군.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 466,
+            "lineEnd": 466,
+            "stableBlockId": "SRC_CH03_S01_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_A_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "지후가 고개를 끄덕였다. 오랫동안 기다린 확인처럼 보였다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_E03_VERIFICATION"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 468,
+            "lineEnd": 468,
+            "stableBlockId": "SRC_CH03_S01_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 461,
+        "lineEnd": 470,
+        "stableBlockId": "SRC_CH03_S01_A"
+      }
+    },
+    {
+      "id": "CH03_S01_B",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S01_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “계속 앉아서 무슨 일을 했습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 473,
+            "lineEnd": 473,
+            "stableBlockId": "SRC_CH03_S01_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “들어온 회신 확인하고, 퇴실 확인하고요. 마감 전에 숫자 맞췄어요.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 475,
+            "lineEnd": 475,
+            "stableBlockId": "SRC_CH03_S01_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그 숫자를 누가 사용합니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 477,
+            "lineEnd": 477,
+            "stableBlockId": "SRC_CH03_S01_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “경비실로 보내요. 절차대로요.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 479,
+            "lineEnd": 479,
+            "stableBlockId": "SRC_CH03_S01_B_04"
+          }
+        },
+        {
+          "id": "BLK_CH03_S01_B_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "도현은 영상 북마크에 ‘종이의 이동’이라고 입력했다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C05_B_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 481,
+            "lineEnd": 481,
+            "stableBlockId": "SRC_CH03_S01_B_05"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 472,
+        "lineEnd": 483,
+        "stableBlockId": "SRC_CH03_S01_B"
+      }
+    },
+    {
+      "id": "CH03_S02",
+      "chapterId": "CH03",
+      "title": "명부",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S02_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "수현이 출입 태그와 당일 명부를 나란히 펼쳤다. 종이는 서로 크기가 달랐다. 한쪽은 위험 구역의 확인 대상, 다른 쪽은 안전실 문을 드나든 모든 사람의 목록이었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 488,
+            "lineEnd": 488,
+            "stableBlockId": "SRC_CH03_S02_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_02",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "**대상 명부 19:36 — 강태오 / 한이경 / 최은서 / 오준석**"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 490,
+            "lineEnd": 490,
+            "stableBlockId": "SRC_CH03_S02_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_03",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "**태그 원본 — 19:32 정지후 안전실 입실 / 19:37 한이경 위험 구역 퇴실 / 19:38 최은서 위험 구역 퇴실 / 19:38 오준석 위험 구역 퇴실**"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 492,
+            "lineEnd": 492,
+            "stableBlockId": "SRC_CH03_S02_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “네 건이네요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 494,
+            "lineEnd": 494,
+            "stableBlockId": "SRC_CH03_S02_04"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “네. 그래서 숫자는 맞는 줄 알았어요. 제가 합계를 계산한 건 아니고, 안전실에서 네 명이라고 보내서…….”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 496,
+            "lineEnd": 496,
+            "stableBlockId": "SRC_CH03_S02_05"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “네 명이 여기 있었어요. 경비도 봤습니다.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 498,
+            "lineEnd": 498,
+            "stableBlockId": "SRC_CH03_S02_06"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그 네 명의 이름은요?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 500,
+            "lineEnd": 500,
+            "stableBlockId": "SRC_CH03_S02_07"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “저, 한이경 선생님, 최은서 씨, 오준석 기사님.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 502,
+            "lineEnd": 502,
+            "stableBlockId": "SRC_CH03_S02_08"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_09",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "은서가 문서 위에 손을 올렸다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 504,
+            "lineEnd": 504,
+            "stableBlockId": "SRC_CH03_S02_09"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_10",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “제 출입만 확인하세요. 제가 누구 기록 때문에 왔는지까지 여기서 말하고 싶지는 않아요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_E05"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 506,
+            "lineEnd": 506,
+            "stableBlockId": "SRC_CH03_S02_10"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_11",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 508,
+            "lineEnd": 508,
+            "stableBlockId": "SRC_CH03_S02_11"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C06_A",
+          "label": "수현에게 ‘네 건’과 ‘전원 퇴실’을 같은 뜻으로 봤는지 묻는다.",
+          "resultSceneId": "CH03_S02_A",
+          "effectIds": [
+            "FX_C06_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 510,
+            "lineEnd": 510,
+            "stableBlockId": "SRC_C06_A"
+          }
+        },
+        {
+          "id": "C06_B",
+          "label": "지후의 자리에 실제로 네 사람이 있었는지 목격을 맞춘다.",
+          "resultSceneId": "CH03_S02_B",
+          "effectIds": [
+            "FX_C06_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 511,
+            "lineEnd": 511,
+            "stableBlockId": "SRC_C06_B"
+          }
+        },
+        {
+          "id": "C06_C",
+          "label": "은서에게 기록의 비공개 범위를 먼저 정하게 한다.",
+          "resultSceneId": "CH03_S02_C",
+          "effectIds": [
+            "FX_C06_C"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 512,
+            "lineEnd": 512,
+            "stableBlockId": "SRC_C06_C"
+          }
+        }
+      ],
+      "entryEffectIds": [
+        "FX_CH03_ENTRY_E05"
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 485,
+        "lineEnd": 512,
+        "stableBlockId": "SRC_CH03_S02"
+      }
+    },
+    {
+      "id": "CH03_S02_A",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S02_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “제가 태그를 세서 확인서를 쓴 건 아니에요. 안전실 서명을 접수했어요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 515,
+            "lineEnd": 515,
+            "stableBlockId": "SRC_CH03_S02_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그럼 이 숫자는 서로 다른 문서에서 왔군요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 517,
+            "lineEnd": 517,
+            "stableBlockId": "SRC_CH03_S02_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “네. 다 네 명이니까 같은 줄 알았어요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 519,
+            "lineEnd": 519,
+            "stableBlockId": "SRC_CH03_S02_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_A_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그는 두 종이가 포개지지 않도록 떨어뜨려놓았다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C06_A_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 521,
+            "lineEnd": 521,
+            "stableBlockId": "SRC_CH03_S02_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 514,
+        "lineEnd": 523,
+        "stableBlockId": "SRC_CH03_S02_A"
+      }
+    },
+    {
+      "id": "CH03_S02_B",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S02_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “저하고 은서 씨, 이경 선생님. 지후 씨가 책상에 있었고요. 맞아요. 네 명.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 526,
+            "lineEnd": 526,
+            "stableBlockId": "SRC_CH03_S02_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “태오 씨를 거기서 봤습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 528,
+            "lineEnd": 528,
+            "stableBlockId": "SRC_CH03_S02_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “그건 못 봤어요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 530,
+            "lineEnd": 530,
+            "stableBlockId": "SRC_CH03_S02_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "지후: “원장님이 먼저 나간 줄 알았죠.”"
+          },
+          "speakerId": "CHAR_JIHU",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 532,
+            "lineEnd": 532,
+            "stableBlockId": "SRC_CH03_S02_B_04"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_B_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그의 문장이 처음으로 확정형에서 추측형으로 바뀌었다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C06_B_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 534,
+            "lineEnd": 534,
+            "stableBlockId": "SRC_CH03_S02_B_05"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 525,
+        "lineEnd": 536,
+        "stableBlockId": "SRC_CH03_S02_B"
+      }
+    },
+    {
+      "id": "CH03_S02_C",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S02_C_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “사건과 연결되는 출입은 확인하겠습니다. 기록 당사자 이름은 공개하지 않아도 됩니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 539,
+            "lineEnd": 539,
+            "stableBlockId": "SRC_CH03_S02_C_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_C_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그렇게 해주시면 협조할게요. 원본을 감춘 이유도 말씀드릴 수 있고요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 541,
+            "lineEnd": 541,
+            "stableBlockId": "SRC_CH03_S02_C_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_C_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “숨긴 건 인정합니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 543,
+            "lineEnd": 543,
+            "stableBlockId": "SRC_CH03_S02_C_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S02_C_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그 사람이 사람 이름을 가격표처럼 썼으니까요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C06_C_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 545,
+            "lineEnd": 545,
+            "stableBlockId": "SRC_CH03_S02_C_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 538,
+        "lineEnd": 547,
+        "stableBlockId": "SRC_CH03_S02_C"
+      }
+    },
+    {
+      "id": "CH03_S03",
+      "chapterId": "CH03",
+      "title": "은서의 거짓말",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S03_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “처음에는 태오 씨와 처음 만난 사이라고 했죠.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 552,
+            "lineEnd": 552,
+            "stableBlockId": "SRC_CH03_S03_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “네.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 554,
+            "lineEnd": 554,
+            "stableBlockId": "SRC_CH03_S03_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_03",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "도현이 방문 대장 사본을 내밀었다. 지난달 같은 이름, 같은 단체. 은서는 바로 시선을 내렸다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 556,
+            "lineEnd": 556,
+            "stableBlockId": "SRC_CH03_S03_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그 부분은 거짓말했어요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 558,
+            "lineEnd": 558,
+            "stableBlockId": "SRC_CH03_S03_04"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “이유는요?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 560,
+            "lineEnd": 560,
+            "stableBlockId": "SRC_CH03_S03_05"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “제가 만나는 분들은 옛날에도 자기 이야기를 남이 마음대로 적었어요. 여기 또 명단으로 남으면, 그걸 누가 볼지 모르니까.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 562,
+            "lineEnd": 562,
+            "stableBlockId": "SRC_CH03_S03_06"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “지후 씨도 그 당사자입니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 564,
+            "lineEnd": 564,
+            "stableBlockId": "SRC_CH03_S03_07"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그건 지후 씨에게 물어보세요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 566,
+            "lineEnd": 566,
+            "stableBlockId": "SRC_CH03_S03_08"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_09",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 568,
+            "lineEnd": 568,
+            "stableBlockId": "SRC_CH03_S03_09"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C07_A",
+          "label": "출입 거짓말은 기록하되 당사자 정보 보호를 약속한다.",
+          "resultSceneId": "CH03_S03_A",
+          "effectIds": [
+            "FX_C07_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 570,
+            "lineEnd": 570,
+            "stableBlockId": "SRC_C07_A"
+          }
+        },
+        {
+          "id": "C07_B",
+          "label": "협조하지 않으면 모든 기록을 공개 조사하겠다고 압박한다.",
+          "resultSceneId": "CH03_S03_B",
+          "effectIds": [
+            "FX_C07_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 571,
+            "lineEnd": 571,
+            "stableBlockId": "SRC_C07_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 549,
+        "lineEnd": 571,
+        "stableBlockId": "SRC_CH03_S03"
+      }
+    },
+    {
+      "id": "CH03_S03_A",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S03_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “거짓 진술은 남깁니다. 하지만 사건과 상관없는 이름은 가리겠습니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 574,
+            "lineEnd": 574,
+            "stableBlockId": "SRC_CH03_S03_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그럼 자료실에서 따로 얘기해요. 지후 씨 없는 데서요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 576,
+            "lineEnd": 576,
+            "stableBlockId": "SRC_CH03_S03_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “비공개 면담으로 잡겠습니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 578,
+            "lineEnd": 578,
+            "stableBlockId": "SRC_CH03_S03_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_A_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "은서는 닫혀 있던 가방 지퍼를 조금 열었다가 다시 잠갔다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C07_A_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 580,
+            "lineEnd": 580,
+            "stableBlockId": "SRC_CH03_S03_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH04_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 573,
+        "lineEnd": 582,
+        "stableBlockId": "SRC_CH03_S03_A"
+      }
+    },
+    {
+      "id": "CH03_S03_B",
+      "chapterId": "CH03",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH03_S03_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “그럼 저는 당사자 동의부터 다시 받겠습니다.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 585,
+            "lineEnd": 585,
+            "stableBlockId": "SRC_CH03_S03_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “사건 수사입니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 587,
+            "lineEnd": 587,
+            "stableBlockId": "SRC_CH03_S03_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "은서: “알아요. 그러니까 공식 요청서로 주세요. 제 입으로 사생활까지 드리진 않을게요.”"
+          },
+          "speakerId": "CHAR_EUNSEO",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 589,
+            "lineEnd": 589,
+            "stableBlockId": "SRC_CH03_S03_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH03_S03_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "지후가 아무 말 없이 서류를 자기 쪽으로 당겼다. 은서는 그 손을 보았지만 붙잡지 않았다."
+          },
+          "completionEffectIds": [
+            "FX_CH03_REVEAL_C07_B_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 591,
+            "lineEnd": 591,
+            "stableBlockId": "SRC_CH03_S03_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH04_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 584,
+        "lineEnd": 593,
+        "stableBlockId": "SRC_CH03_S03_B"
+      }
+    }
+  ],
+  "source": {
+    "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+    "sourcePath": "source/마지막_확인_전체_시나리오.md",
+    "lineStart": 431,
+    "lineEnd": 594,
+    "stableBlockId": "SRC_CH03"
+  }
+}

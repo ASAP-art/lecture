@@ -1,0 +1,4 @@
+* text=auto eol=lf
+source/** -text
+art-source/** -text
+public/assets/** -text

@@ -1,0 +1,1156 @@
+{
+  "id": "CH07",
+  "title": "누가 움직였는가〔5분〕",
+  "entrySceneId": "CH07_S01",
+  "scenes": [
+    {
+      "id": "CH07_S01",
+      "chapterId": "CH07",
+      "title": "보완할 한 칸",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S01_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "분석실 화이트보드에 세 개의 제목을 썼다. ‘사람’, ‘움직임’, ‘문서’. 같은 이름이 여러 칸에 들어갔다. 같은 의미로 들어간 것은 아니었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1000,
+            "lineEnd": 1000,
+            "stableBlockId": "SRC_CH07_S01_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “여기서 하나 더 자세히 볼 수 있습니다. 기계 원본, 화면 정의, 이경 씨의 사고 뒤 행적.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1002,
+            "lineEnd": 1002,
+            "stableBlockId": "SRC_CH07_S01_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “원본은 전부 보전됐지?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1004,
+            "lineEnd": 1004,
+            "stableBlockId": "SRC_CH07_S01_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “네. 다만 지금 최종 대질에 올릴 분석을 고르는 겁니다. 확보했다고 저절로 해석되진 않으니까요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1006,
+            "lineEnd": 1006,
+            "stableBlockId": "SRC_CH07_S01_04"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경이 문밖에서 말했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1008,
+            "lineEnd": 1008,
+            "stableBlockId": "SRC_CH07_S01_05"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “지후가 안전실에 있었다는 건 이제 충분하죠?”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1010,
+            "lineEnd": 1010,
+            "stableBlockId": "SRC_CH07_S01_06"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “충분합니다.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1012,
+            "lineEnd": 1012,
+            "stableBlockId": "SRC_CH07_S01_07"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그럼 남은 사람을 보셔야죠.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1014,
+            "lineEnd": 1014,
+            "stableBlockId": "SRC_CH07_S01_08"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_09",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그녀는 틀린 사실을 말하지 않았다. ‘남은 사람’이라는 분류를 내가 받아들이기를 기다렸다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1016,
+            "lineEnd": 1016,
+            "stableBlockId": "SRC_CH07_S01_09"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_10",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1018,
+            "lineEnd": 1018,
+            "stableBlockId": "SRC_CH07_S01_10"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C15_A",
+          "label": "독립 이력을 원본 출력과 대조한다.",
+          "resultSceneId": "CH07_S01_A",
+          "effectIds": [
+            "FX_C15_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1020,
+            "lineEnd": 1020,
+            "stableBlockId": "SRC_C15_A"
+          }
+        },
+        {
+          "id": "C15_B",
+          "label": "‘관리자’와 ‘작성자’의 정의를 문서로 확정한다.",
+          "resultSceneId": "CH07_S01_B",
+          "effectIds": [
+            "FX_C15_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1021,
+            "lineEnd": 1021,
+            "stableBlockId": "SRC_C15_B"
+          }
+        },
+        {
+          "id": "C15_C",
+          "label": "이경의 19:44 통화를 다시 확인한다.",
+          "resultSceneId": "CH07_S01_C",
+          "effectIds": [
+            "FX_C15_C"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1022,
+            "lineEnd": 1022,
+            "stableBlockId": "SRC_C15_C"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 997,
+        "lineEnd": 1022,
+        "stableBlockId": "SRC_CH07_S01"
+      }
+    },
+    {
+      "id": "CH07_S01_A",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S01_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “사건번호 같습니다. AUTO 복귀, 예약 이동, HAND 변경. 순서도 같습니다.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1025,
+            "lineEnd": 1025,
+            "stableBlockId": "SRC_CH07_S01_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “7시 46분에 다시 살인 장치를 작동했다는 뜻은 아니군요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1027,
+            "lineEnd": 1027,
+            "stableBlockId": "SRC_CH07_S01_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “아닙니다. 그땐 이미 멈춰 있었어요. 모터가 움직였으면 별도 행이 나와야 해요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1029,
+            "lineEnd": 1029,
+            "stableBlockId": "SRC_CH07_S01_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_A_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “최초 봉인은 7시 41분이니, 그 출력에는 뒤의 HAND 변경이 없습니다. 기록기 원본을 보완 출력해서 이어붙이면 7시 46분이 나와요. 서로 모순되지 않습니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E07_CH07_S01_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1031,
+            "lineEnd": 1031,
+            "stableBlockId": "SRC_CH07_S01_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH07_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1024,
+        "lineEnd": 1033,
+        "stableBlockId": "SRC_CH07_S01_A"
+      }
+    },
+    {
+      "id": "CH07_S01_B",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S01_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “이경 선생님 이름은 지난달 운전에도, 제가 혼자 일한 날에도 똑같이 떠요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1036,
+            "lineEnd": 1036,
+            "stableBlockId": "SRC_CH07_S01_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “세 회차 대조했습니다. 고정 등록값 맞고요. 인원 확인서 작성자 서명은 매번 따로입니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1038,
+            "lineEnd": 1038,
+            "stableBlockId": "SRC_CH07_S01_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “오늘은 정지후.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1040,
+            "lineEnd": 1040,
+            "stableBlockId": "SRC_CH07_S01_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “네. 관리자가 누구냐고 물으면 한이경이고, 확인서를 누가 썼냐고 물으면 지후 씨예요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E04_CH07_S01_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1042,
+            "lineEnd": 1042,
+            "stableBlockId": "SRC_CH07_S01_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH07_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1035,
+        "lineEnd": 1044,
+        "stableBlockId": "SRC_CH07_S01_B"
+      }
+    },
+    {
+      "id": "CH07_S01_C",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S01_C_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “제가 대답했어요. 경비실에도 원본 나온다고. 그러니까 더는 안 물었어요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1047,
+            "lineEnd": 1047,
+            "stableBlockId": "SRC_CH07_S01_C_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_C_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그 뒤 이경 씨가 경비실에 혼자 들어왔습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1049,
+            "lineEnd": 1049,
+            "stableBlockId": "SRC_CH07_S01_C_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_C_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “아뇨. 구조 요청 전화 받느라 제가 계속 있었어요. 봉투도 제 앞에 있었고요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1051,
+            "lineEnd": 1051,
+            "stableBlockId": "SRC_CH07_S01_C_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S01_C_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “없애지 못한 기록을 알고 있었다는 건 확인됩니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E11_CH07_S01_C"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1053,
+            "lineEnd": 1053,
+            "stableBlockId": "SRC_CH07_S01_C_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH07_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1046,
+        "lineEnd": 1055,
+        "stableBlockId": "SRC_CH07_S01_C"
+      }
+    },
+    {
+      "id": "CH07_S02",
+      "chapterId": "CH07",
+      "title": "퍼즐 2: 먼저 일어난 일",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S02_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "수첩의 시간표에 카드를 놓는다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1060,
+            "lineEnd": 1060,
+            "stableBlockId": "SRC_CH07_S02_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_02",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "- 19:37:20 점검 종료, AUTO 복귀."
+          },
+          "pinned": true,
+          "confirmationCondition": {
+            "op": "hasEvidence",
+            "evidenceId": "E07"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1062,
+            "lineEnd": 1062,
+            "stableBlockId": "SRC_CH07_S02_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_03",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "- 19:39:30 전원 퇴실 서류 접수."
+          },
+          "pinned": true,
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1063,
+            "lineEnd": 1063,
+            "stableBlockId": "SRC_CH07_S02_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_04",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "- 19:40 유일한 치명적 이동."
+          },
+          "pinned": true,
+          "confirmationCondition": {
+            "op": "hasEvidence",
+            "evidenceId": "E07"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1064,
+            "lineEnd": 1064,
+            "stableBlockId": "SRC_CH07_S02_04"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_05",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "- 19:41 정지·신고·최초 원본 봉인."
+          },
+          "pinned": true,
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1065,
+            "lineEnd": 1065,
+            "stableBlockId": "SRC_CH07_S02_05"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_06",
+          "kind": "document",
+          "content": {
+            "type": "fixed",
+            "text": "- 19:46 현재의 HAND 상태로 변경."
+          },
+          "pinned": true,
+          "confirmationCondition": {
+            "op": "hasEvidence",
+            "evidenceId": "E07"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1066,
+            "lineEnd": 1066,
+            "stableBlockId": "SRC_CH07_S02_06"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “현재 손자국과 사망을 만든 움직임. 어느 쪽이 먼저입니까?”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1070,
+            "lineEnd": 1070,
+            "stableBlockId": "SRC_CH07_S02_07"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_08",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1072,
+            "lineEnd": 1072,
+            "stableBlockId": "SRC_CH07_S02_08"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C16_A",
+          "label": "이력 원본을 근거로 HAND 흔적의 인과적 위치를 결정한다.",
+          "resultSceneId": "CH07_S02_A",
+          "effectIds": [
+            "FX_C16_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1074,
+            "lineEnd": 1074,
+            "stableBlockId": "SRC_C16_A"
+          }
+        },
+        {
+          "id": "C16_B",
+          "label": "먼저 지후와 경비의 재확인 통화를 청취한다.",
+          "resultSceneId": "CH07_S02_B",
+          "effectIds": [
+            "FX_C16_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1075,
+            "lineEnd": 1075,
+            "stableBlockId": "SRC_C16_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "presentationInstructions": [
+        {
+          "text": "위 다섯 행 가운데 E07에서 확인되는 세 행은 E07 보유 때만 확정색으로 표시한다. 미보유 때는 ‘설비 설명상의 확인 후보’로 표시해 미확인 정보를 사실처럼 주지 않는다.",
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1068,
+            "lineEnd": 1068,
+            "stableBlockId": "SRC_CH07_S02_PRESENTATION"
+          }
+        }
+      ],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1057,
+        "lineEnd": 1075,
+        "stableBlockId": "SRC_CH07_S02"
+      }
+    },
+    {
+      "id": "CH07_S02_A",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S02_A_RESULT",
+          "kind": "dialogue",
+          "content": {
+            "type": "conditional",
+            "variants": [
+              {
+                "id": "VAR_CH07_S02_A_HAS_E07",
+                "when": {
+                  "op": "hasEvidence",
+                  "evidenceId": "E07"
+                },
+                "text": "서진: “7시 40분 이동이 먼저다. 7시 46분 HAND는 원인이 될 수 없어. 그 뒤에는 이동도 없고.”\n\n도현: “열쇠를 쓴 사실은 참인데, 그 열쇠로 죽였다는 자백은 원본과 안 맞습니다.”\n\n서진: “사건 시각을 바꿀 필요도 없어. 흔적이 사건 뒤에 생긴 거야.”\n\n이경은 보드를 오래 보았다. 이번에는 7시 37분을 이야기하지 않았다.",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1080,
+                  "lineEnd": 1086,
+                  "stableBlockId": "SRC_CH07_S02_A_HAS_E07"
+                }
+              },
+              {
+                "id": "VAR_CH07_S02_A_MISSING_E07",
+                "when": {
+                  "op": "not",
+                  "condition": {
+                    "op": "hasEvidence",
+                    "evidenceId": "E07"
+                  }
+                },
+                "text": "도현: “그 순서를 확정하려면 독립 이력이 필요합니다. 지금은 후보 시간표예요.”\n\n서진: “현재 상태를 과거의 원인으로 바로 쓸 수 없다는 것까지만 적어.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1092,
+                  "lineEnd": 1094,
+                  "stableBlockId": "SRC_CH07_S02_A_MISSING_E07"
+                }
+              }
+            ]
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH07_S02_A_HAS_E07",
+            "FX_REVEAL_NOTE_CH07_S02_A_MISSING_E07"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1077,
+            "lineEnd": 1098,
+            "stableBlockId": "SRC_CH07_S02_A_CONDITIONAL"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH07_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1077,
+        "lineEnd": 1098,
+        "stableBlockId": "SRC_CH07_S02_A"
+      }
+    },
+    {
+      "id": "CH07_S02_B",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S02_B_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "녹음 속 수현: “강 원장님 A3 들어가신 거 맞죠? 아직 거기 계신 건 아니에요?”"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1101,
+            "lineEnd": 1101,
+            "stableBlockId": "SRC_CH07_S02_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_B_02",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "녹음 속 지후: “확인했습니다. 안에 아무도 없어요. 네 명 다 나왔어요.”"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1103,
+            "lineEnd": 1103,
+            "stableBlockId": "SRC_CH07_S02_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “이름까지 물었네요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1105,
+            "lineEnd": 1105,
+            "stableBlockId": "SRC_CH07_S02_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S02_B_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “지후가 무엇을 알았는지와 같이 봐야 해.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [
+            "FX_REVEAL_ESECTION_E10_CH07_S02_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1107,
+            "lineEnd": 1107,
+            "stableBlockId": "SRC_CH07_S02_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH07_S03",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1100,
+        "lineEnd": 1109,
+        "stableBlockId": "SRC_CH07_S02_B"
+      }
+    },
+    {
+      "id": "CH07_S03",
+      "chapterId": "CH07",
+      "title": "퍼즐 3: 이름의 역할",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S03_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “요약 화면의 관리자 한이경. 원본 확인서 작성 정지후. 경비실 접수 배수현. 세 이름 중 누가 ‘안에 아무도 없다’고 한 사람일까요?”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1114,
+            "lineEnd": 1114,
+            "stableBlockId": "SRC_CH07_S03_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “권한을 가진 사람과 사실을 확인한 사람을 구분해야 해.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1116,
+            "lineEnd": 1116,
+            "stableBlockId": "SRC_CH07_S03_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “제가 관리책임자입니다. 그걸 바꾸지는 못해요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1118,
+            "lineEnd": 1118,
+            "stableBlockId": "SRC_CH07_S03_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “바꾸려는 게 아닙니다. 그 항목이 어떤 질문에 답하는지 확인하는 거죠.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1120,
+            "lineEnd": 1120,
+            "stableBlockId": "SRC_CH07_S03_04"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_05",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1122,
+            "lineEnd": 1122,
+            "stableBlockId": "SRC_CH07_S03_05"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C17_A",
+          "label": "등록 책임·내용 작성·서류 접수를 분리해 연결한다.",
+          "resultSceneId": "CH07_S03_A",
+          "effectIds": [
+            "FX_C17_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1124,
+            "lineEnd": 1124,
+            "stableBlockId": "SRC_C17_A"
+          }
+        },
+        {
+          "id": "C17_B",
+          "label": "관리책임자 이름을 모든 행위의 최종 승인자로 본다.",
+          "resultSceneId": "CH07_S03_B",
+          "effectIds": [
+            "FX_C17_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1125,
+            "lineEnd": 1125,
+            "stableBlockId": "SRC_C17_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1111,
+        "lineEnd": 1125,
+        "stableBlockId": "SRC_CH07_S03"
+      }
+    },
+    {
+      "id": "CH07_S03_A",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S03_A_RESULT",
+          "kind": "dialogue",
+          "content": {
+            "type": "conditional",
+            "variants": [
+              {
+                "id": "VAR_CH07_S03_A_HAS_E04",
+                "when": {
+                  "op": "all",
+                  "conditions": [
+                    { "op": "hasEvidence", "evidenceId": "E04" },
+                    { "op": "hasEvidence", "evidenceId": "E06" }
+                  ]
+                },
+                "text": "서진: “이경은 등록 책임자, 지후는 내용 작성자, 수현은 수신자입니다. 이경 이름만으로 누가 사람 수를 확인했는지 답할 수 없습니다.”\n\n도현: “접수 도장도 지후의 거짓을 참으로 바꾸지는 않고요.”\n\n이경: “거짓이라고 확정하셨군요.”\n\n서진: “전원 퇴실의 근거가 없다는 건 확인했습니다. 고의인지는 따로 증명하겠습니다.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1130,
+                  "lineEnd": 1136,
+                  "stableBlockId": "SRC_CH07_S03_A_HAS_E04"
+                }
+              },
+              {
+                "id": "VAR_CH07_S03_A_MISSING_E04",
+                "when": {
+                  "op": "not",
+                  "condition": {
+                    "op": "all",
+                    "conditions": [
+                      { "op": "hasEvidence", "evidenceId": "E04" },
+                      { "op": "hasEvidence", "evidenceId": "E06" }
+                    ]
+                  }
+                },
+                "text": "도현: “가능한 분류입니다. 화면 항목의 정의를 받지 않아 확정 근거는 부족합니다.”\n\n서진: “서명이 누구 건지는 남겨두자. 아직 하나로 묶지는 말고.”",
+                "source": {
+                  "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+                  "sourcePath": "source/마지막_확인_전체_시나리오.md",
+                  "lineStart": 1142,
+                  "lineEnd": 1144,
+                  "stableBlockId": "SRC_CH07_S03_A_MISSING_E04"
+                }
+              }
+            ]
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH07_S03_A_HAS_E04",
+            "FX_REVEAL_NOTE_CH07_S03_A_MISSING_E04"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1127,
+            "lineEnd": 1148,
+            "stableBlockId": "SRC_CH07_S03_A_CONDITIONAL"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1127,
+        "lineEnd": 1148,
+        "stableBlockId": "SRC_CH07_S03_A"
+      }
+    },
+    {
+      "id": "CH07_S03_B",
+      "chapterId": "CH07",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH07_S03_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “운용은 관리자의 책임입니다. 나머지는 절차에 참여했을 뿐일 수 있어요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1151,
+            "lineEnd": 1151,
+            "stableBlockId": "SRC_CH07_S03_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “그렇게 보시는 게 맞겠죠.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1153,
+            "lineEnd": 1153,
+            "stableBlockId": "SRC_CH07_S03_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “책임 범위와 실제 확인 발언은 별개로 적겠습니다.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1155,
+            "lineEnd": 1155,
+            "stableBlockId": "SRC_CH07_S03_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH07_S03_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그녀가 처음으로 먼저 고개를 끄덕였다. 내가 내린 결론보다 내가 그만두려는 질문에 안도하는 것처럼 보였다."
+          },
+          "completionEffectIds": [
+            "FX_REVEAL_NOTE_CH07_S03_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 1157,
+            "lineEnd": 1157,
+            "stableBlockId": "SRC_CH07_S03_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH08_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 1150,
+        "lineEnd": 1159,
+        "stableBlockId": "SRC_CH07_S03_B"
+      }
+    }
+  ],
+  "source": {
+    "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+    "sourcePath": "source/마지막_확인_전체_시나리오.md",
+    "lineStart": 995,
+    "lineEnd": 1160,
+    "stableBlockId": "SRC_CH07"
+  }
+}

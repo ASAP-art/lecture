@@ -1,0 +1,785 @@
+{
+  "id": "CH02",
+  "title": "열쇠의 주인〔2분〕",
+  "entrySceneId": "CH02_S01",
+  "scenes": [
+    {
+      "id": "CH02_S01",
+      "chapterId": "CH02",
+      "title": "질문의 방향",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S01_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 차를 거절하고 종이컵의 물만 받았다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 338,
+            "lineEnd": 338,
+            "stableBlockId": "SRC_CH02_S01_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “아들은 왜 여기에 와 있었습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 340,
+            "lineEnd": 340,
+            "stableBlockId": "SRC_CH02_S01_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “일하러요. 그리고 태오 씨에게 자기 기록을 받으러.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 342,
+            "lineEnd": 342,
+            "stableBlockId": "SRC_CH02_S01_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “당신에게 유리한 기록입니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 344,
+            "lineEnd": 344,
+            "stableBlockId": "SRC_CH02_S01_04"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “걔는 오늘 제 편을 들러 온 게 아닙니다.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 346,
+            "lineEnd": 346,
+            "stableBlockId": "SRC_CH02_S01_05"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_06",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그 말 뒤에 변명이 붙지 않았다. 복도에서 수현이 낮게 말했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 348,
+            "lineEnd": 348,
+            "stableBlockId": "SRC_CH02_S01_06"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “이경 선생님이 신고 뒤에 이상한 걸 물으셨어요. 자동 기록, 그게 아직 종이로 나오냐고.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 350,
+            "lineEnd": 350,
+            "stableBlockId": "SRC_CH02_S01_07"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_08",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 352,
+            "lineEnd": 352,
+            "stableBlockId": "SRC_CH02_S01_08"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C03_A",
+          "label": "이경과 태오의 금전 갈등을 묻는다.",
+          "resultSceneId": "CH02_S01_A",
+          "effectIds": [
+            "FX_C03_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 354,
+            "lineEnd": 354,
+            "stableBlockId": "SRC_C03_A"
+          }
+        },
+        {
+          "id": "C03_B",
+          "label": "경비에게 기록에 관한 질문을 그대로 재현하게 한다.",
+          "resultSceneId": "CH02_S01_B",
+          "effectIds": [
+            "FX_C03_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 355,
+            "lineEnd": 355,
+            "stableBlockId": "SRC_C03_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 335,
+        "lineEnd": 355,
+        "stableBlockId": "SRC_CH02_S01"
+      }
+    },
+    {
+      "id": "CH02_S01_A",
+      "chapterId": "CH02",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S01_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “돈 때문에 다퉜습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 358,
+            "lineEnd": 358,
+            "stableBlockId": "SRC_CH02_S01_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “돈이 끝이었으면 좋았겠죠.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 360,
+            "lineEnd": 360,
+            "stableBlockId": "SRC_CH02_S01_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “얼마입니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 362,
+            "lineEnd": 362,
+            "stableBlockId": "SRC_CH02_S01_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_A_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "이경: “장부 드리겠습니다. 제 계좌로 나간 건 숨기지 않을게요.”"
+          },
+          "speakerId": "CHAR_IKYEONG",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 364,
+            "lineEnd": 364,
+            "stableBlockId": "SRC_CH02_S01_A_04"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_A_05",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "장부에는 여러 해의 이체가 있었다. 단순한 오늘의 분쟁보다 오래된 관계였다."
+          },
+          "completionEffectIds": [
+            "FX_CH02_REVEAL_C03_A_NOTE"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 366,
+            "lineEnd": 366,
+            "stableBlockId": "SRC_CH02_S01_A_05"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH02_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 357,
+        "lineEnd": 368,
+        "stableBlockId": "SRC_CH02_S01_A"
+      }
+    },
+    {
+      "id": "CH02_S01_B",
+      "chapterId": "CH02",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S01_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “7시 44분이었어요. 제 휴대전화로 걸렸거든요. ‘자동 표시가 남아 있어요? 그거 안전실 말고 여기 원본도 나오나요?’ 그렇게요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 371,
+            "lineEnd": 371,
+            "stableBlockId": "SRC_CH02_S01_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “지워 달라고 했습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 373,
+            "lineEnd": 373,
+            "stableBlockId": "SRC_CH02_S01_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "수현: “아뇨. ‘그렇군요’ 하고 끊었어요.”"
+          },
+          "speakerId": "CHAR_SUHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 375,
+            "lineEnd": 375,
+            "stableBlockId": "SRC_CH02_S01_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S01_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "이경은 복도 끝을 보고 있었다. 설명을 요구하지 않았는데도 입술이 한 번 움직였다가 멈췄다."
+          },
+          "completionEffectIds": [
+            "FX_CH02_REVEAL_E11"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 377,
+            "lineEnd": 377,
+            "stableBlockId": "SRC_CH02_S01_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH02_S02",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 370,
+        "lineEnd": 379,
+        "stableBlockId": "SRC_CH02_S01_B"
+      }
+    },
+    {
+      "id": "CH02_S02",
+      "chapterId": "CH02",
+      "title": "두 개의 길",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S02_01",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "준석은 서가 도면 위에 손바닥을 얹었다. 세부 배선도는 접어두고 운용 개요 한 장만 펼쳤다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 384,
+            "lineEnd": 384,
+            "stableBlockId": "SRC_CH02_S02_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “크게 두 길입니다. 예약 마감, 현장 수동. 둘 다 같은 모터를 돌려요. 예약 마감은 확인서가 접수되면 경비실에서 통상 운용을 진행하고, 확인이 안 오면 보류합니다.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 386,
+            "lineEnd": 386,
+            "stableBlockId": "SRC_CH02_S02_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “안에 사람이 있으면?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 388,
+            "lineEnd": 388,
+            "stableBlockId": "SRC_CH02_S02_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “안쪽 사각은 못 잡습니다. 구형이라. 그래서 네 명 명부를 맞춰 보고, 안전실이 빈 걸 확인해야 해요. 개선하라고 세 번 올렸어요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 390,
+            "lineEnd": 390,
+            "stableBlockId": "SRC_CH02_S02_04"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_05",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “오늘 예약도 있었고요?”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 392,
+            "lineEnd": 392,
+            "stableBlockId": "SRC_CH02_S02_05"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_06",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “매일 7시 40분. 대조 작업이 남으면 안전실에서 확인서를 안 보내서 보류해요. 원장님이 종종 미뤘습니다. 오늘은 전원 퇴실로 왔고요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 394,
+            "lineEnd": 394,
+            "stableBlockId": "SRC_CH02_S02_06"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_07",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “안전실에서 모터를 조작할 수 있습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 396,
+            "lineEnd": 396,
+            "stableBlockId": "SRC_CH02_S02_07"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_08",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “없어요. 그쪽은 사람 확인 담당이에요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 398,
+            "lineEnd": 398,
+            "stableBlockId": "SRC_CH02_S02_08"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_09",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "그가 도면의 A3와 출입구 사이를 손가락으로 짚었다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 400,
+            "lineEnd": 400,
+            "stableBlockId": "SRC_CH02_S02_09"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_10",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “여기는 걷는 길이 돌아갑니다. A3 고정 전화 자리에서 위험 구역 밖까지, 빨라도 90초는 잡아야 해요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 402,
+            "lineEnd": 402,
+            "stableBlockId": "SRC_CH02_S02_10"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_11",
+          "kind": "choicePrompt",
+          "content": {
+            "type": "fixed",
+            "text": "선택:"
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 404,
+            "lineEnd": 404,
+            "stableBlockId": "SRC_CH02_S02_11"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "C04_A",
+          "label": "화면 항목과 실제 작동 이력의 차이를 확인한다.",
+          "resultSceneId": "CH02_S02_A",
+          "effectIds": [
+            "FX_C04_A"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 406,
+            "lineEnd": 406,
+            "stableBlockId": "SRC_C04_A"
+          }
+        },
+        {
+          "id": "C04_B",
+          "label": "준석의 서비스 열쇠와 사고 책임을 추궁한다.",
+          "resultSceneId": "CH02_S02_B",
+          "effectIds": [
+            "FX_C04_B"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 407,
+            "lineEnd": 407,
+            "stableBlockId": "SRC_C04_B"
+          }
+        }
+      ],
+      "entryEffectIds": [],
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 381,
+        "lineEnd": 407,
+        "stableBlockId": "SRC_CH02_S02"
+      }
+    },
+    {
+      "id": "CH02_S02_A",
+      "chapterId": "CH02",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S02_A_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “‘관리자’는 등록 이름입니다. 누가 손댔다는 인증값이 아니에요. HAND도 지금 위치고요.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 410,
+            "lineEnd": 410,
+            "stableBlockId": "SRC_CH02_S02_A_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_A_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “그때의 작동 방식은 어디 남습니까?”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 412,
+            "lineEnd": 412,
+            "stableBlockId": "SRC_CH02_S02_A_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_A_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “독립 이력. 경비실에도 출력됐을 거예요. 선택 상태 바뀐 시각과 실제 이동 신호가 따로 찍힙니다.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 414,
+            "lineEnd": 414,
+            "stableBlockId": "SRC_CH02_S02_A_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_A_04",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "도현: “동일 사건번호로 맞추면 되겠네요.”"
+          },
+          "speakerId": "CHAR_DOHYEON",
+          "completionEffectIds": [
+            "FX_CH02_REVEAL_E04"
+          ],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 416,
+            "lineEnd": 416,
+            "stableBlockId": "SRC_CH02_S02_A_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 409,
+        "lineEnd": 418,
+        "stableBlockId": "SRC_CH02_S02_A"
+      }
+    },
+    {
+      "id": "CH02_S02_B",
+      "chapterId": "CH02",
+      "title": "",
+      "blocks": [
+        {
+          "id": "BLK_CH02_S02_B_01",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “제 열쇠도 제출할게요. 개선 요청도요. 책임 없다는 소리 하려는 건 아닙니다.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 421,
+            "lineEnd": 421,
+            "stableBlockId": "SRC_CH02_S02_B_01"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_B_02",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "서진: “남아 있는 사람을 직접 보지 않고 마감했군요.”"
+          },
+          "speakerId": "CHAR_SEOJIN",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 423,
+            "lineEnd": 423,
+            "stableBlockId": "SRC_CH02_S02_B_02"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_B_03",
+          "kind": "dialogue",
+          "content": {
+            "type": "fixed",
+            "text": "준석: “안전실에서 확인했다니까요. 그게 틀렸으면…… 그건 다시 봐야죠.”"
+          },
+          "speakerId": "CHAR_JUNSEOK",
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 425,
+            "lineEnd": 425,
+            "stableBlockId": "SRC_CH02_S02_B_03"
+          }
+        },
+        {
+          "id": "BLK_CH02_S02_B_04",
+          "kind": "narration",
+          "content": {
+            "type": "fixed",
+            "text": "도현이 개요에 ‘두 경로, 확인서 필요, 독립 이력 존재’라고 적었다. 상세한 항목 정의는 아직 받지 못했다."
+          },
+          "completionEffectIds": [],
+          "source": {
+            "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+            "sourcePath": "source/마지막_확인_전체_시나리오.md",
+            "lineStart": 427,
+            "lineEnd": 427,
+            "stableBlockId": "SRC_CH02_S02_B_04"
+          }
+        }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH03_S01",
+      "source": {
+        "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+        "sourcePath": "source/마지막_확인_전체_시나리오.md",
+        "lineStart": 420,
+        "lineEnd": 429,
+        "stableBlockId": "SRC_CH02_S02_B"
+      }
+    }
+  ],
+  "source": {
+    "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336",
+    "sourcePath": "source/마지막_확인_전체_시나리오.md",
+    "lineStart": 333,
+    "lineEnd": 430,
+    "stableBlockId": "SRC_CH02"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "path": "source/마지막_확인_전체_시나리오.md",
+    "sha256": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336"
+  },
+  "expected": {
+    "chapters": 10,
+    "commonScenes": 24,
+    "resultScenes": 54,
+    "endings": 4,
+    "totalScenes": 82,
+    "choices": 54,
+    "evidence": 15,
+    "deductions": 6
+  },
+  "chapters": [
+    { "id": "CH01", "title": "멈춘 서가", "status": "imported", "file": "chapter-01.json", "commonSceneCount": 2, "resultSceneCount": 4, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 225, "lineEnd": 332, "stableBlockId": "SRC_CH01" } },
+    { "id": "CH02", "title": "열쇠의 주인", "status": "imported", "file": "chapter-02.json", "commonSceneCount": 2, "resultSceneCount": 4, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 333, "lineEnd": 430, "stableBlockId": "SRC_CH02" } },
+    { "id": "CH03", "title": "네 명의 얼굴", "status": "imported", "file": "chapter-03.json", "commonSceneCount": 3, "resultSceneCount": 7, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 431, "lineEnd": 594, "stableBlockId": "SRC_CH03" } },
+    { "id": "CH04", "title": "확인된 자리", "status": "imported", "file": "chapter-04.json", "commonSceneCount": 2, "resultSceneCount": 4, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 595, "lineEnd": 708, "stableBlockId": "SRC_CH04" } },
+    { "id": "CH05", "title": "같은 숫자, 다른 사람", "status": "imported", "file": "chapter-05.json", "commonSceneCount": 3, "resultSceneCount": 7, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 709, "lineEnd": 868, "stableBlockId": "SRC_CH05" } },
+    { "id": "CH06", "title": "남아 있는 사람", "status": "imported", "file": "chapter-06.json", "commonSceneCount": 2, "resultSceneCount": 5, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 869, "lineEnd": 994, "stableBlockId": "SRC_CH06" } },
+    { "id": "CH07", "title": "누가 움직였는가", "status": "imported", "file": "chapter-07.json", "commonSceneCount": 3, "resultSceneCount": 7, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 995, "lineEnd": 1160, "stableBlockId": "SRC_CH07" } },
+    { "id": "CH08", "title": "마지막 확인", "status": "imported", "file": "chapter-08.json", "commonSceneCount": 3, "resultSceneCount": 7, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1161, "lineEnd": 1324, "stableBlockId": "SRC_CH08" } },
+    { "id": "CH09", "title": "이미 받은 편지", "status": "imported", "file": "chapter-09.json", "commonSceneCount": 2, "resultSceneCount": 4, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1325, "lineEnd": 1434, "stableBlockId": "SRC_CH09" } },
+    { "id": "CH10", "title": "돌려줄 수 없는 것", "status": "imported", "file": "chapter-10.json", "commonSceneCount": 2, "resultSceneCount": 5, "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1435, "lineEnd": 1526, "stableBlockId": "SRC_CH10" } }
+  ]
+}

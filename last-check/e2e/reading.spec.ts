@@ -1,0 +1,120 @@
+import { expect, test } from '@playwright/test';
+
+const url = '/lecture/last-check/';
+const saveKey = 'last-check.saves.v1';
+const readingKey = 'last-check.reading.v1';
+
+test('reading preferences persist independently and never rewrite the current investigation', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto(url);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
+  const block = page.locator('[data-block-id]');
+  const blockId = await block.getAttribute('data-block-id');
+  const initialSize = await block.evaluate(element => parseFloat(getComputedStyle(element).fontSize));
+  const saved = await page.evaluate(key => localStorage.getItem(key), saveKey);
+  const settings = page.getByRole('button', { name: '읽기 설정', exact: true });
+  await settings.click();
+  await expect(page.getByRole('heading', { name: '읽기 설정', exact: true })).toBeFocused();
+  await page.getByRole('combobox', { name: '대사 크기', exact: true }).selectOption('largest');
+  await page.getByRole('combobox', { name: '타이핑 속도', exact: true }).selectOption('slow');
+  await page.getByRole('checkbox', { name: '모션 줄이기', exact: true }).check();
+  await page.getByRole('checkbox', { name: '대사 즉시 표시', exact: true }).check();
+  await expect.poll(() => page.evaluate(key => JSON.parse(localStorage.getItem(key) ?? 'null'), readingKey)).toEqual({ version: 1, textSize: 'largest', typingSpeed: 'slow', reduceMotion: true });
+  expect(await page.evaluate(key => localStorage.getItem(key), saveKey)).toBe(saved);
+  await page.reload();
+  await expect(page.locator(`[data-block-id="${blockId}"]`)).toBeVisible();
+  await expect(page.getByRole('button', { name: '계속', exact: true })).toBeVisible();
+  expect(await block.evaluate(element => parseFloat(getComputedStyle(element).fontSize))).toBeGreaterThan(initialSize);
+  expect(await page.evaluate(key => localStorage.getItem(key), saveKey)).toBe(saved);
+  await settings.click();
+  await expect(page.getByRole('combobox', { name: '대사 크기', exact: true })).toHaveValue('largest');
+  await expect(page.getByRole('combobox', { name: '타이핑 속도', exact: true })).toHaveValue('slow');
+  await expect(page.getByRole('checkbox', { name: '모션 줄이기', exact: true })).toBeChecked();
+  await expect(page.getByRole('checkbox', { name: '대사 즉시 표시', exact: true })).toBeChecked();
+  await page.keyboard.press('Escape');
+  await expect(settings).toBeFocused();
+});
+
+test('dialogs contain keyboard focus, notebook tabs work, and OS motion changes never auto-advance', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto(url);
+  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
+  const saved = await page.evaluate(key => localStorage.getItem(key), saveKey);
+  const settings = page.getByRole('button', { name: '읽기 설정', exact: true });
+  await settings.click();
+  await page.keyboard.press('Shift+Tab');
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('button', { name: '메뉴 닫기', exact: true })).toBeFocused();
+  const newGame = page.getByRole('button', { name: '새 게임 시작', exact: true });
+  await newGame.click();
+  await expect(page.getByRole('button', { name: '진행 교체 확인', exact: true })).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(page.getByRole('button', { name: '취소', exact: true })).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('button', { name: '진행 교체 확인', exact: true })).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(newGame).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(settings).toBeFocused();
+  await page.setViewportSize({ width: 390, height: 844 });
+  const toggle = page.getByRole('button', { name: /^수첩 \d+$/ });
+  await toggle.click();
+  const notebook = page.getByRole('dialog', { name: '수첩', exact: true });
+  await expect(notebook.getByRole('button', { name: '닫기', exact: true })).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(notebook.getByRole('tabpanel')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(notebook.getByRole('button', { name: '닫기', exact: true })).toBeFocused();
+  await notebook.getByRole('tab', { name: '전체 기록', exact: true }).focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(notebook.getByRole('tab', { name: '증거', exact: true })).toBeFocused();
+  await expect(notebook.getByRole('tab', { name: '증거', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await page.keyboard.press('End');
+  await expect(notebook.getByRole('tab', { name: '로그', exact: true })).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(toggle).toBeFocused();
+  expect(await page.evaluate(key => localStorage.getItem(key), saveKey)).toBe(saved);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.getByRole('button', { name: '계속', exact: true }).click();
+  await expect(page.locator('[data-block-id="BLK_CH01_S01_02"]')).toBeVisible();
+  await expect(page.getByRole('button', { name: '계속', exact: true })).toBeVisible();
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.evaluate(() => (document.activeElement as HTMLElement).blur());
+  await page.keyboard.down('Enter');
+  await expect(page.locator('[data-block-id="BLK_CH01_S01_03"]')).toBeVisible();
+  await page.keyboard.down('Enter');
+  await page.keyboard.up('Enter');
+  await expect(page.locator('[data-block-id="BLK_CH01_S01_03"]')).toBeVisible();
+});
+
+test('reading storage failure keeps changes in memory and leaves investigation bytes intact', async ({ page }) => {
+  await page.addInitScript(() => {
+    const setItem = Storage.prototype.setItem;
+    Reflect.set(window, 'blockReadingWrites', true);
+    Storage.prototype.setItem = function(key, value) {
+      if (key === 'last-check.reading.v1' && Reflect.get(window, 'blockReadingWrites')) {
+        throw new DOMException('full', 'QuotaExceededError');
+      }
+      return setItem.call(this, key, value);
+    };
+  });
+  await page.goto(url);
+  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
+  const saved = await page.evaluate(key => localStorage.getItem(key), saveKey);
+  await page.getByRole('button', { name: '읽기 설정', exact: true }).click();
+  await page.getByRole('combobox', { name: '대사 크기', exact: true }).selectOption('large');
+  await expect(page.locator('.reading-settings').getByRole('alert')).toContainText('읽기 설정 미저장');
+  await expect(page.locator('.app-shell')).toHaveAttribute('data-text-size', 'large');
+  expect(await page.evaluate(key => localStorage.getItem(key), saveKey)).toBe(saved);
+  expect(await page.evaluate(key => localStorage.getItem(key), readingKey)).toBeNull();
+  await page.evaluate(() => Reflect.set(window, 'blockReadingWrites', false));
+  await page.getByRole('combobox', { name: '대사 크기', exact: true }).selectOption('largest');
+  await expect(page.locator('.reading-settings').getByRole('alert')).toHaveCount(0);
+  await expect.poll(() => page.evaluate(key => JSON.parse(localStorage.getItem(key) ?? 'null')?.textSize, readingKey)).toBe('largest');
+  expect(await page.evaluate(key => localStorage.getItem(key), saveKey)).toBe(saved);
+});

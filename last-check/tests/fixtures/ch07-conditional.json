@@ -1,0 +1,23 @@
+{
+  "id": "BLK_CH07_S02_A_RESULT",
+  "kind": "dialogue",
+  "content": {
+    "type": "conditional",
+    "variants": [
+      {
+        "id": "VAR_CH07_S02_A_HAS_E07",
+        "when": { "op": "hasEvidence", "evidenceId": "E07" },
+        "text": "서진: “7시 40분 이동이 먼저다. 7시 46분 HAND는 원인이 될 수 없어. 그 뒤에는 이동도 없고.”\n\n도현: “열쇠를 쓴 사실은 참인데, 그 열쇠로 죽였다는 자백은 원본과 안 맞습니다.”\n\n서진: “사건 시각을 바꿀 필요도 없어. 흔적이 사건 뒤에 생긴 거야.”\n\n이경은 보드를 오래 보았다. 이번에는 7시 37분을 이야기하지 않았다.",
+        "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1080, "lineEnd": 1086, "stableBlockId": "SRC_CH07_S02_A_HAS_E07" }
+      },
+      {
+        "id": "VAR_CH07_S02_A_MISSING_E07",
+        "when": { "op": "not", "condition": { "op": "hasEvidence", "evidenceId": "E07" } },
+        "text": "도현: “그 순서를 확정하려면 독립 이력이 필요합니다. 지금은 후보 시간표예요.”\n\n서진: “현재 상태를 과거의 원인으로 바로 쓸 수 없다는 것까지만 적어.”",
+        "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1092, "lineEnd": 1094, "stableBlockId": "SRC_CH07_S02_A_MISSING_E07" }
+      }
+    ]
+  },
+  "completionEffectIds": [],
+  "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 1077, "lineEnd": 1098, "stableBlockId": "SRC_CH07_S02_A_CONDITIONAL" }
+}

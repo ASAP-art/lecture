@@ -1,0 +1,119 @@
+{
+  "id": "CH01",
+  "title": "멈춘 서가〔3분〕",
+  "entrySceneId": "CH01_S01",
+  "scenes": [
+    {
+      "id": "CH01_S01",
+      "chapterId": "CH01",
+      "title": "도착",
+      "blocks": [
+        { "id": "BLK_CH01_S01_01", "kind": "narration", "content": { "type": "fixed", "text": "지하로 내려가자 젖은 종이 냄새가 났다. 화재는 아니었다. 누군가 창고 바닥에 흘린 물이 출입구까지 번져 있었다. 안쪽 적재대 사이에는 흰 가림막이 세워져 있었다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 230, "lineEnd": 230, "stableBlockId": "SRC_CH01_S01_01" } },
+        { "id": "BLK_CH01_S01_02", "kind": "dialogue", "content": { "type": "fixed", "text": "도현: “서진 선배. 신고는 7시 41분. 원장 강태오 씨 맞습니다. 직원 두 명이 확인했고요. 신원에 다툼 없습니다.”" }, "speakerId": "CHAR_DOHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 232, "lineEnd": 232, "stableBlockId": "SRC_CH01_S01_02" } },
+        { "id": "BLK_CH01_S01_03", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “움직인 시간은?”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 234, "lineEnd": 234, "stableBlockId": "SRC_CH01_S01_03" } },
+        { "id": "BLK_CH01_S01_04", "kind": "dialogue", "content": { "type": "fixed", "text": "도현: “기계 기록상 7시 40분. 이후 비상 정지. 다른 이동은 없답니다. 수동인지 예약인지는 아직 분석 전이고요.”" }, "speakerId": "CHAR_DOHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 236, "lineEnd": 236, "stableBlockId": "SRC_CH01_S01_04" } },
+        { "id": "BLK_CH01_S01_05", "kind": "narration", "content": { "type": "fixed", "text": "기계실 외함에 금속이 쓸린 흔적이 보였다. 선택창에는 HAND. 옆 모니터에는 ‘관리자: 한이경’이라고 적혀 있었다." }, "completionEffectIds": ["FX_CH01_REVEAL_E01"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 238, "lineEnd": 238, "stableBlockId": "SRC_CH01_S01_05" } },
+        { "id": "BLK_CH01_S01_06", "kind": "dialogue", "content": { "type": "fixed", "text": "도현: “지금은 수동이네요.”" }, "speakerId": "CHAR_DOHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 240, "lineEnd": 240, "stableBlockId": "SRC_CH01_S01_06" } },
+        { "id": "BLK_CH01_S01_07", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “지금은.”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 242, "lineEnd": 242, "stableBlockId": "SRC_CH01_S01_07" } },
+        { "id": "BLK_CH01_S01_08", "kind": "document", "content": { "type": "fixed", "text": "경비 수현이 문턱을 넘지 않은 채 갈색 봉투를 내밀었다. ‘19:41 / 원본 출력 / 봉인’. 모서리가 손의 땀에 젖어 있었다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 244, "lineEnd": 244, "stableBlockId": "SRC_CH01_S01_08" } },
+        { "id": "BLK_CH01_S01_09", "kind": "dialogue", "content": { "type": "fixed", "text": "수현: “이거부터 보실래요? 신고하면서 나오는 거라, 원래 넣어두게 돼 있어서요.”" }, "speakerId": "CHAR_SUHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 246, "lineEnd": 246, "stableBlockId": "SRC_CH01_S01_09" } },
+        { "id": "BLK_CH01_S01_10", "kind": "narration", "content": { "type": "fixed", "text": "서진은 봉투와 외함을 번갈아 보았다. 먼저 확인할 수 있는 것은 하나였다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 248, "lineEnd": 248, "stableBlockId": "SRC_CH01_S01_10" } },
+        { "id": "BLK_CH01_S01_11", "kind": "choicePrompt", "content": { "type": "fixed", "text": "선택:" }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 250, "lineEnd": 250, "stableBlockId": "SRC_CH01_S01_11" } }
+      ],
+      "choices": [
+        { "id": "C01_A", "label": "봉투의 봉인·시각·인계자를 먼저 기록한다.", "resultSceneId": "CH01_S01_A", "effectIds": ["FX_C01_A"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 252, "lineEnd": 252, "stableBlockId": "SRC_C01_A" } },
+        { "id": "C01_B", "label": "외함과 열쇠의 접촉 흔적을 먼저 확대한다.", "resultSceneId": "CH01_S01_B", "effectIds": ["FX_C01_B"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 253, "lineEnd": 253, "stableBlockId": "SRC_C01_B" } }
+      ],
+      "entryEffectIds": ["FX_CH01_ENTRY_E01"],
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 227, "lineEnd": 253, "stableBlockId": "SRC_CH01_S01" }
+    },
+    {
+      "id": "CH01_S01_A",
+      "chapterId": "CH01",
+      "title": "",
+      "blocks": [
+        { "id": "BLK_CH01_S01_A_01", "kind": "dialogue", "content": { "type": "fixed", "text": "수현: “제가 출력되고 바로 넣었어요. 이 줄이 사건번호고, 여기 제 서명이에요.”" }, "speakerId": "CHAR_SUHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 256, "lineEnd": 256, "stableBlockId": "SRC_CH01_S01_A_01" } },
+        { "id": "BLK_CH01_S01_A_02", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “내용을 고치거나 다시 뽑은 적은요?”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 258, "lineEnd": 258, "stableBlockId": "SRC_CH01_S01_A_02" } },
+        { "id": "BLK_CH01_S01_A_03", "kind": "dialogue", "content": { "type": "fixed", "text": "수현: “없어요. 제 책상에 계속 있었어요.”" }, "speakerId": "CHAR_SUHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 260, "lineEnd": 260, "stableBlockId": "SRC_CH01_S01_A_03" } },
+        { "id": "BLK_CH01_S01_A_04", "kind": "dialogue", "content": { "type": "fixed", "text": "도현: “원본 보전 요청 넣겠습니다. 뜯는 건 분석실에서 같이 하죠.”" }, "speakerId": "CHAR_DOHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 262, "lineEnd": 262, "stableBlockId": "SRC_CH01_S01_A_04" } },
+        { "id": "BLK_CH01_S01_A_05", "kind": "narration", "content": { "type": "fixed", "text": "수현은 그제야 봉투를 놓았다." }, "completionEffectIds": ["FX_CH01_REVEAL_E02"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 264, "lineEnd": 264, "stableBlockId": "SRC_CH01_S01_A_05" } }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH01_S02",
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 255, "lineEnd": 266, "stableBlockId": "SRC_CH01_S01_A" }
+    },
+    {
+      "id": "CH01_S01_B",
+      "chapterId": "CH01",
+      "title": "",
+      "blocks": [
+        { "id": "BLK_CH01_S01_B_01", "kind": "dialogue", "content": { "type": "fixed", "text": "도현: “외함은 오래됐는데 이 선은 밝네요. 비교 사진도 찍어둘게요.”" }, "speakerId": "CHAR_DOHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 269, "lineEnd": 269, "stableBlockId": "SRC_CH01_S01_B_01" } },
+        { "id": "BLK_CH01_S01_B_02", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “언제 생겼는지까지 밝다는 뜻은 아니야.”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 271, "lineEnd": 271, "stableBlockId": "SRC_CH01_S01_B_02" } },
+        { "id": "BLK_CH01_S01_B_03", "kind": "dialogue", "content": { "type": "fixed", "text": "수현: “봉투는 증거함에 같이 넣을게요.”" }, "speakerId": "CHAR_SUHYEON", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 273, "lineEnd": 273, "stableBlockId": "SRC_CH01_S01_B_03" } },
+        { "id": "BLK_CH01_S01_B_04", "kind": "narration", "content": { "type": "fixed", "text": "금속의 새 표면에는 형광등이 가늘게 비쳤다. 눈에 잘 보이는 흔적이었다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 275, "lineEnd": 275, "stableBlockId": "SRC_CH01_S01_B_04" } }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH01_S02",
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 268, "lineEnd": 277, "stableBlockId": "SRC_CH01_S01_B" }
+    },
+    {
+      "id": "CH01_S02",
+      "chapterId": "CH01",
+      "title": "첫 진술",
+      "blocks": [
+        { "id": "BLK_CH01_S02_01", "kind": "narration", "content": { "type": "fixed", "text": "면담실 문 앞에 이경이 앉아 있었다. 코트 단추를 하나 잘못 끼웠다. 무릎 위에는 작은 열쇠 고리가 놓여 있었다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 282, "lineEnd": 282, "stableBlockId": "SRC_CH01_S02_01" } },
+        { "id": "BLK_CH01_S02_02", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “이걸 찾으시겠죠.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 284, "lineEnd": 284, "stableBlockId": "SRC_CH01_S02_02" } },
+        { "id": "BLK_CH01_S02_03", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “무슨 열쇠입니까?”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 286, "lineEnd": 286, "stableBlockId": "SRC_CH01_S02_03" } },
+        { "id": "BLK_CH01_S02_04", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “서비스용이에요. 오늘 썼습니다.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 288, "lineEnd": 288, "stableBlockId": "SRC_CH01_S02_04" } },
+        { "id": "BLK_CH01_S02_05", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “태오 씨가 안에 있다는 건 아셨고요?”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 290, "lineEnd": 290, "stableBlockId": "SRC_CH01_S02_05" } },
+        { "id": "BLK_CH01_S02_06", "kind": "narration", "content": { "type": "fixed", "text": "이경은 열쇠를 내려다보았다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 292, "lineEnd": 292, "stableBlockId": "SRC_CH01_S02_06" } },
+        { "id": "BLK_CH01_S02_07", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “먼저 정확히 묻죠. 누가 서가를 움직였는지 묻는 거죠?”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 294, "lineEnd": 294, "stableBlockId": "SRC_CH01_S02_07" } },
+        { "id": "BLK_CH01_S02_08", "kind": "document", "content": { "type": "fixed", "text": "도현이 내 쪽으로 얇은 사건 개요를 밀었다. 태오가 사망하기 전 이경에게 보낸 금전 요구 메시지. 오후에 들렸다는 언쟁. 화면 속 관리자의 이름." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 296, "lineEnd": 296, "stableBlockId": "SRC_CH01_S02_08" } },
+        { "id": "BLK_CH01_S02_09", "kind": "narration", "content": { "type": "fixed", "text": "문 반대편에서 지후가 말했다." }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 298, "lineEnd": 298, "stableBlockId": "SRC_CH01_S02_09" } },
+        { "id": "BLK_CH01_S02_10", "kind": "dialogue", "content": { "type": "fixed", "text": "지후: “그 시간에 저는 안전실에 있었어요. 처음부터 끝까지요.”" }, "speakerId": "CHAR_JIHU", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 300, "lineEnd": 300, "stableBlockId": "SRC_CH01_S02_10" } },
+        { "id": "BLK_CH01_S02_11", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “그건 확인해 주세요. 제가 말해서가 아니라, 실제로 그랬으니까.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 302, "lineEnd": 302, "stableBlockId": "SRC_CH01_S02_11" } },
+        { "id": "BLK_CH01_S02_12", "kind": "choicePrompt", "content": { "type": "fixed", "text": "선택:" }, "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 304, "lineEnd": 304, "stableBlockId": "SRC_CH01_S02_12" } }
+      ],
+      "choices": [
+        { "id": "C02_A", "label": "열쇠 사용 사실과 살인을 구분해 질문한다.", "resultSceneId": "CH01_S02_A", "effectIds": ["FX_C02_A"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 306, "lineEnd": 306, "stableBlockId": "SRC_C02_A" } },
+        { "id": "C02_B", "label": "이경에게 ‘당신이 죽였습니까’라고 바로 묻는다.", "resultSceneId": "CH01_S02_B", "effectIds": ["FX_C02_B"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 307, "lineEnd": 307, "stableBlockId": "SRC_C02_B" } }
+      ],
+      "entryEffectIds": [],
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 279, "lineEnd": 307, "stableBlockId": "SRC_CH01_S02" }
+    },
+    {
+      "id": "CH01_S02_A",
+      "chapterId": "CH01",
+      "title": "",
+      "blocks": [
+        { "id": "BLK_CH01_S02_A_01", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “열쇠를 쓴 시각과 목적부터 말씀하세요. 살인 여부는 그다음입니다.”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 310, "lineEnd": 310, "stableBlockId": "SRC_CH01_S02_A_01" } },
+        { "id": "BLK_CH01_S02_A_02", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “7시 37분쯤. 점검 서명을 하려고요.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 312, "lineEnd": 312, "stableBlockId": "SRC_CH01_S02_A_02" } },
+        { "id": "BLK_CH01_S02_A_03", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “다시 기계실에 간 적도 있습니까?”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 314, "lineEnd": 314, "stableBlockId": "SRC_CH01_S02_A_03" } },
+        { "id": "BLK_CH01_S02_A_04", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “있습니다.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 316, "lineEnd": 316, "stableBlockId": "SRC_CH01_S02_A_04" } },
+        { "id": "BLK_CH01_S02_A_05", "kind": "narration", "content": { "type": "fixed", "text": "그녀는 두 번째 시각을 스스로 덧붙이지 않았다." }, "completionEffectIds": ["FX_CH01_REVEAL_C02_A_NOTE"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 318, "lineEnd": 318, "stableBlockId": "SRC_CH01_S02_A_05" } }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH02_S01",
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 309, "lineEnd": 320, "stableBlockId": "SRC_CH01_S02_A" }
+    },
+    {
+      "id": "CH01_S02_B",
+      "chapterId": "CH01",
+      "title": "",
+      "blocks": [
+        { "id": "BLK_CH01_S02_B_01", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “제가 죽였다고 하면, 아들 쪽은 끝나는 겁니까?”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 323, "lineEnd": 323, "stableBlockId": "SRC_CH01_S02_B_01" } },
+        { "id": "BLK_CH01_S02_B_02", "kind": "dialogue", "content": { "type": "fixed", "text": "서진: “그런 거래는 없습니다.”" }, "speakerId": "CHAR_SEOJIN", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 325, "lineEnd": 325, "stableBlockId": "SRC_CH01_S02_B_02" } },
+        { "id": "BLK_CH01_S02_B_03", "kind": "dialogue", "content": { "type": "fixed", "text": "이경: “알겠습니다. 그럼 질문하신 것만 답하죠.”" }, "speakerId": "CHAR_IKYEONG", "completionEffectIds": [], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 327, "lineEnd": 327, "stableBlockId": "SRC_CH01_S02_B_03" } },
+        { "id": "BLK_CH01_S02_B_04", "kind": "narration", "content": { "type": "fixed", "text": "지후가 고개를 들었다. 이경과 눈을 맞추지는 않았다." }, "completionEffectIds": ["FX_CH01_REVEAL_C02_B_NOTE"], "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 329, "lineEnd": 329, "stableBlockId": "SRC_CH01_S02_B_04" } }
+      ],
+      "choices": [],
+      "entryEffectIds": [],
+      "nextSceneId": "CH02_S01",
+      "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 322, "lineEnd": 331, "stableBlockId": "SRC_CH01_S02_B" }
+    }
+  ],
+  "source": { "sourceHash": "66e7358249200fd6624e03f7f818a9c1a0f434cb3ca032c3ef1c89b148fa7336", "sourcePath": "source/마지막_확인_전체_시나리오.md", "lineStart": 225, "lineEnd": 332, "stableBlockId": "SRC_CH01" }
+}
