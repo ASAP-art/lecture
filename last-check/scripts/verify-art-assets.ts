@@ -3,8 +3,26 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { basename, resolve } from 'node:path';
 import { GAME_CONTENT, GAME_INDEX } from '../src/content/game-content';
+import type { SceneId } from '../src/content/ids';
 import { ART_ASSETS, SCENE_VISUAL_MAPPINGS, type ArtAssetId } from '../src/engine/visuals';
 import { ILLUSTRATION_CUES } from '../src/engine/illustrations';
+import { PORTRAIT_CUES, UNUSED_SPRITE_REASONS } from '../src/engine/portrait-cues';
+import { SPRITE_ASSETS, SPRITE_REJECTION_REASONS } from '../src/engine/sprite-assets';
+
+const spriteManifest = JSON.parse(await readFile(resolve('art-source/incoming/sprites22/IMAGE_MANIFEST.json'), 'utf8')) as {
+  file: string; size: string; sha256: string; transparent: boolean;
+}[];
+assert.deepEqual(spriteManifest.map(entry => entry.file).sort(), Object.keys(SPRITE_ASSETS).map(id => `${id}.png`).sort());
+const incomingFiles = await readdir(resolve('art-source/incoming/sprites22'));
+for (const asset of Object.values(SPRITE_ASSETS)) {
+  assert(asset.sourcePath);
+  const filename = basename(asset.sourcePath);
+  assert(incomingFiles.includes(filename), `incoming filename case mismatch: ${asset.id}`);
+  const entry = spriteManifest.find(item => item.file === filename)!;
+  assert.equal(entry.size, `${asset.width}x${asset.height}`);
+  assert.equal(entry.sha256, asset.sha256);
+  assert.equal(entry.transparent, asset.hasAlpha);
+}
 
 const hash = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 function imageHeader(bytes: Buffer) {
@@ -56,11 +74,46 @@ for (const cue of ILLUSTRATION_CUES) {
   if (cue.hideAtBlockId) assert(scene.blocks.some(b => b.id === cue.hideAtBlockId));
   used.add(cue.assetId);
 }
+for (const cue of PORTRAIT_CUES) {
+  const scene = GAME_INDEX.scenes.get(cue.sceneId);
+  assert(scene, `missing portrait scene: ${cue.sceneId}`);
+  for (const blockId of cue.blockIds) assert(scene.blocks.some(b => b.id === blockId), `invalid portrait block: ${blockId}`);
+  if (cue.disclosedBy) {
+    let ancestor: typeof scene | undefined = scene;
+    while (ancestor && !ancestor.blocks.some(block => block.id === cue.disclosedBy)) {
+      const parent: SceneId | null = SCENE_VISUAL_MAPPINGS[ancestor.id]!.inheritsFrom;
+      ancestor = parent ? GAME_INDEX.scenes.get(parent) : undefined;
+    }
+    assert(ancestor, `invalid portrait disclosure ancestry: ${cue.disclosedBy}`);
+  }
+  if (cue.variantId) assert(scene.blocks.some(block => block.content.type === 'conditional' &&
+    block.content.variants.some(variant => variant.id === cue.variantId)), `invalid portrait variant: ${cue.variantId}`);
+  assert.equal(SPRITE_ASSETS[cue.assetId].status, 'received', `rejected portrait cue: ${cue.assetId}`);
+  used.add(cue.assetId);
+}
 for (const id of used) assert(ART_ASSETS[id], `unknown visual asset: ${id}`);
 
 const inventory = [];
 const paths: string[] = [];
 for (const asset of Object.values(ART_ASSETS)) {
+  if (asset.status === 'rejected') {
+    assert(asset.sourcePath);
+    assert.equal(asset.publicPath, null);
+    assert(!used.has(asset.id), `rejected sprite used: ${asset.id}`);
+    const original = await readFile(resolve(asset.sourcePath));
+    const header = imageHeader(original);
+    assert.equal(header.format, asset.format);
+    assert.equal(header.width, asset.width);
+    assert.equal(header.height, asset.height);
+    assert.equal(header.alphaChannel, asset.hasAlpha);
+    assert.equal(hash(original), asset.sha256);
+    assert(!GAME_CONTENT.assets.some(a => a.id === asset.schemaId));
+    for (const directory of ['public/assets', 'dist/assets']) {
+      assert(!(await readdir(resolve(directory))).includes(basename(asset.sourcePath)), `rejected sprite deployed: ${asset.id}`);
+    }
+    inventory.push({ id: asset.id, status: asset.status, applied: false, sourcePath: asset.sourcePath, ...header, sourceBytes: original.length, sourceSha256: hash(original), reason: SPRITE_REJECTION_REASONS[asset.id as keyof typeof SPRITE_REJECTION_REASONS] });
+    continue;
+  }
   if (asset.status !== 'received') {
     assert.equal(asset.publicPath, null);
     inventory.push({ id: asset.id, status: asset.status, applied: used.has(asset.id) });
@@ -91,13 +144,22 @@ for (const asset of Object.values(ART_ASSETS)) {
 }
 const files = await readdir(resolve('public/assets'));
 assert.deepEqual(files.sort(), paths.sort(), 'orphan asset or filename case mismatch');
-assert.equal(GAME_CONTENT.assets.length, 22);
-assert.equal(paths.length, 22);
-const unreceived = inventory.filter(a => a.status !== 'received').map(a => a.id);
+const expectedReceived = Object.values(ART_ASSETS).filter(asset => asset.status === 'received');
+assert.deepEqual(GAME_CONTENT.assets.map(asset => asset.id).sort(), expectedReceived.map(asset => asset.schemaId).sort());
+assert.equal(Object.values(SPRITE_ASSETS).filter(asset => asset.status === 'received').length, 18);
+assert.equal(Object.values(SPRITE_ASSETS).filter(asset => asset.status === 'rejected').length, 4);
+assert.equal(paths.length, 40);
+const unreceived = inventory.filter(a => a.status === 'unreceived').map(a => a.id);
+const rejected = inventory.filter(a => a.status === 'rejected').map(a => a.id);
+assert.deepEqual([...rejected].sort(), Object.keys(SPRITE_REJECTION_REASONS).sort());
 assert.deepEqual(unreceived.sort(), ['doc_independent_log', 'doc_roster_tags', 'doc_safety_confirmation']);
 const unused = inventory.filter(a => a.status === 'received' && !a.applied).map(a => a.id);
-assert.deepEqual(unused, []);
-const summary = { received: paths.length, applied: paths.length - unused.length, unused, unreceived, scenePolicies: mappings.length, inheritedScenes: mappings.filter(m => m.inheritsFrom).length, beforeOverrides: mappings.flatMap(m => m.blockOverrides).filter(o => o.timing === 'before').length, afterOverrides: mappings.flatMap(m => m.blockOverrides).filter(o => o.timing === 'after').length, sourceKinds: ['original PNG files', 'runtime versioned files'], note: 'Raw policies still require resolver path, condition, stored-variant and on-site disclosure filters; browser requests are checked separately.' };
+const expectedUnused = Object.keys(UNUSED_SPRITE_REASONS).filter(id => SPRITE_ASSETS[id as keyof typeof SPRITE_ASSETS].status === 'received');
+assert.deepEqual([...unused].sort(), expectedUnused.sort(), 'Only explicitly documented, narrative-incompatible sprites may remain unused');
+for (const [id, reason] of Object.entries(UNUSED_SPRITE_REASONS)) {
+  assert(reason.length > 0 && !used.has(id as ArtAssetId), `missing or obsolete unused reason: ${id}`);
+}
+const summary = { received: paths.length, providedSprites: Object.keys(SPRITE_ASSETS).length, acceptedSprites: 18, rejected, applied: paths.length - unused.length, appliedSprites: PORTRAIT_CUES.length, unused, unusedReasons: UNUSED_SPRITE_REASONS, unreceived, scenePolicies: mappings.length, inheritedScenes: mappings.filter(m => m.inheritsFrom).length, beforeOverrides: mappings.flatMap(m => m.blockOverrides).filter(o => o.timing === 'before').length, afterOverrides: mappings.flatMap(m => m.blockOverrides).filter(o => o.timing === 'after').length, sourceKinds: ['original PNG files', 'runtime versioned files'], note: 'Rejected sprites were provided but are not deployed. Cue inventory is not proof of browser display; resolver disclosure, stored-variant and CG priority remain authoritative.' };
 await mkdir(resolve('docs/qa-logs'), { recursive: true });
-await writeFile(resolve('docs/qa-logs/art-assets.json'), JSON.stringify({ generatedAt: new Date().toISOString(), summary, inventory, mappings, illustrationCues: ILLUSTRATION_CUES }, null, 2) + '\n');
+await writeFile(resolve('docs/qa-logs/art-assets.json'), JSON.stringify({ generatedAt: new Date().toISOString(), summary, inventory, mappings, illustrationCues: ILLUSTRATION_CUES, portraitCues: PORTRAIT_CUES }, null, 2) + '\n');
 console.log(JSON.stringify({ result: 'pass', ...summary, report: 'docs/qa-logs/art-assets.json' }));

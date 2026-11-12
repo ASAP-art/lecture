@@ -4,6 +4,8 @@ import { createHash } from 'node:crypto';
 import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ART_ASSETS } from '../src/engine/visuals';
+import { SPRITE_ASSETS } from '../src/engine/sprite-assets';
 
 const appRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const repoRoot = resolve(appRoot, '..');
@@ -42,8 +44,26 @@ function inspect(directory: string) {
   }
 }
 inspect(output);
-assert.equal(files.filter(file => file.path.startsWith('last-check/assets/') && !/\/index-[^/]+\.(js|css)$/.test(file.path)).length, 22);
+const expectedImages = Object.values(ART_ASSETS).filter(asset => asset.status === 'received');
+const imageFiles = files.filter(file => file.path.startsWith('last-check/assets/') && !/\/index-[^/]+\.(js|css)$/.test(file.path));
+assert.deepEqual(imageFiles.map(file => file.path).sort(), expectedImages.map(asset => `last-check${asset.publicPath}`).sort(), 'Exact deployed image filename set must match registry');
+for (const asset of expectedImages) {
+  assert(asset.publicPath && asset.sourcePath);
+  const packaged = imageFiles.find(file => file.path === `last-check${asset.publicPath}`)!;
+  assert.equal(packaged.sha256, asset.sha256, `packaged image hash: ${asset.id}`);
+  const publicBytes = readFileSync(join(appRoot, 'public', asset.publicPath.slice(1)));
+  const distBytes = readFileSync(join(appRoot, 'dist', asset.publicPath.slice(1)));
+  assert.deepEqual(publicBytes, distBytes, `public/dist mismatch: ${asset.id}`);
+  assert.equal(createHash('sha256').update(publicBytes).digest('hex'), packaged.sha256);
+  if (asset.format === 'PNG') assert.deepEqual(publicBytes, readFileSync(join(appRoot, asset.sourcePath)), `PNG source mismatch: ${asset.id}`);
+}
+for (const asset of Object.values(SPRITE_ASSETS).filter(asset => asset.status === 'rejected')) {
+  assert.equal(asset.publicPath, null);
+  const filename = asset.sourcePath!.split('/').at(-1)!;
+  assert(!imageFiles.some(file => file.path.endsWith(`/${filename}`)), `rejected sprite packaged: ${asset.id}`);
+  assert(!readdirSync(join(appRoot, 'public/assets')).includes(filename), `rejected sprite in public: ${asset.id}`);
+}
 assert(files.every(file => preserved.includes(file.path) || file.path === 'last-check/index.html' || file.path.startsWith('last-check/assets/')));
 files.sort((a, b) => a.path.localeCompare(b.path));
 writeFileSync(join(output, 'last-check/deployment.json'), `${JSON.stringify({ review: true, commit, base, public: true, preserved, files }, null, 2)}\n`);
-console.log(JSON.stringify({ commit, base, output, preservedSites: 2, runtimeFiles: files.length, providedImages: 22 }));
+console.log(JSON.stringify({ commit, base, output, preservedSites: 2, runtimeFiles: files.length, providedImages: expectedImages.length, providedSprites: Object.keys(SPRITE_ASSETS).length, rejectedSprites: Object.values(SPRITE_ASSETS).filter(asset => asset.status === 'rejected').length }));

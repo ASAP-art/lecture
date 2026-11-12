@@ -746,7 +746,7 @@ export function App() {
       </div>
 
       <footer className="scope-note">
-        기능 범위: CH01–CH10 · 엔딩 4개 · 미술: 제공 자산 22종 적용 · 사람 플레이테스트/배포: 미완료
+        기능 범위: CH01–CH10 · 엔딩 4개 · 미술: 기존 22종 + 상황 16종 적용(6종 보류/미사용) · 검토 배포 · 사람 플레이 미검증
       </footer>
     </main>
   );

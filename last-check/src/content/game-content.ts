@@ -13,6 +13,7 @@ import support0810 from './chapters/support-08-10.json';
 import { createGameContentIndex } from './index';
 import { parseGameContent } from './schema';
 import { SOURCE_PATH, SOURCE_SHA256 } from './source';
+import { SPRITE_CONTENT_ASSETS } from '../engine/sprite-assets';
 
 const source = (lineStart: number, lineEnd: number, stableBlockId: `SRC_${string}`) => ({
   sourceHash: SOURCE_SHA256,
@@ -241,6 +242,7 @@ export const GAME_CONTENT = parseGameContent({
   ],
   deductions: [...support0507.deductions, ...support0810.deductions],
   assets: [
+    ...SPRITE_CONTENT_ASSETS,
     {
       id: 'ASSET_BG_ARCHIVE',
       kind: 'background',

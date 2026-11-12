@@ -16,14 +16,14 @@
 - `scripts/package-review.ts`는 `.review-site/`만 생성한다. 기존 사이트 런타임4파일은 같은 Git 커밋에서 바이트 그대로 가져오고, 게임은 dist만 last-check/에 복사한다. 원본 HTML/소스/문서/테스트/원본 미술/QA 로그를 웹 배포 산출물에 포함하지 않는다. 게임 실행에 필요한 원문은 클라이언트 번들에 포함되므로 소스 분석 방지 보안은 아니다.
 - `/last-check/deployment.json`은 review/public 표시, 실제 소스 commit, base, 런타임 파일별 SHA-256/크기를 제공한다. 배포가 성공해도 정식 출시/전체 미술 완료라고 표시하지 않는다.
 - Pages는 공개 URL이다. 기존 noindex는 검색 요청일 뿐 인증/접근 제한이 아니다. 접근 제한이 필요해지면 별도 호스트의 실제 인증 보호가 선행되어야 한다.
-- GitHub Pages의 HTML/CDN 캐시는 호스트 정책을 따른다. 해시 버전 JS/CSS/그림 파일을 사용하고 실제 URL의 Cache-Control/ETag/Last-Modified/Content-Type 및 본문 SHA를 확인한다. 지원하지 않는 `_headers`/캐시 rewrite를 추가하지 않는다.
+- GitHub Pages의 HTML/CDN 캐시는 호스트 정책을 따른다. 기존 해시 파일명 JS/CSS/그림을 유지하고, 신규 sprite22 파일은 원래 이름을 보존하며 `?v=<SHA 앞12자리>`를 사용한다. 실제 URL의 Cache-Control/ETag/Last-Modified/Content-Type 및 본문 SHA를 확인한다. 지원하지 않는 `_headers`/캐시 rewrite를 추가하지 않는다.
 - main 외 소스 검토 브랜치에서 확인한 커밋만 fast-forward로 main에 올린다. 강제 push/전체 staging/타사이트 수정은 하지 않는다. 실패한 build는 기존 배포를 대체하지 않는다.
 
 ## 검토 URL 스모크와 경계
 
 - 실제 HTTPS URL에서 시작→선택 결과→수첩/로그→수동 저장/복원→재접속, Chromium 대표 엔딩 실제 선택ID 완주, WebKit390×844 터치/설정/화면과 그림을 검사한다. 최근 전체 QA는 재사용하고 호스트/경로/변경에 해당하는 스모크만 실행한다.
 - 별도 깨끗한 브라우저 context에서 검수한다. 기존 사이트와 origin을 공유하므로 사용자 브라우저에서 localStorage.clear()를 실행하지 않는다. 게임 저장은 last-check 네임스페이스이며 기존 사이트 데이터를 초기화하지 않는다.
-- 원본 두 사이트의 실제 응답 SHA와 커밋 바이트, 배포 manifest의 commit/base, 모든22이미지와 JS/CSS의 파일/MIME/해시·404/콘솔을 확인한다. 응답 캐시 지연 시 새 커밋이 제공될 때까지 이전 커밋을 검수 완료로 표시하지 않는다.
+- 원본 두 사이트의 실제 응답 SHA와 커밋 바이트, 배포 manifest의 commit/base, 등록된 정확한 이미지 집합과 JS/CSS의 파일/MIME/해시·404/콘솔을 확인한다. 현재 이미지40종(기존22+신규채택18)이며 신규16종 적용·2종 미사용·4종 품질 보류는 ART_ASSETS §11에 구분했다. 응답 캐시 지연 시 새 커밋이 제공될 때까지 이전 커밋을 검수 완료로 표시하지 않는다.
 - 최근 원문82/선택54·실제 엔진·단위286/E2E24의 범위/경계 주입은 FULL_QA.md. 실기기 iOS/Android·실제 스크린리더·전82장면 육안·사람 플레이는 별도 미검증이다.
 - 인증은 기존 Git credential helper/GitHub 권한을 사용하며 토큰/비밀번호를 요청·문서·명령행 인자로 기록하지 않는다. 인증이 끊기면 사용자가 GitHub/Git Credential Manager에서 로그인/권한 승인 후 같은 workflow를 실행한다.
 
@@ -45,3 +45,9 @@
 - 변경 관련 단위34건·고유 브라우저9건 통과. 기존 단순 제목 문구 검사는 새 메뉴 제목과 부분 일치해 제거하고 CH01 동작만 재검사했다. 전체 단위/E2E를 다시 실행한 것으로 세지 않는다. 기존 도달성 증인은 visual 모듈 입력 지문이 바뀌어 해당 생성 검사만 갱신했다.
 - 단독/2인/3인×PC1366/모바일390/360의9상태와 소개/도움말 화면을 실제 확인했다. 인물 요청 실패·늦은 이전 요청 후 선택 결과 전환도 검사했다. 화면 경계 검수는 엔진 생성 저장을 주입한 것으로 실제 완주와 구분한다.
 - 같은 Pages workflow/base/보존 패키징을 재사용한다. 위 bd9fa17은 최초 배포 이력이며 현재 반영 버전은 공개 URL의 deployment.json.commit으로 구분한다. 이번 실제 반영 커밋/원격 스모크는 루트 HANDOFF.md와 로컬 qa-logs/revision1-deployment-*.json에 기록한다.
+
+## 신규 인물22장 적용 범위
+
+- 기존 Pages/workflow/base/원문·게임·저장 계약을 유지한다. 자산 목록에 채택18장만 추가하고,16개 현재 대사 블록 cue·기본 초상 로딩 fallback·이전 요청 무효화를 검증했다. source/public 파일명을 바꾸거나 기본 이미지를 덮어쓰지 않았다.
+- 관련 단위 고유25·Chromium3건, 1366×768/360×800/390×844 및 WebKit/iPhone13 설정의 신규16동작+3인 그룹17상태씩을 확인했다. 저장 경계 주입과 실제 C01_B 클릭/수동 복원·터치 진행/재접속을 구분한다. 기존 전체 QA/대표 엔딩 완주는 재사용했으며 이번에 다시 실행하지 않았다.
+- 실제 반영 소스는 공개 `deployment.json.commit`, 최신 배포/HTTP/스모크 근거는 루트 HANDOFF와 로컬 `docs/qa-logs/sprites22-deployment-*.json`을 기준으로 한다. 공개 검토이며 정식 출시/사람 플레이/실기기 완료가 아니다. 상세 미술 목록은 ART_ASSETS §11을 재사용한다.

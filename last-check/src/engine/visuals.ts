@@ -3,6 +3,8 @@ import { GAME_INDEX } from '../content/game-content';
 import type { BlockId, SceneId, VariantId } from '../content/ids';
 import { currentBlock } from './gameplay';
 import type { RuntimeGameState } from './state';
+import { SPRITE_ASSETS, SPRITE_NEUTRAL_IDS, type SpriteAssetId } from './sprite-assets';
+import { PORTRAIT_CUES } from './portrait-cues';
 
 export type ArtAssetId =
   | 'bg_archive'
@@ -29,13 +31,14 @@ export type ArtAssetId =
   | 'end_true'
   | 'end_good'
   | 'end_bad01'
-  | 'end_bad02';
+  | 'end_bad02'
+  | SpriteAssetId;
 
 export interface ArtAssetMetadata {
   readonly id: ArtAssetId;
   readonly schemaId: `ASSET_${string}`;
   readonly kind: 'background' | 'portrait' | 'document';
-  readonly status: 'received' | 'unreceived';
+  readonly status: 'received' | 'unreceived' | 'rejected';
   readonly sourcePath: string | null;
   readonly publicPath: string | null;
   readonly format: 'PNG' | 'WebP' | null;
@@ -50,6 +53,7 @@ export interface ArtAssetMetadata {
 }
 
 export const ART_ASSETS: Readonly<Record<ArtAssetId, ArtAssetMetadata>> = {
+  ...SPRITE_ASSETS,
   end_true: {
     id: 'end_true',
     schemaId: 'ASSET_END_TRUE',
@@ -1189,6 +1193,9 @@ export interface ResolvedLayer {
 export interface ResolvedPortrait extends ResolvedLayer {
   readonly direction: PortraitDirection;
   readonly url: string | null;
+  readonly neutralId: PortraitAssetId;
+  readonly neutralAsset: ArtAssetMetadata | null;
+  readonly neutralUrl: string | null;
 }
 
 export interface ResolvedStageVisual {
@@ -1228,6 +1235,10 @@ const OFFSTAGE_PORTRAIT_BLOCKS = new Set<BlockId>([
   'BLK_CH06_S01_06', 'BLK_CH06_S01_07',
   'BLK_CH06_S02_A_01', 'BLK_CH06_S02_A_02',
 ]);
+
+function neutralPortraitId(id: PortraitAssetId): PortraitAssetId {
+  return id in SPRITE_NEUTRAL_IDS ? SPRITE_NEUTRAL_IDS[id as SpriteAssetId] : id;
+}
 
 function portraitIsOnSite(id: PortraitAssetId, state: RuntimeGameState): boolean {
   if (state.blockId && OFFSTAGE_PORTRAIT_BLOCKS.has(state.blockId)) return false;
@@ -1322,6 +1333,30 @@ export function resolveStageVisual(
     }
   }
 
+  let liveCueAssets: Set<PortraitAssetId> | undefined;
+  for (const cue of PORTRAIT_CUES) {
+    if (cue.sceneId !== state.sceneId || !activeBlock || !cue.blockIds.includes(activeBlock.id)) continue;
+    if (cue.disclosedBy && !state.revealedBlocks.has(cue.disclosedBy)) continue;
+    if (cue.variantId) {
+      const variantBlock = scene.blocks.find((block) => block.content.type === 'conditional' &&
+        block.content.variants.some((variant) => variant.id === cue.variantId));
+      if (!variantBlock || state.resolvedVariants[variantBlock.id] !== cue.variantId) continue;
+    }
+    const neutralId = neutralPortraitId(cue.assetId);
+    const index = portraitGroup.findIndex((portrait) => neutralPortraitId(portrait.assetId) === neutralId);
+    const directed = { assetId: cue.assetId, action: cue.action };
+    const nextGroup = [...portraitGroup];
+    if (index === -1) nextGroup.push(directed);
+    else nextGroup[index] = directed;
+    portraitGroup = nextGroup;
+    (liveCueAssets ??= new Set()).add(cue.assetId);
+    if (cue.liveBackgroundId) {
+      backgroundId = cue.liveBackgroundId;
+      backgroundMode = 'location';
+      backgroundCaption = null;
+    }
+  }
+
   const background = resolveLayer(backgroundId);
 
   const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
@@ -1330,14 +1365,22 @@ export function resolveStageVisual(
       ? `${normalizedBase}${background.asset.publicPath}`
       : null;
   const portraits: ResolvedPortrait[] = [];
-  if (backgroundMode !== 'reference') {
+  if (backgroundMode !== 'reference' && (!state.blockId || !OFFSTAGE_PORTRAIT_BLOCKS.has(state.blockId))) {
     for (const direction of portraitGroup) {
-      if (!portraitIsOnSite(direction.assetId, state)) continue;
-      const layer = resolveLayer(direction.assetId);
+      const neutralId = neutralPortraitId(direction.assetId);
+      if (!liveCueAssets?.has(direction.assetId) && !portraitIsOnSite(neutralId, state)) continue;
+      const requested = resolveLayer(direction.assetId);
+      const neutral = resolveLayer(neutralId);
+      const layer = requested.isReceived ? requested : neutral;
+      const version = layer.asset && layer.asset.id in SPRITE_ASSETS ? `?v=${layer.asset.sha256!.slice(0, 12)}` : '';
       portraits.push({
         ...layer,
+        requestedId: direction.assetId,
         direction,
-        url: layer.asset?.publicPath ? `${normalizedBase}${layer.asset.publicPath}` : null,
+        url: layer.asset?.publicPath ? `${normalizedBase}${layer.asset.publicPath}${version}` : null,
+        neutralId,
+        neutralAsset: neutral.asset,
+        neutralUrl: neutral.asset?.publicPath ? `${normalizedBase}${neutral.asset.publicPath}` : null,
       });
     }
   }
