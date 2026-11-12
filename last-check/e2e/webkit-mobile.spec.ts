@@ -21,8 +21,10 @@ test.beforeEach(async ({ page }) => {
   page.on('requestfailed', request => messages.push({ kind: 'requestfailed', message: `${request.url()}: ${request.failure()?.errorText}` }));
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(url);
+  await expect(page.locator('img.stage-art-illustration')).toBeVisible();
   await page.evaluate(() => localStorage.clear());
   await page.reload();
+  await expect(page.locator('img.stage-art-illustration')).toBeVisible();
 });
 
 test.afterEach(async ({ page }, testInfo) => {
