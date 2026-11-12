@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 import { execFileSync } from 'node:child_process';
 import type { SaveDocument } from '../src/engine/save-schema';
 const SAVE_KEY = 'last-check.saves.v1';
@@ -37,7 +38,7 @@ test('typing writes no character saves; manual restore and reconnect retain the 
   });
   await page.emulateMedia({reducedMotion:'no-preference'});
   await page.goto(url);
-  await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+  await startFromTitle(page);
   await waitSaved(page);
   const before = (await documentSaved(page)).auto!.state;
   const writes = await page.evaluate(()=>Reflect.get(window,'saveWrites'));
@@ -129,7 +130,7 @@ test('quota failure preserves durable bytes, continues in memory, and retries th
     Storage.prototype.setItem = function(key,value) { if(key==='last-check.saves.v1' && Reflect.get(window,'blockSave')) throw new DOMException('full','QuotaExceededError'); return original.call(this,key,value); };
   });
   await page.goto(url);
-  await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+  await startFromTitle(page);
   await waitSaved(page);
   const raw = await page.evaluate(key=>localStorage.getItem(key),SAVE_KEY);
   await page.evaluate(()=>Reflect.set(window,'blockSave',true));
@@ -151,7 +152,7 @@ test('corrupt original is exportable and recovery backs it up before replacing i
   await page.goto(url);
   await page.evaluate(({key,raw})=>localStorage.setItem(key,raw),{key:SAVE_KEY,raw});
   await page.reload();
-  await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+  await startFromTitle(page);
   await expect(page.getByLabel('저장 상태',{exact:true})).toContainText('저장 실패');
   expect(await page.evaluate(key=>localStorage.getItem(key),SAVE_KEY)).toBe(raw);
   await page.getByRole('button',{name:'저장/불러오기',exact:true}).click();
@@ -169,7 +170,7 @@ test('corrupt original is exportable and recovery backs it up before replacing i
 test('two real tabs detect revision conflict and explicit reload replaces rather than merges disclosure',async ({page,context}) => {
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.goto(url);
-  await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+  await startFromTitle(page);
   await waitSaved(page);
   const other = await context.newPage();
   await other.emulateMedia({reducedMotion:'reduce'});
@@ -197,7 +198,7 @@ test('blocked localStorage does not prevent starting or advancing in memory',asy
     Storage.prototype.getItem = function(key) { if(key.startsWith('last-check.')) throw new DOMException('blocked','SecurityError'); return original.call(this,key); };
   });
   await page.goto(url);
-  await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+  await startFromTitle(page);
   await nextBlock(page);
   await expect(page.locator('[data-block-id="BLK_CH01_S01_02"]')).toBeVisible();
   await expect(page.getByLabel('저장 상태',{exact:true})).toContainText('저장 실패');

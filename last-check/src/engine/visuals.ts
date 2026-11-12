@@ -477,20 +477,31 @@ export const ART_ASSETS: Readonly<Record<ArtAssetId, ArtAssetMetadata>> = {
   },
 };
 
+export type PortraitAssetId = Extract<ArtAssetId, `char_${string}`>;
+
+export interface PortraitDirection {
+  readonly assetId: PortraitAssetId;
+  // Optional art direction only: these never fabricate or select an unavailable image.
+  readonly expression?: string;
+  readonly action?: string;
+}
+
 export interface BlockVisualOverride {
   readonly blockId: BlockId;
   readonly timing: 'before' | 'after';
   readonly condition?: Condition;
   readonly variantId?: VariantId;
   readonly backgroundId?: ArtAssetId | null;
-  readonly portraitId?: ArtAssetId | null;
+  readonly portraitId?: PortraitAssetId | null;
+  readonly portraitGroup?: readonly PortraitDirection[];
 }
 
 export interface SceneVisualMapping {
   readonly sceneId: SceneId;
   readonly inheritsFrom: SceneId | null;
   readonly backgroundId?: ArtAssetId | null;
-  readonly portraitId?: ArtAssetId | null;
+  readonly portraitId?: PortraitAssetId | null;
+  readonly portraitGroup?: readonly PortraitDirection[];
   readonly backgroundCaption?: string;
   readonly backgroundMode?: 'location' | 'reference';
   readonly condition?: Condition;
@@ -622,8 +633,10 @@ export const SCENE_VISUAL_MAPPINGS: Readonly<Record<SceneId, SceneVisualMapping>
     backgroundId: 'bg_interview',
     portraitId: 'char_suhyeon_neutral',
     blockOverrides: [
-      { blockId: 'BLK_CH03_S02_06', timing: 'before', portraitId: 'char_jihu_neutral' },
-      { blockId: 'BLK_CH03_S02_09', timing: 'before', portraitId: 'char_eunseo_neutral' },
+      { blockId: 'BLK_CH03_S02_06', timing: 'before', portraitId: 'char_jihu_neutral',
+        portraitGroup: [{ assetId: 'char_suhyeon_neutral' }, { assetId: 'char_jihu_neutral' }] },
+      { blockId: 'BLK_CH03_S02_09', timing: 'before', portraitId: 'char_eunseo_neutral',
+        portraitGroup: [{ assetId: 'char_suhyeon_neutral' }, { assetId: 'char_jihu_neutral' }, { assetId: 'char_eunseo_neutral' }] },
     ],
   },
   CH03_S02_A: {
@@ -638,7 +651,10 @@ export const SCENE_VISUAL_MAPPINGS: Readonly<Record<SceneId, SceneVisualMapping>
     inheritsFrom: 'CH03_S02',
     backgroundId: 'bg_interview',
     portraitId: 'char_junseok_neutral',
-    blockOverrides: [],
+    blockOverrides: [
+      { blockId: 'BLK_CH03_S02_B_04', timing: 'before',
+        portraitGroup: [{ assetId: 'char_junseok_neutral' }, { assetId: 'char_jihu_neutral' }] },
+    ],
   },
   CH03_S02_C: {
     sceneId: 'CH03_S02_C',
@@ -859,14 +875,20 @@ export const SCENE_VISUAL_MAPPINGS: Readonly<Record<SceneId, SceneVisualMapping>
     inheritsFrom: 'CH07_S01',
     backgroundId: 'bg_interview',
     portraitId: 'char_junseok_neutral',
-    blockOverrides: [],
+    blockOverrides: [
+      { blockId: 'BLK_CH07_S01_A_04', timing: 'before',
+        portraitGroup: [{ assetId: 'char_junseok_neutral' }, { assetId: 'char_dohyeon_neutral' }] },
+    ],
   },
   CH07_S01_B: {
     sceneId: 'CH07_S01_B',
     inheritsFrom: 'CH07_S01',
     backgroundId: 'bg_interview',
     portraitId: 'char_junseok_neutral',
-    blockOverrides: [],
+    blockOverrides: [
+      { blockId: 'BLK_CH07_S01_B_02', timing: 'before',
+        portraitGroup: [{ assetId: 'char_junseok_neutral' }, { assetId: 'char_dohyeon_neutral' }] },
+    ],
   },
   CH07_S01_C: {
     sceneId: 'CH07_S01_C',
@@ -1164,12 +1186,18 @@ export interface ResolvedLayer {
   readonly isReceived: boolean;
 }
 
+export interface ResolvedPortrait extends ResolvedLayer {
+  readonly direction: PortraitDirection;
+  readonly url: string | null;
+}
+
 export interface ResolvedStageVisual {
   readonly sceneId: SceneId;
   readonly blockId: BlockId | null;
   readonly inheritsFrom: SceneId | null;
   readonly background: ResolvedLayer;
-  readonly portrait: ResolvedLayer;
+  readonly backgroundUrl: string | null;
+  readonly portraits: readonly ResolvedPortrait[];
   readonly backgroundCaption: string | null;
   readonly backgroundMode: 'location' | 'reference';
 }
@@ -1201,8 +1229,8 @@ const OFFSTAGE_PORTRAIT_BLOCKS = new Set<BlockId>([
   'BLK_CH06_S02_A_01', 'BLK_CH06_S02_A_02',
 ]);
 
-function portraitIsOnSite(id: ArtAssetId | null, state: RuntimeGameState): boolean {
-  if (!id || (state.blockId && OFFSTAGE_PORTRAIT_BLOCKS.has(state.blockId))) return false;
+function portraitIsOnSite(id: PortraitAssetId, state: RuntimeGameState): boolean {
+  if (state.blockId && OFFSTAGE_PORTRAIT_BLOCKS.has(state.blockId)) return false;
   // Keep the existing Yi-kyung mapping; new portraits need a disclosed live introduction.
   if (id === 'char_yikyung_neutral') return true;
   const characterId = PORTRAIT_CHARACTERS[id];
@@ -1210,6 +1238,7 @@ function portraitIsOnSite(id: ArtAssetId | null, state: RuntimeGameState): boole
   const scene = GAME_INDEX.scenes.get(state.sceneId)!;
   const introduced = (sceneId: SceneId) => GAME_INDEX.scenes.get(sceneId)!.blocks.some(
     (block) => block.kind === 'dialogue' && block.speakerId === characterId &&
+      !OFFSTAGE_PORTRAIT_BLOCKS.has(block.id) &&
       (state.revealedBlocks.has(block.id) || (sceneId === state.sceneId && state.blockId === block.id)),
   );
   const parent = SCENE_VISUAL_MAPPINGS[scene.id]!.inheritsFrom;
@@ -1223,10 +1252,7 @@ function portraitIsOnSite(id: ArtAssetId | null, state: RuntimeGameState): boole
 export function resolveStageVisual(
   state: RuntimeGameState,
   baseUrl = '/',
-): ResolvedStageVisual & {
-  readonly backgroundUrl: string | null;
-  readonly portraitUrl: string | null;
-} {
+): ResolvedStageVisual {
   const scene = GAME_INDEX.scenes.get(state.sceneId);
   if (!scene) throw new Error(`알 수 없는 장면 시각 매핑: ${state.sceneId}`);
 
@@ -1244,9 +1270,8 @@ export function resolveStageVisual(
       blockId: state.blockId,
       inheritsFrom: mapping.inheritsFrom,
       background: resolveLayer(null),
-      portrait: resolveLayer(null),
+      portraits: [],
       backgroundUrl: null,
-      portraitUrl: null,
       backgroundCaption: null,
       backgroundMode: 'location',
     };
@@ -1254,7 +1279,7 @@ export function resolveStageVisual(
 
   // Inherit base layers only. Parent block events belong to a different scene.
   const baseLayers = (id: SceneId, visiting = new Set<SceneId>()): {
-    backgroundId: ArtAssetId | null; portraitId: ArtAssetId | null;
+    backgroundId: ArtAssetId | null; portraitGroup: readonly PortraitDirection[];
     backgroundCaption: string | null; backgroundMode: 'location' | 'reference';
   } => {
     if (visiting.has(id)) throw new Error(`순환 장면 시각 상속: ${id}`);
@@ -1264,7 +1289,9 @@ export function resolveStageVisual(
     const parent = entry.inheritsFrom ? baseLayers(entry.inheritsFrom, visiting) : null;
     return {
       backgroundId: entry.backgroundId === undefined ? parent?.backgroundId ?? null : entry.backgroundId,
-      portraitId: entry.portraitId === undefined ? parent?.portraitId ?? null : entry.portraitId,
+      portraitGroup: entry.portraitGroup ?? (entry.portraitId === undefined
+        ? parent?.portraitGroup ?? []
+        : entry.portraitId ? [{ assetId: entry.portraitId }] : []),
       backgroundCaption: entry.backgroundCaption ?? (
         entry.backgroundId !== undefined && entry.backgroundId !== parent?.backgroundId
           ? null : parent?.backgroundCaption ?? null
@@ -1275,7 +1302,7 @@ export function resolveStageVisual(
       ),
     };
   };
-  let { backgroundId, portraitId, backgroundCaption, backgroundMode } = baseLayers(state.sceneId);
+  let { backgroundId, portraitGroup, backgroundCaption, backgroundMode } = baseLayers(state.sceneId);
   const activeBlock = currentBlock(state, GAME_INDEX);
   for (const override of mapping.blockOverrides) {
     const target = scene.blocks.find((block) => block.id === override.blockId);
@@ -1289,32 +1316,39 @@ export function resolveStageVisual(
     if (override.variantId && state.resolvedVariants[target.id] !== override.variantId) continue;
     if (override.condition && !evaluateCondition(override.condition, state)) continue;
     if (override.backgroundId !== undefined) backgroundId = override.backgroundId;
-    if (override.portraitId !== undefined) portraitId = override.portraitId;
+    if (override.portraitGroup !== undefined) portraitGroup = override.portraitGroup;
+    else if (override.portraitId !== undefined) {
+      portraitGroup = override.portraitId ? [{ assetId: override.portraitId }] : [];
+    }
   }
 
   const background = resolveLayer(backgroundId);
-  const portrait = resolveLayer(
-    backgroundMode !== 'reference' && portraitIsOnSite(portraitId, state) ? portraitId : null,
-  );
 
   const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
   const backgroundUrl =
     background.isReceived && background.asset?.publicPath
       ? `${normalizedBase}${background.asset.publicPath}`
       : null;
-  const portraitUrl =
-    portrait.isReceived && portrait.asset?.publicPath
-      ? `${normalizedBase}${portrait.asset.publicPath}`
-      : null;
+  const portraits: ResolvedPortrait[] = [];
+  if (backgroundMode !== 'reference') {
+    for (const direction of portraitGroup) {
+      if (!portraitIsOnSite(direction.assetId, state)) continue;
+      const layer = resolveLayer(direction.assetId);
+      portraits.push({
+        ...layer,
+        direction,
+        url: layer.asset?.publicPath ? `${normalizedBase}${layer.asset.publicPath}` : null,
+      });
+    }
+  }
 
   return {
     sceneId: state.sceneId,
     blockId: state.blockId,
     inheritsFrom: mapping.inheritsFrom,
     background,
-    portrait,
+    portraits,
     backgroundUrl,
-    portraitUrl,
     backgroundCaption,
     backgroundMode,
   };

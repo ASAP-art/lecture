@@ -7,7 +7,7 @@ import {
   buildInvestigationSurface,
   type NotebookTabId,
 } from '../engine/investigation-view';
-import { createSaveSession, saveSessionReducer } from '../engine/save-session';
+import { createSaveSession, saveSessionReducer, type SaveSession } from '../engine/save-session';
 import { orderChoiceIds } from '../engine/selection-order';
 import { createInitialState } from '../engine/state';
 import { browserLocks, browserStorage, SAVE_ERRORS, SAVE_KEY, SaveRepository } from '../engine/storage';
@@ -16,6 +16,8 @@ import { SavePanel, saveStatus } from './SavePanel';
 import { StageArt } from './StageArt';
 import { useMediaQuery, useReadingPreferences, TYPING_DELAYS } from './reading-preferences';
 import { containDialogTab } from './dialog-focus';
+import { StartMenu } from './StartMenu';
+import { getDialogueReviewEntries } from './dialogue-review';
 
 const characterIds = GAME_CONTENT.characters.map((character) => character.id);
 
@@ -74,6 +76,16 @@ export function App() {
   const compact = useMediaQuery('(max-width: 840px)');
   const systemReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const reducedMotion = systemReducedMotion || reading.preferences.reduceMotion;
+  const [reviewCursor, setReviewCursor] = useState<{ identity: string; index: number } | null>(null);
+  const [startMenuPage, setStartMenuPage] = useState<'menu' | 'introduction' | null>(() =>
+    state.displayStage === 'scene' && state.sceneId === 'CH01_S01' && state.choiceHistory.length === 0 && state.displayLog.length === 0
+      ? 'menu' : null);
+  const startMenuOpen = startMenuPage !== null;
+  const reviewEntries = useMemo(() => startMenuOpen ? [] : getDialogueReviewEntries(state), [state, startMenuOpen]);
+  const reviewIdentity = `${state.runId}:${state.saveRevision}:${session.sequence}`;
+  const reviewIndex = reviewCursor?.identity === reviewIdentity ? reviewCursor.index : -1;
+  const reviewed = reviewIndex >= 0 ? reviewEntries[reviewIndex] : undefined;
+  const reviewing = reviewed !== undefined;
 
   const scene = GAME_INDEX.scenes.get(state.sceneId);
   if (!scene) throw new Error(`현재 scene을 찾을 수 없습니다: ${state.sceneId}`);
@@ -123,7 +135,7 @@ export function App() {
   }, [profile, state.runId, state.displayStage, scene.id, scene.endCommand]);
 
   useEffect(() => {
-    if (!block) return;
+    if (!block || reviewing || startMenuOpen) return;
     if (reducedMotion || profileView.preferences.instantText) {
       setTyping({ identity: typingIdentity, count: text.length });
       return;
@@ -144,7 +156,7 @@ export function App() {
       window.clearInterval(timer);
       if (typingTimer.current === timer) typingTimer.current = null;
     };
-  }, [typingIdentity, text, block, profileView.preferences.instantText, reading.preferences.typingSpeed, reducedMotion]);
+  }, [typingIdentity, text, block, profileView.preferences.instantText, reading.preferences.typingSpeed, reducedMotion, reviewing, startMenuOpen]);
 
   useEffect(() => {
     if (!notebookOpen) return;
@@ -155,10 +167,10 @@ export function App() {
     return () => { document.body.style.overflow = previousOverflow; };
   }, [notebookOpen, compact]);
 
-  const closeSavePanel = () => {
+  const closeSavePanel = (restoreFocus = true) => {
     setSaveOpen(false);
     setConfirmOpen(false);
-    window.setTimeout(() => (saveOpenerRef.current ?? saveToggleRef.current)?.focus(), 0);
+    if (restoreFocus) window.setTimeout(() => (saveOpenerRef.current ?? saveToggleRef.current)?.focus(), 0);
   };
 
   const closeNotebook = () => {
@@ -188,7 +200,7 @@ export function App() {
           return;
         }
       }
-      if (confirmOpen || saveOpen || (notebookOpen && compact)) return;
+      if (confirmOpen || saveOpen || (notebookOpen && compact) || reviewing || startMenuOpen) return;
       if (target?.closest('#save-panel, .notebook, .site-header, button, input, select, textarea, a, [contenteditable="true"]')) {
         return;
       }
@@ -212,7 +224,7 @@ export function App() {
   const modalOpen = saveOpen || confirmOpen || (notebookOpen && compact);
 
   const handleContinue = () => {
-    if (modalOpen) return;
+    if (modalOpen || reviewing || startMenuOpen) return;
     if (!typingComplete) {
       if (typingTimer.current !== null) {
         window.clearInterval(typingTimer.current);
@@ -225,37 +237,57 @@ export function App() {
   };
 
   const handleChoice = (choiceId: ChoiceId) => {
-    if (modalOpen) return;
+    if (modalOpen || reviewing || startMenuOpen) return;
     dispatch({ type: 'choose', choiceId, sceneId: scene.id });
   };
 
   const handleStartNewGame = () => {
+    closeSavePanel(false);
+    setNotebookOpen(false);
+    setReviewCursor(null);
+    setStartMenuPage('introduction');
+  };
+  const startFromIntroduction = () => {
+    setStartMenuPage(null);
+    setReviewCursor(null);
+    if (state.displayStage === 'scene' && state.sceneId === 'CH01_S01' && state.choiceHistory.length === 0 && state.displayLog.length === 0) {
+      dispatch({ type: 'begin' });
+      return;
+    }
     const fresh = createSaveSession(
       { ...initialGameState(state.runId), saveRevision: 1 },
       { ...saveView.document.runs, ...session.runs },
     );
-    closeSavePanel();
-    setNotebookOpen(false);
-    const synced = saveSessionReducer(fresh, { type: 'begin' });
-    dispatch({ type: 'restoreSession', session: synced });
+    dispatch({ type: 'restoreSession', session: saveSessionReducer(fresh, { type: 'begin' }) });
   };
 
   const handleReturnToTitle = () => {
-    closeSavePanel();
+    closeSavePanel(false);
     setNotebookOpen(false);
-    dispatch({ type: 'title', runId: createRunId(), seed: createSeed(), force: true, parentRunId: state.runId });
+    setReviewCursor(null);
+    setStartMenuPage('menu');
   };
 
   const canContinueFromTitle =
     saveView.pending === 0 &&
     saveView.error !== 'corrupt' &&
     saveView.error !== 'incompatible' &&
-    Boolean(
-      saveView.durable?.auto &&
-        (saveView.durable.auto.state.displayStage !== 'scene' ||
-          saveView.durable.auto.state.displayLog.length > 0 ||
-          saveView.durable.auto.state.choiceHistory.length > 0),
-    );
+    (state.displayStage !== 'scene' || state.displayLog.length > 0 || state.choiceHistory.length > 0);
+
+  const restoreSession = (loaded: SaveSession) => {
+    setNotebookOpen(false);
+    setConfirmOpen(false);
+    setReviewCursor(null);
+    setStartMenuPage(null);
+    dispatch({ type: 'restoreSession', session: loaded });
+  };
+  const beginScene = () => {
+    dispatch({ type: 'begin' });
+  };
+  const reviewPrevious = () => {
+    if (modalOpen || reviewEntries.length === 0) return;
+    setReviewCursor({ identity: reviewIdentity, index: reviewing ? Math.max(0, reviewIndex - 1) : reviewEntries.length - 1 });
+  };
 
   const visibleRequiredBlocks = useMemo(
     () =>
@@ -274,7 +306,7 @@ export function App() {
       <header className="site-header" inert={saveOpen || (notebookOpen && compact) || undefined} onClick={(event) => event.stopPropagation()}>
         <div>
           <h1>마지막 확인</h1>
-          <p className="chapter-line">{scene.endCommand ? scene.title : `${chapter.id.replace('CH', 'CHAPTER ')} — ${chapter.title}`}</p>
+          <p className="chapter-line">{startMenuOpen ? '진술과 기록을 대조하는 추리 게임' : scene.endCommand ? scene.title : `${chapter.id.replace('CH', 'CHAPTER ')} — ${chapter.title}`}</p>
         </div>
         <div className="header-actions">
           <span className="save-state" role="status" aria-label="저장 상태">{saveStatus(saveView, state)}</span>
@@ -341,11 +373,7 @@ export function App() {
           profileView={profileView}
           createRunId={createRunId}
           createSeed={createSeed}
-          restore={(loaded) => {
-            setNotebookOpen(false);
-            setConfirmOpen(false);
-            dispatch({ type: 'restoreSession', session: loaded });
-          }}
+          restore={restoreSession}
           startNewGame={handleStartNewGame}
           returnToTitle={handleReturnToTitle}
           onClose={closeSavePanel}
@@ -359,17 +387,17 @@ export function App() {
 
       <div className={notebookOpen ? 'workspace notebook-visible' : 'workspace'}>
         <section className="play-stage" aria-label="게임 플레이 화면" inert={modalOpen || undefined} aria-hidden={modalOpen || undefined}>
-          <StageArt state={state} />
+          <StageArt state={state} title={startMenuOpen} />
 
           <div className="scene-strip">
-            <span>{scene.id}{scene.title ? ` — ${scene.title}` : ''}</span>
-            {block && <span>{state.blockCursor + 1} / {scene.blocks.length}</span>}
-            {scene.id === 'CH07_S03' && !state.evidence.has('E04') && (
+            <span>{startMenuOpen ? '시작 메뉴' : `${scene.id}${scene.title ? ` — ${scene.title}` : ''}`}</span>
+            {!startMenuOpen && block && <span>{state.blockCursor + 1} / {scene.blocks.length}</span>}
+            {!startMenuOpen && scene.id === 'CH07_S03' && !state.evidence.has('E04') && (
               <span>화면 항목: 정의 미확인</span>
             )}
           </div>
 
-          {scene.blocks.some((item) => item.pinned && state.revealedBlocks.has(item.id)) && (
+          {!startMenuOpen && scene.blocks.some((item) => item.pinned && state.revealedBlocks.has(item.id)) && (
             <section className="pinned-documents" aria-label="대조 자료">
               {scene.blocks.filter((item) => item.pinned && state.revealedBlocks.has(item.id)).map((item) => (
                 <p key={item.id} data-pinned-block={item.id}>
@@ -385,14 +413,14 @@ export function App() {
               ))}
             </section>
           )}
-          {scene.id === 'CH08_S01' && (
+          {!startMenuOpen && scene.id === 'CH08_S01' && (
             <section className="pinned-documents" aria-label="재확인 통화">
               {state.evidence.has('E10') && surface.evidenceRecords.some((r) => r.title === '19:39 태오를 특정한 안전 재확인 통화')
                 ? <p>{surface.evidenceRecords.find((r) => r.title === '19:39 태오를 특정한 안전 재확인 통화')?.body}</p>
                 : <p>미청취</p>}
             </section>
           )}
-          {scene.id === 'CH08_S03_A' && !state.flags.FLAG_FINAL_CHAIN &&
+          {!startMenuOpen && scene.id === 'CH08_S03_A' && !state.flags.FLAG_FINAL_CHAIN &&
             state.revealedBlocks.has(scene.blocks[0]!.id) && missingChainItems.length > 0 && (
               <section className="pinned-documents" aria-label="미완성 논증">
                 {missingChainItems.map((item) => <p key={item}>{item}</p>)}
@@ -409,33 +437,22 @@ export function App() {
               handleContinue();
             }}
           >
-            {state.displayStage === 'scene' && (
-              <div className="start-state">
-                <div className="save-actions">
-                  <button
-                    className="primary-action"
-                    type="button"
-                    disabled={modalOpen}
-                    onClick={() => dispatch({ type: 'begin' })}
-                  >
-                    CH01 시작
-                  </button>
-                  <button
-                    className="continue-action"
-                    type="button"
-                    disabled={!canContinueFromTitle || modalOpen}
-                    onClick={() => {
-                      const loaded = repository.reloadAutomatic();
-                      if (loaded) dispatch({ type: 'restoreSession', session: loaded });
-                    }}
-                  >
-                    이어하기
-                  </button>
-                </div>
-              </div>
+            {startMenuOpen ? <StartMenu
+              key={`${state.runId}:${startMenuPage}`}
+              initialPage={startMenuPage}
+              disabled={modalOpen}
+              canContinue={canContinueFromTitle}
+              onStart={startFromIntroduction}
+              onContinue={() => setStartMenuPage(null)}
+            /> : state.displayStage === 'scene' && (
+              <button className="primary-action" type="button" disabled={modalOpen} onClick={beginScene}>이 장면 시작</button>
             )}
 
-            {block && (
+            {!startMenuOpen && reviewed && <>
+              <p className="dialogue-review-note" role="status">이전 대사 {reviewIndex + 1} / {reviewEntries.length} · 진행과 그림은 현재 위치에 유지됩니다.</p>
+              <p className={`story-block story-${reviewed.kind}`} data-review-block-id={reviewed.blockId}>{reviewed.text}</p>
+            </>}
+            {!startMenuOpen && block && !reviewing && (
               <>
                 <p
                   className={`story-block story-${block.kind}`}
@@ -445,13 +462,28 @@ export function App() {
                   <span aria-hidden="true">{text.slice(0, visibleCharacters)}</span>
                   {!typingComplete && <span className="typing-caret" aria-hidden="true" />}
                 </p>
-                <button className="continue-action" type="button" disabled={modalOpen} onClick={handleContinue}>
-                  {typingComplete ? '계속' : '현재 문장 모두 표시'}
-                </button>
               </>
             )}
 
-            {state.displayStage === 'choice' && allRequiredBlocksCompleted && (
+            {!startMenuOpen && state.displayStage !== 'scene' && <div className="dialogue-controls" onClick={event => event.stopPropagation()}>
+              <div className="dialogue-history-actions" aria-label="읽은 대사 이동">
+                <button className="continue-action secondary-action" type="button"
+                  disabled={modalOpen || reviewEntries.length === 0 || (reviewing && reviewIndex === 0)}
+                  onClick={reviewPrevious}>이전 대사</button>
+                {reviewing && <>
+                  <button className="continue-action secondary-action" type="button"
+                    disabled={modalOpen || reviewIndex >= reviewEntries.length - 1}
+                    onClick={() => setReviewCursor({ identity: reviewIdentity, index: reviewIndex + 1 })}>다음 대사</button>
+                  <button className="continue-action secondary-action" type="button" disabled={modalOpen}
+                    onClick={() => setReviewCursor(null)}>현재로 돌아가기</button>
+                </>}
+              </div>
+              {block && !reviewing && <button className="continue-action advance-action" type="button" disabled={modalOpen} onClick={handleContinue}>
+                {typingComplete ? '계속' : '현재 문장 모두 표시'}
+              </button>}
+            </div>}
+
+            {!startMenuOpen && !reviewing && state.displayStage === 'choice' && allRequiredBlocksCompleted && (
               <div className="choice-state" aria-labelledby="choice-heading">
                 <h2 id="choice-heading">선택:</h2>
                 <div className="choice-list">
@@ -474,7 +506,7 @@ export function App() {
               </div>
             )}
 
-            {state.displayStage === 'complete' && (
+            {!startMenuOpen && !reviewing && state.displayStage === 'complete' && (
               <div className="complete-state" role="status">
                 <h2>{scene.title}</h2>
                 {scene.blocks.at(-1)?.kind === 'closingLine' &&
@@ -491,6 +523,7 @@ export function App() {
                 {scene.endCommand === 'TITLE' && (
                   <button className="primary-action" type="button" disabled={modalOpen} onClick={() => {
                     setNotebookOpen(false);
+                    setStartMenuPage('menu');
                     dispatch({ type: 'title', runId: createRunId(), seed: createSeed() });
                   }}>
                     타이틀로

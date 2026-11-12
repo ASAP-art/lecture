@@ -58,7 +58,7 @@ describe('ending art follows the confirmed operating route', () => {
       expect(upcomingIllustrationUrl(state, base)).toBeNull();
       const visual = resolveStageVisual(state, base);
       expect(visual.backgroundUrl).toBeNull();
-      expect(visual.portraitUrl).toBeNull();
+      expect(visual.portraits).toEqual([]);
       state = advance(state);
     }
   });

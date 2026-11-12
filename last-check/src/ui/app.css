@@ -211,9 +211,28 @@ h1 {
   width: 100%;
 }
 
+.stage-art-portraits {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: clamp(8px, 2vw, 24px);
+  padding-inline: clamp(12px, 3vw, 32px);
+}
+
+.stage-art-portrait-slot {
+  position: relative;
+  flex: 0 1 260px;
+  min-width: 0;
+  height: 100%;
+}
+
+.stage-art-portrait-slot:empty { display: none; }
+
 .stage-art-portrait {
-  inset: 0 0 0 auto;
-  width: min(55%, 360px);
+  inset: 0;
+  width: 100%;
 }
 
 .stage-art-caption {
@@ -288,11 +307,6 @@ h1 {
   animation: caret-pulse 760ms steps(1, end) infinite;
 }
 
-.start-state {
-  display: grid;
-  min-height: 138px;
-  place-items: center;
-}
 
 .primary-action,
 .continue-action {
@@ -308,6 +322,75 @@ h1 {
 .continue-action:hover {
   background: var(--accent-hover);
 }
+
+.dialogue-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dialogue-history-actions,
+.start-menu-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dialogue-controls .continue-action {
+  min-height: 44px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+}
+
+.dialogue-controls .advance-action {
+  width: auto;
+  min-width: 88px;
+  margin-inline-start: auto;
+}
+
+.secondary-action {
+  color: var(--accent-hover);
+  background: transparent;
+  font-weight: 600;
+}
+
+.secondary-action:hover { background: var(--paper-deep); }
+
+.dialogue-review-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.start-menu {
+  display: grid;
+  max-width: 72ch;
+  gap: 16px;
+}
+
+.start-menu h2,
+.start-menu h3,
+.start-menu p { margin-block: 0; }
+
+.start-menu h2 { font-size: 1.35rem; }
+.start-menu h3 { margin-top: 8px; font-size: 1.05rem; }
+.start-menu p,
+.play-instructions { line-height: 1.75; }
+
+.introduction-people {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 0;
+}
+
+.introduction-people dt { font-weight: 700; }
+.introduction-people dd { margin: 4px 0 0; color: var(--ink-soft); line-height: 1.6; }
+.play-instructions { margin: 0; padding-inline-start: 24px; }
+.play-instructions li + li { margin-top: 12px; }
 
 .choice-state h2 {
   margin-bottom: 18px;
@@ -847,8 +930,17 @@ h1 {
   }
 
   .save-actions > button,
-  .save-slots > li > button,
-  .dialogue-panel > .continue-action {
+  .save-slots > li > button {
     width: 100%;
   }
+}
+
+@media (max-width: 620px) {
+  .introduction-people,
+  .start-menu-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .start-menu-actions > button { width: 100%; }
 }

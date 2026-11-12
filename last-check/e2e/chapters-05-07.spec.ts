@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 
 async function nextBlock(page: Page) {
   const block = page.locator('[data-block-id]');
@@ -21,7 +22,7 @@ test('plays through CH07 with missing analysis, staged private disclosure, and n
   await page.goto('/lecture/last-check/');
   await page.evaluate(() => localStorage.clear());
   await page.reload();
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   const route = ['C01_B', 'C02_A', 'C03_B', 'C04_B', 'C05_B', 'C06_C', 'C07_A', 'C08_A', 'C09_B', 'C10_A', 'C11_A', 'C12_B', 'C13_A', 'C14_B', 'C15_C', 'C16_A', 'C17_A'];
   for (const choiceId of route) {
     while (await page.locator('[data-block-id]').count()) await nextBlock(page);
@@ -69,7 +70,7 @@ test('shows unavailable consent choice and distinguishes confirmed from candidat
   await page.goto('/lecture/last-check/');
   await page.evaluate(() => localStorage.clear());
   await page.reload();
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   for (const choiceId of ['C01_B', 'C02_A', 'C03_A', 'C04_B', 'C05_A', 'C06_B', 'C07_B', 'C08_A', 'C09_B', 'C10_C']) {
     await chooseAfterDialogue(page, choiceId);
   }

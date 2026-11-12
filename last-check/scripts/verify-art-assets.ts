@@ -40,11 +40,13 @@ for (const mapping of mappings) {
     }
   }
   for (const id of [mapping.backgroundId, mapping.portraitId]) if (id) used.add(id);
+  for (const portrait of mapping.portraitGroup ?? []) used.add(portrait.assetId);
   for (const override of mapping.blockOverrides) {
     const block = scene.blocks.find(b => b.id === override.blockId);
     assert(block, `foreign block: ${override.blockId}`);
     if (override.variantId) assert(block.content.type === 'conditional' && block.content.variants.some(v => v.id === override.variantId));
     for (const id of [override.backgroundId, override.portraitId]) if (id) used.add(id);
+    for (const portrait of override.portraitGroup ?? []) used.add(portrait.assetId);
   }
 }
 for (const cue of ILLUSTRATION_CUES) {

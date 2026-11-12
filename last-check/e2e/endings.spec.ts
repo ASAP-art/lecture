@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 
 const trueRoute = ['C01_A','C02_A','C03_B','C04_A','C05_B','C06_C','C07_A','C08_A','C09_A','C10_A','C11_A','C12_A','C13_A','C14_A','C15_C','C16_A','C17_A','C18_A','C19_A','C20_A','C21_A','C22_A','C23_A','C24_A'];
 const bad02Route = ['C01_B','C02_B','C03_A','C04_B','C05_A','C06_B','C07_B','C08_B','C09_B','C10_C','C11_B','C12_B','C13_B','C14_B','C15_C','C16_B','C17_B','C18_B','C19_B','C20_B','C21_B','C22_B','C23_B','C24_B'];
@@ -62,7 +63,7 @@ for (const scenario of [
     await page.evaluate(()=>localStorage.clear());
     await page.reload();
     await expect(page.locator('img.stage-art-illustration')).toBeVisible();
-    await page.getByRole('button',{name:'CH01 시작',exact:true}).click();
+    await startFromTitle(page);
     for(const choiceId of scenario.route){
       while(await page.locator('[data-block-id]').count())await nextBlock(page,trace);
       if(choiceId.startsWith('C23_')){
@@ -144,7 +145,7 @@ for (const scenario of [
     await expect(page.getByText(/확인한 사실과, 그 사실로 답할 수 있는 질문은 같은 것이 아니었다./)).toBeVisible();
     await page.getByRole('button',{name:'타이틀로',exact:true}).click();
     await expect(page.locator('img.stage-art-illustration')).toBeVisible();
-    await expect(page.getByRole('button',{name:'CH01 시작',exact:true})).toBeVisible();
+    await expect(page.getByRole('button',{name:'게임 시작',exact:true})).toBeVisible();
     await expect.poll(async()=>(await saved(page)).evidence).toEqual([]);
     await expect.poll(async()=>(await saved(page)).deductions).toEqual([]);
     expect((await saved(page)).parentRunId).toBe(final.runId);

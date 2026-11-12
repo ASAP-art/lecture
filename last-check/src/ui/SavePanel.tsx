@@ -26,7 +26,7 @@ function location(state: PersistedGameState | undefined): string {
   return `${GAME_INDEX.scenes.get(state.sceneId)!.title} · 진행 ${state.saveRevision}`;
 }
 interface PendingReplace {
-  readonly label: string;
+  readonly description: string;
   readonly execute: () => void;
 }
 interface Props {
@@ -101,13 +101,13 @@ export function SavePanel({
     const trigger = confirmTriggerRef.current;
     window.setTimeout(() => trigger?.focus(), 0);
   };
-  const requestReplace = (label: string, trigger: HTMLButtonElement, execute: () => void) => {
+  const requestReplace = (label: string, trigger: HTMLButtonElement, execute: () => void, description = `현재 진행 중인 수사 상태를 ‘${label}’ 상태로 교체합니다. 계속하시겠습니까?`) => {
     if (!hasActiveProgress) {
       guarded(execute);
       return;
     }
     confirmTriggerRef.current = trigger;
-    setPendingReplace({ label, execute });
+    setPendingReplace({ description, execute });
   };
   return (
     <section
@@ -160,7 +160,7 @@ export function SavePanel({
         >
           <h3 id="confirm-replace-heading">진행 교체 확인</h3>
           <p id="confirm-replace-desc">
-            현재 진행 중인 수사 상태를 ‘{pendingReplace.label}’ 상태로 교체합니다. 계속하시겠습니까?
+            {pendingReplace.description}
           </p>
           <div className="save-actions">
             <button
@@ -214,7 +214,7 @@ export function SavePanel({
           disabled={busy}
           onClick={event => {
             event.stopPropagation();
-            requestReplace('새 게임 시작', event.currentTarget, startNewGame);
+            requestReplace('새 게임 시작', event.currentTarget, startNewGame, '새 게임 소개로 이동합니다. 소개를 마치거나 건너뛰어 조사를 시작할 때 새 실행으로 전환합니다.');
           }}
         >
           새 게임 시작
@@ -226,7 +226,7 @@ export function SavePanel({
             disabled={busy}
             onClick={event => {
               event.stopPropagation();
-              requestReplace('타이틀 화면 복귀', event.currentTarget, returnToTitle);
+              requestReplace('타이틀 화면 복귀', event.currentTarget, returnToTitle, '현재 진행과 저장을 유지한 채 시작 메뉴로 돌아갑니다. 이어하기로 조사를 계속할 수 있습니다.');
             }}
           >
             타이틀 화면으로

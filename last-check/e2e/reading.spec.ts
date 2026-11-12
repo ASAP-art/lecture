@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 
 const url = '/lecture/last-check/';
 const saveKey = 'last-check.saves.v1';
@@ -9,7 +10,7 @@ test('reading preferences persist independently and never rewrite the current in
   await page.goto(url);
   await page.evaluate(() => localStorage.clear());
   await page.reload();
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
   const block = page.locator('[data-block-id]');
   const blockId = await block.getAttribute('data-block-id');
@@ -41,7 +42,7 @@ test('reading preferences persist independently and never rewrite the current in
 test('dialogs contain keyboard focus, notebook tabs work, and OS motion changes never auto-advance', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto(url);
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
   const saved = await page.evaluate(key => localStorage.getItem(key), saveKey);
   const settings = page.getByRole('button', { name: '읽기 설정', exact: true });
@@ -103,7 +104,7 @@ test('reading storage failure keeps changes in memory and leaves investigation b
     };
   });
   await page.goto(url);
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   await expect(page.getByLabel('저장 상태', { exact: true })).toContainText('저장 완료');
   const saved = await page.evaluate(key => localStorage.getItem(key), saveKey);
   await page.getByRole('button', { name: '읽기 설정', exact: true }).click();

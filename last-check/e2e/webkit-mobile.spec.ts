@@ -1,4 +1,5 @@
 import { expect, test, type Locator, type Page, type TestInfo } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 import type { SaveDocument } from '../src/engine/save-schema';
 
 const url = '/lecture/last-check/';
@@ -72,7 +73,7 @@ async function mobileLayout(page: Page, root: Locator, testInfo: TestInfo, name:
 test('WebKit mobile fresh title: touch reading settings, menu focus and persistent preferences without game injection', async ({ page }, testInfo) => {
   await expect(page.locator('img.stage-art-illustration')).toBeVisible();
   await mobileLayout(page, page.locator('.app-shell'), testInfo, 'mobile-title');
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).tap();
+  await startFromTitle(page, 'tap');
   const initial = (await saved(page)).auto!.state;
   const settings = page.getByRole('button', { name: '읽기 설정', exact: true });
   await settings.tap();
@@ -101,7 +102,7 @@ test('WebKit mobile fresh title: touch reading settings, menu focus and persiste
 
 test('WebKit mobile fresh play: C01_A and C02_A results, separate notebook/log, manual restore and reload into CH02', async ({ page }, testInfo) => {
   test.setTimeout(120_000);
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).tap();
+  await startFromTitle(page, 'tap');
   await choose(page, 'C01_A');
   await expect(page.locator('[data-block-id="BLK_CH01_S01_A_01"]')).toBeVisible();
   expect((await saved(page)).auto!.state.evidence).toContain('E02');

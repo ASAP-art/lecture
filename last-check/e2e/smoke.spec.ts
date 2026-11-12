@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { startFromTitle } from './helpers/start';
 
 async function finishAndContinue(page: Page) {
   const block = page.locator('[data-block-id]');
@@ -17,9 +18,8 @@ test('plays CH01 choice result, hides notebook secrets, and restores the same bl
   await page.evaluate(() => window.localStorage.clear());
   await page.reload();
 
-  await expect(page.getByRole('heading', { name: '마지막 확인' })).toBeVisible();
 
-  await page.getByRole('button', { name: 'CH01 시작' }).click();
+  await startFromTitle(page);
   await expect(page.locator('[data-block-id="BLK_CH01_S01_01"]')).toBeVisible();
 
   for (let index = 0; index < 11; index += 1) await finishAndContinue(page);
@@ -79,7 +79,7 @@ test('completes typing on first input, advances on second, enforces modal/menu g
   // Non-existent save -> Continue is disabled on title screen and in menu
   await expect(page.getByRole('button', { name: '이어하기', exact: true })).toBeDisabled();
 
-  await page.getByRole('button', { name: 'CH01 시작', exact: true }).click();
+  await startFromTitle(page);
   await expect(page.locator('[data-block-id="BLK_CH01_S01_01"]')).toBeVisible();
   await expect(page.getByRole('button', { name: '현재 문장 모두 표시', exact: true })).toBeVisible();
 
@@ -141,13 +141,18 @@ test('completes typing on first input, advances on second, enforces modal/menu g
   );
   expect(stateAfterNotebook).toEqual(stateBeforeNotebook);
 
-  // Confirming replacement in menu returns to title screen with disabled Continue for fresh title run
+  // Returning to the start menu preserves the current run; Continue resumes without an intro.
   await menuToggle.click();
   await page.getByRole('button', { name: '타이틀 화면으로', exact: true }).click();
   await expect(page.getByRole('alertdialog', { name: '진행 교체 확인' })).toBeVisible();
   await page.getByRole('button', { name: '진행 교체 확인', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'CH01 시작', exact: true })).toBeVisible();
-  await expect(page.getByRole('button', { name: '이어하기', exact: true })).toBeDisabled();
+  await expect(page.getByRole('button', { name: '게임 시작', exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: '이어하기', exact: true })).toBeEnabled();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('last-check.saves.v1')!).auto.state)).toEqual(stateAfterNotebook);
+  await page.getByRole('button', { name: '이어하기', exact: true }).click();
+  await expect(page.locator('[data-block-id]')).toBeVisible();
+  await expect(page.getByRole('heading', { name: '조사를 시작하기 전에', exact: true })).toHaveCount(0);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('last-check.saves.v1')!).auto.state)).toEqual(stateAfterNotebook);
 
   // Incompatible save also keeps Continue disabled
   await page.evaluate(() => window.localStorage.setItem('last-check.saves.v1', '{"version":99}'));
