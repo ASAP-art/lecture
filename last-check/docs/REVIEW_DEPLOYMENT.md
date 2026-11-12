@@ -51,3 +51,11 @@
 - 기존 Pages/workflow/base/원문·게임·저장 계약을 유지한다. 자산 목록에 채택18장만 추가하고,16개 현재 대사 블록 cue·기본 초상 로딩 fallback·이전 요청 무효화를 검증했다. source/public 파일명을 바꾸거나 기본 이미지를 덮어쓰지 않았다.
 - 관련 단위 고유25·Chromium3건, 1366×768/360×800/390×844 및 WebKit/iPhone13 설정의 신규16동작+3인 그룹17상태씩을 확인했다. 저장 경계 주입과 실제 C01_B 클릭/수동 복원·터치 진행/재접속을 구분한다. 기존 전체 QA/대표 엔딩 완주는 재사용했으며 이번에 다시 실행하지 않았다.
 - 실제 반영 소스는 공개 `deployment.json.commit`, 최신 배포/HTTP/스모크 근거는 루트 HANDOFF와 로컬 `docs/qa-logs/sprites22-deployment-*.json`을 기준으로 한다. 공개 검토이며 정식 출시/사람 플레이/실기기 완료가 아니다. 상세 미술 목록은 ART_ASSETS §11을 재사용한다.
+
+## 신규 인물22장 실제 반영 결과
+
+- 배포 소스 **`cdd00f568b4b28176f1d0b0e599a4f22776eb733`**, [Pages Actions43192867544](https://github.com/ASAP-art/lecture/actions/runs/43192867544) build/자산 검증/패키징/게시 성공. 실제 https://asap-art.github.io/lecture/last-check/ 의 deployment.json이 같은 commit/base와 로컬과 동일한47파일 manifest를 반환했다. 이 뒤 검수 결과 문서만 바뀐 커밋은 재배포하지 않는다.
+- 새 PNG18 + HTML/JS/CSS3 + 기존 두 사이트4, 총25개 실제 GET200·MIME/바이트/SHA 일치, cache max-age600. 새 PNG는 원래 파일명과 SHA query version을 썼으며 보류4는 패키지에 없다.
+- 실제 URL에서 Chromium1건은 상태 주입 없이 C01_B 클릭·상황 전환→수동 슬롯 저장/복원→재접속을 통과했다. WebKit/iPhone13 설정은 유효 저장5경계(신규 인물/단독·2인·3인/수첩)를 주입하고 별도 실제 터치 진행·동일 저장 재접속을 확인했다. WebKit의 예상 밖404/요청 실패/console·pageerror0, 가로 넘침0. 실제 배포 대표 캡처도 육안 확인했다. 이 결과를 전체 경로 완주나 실기기로 표시하지 않는다.
+- **404 미검증4건:** `last-check/art-source/incoming/sprites22/IMAGE_MANIFEST.json`, `last-check/assets/CHAR_YIKYUNG_LOOKING_AT_KEY.png`, `last-check/assets/char_eunseo_offering_envelope.png`, `last-check/assets/char_junseok_explaining_log.png`. 기대는404이나 일반 GET 및 별도 Chromium/cache-buster GET 모두 Varnish503이었다. 코드/기대값/라우터를 바꾸지 않았다. 소스 파일1종·보류 이미지2종·오대소문자1종의 비배포404 응답만 미검증이며 정상 게임18이미지는 모두200이다. 그 밖의 소스TS·컵 보류 이미지404, 내려보는 은서 보류 이미지는 cache-buster GET404를 확인했다.
+- 재현은 `https://asap-art.github.io/lecture/` 뒤 위 상대 경로를 붙여 GET한다. 상세 `qa-logs/sprites22-deployment-{ci,http,http-initial-failure,negative-browser,browser,mobile}.json` 및 `sprites22-final-summary.json`. 실제 사용자 플레이/실기기는 미검증, 미술 보류/미사용·기존 문제는 ART_ASSETS §11을 따른다.
